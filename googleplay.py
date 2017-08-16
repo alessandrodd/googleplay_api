@@ -195,7 +195,6 @@ class GooglePlayAPI(object):
                 response = requests.get(url, headers=headers,
                                         verify=ssl_verify)
             data = response.content
-
         '''
         data = StringIO.StringIO(data)
         gzipper = gzip.GzipFile(fileobj=data)
@@ -278,6 +277,25 @@ class GooglePlayAPI(object):
             path += "&n={0}".format(requests.utils.quote(nb_results))
         if offset is not None:
             path += "&o={0}".format(requests.utils.quote(offset))
+        message = self.executeRequestApi2(path)
+        return message.payload.listResponse
+
+    def list_similar(self, packageName, nb_results=None, offset=None):
+        """List apps similar to a given package
+
+        :param packageName: name of the package (e.g. com.android.chrome)
+        :param nb_results: how many results to show (max 100)
+        :param offset: used for paging
+        :return: a list of apps similar to packageName
+        """
+        # Check this url for further analysis
+        # browseV2?bt=5&c=3&doc=com.android.chrome&rt=1
+        path = "rec?c=3&rt=1&doc={0}".format(packageName)
+        if nb_results is not None:
+            path += "&n={0}".format(int(nb_results))
+        if offset is not None:
+            path += "&o={0}".format(int(offset))
+
         message = self.executeRequestApi2(path)
         return message.payload.listResponse
 
