@@ -1,13 +1,31 @@
-# separator used by search.py, categories.py, ...
-SEPARATOR = ";"
+import configparser
+import os
 
-LANG            = "fr_FR" # can be en_US, fr_FR, ...
-ANDROID_ID      = "32AA74CDC05B26A9" # "xxxxxxxxxxxxxxxx"
-GOOGLE_LOGIN    = "tefuhkog@gmail.com" # "username@gmail.com"
-GOOGLE_PASSWORD = "tyuiop65"
-AUTH_TOKEN      = None # "yyyyyyyyy"
+__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+
+CONFIG_FILE = os.path.join(__location__, "config.ini")
+MAIN_SEC = "Main"
+
+c = configparser.ConfigParser()
+c.read(CONFIG_FILE)
+
+
+def config_section_map(section):
+    dict1 = {}
+    options = c.options(section)
+    for option in options:
+        try:
+            dict1[option] = c.get(section, option)
+        except configparser.NoSectionError or configparser.NoOptionError:
+            dict1[option] = None
+    return dict1
+
+
+def get_option(opt):
+    return config_section_map(MAIN_SEC)[opt]
+
 
 # force the user to edit this file
-if any([each == None for each in [ANDROID_ID, GOOGLE_LOGIN, GOOGLE_PASSWORD]]):
-    raise Exception("config.py not updated")
-
+if any([each is None for each in
+        [get_option("android_id"), get_option("google_login"), get_option("google_password")]]):
+    raise Exception("config.ini not updated")
