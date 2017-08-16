@@ -181,6 +181,7 @@ class GooglePlayAPI(object):
                                      "hardware=hammerhead,product=hammerhead)",
                        "X-DFE-SmallestScreenWidthDp": "335",
                        "X-DFE-Filter-Level": "3",
+                       # "X-DFE-No-Prefetch": 'true',  # avoid prefetch
                        "Accept-Encoding": "",
                        "Host": "android.clients.google.com"}
 
@@ -235,7 +236,7 @@ class GooglePlayAPI(object):
     def details(self, packageName):
         """Get app details from a package name.
         packageName is the app unique ID (usually starting with 'com.')."""
-        path = "details?doc={0}".format(requests.utils.quote(packageName))
+        path = "details?doc={0}".format(packageName)
         message = self.executeRequestApi2(path)
         return message.payload.detailsResponse
 
@@ -253,30 +254,41 @@ class GooglePlayAPI(object):
         message = self.executeRequestApi2(path, data.decode("utf-8"), "application/x-protobuf")
         return message.payload.bulkDetailsResponse
 
-    def browse(self, cat=None, ctr=None):
+    def browse(self, cat=None, ctr=None, dataUrl=None):
         """Browse categories.
-        cat (category ID) and ctr (subcategory ID) are used as filters."""
-        path = "browse?c=3"
-        if cat is not None:
-            path += "&cat={0}".format(requests.utils.quote(cat))
-        if ctr is not None:
-            path += "&ctr={0}".format(requests.utils.quote(ctr))
+        cat (category ID) and ctr (subcategory ID) are used as filters.
+        @:param dataUrl: pass directly the path, e.g. browse?cat=TRAVEL_AND_LOCAL&c=3 bypassing cat and ctr
+        """
+        if dataUrl:
+            path = dataUrl
+        else:
+            path = "browse?c=3"
+            if cat is not None:
+                path += "&cat={0}".format(cat)
+            if ctr is not None:
+                path += "&ctr={0}".format(ctr)
         message = self.executeRequestApi2(path)
         return message.payload.browseResponse
 
-    def list(self, cat, ctr=None, nb_results=None, offset=None):
+    def list(self, cat=None, ctr=None, nb_results=None, offset=None, dataUrl=None):
         """List apps.
 
         If ctr (subcategory ID) is None, returns a list of valid subcategories.
 
-        If ctr is provided, list apps within this subcategory."""
-        path = "list?c=3&cat={0}".format(requests.utils.quote(cat))
-        if ctr is not None:
-            path += "&ctr={0}".format(requests.utils.quote(ctr))
+        If ctr is provided, list apps within this subcategory.
+        @:param dataUrl: pass directly the path, e.g. browse?cat=TRAVEL_AND_LOCAL&c=3 bypassing cat and ctr
+
+        """
+        if dataUrl:
+            path = dataUrl
+        else:
+            path = "list?c=3&cat={0}".format(cat)
+            if ctr is not None:
+                path += "&ctr={0}".format(ctr)
         if nb_results is not None:
-            path += "&n={0}".format(requests.utils.quote(nb_results))
+            path += "&n={0}".format(int(nb_results))
         if offset is not None:
-            path += "&o={0}".format(requests.utils.quote(offset))
+            path += "&o={0}".format(int(offset))
         message = self.executeRequestApi2(path)
         return message.payload.listResponse
 
@@ -303,7 +315,7 @@ class GooglePlayAPI(object):
         """Browse reviews.
         packageName is the app unique ID.
         If filterByDevice is True, return only reviews for your device."""
-        path = "rev?doc={0}&sort={1}".format(requests.utils.quote(packageName), sort)
+        path = "rev?doc={0}&sort={1}".format(packageName, sort)
         if nb_results is not None:
             path += "&n={0}".format(int(nb_results))
         if offset is not None:
