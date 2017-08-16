@@ -1,10 +1,10 @@
 # separator used by search.py, categories.py, ...
 SEPARATOR = ";"
 
-LANG            = "en_US" # can be en_US, fr_FR, ...
-ANDROID_ID      = None # "xxxxxxxxxxxxxxxx"
-GOOGLE_LOGIN    = None # "username@gmail.com"
-GOOGLE_PASSWORD = None
+LANG            = "fr_FR" # can be en_US, fr_FR, ...
+ANDROID_ID      = "32AA74CDC05B26A9" # "xxxxxxxxxxxxxxxx"
+GOOGLE_LOGIN    = "tefuhkog@gmail.com" # "username@gmail.com"
+GOOGLE_PASSWORD = "tyuiop65"
 AUTH_TOKEN      = None # "yyyyyyyyy"
 
 # force the user to edit this file

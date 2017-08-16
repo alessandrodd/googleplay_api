@@ -1,4 +1,4 @@
-# Google Play Unofficial Python API
+# Google Play Unofficial Python API - Python 3 updated fork
 
 An unofficial Python API that let you search, browse and download Android apps from Google Play (formerly Android Market).
 

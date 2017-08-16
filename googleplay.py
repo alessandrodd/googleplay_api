@@ -11,8 +11,20 @@ from google.protobuf.internal.containers import RepeatedCompositeFieldContainer
 from google.protobuf import text_format
 from google.protobuf.message import Message, DecodeError
 
+from OpenSSL.SSL import Error as SSLError
+
 import googleplay_pb2
 import config
+
+ssl_verify="/etc/ssl/certs/ca-certificates.crt"
+
+conn_test_url="https://android.clients.google.com"
+try:
+    requests.post(conn_test_url, verify=ssl_verify)
+except (SSLError, IOError) as e:
+    ssl_verify=True
+    requests.post(conn_test_url, verify=ssl_verify)
+
 
 class LoginError(Exception):
     def __init__(self, value):
@@ -118,16 +130,16 @@ class GooglePlayAPI(object):
                                 "device_country": "fr",
                                 "operatorCountry": "fr",
                                 "lang": "fr",
-                                "sdk_version": "16"}
+                                "sdk_version": "19"}
             headers = {
                 "Accept-Encoding": "",
             }
-            response = requests.post(self.URL_LOGIN, data=params, headers=headers, verify=False)
+            response = requests.post(self.URL_LOGIN, data=params, headers=headers, verify=ssl_verify)
             data = response.text.split()
             params = {}
             for d in data:
                 if not "=" in d: continue
-                k, v = d.split("=")
+                k, v = d.split("=")[0:2]
                 params[k.strip().lower()] = v.strip()
             if "auth" in params:
                 self.setAuthSubToken(params["auth"])
@@ -147,8 +159,8 @@ class GooglePlayAPI(object):
                                     "X-DFE-Device-Id": self.androidId,
                                     "X-DFE-Client-Id": "am-android-google",
                                     #"X-DFE-Logging-Id": self.loggingId2, # Deprecated?
-                                    "User-Agent": "Android-Finsky/3.7.13 (api=3,versionCode=8013013,sdk=16,device=crespo,hardware=herring,product=soju)",
-                                    "X-DFE-SmallestScreenWidthDp": "320",
+                                    "User-Agent": "Android-Finsky/4.4.3 (api=3,versionCode=8013013,sdk=19,device=hammerhead,hardware=hammerhead,product=hammerhead)",
+                                    "X-DFE-SmallestScreenWidthDp": "335",
                                     "X-DFE-Filter-Level": "3",
                                     "Accept-Encoding": "",
                                     "Host": "android.clients.google.com"}
@@ -158,9 +170,9 @@ class GooglePlayAPI(object):
 
             url = "https://android.clients.google.com/fdfe/%s" % path
             if datapost is not None:
-                response = requests.post(url, data=datapost, headers=headers, verify=False)
+                response = requests.post(url, data=str(datapost), headers=headers, verify=ssl_verify)
             else:
-                response = requests.get(url, headers=headers, verify=False)
+                response = requests.get(url, headers=headers, verify=ssl_verify)
             data = response.content
 
         '''
@@ -182,13 +194,20 @@ class GooglePlayAPI(object):
     def search(self, query, nb_results=None, offset=None):
         """Search for apps."""
         path = "search?c=3&q=%s" % requests.utils.quote(query) # TODO handle categories
-        if (nb_results is not None):
-            path += "&n=%d" % int(nb_results)
         if (offset is not None):
             path += "&o=%d" % int(offset)
-
         message = self.executeRequestApi2(path)
-        return message.payload.searchResponse
+        remaining = int(nb_results) - len(message.payload.searchResponse.doc[0].child)
+        messagenext = message
+        allmessages = message
+        while remaining > 0:
+            pathnext = messagenext.payload.searchResponse.doc[0].containerMetadata.nextPageUrl
+            messagenext = self.executeRequestApi2(pathnext)
+            if len(messagenext.payload.searchResponse.doc) <= 0:
+                    break
+            remaining -= len(messagenext.payload.searchResponse.doc[0].child)
+            allmessages.MergeFrom(messagenext)
+        return allmessages.payload.searchResponse
 
     def details(self, packageName):
         """Get app details from a package name.
@@ -237,7 +256,7 @@ class GooglePlayAPI(object):
             path += "&o=%s" % requests.utils.quote(offset)
         message = self.executeRequestApi2(path)
         return message.payload.listResponse
-    
+
     def reviews(self, packageName, filterByDevice=False, sort=2, nb_results=None, offset=None):
         """Browse reviews.
         packageName is the app unique ID.
@@ -251,8 +270,8 @@ class GooglePlayAPI(object):
             path += "&dfil=1"
         message = self.executeRequestApi2(path)
         return message.payload.reviewResponse
-    
-    def download(self, packageName, versionCode, offerType=1):
+
+    def download(self, packageName, versionCode, offerType=1,progress_bar=False):
         """Download an app and return its raw data (APK file).
 
         packageName is the app unique ID (usually starting with 'com.').
@@ -266,15 +285,44 @@ class GooglePlayAPI(object):
         url = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadUrl
         cookie = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadAuthCookie[0]
 
+        return self.download_package(url, progress_bar, cookie)
+
+    def delivery(self, packageName, versionCode, offerType=1, progress_bar=False):
+        """Download a prepaid app and return its raw data (APK file).
+
+        packageName is the app unique ID (usually starting with 'com.').
+
+        versionCode can be grabbed by using the details() method on the given
+        app."""
+        path = "delivery?ot=%d&doc=%s&vc=%d" % (offerType, packageName, versionCode)
+        message = self.executeRequestApi2(path)
+
+        url = message.payload.deliveryResponse.appDeliveryData.downloadUrl
+        cookie = message.payload.deliveryResponse.appDeliveryData.downloadAuthCookie[0]
+
+        return self.download_package(url, progress_bar, cookie)
+
+
+    def download_package(self, url, progress_bar, cookie):
         cookies = {
             str(cookie.name): str(cookie.value) # python-requests #459 fixes this
         }
 
         headers = {
-                   "User-Agent" : "AndroidDownloadManager/4.1.1 (Linux; U; Android 4.1.1; Nexus S Build/JRO03E)",
+                   "User-Agent" : "AndroidDownloadManager/4.4.3 (Linux; U; Android 4.4.3; Nexus S Build/JRO03E)",
                    "Accept-Encoding": "",
                   }
-
-        response = requests.get(url, headers=headers, cookies=cookies, verify=False)
-        return response.content
+                  
+        if not progress_bar:
+            response = requests.get(url, headers=headers, cookies=cookies, verify=ssl_verify)
+            return response.content
+        # If progress_bar is asked
+        from clint.textui import progress
+        response_content = str()
+        response = requests.get(url, headers=headers, cookies=cookies, verify=ssl_verify,stream=True)
+        total_length = int(response.headers.get('content-length'))
+        for chunk in progress.bar(response.iter_content(chunk_size=1024),expected_size=(total_length/1024) + 1):
+            if chunk:
+                response_content+=chunk
+        return response_content
 
