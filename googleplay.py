@@ -236,7 +236,7 @@ class GooglePlayAPI(object):
             remaining = int(nb_results) - len(message.payload.searchResponse.doc[0].child)
         else:
             remaining = 0
-            logging.warning(message.payload)
+            logging.warning(message)
         messagenext = message
         allmessages = message
 
