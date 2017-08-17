@@ -216,6 +216,8 @@ class GooglePlayAPI(object):
 
         # Debug
         # print(text_format.MessageToString(message))
+        if not message:
+            logging.warning(data)
         return message
 
     #####################################
@@ -236,7 +238,6 @@ class GooglePlayAPI(object):
             remaining = int(nb_results) - len(message.payload.searchResponse.doc[0].child)
         else:
             remaining = 0
-            logging.warning(message)
         messagenext = message
         allmessages = message
 
