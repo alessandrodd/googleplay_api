@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import logging
 
 import requests
 from google.protobuf import descriptor
@@ -235,6 +236,7 @@ class GooglePlayAPI(object):
             remaining = int(nb_results) - len(message.payload.searchResponse.doc[0].child)
         else:
             remaining = 0
+            logging.warning(message.payload)
         messagenext = message
         allmessages = message
 
