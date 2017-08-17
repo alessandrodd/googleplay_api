@@ -216,7 +216,7 @@ class GooglePlayAPI(object):
 
         # Debug
         # print(text_format.MessageToString(message))
-        if not message or not message.payload:
+        if not str(message) or not str(message.payload):
             logging.warning(data)
         return message
 
