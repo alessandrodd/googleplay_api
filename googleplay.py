@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import logging
+from time import sleep
 
 import requests
 from google.protobuf import descriptor
@@ -10,14 +11,8 @@ from google.protobuf.message import Message
 from . import config
 from . import googleplay_pb2
 
-# ssl_verify="/etc/ssl/certs/ca-certificates.crt"
-#
-# conn_test_url="https://android.clients.google.com"
-# try:
-#     requests.post(conn_test_url, verify=ssl_verify)
-# except SSLError as e:
-#     ssl_verify=True
-#     requests.post(conn_test_url, verify=ssl_verify)
+MIN_THROTTLE_TIME = 0.1
+
 ssl_verify = True
 
 
@@ -58,15 +53,18 @@ class GooglePlayAPI(object):
     ACCOUNT_TYPE_HOSTED_OR_GOOGLE = "HOSTED_OR_GOOGLE"
     authSubToken = None
 
-    def __init__(self, androidId=None, lang=None, debug=False):
+    def __init__(self, androidId=None, lang=None, debug=False, throttle=False):
         # you must use a device-associated androidId value
         self.preFetch = {}
         if androidId is None:
             androidId = config.get_option("android_id")
         if lang is None:
             lang = config.get_option("lang")
+        if throttle:
+            self.throttle_time = MIN_THROTTLE_TIME
         self.androidId = androidId
         self.lang = lang
+        self.throttle = throttle
         self.downloadUserAgent = "AndroidDownloadManager/7.1 (Linux; U; Android 7.1; Pixel Build/NZZ99Z)"
         self.defaultAgentvername = "7.0.12.H-all [0]"
         self.defaultAgentvercode = "80701200"  # versionCode should be the version code of the Play Store app
@@ -171,8 +169,9 @@ class GooglePlayAPI(object):
             agentvername = self.defaultAgentvername
         if not agentvercode:
             agentvercode = self.defaultAgentvercode
-        user_agent = "Android-Finsky/" + agentvername + " (api=3,versionCode=" + agentvercode + ",sdk=" + str(sdk) + \
-                     ",device=" + devicename + ",hardware=" + devicename + ",product=" + devicename + ",build=NZZ99Z:user)"
+        user_agent = "Android-Finsky/" + agentvername + " (api=3,versionCode=" + agentvercode + ",sdk=" + \
+                     str(sdk) + ",device=" + devicename + ",hardware=" + devicename + ",product=" + \
+                     devicename + ",build=NZZ99Z:user)"
 
         if datapost is None and path in self.preFetch:
             data = self.preFetch[path]
@@ -199,12 +198,31 @@ class GooglePlayAPI(object):
                 headers["Content-Type"] = post_content_type
 
             url = "https://android.clients.google.com/fdfe/{0}".format(path)
-            if datapost is not None:
-                response = requests.post(url, data=str(datapost),
-                                         headers=headers, verify=ssl_verify)
-            else:
-                response = requests.get(url, headers=headers,
-                                        verify=ssl_verify)
+            response = None
+            retry = True
+            while retry:
+                if self.throttle:
+                    sleep(self.throttle_time)
+                if datapost is not None:
+                    response = requests.post(url, data=str(datapost),
+                                             headers=headers, verify=ssl_verify)
+                else:
+                    response = requests.get(url, headers=headers,
+                                            verify=ssl_verify)
+                response_code = response.status_code
+                if int(response_code) == 429 and self.throttle:
+                    self.throttle_time *= 2
+                    logging.warning("Too many request reached. "
+                                    "Throttling connection (sleep {0})...".format(self.throttle_time))
+                else:
+                    retry = False
+                    if int(response_code) != 200:
+                        logging.warning("Response code: {0} triggered by: {1} "
+                                        "with datapost: {2}".format(response_code, url, str(datapost)))
+                        logging.warning(response.content)
+                    elif self.throttle and self.throttle_time > MIN_THROTTLE_TIME:
+                        self.throttle_time /= 2
+
             data = response.content
         '''
         data = StringIO.StringIO(data)
@@ -224,32 +242,49 @@ class GooglePlayAPI(object):
     # Google Play API Methods
     #####################################
 
-    def search(self, query, nb_results=None, offset=None):
+    def search(self, query, max_per_page=None, offset=None, max_pages=1, details=False):
         """Search for apps.
+
+        max_per_page is fixed to 20, it seems that the server ignores other values
+
+        @:param max_per_page: max 20
         @:param dataUrl: pass directly the path, e.g. browse?cat=TRAVEL_AND_LOCAL&c=3 bypassing the query
 
         """
         path = "search?c=3&q={0}".format(requests.utils.quote(query))  # TODO handle categories
+        if max_per_page is not None:
+            path += "&n={0}".format(int(max_per_page))
         if offset is not None:
             path += "&o={0}".format(int(offset))
 
         message = self.executeRequestApi2(path)
-        if message.payload.searchResponse.doc:
-            remaining = int(nb_results) - len(message.payload.searchResponse.doc[0].child)
-        else:
-            remaining = 0
-        messagenext = message
-        allmessages = message
-
-        while remaining > 0:
-            pathnext = messagenext.payload.searchResponse.doc[0].containerMetadata.nextPageUrl
-            messagenext = self.executeRequestApi2(pathnext)
-            if len(messagenext.payload.searchResponse.doc) <= 0:
+        all_messages = message
+        all_details = None
+        if details and message.payload.searchResponse.doc:
+            bulk_details = self.bulkDetailsFromDocs(message.payload.searchResponse.doc)
+            all_details = bulk_details
+        page = 1
+        while True:
+            if max_pages and page >= max_pages:
+                # break if we have reached the imposed limit
                 break
-            remaining -= len(messagenext.payload.searchResponse.doc[0].child)
-            allmessages.MergeFrom(messagenext)
+            if not message.payload.searchResponse.doc:
+                # break if there are no result
+                break
+            next_page = message.payload.searchResponse.doc[-1].containerMetadata.nextPageUrl
+            if not next_page:
+                # break if there isn't any page left
+                break
+            message = self.executeRequestApi2(next_page)
+            all_messages.MergeFrom(message)
+            if details:
+                bulk_details = self.bulkDetailsFromDocs(message.payload.searchResponse.doc)
+                all_details.MergeFrom(bulk_details)
+            page += 1
 
-        return allmessages.payload.searchResponse
+        if details:
+            return all_details
+        return all_messages.payload.searchResponse
 
     def details(self, packageName):
         """Get app details from a package name.
@@ -273,6 +308,14 @@ class GooglePlayAPI(object):
                                           post_content_type="application/x-protobuf")
         return message.payload.bulkDetailsResponse
 
+    def bulkDetailsFromDocs(self, docs):
+        packages = []
+        for doc in docs:
+            for child in doc.child:
+                packages.append(child.docid)
+        bulk_details = self.bulkDetails(packages)
+        return bulk_details
+
     def browse(self, cat=None, ctr=None, dataUrl=None):
         """Browse categories.
         cat (category ID) and ctr (subcategory ID) are used as filters.
@@ -289,7 +332,7 @@ class GooglePlayAPI(object):
         message = self.executeRequestApi2(path)
         return message.payload.browseResponse
 
-    def list(self, cat=None, ctr=None, nb_results=None, offset=None, dataUrl=None):
+    def list(self, cat=None, ctr=None, max_per_page=None, offset=None, max_pages=1, details=False):
         """List apps.
 
         If ctr (subcategory ID) is None, returns a list of valid subcategories.
@@ -298,37 +341,89 @@ class GooglePlayAPI(object):
         @:param dataUrl: pass directly the path, e.g. browse?cat=TRAVEL_AND_LOCAL&c=3 bypassing cat and ctr
 
         """
-        if dataUrl:
-            path = dataUrl
-        else:
-            path = "list?c=3&cat={0}".format(cat)
-            if ctr is not None:
-                path += "&ctr={0}".format(ctr)
-            if nb_results is not None:
-                path += "&n={0}".format(int(nb_results))
-            if offset is not None:
-                path += "&o={0}".format(int(offset))
-        message = self.executeRequestApi2(path)
-        return message.payload.listResponse
 
-    def list_similar(self, packageName, nb_results=None, offset=None):
+        path = "list?c=3&cat={0}".format(cat)
+        if ctr is not None:
+            path += "&ctr={0}".format(ctr)
+        if max_per_page is not None:
+            path += "&n={0}".format(int(max_per_page))
+        if offset is not None:
+            path += "&o={0}".format(int(offset))
+        message = self.executeRequestApi2(path)
+        all_messages = message
+        all_details = None
+        if details and message.payload.listResponse.doc:
+            bulk_details = self.bulkDetailsFromDocs(message.payload.listResponse.doc)
+            all_details = bulk_details
+        page = 1
+        while True:
+            if max_pages and page >= max_pages:
+                # break if we have reached the imposed limit
+                break
+            if not message.payload.listResponse.doc:
+                # break if there are no result
+                break
+            next_page = message.payload.listResponse.doc[-1].containerMetadata.nextPageUrl
+            if not next_page:
+                # break if there isn't any page left
+                break
+            message = self.executeRequestApi2(next_page)
+            all_messages.MergeFrom(message)
+            if details:
+                bulk_details = self.bulkDetailsFromDocs(message.payload.listResponse.doc)
+                all_details.MergeFrom(bulk_details)
+            page += 1
+
+        if details:
+            return all_details
+
+        return all_messages.payload.listResponse
+
+    def list_similar(self, packageName, max_per_page=None, offset=None, max_pages=1, details=False):
         """List apps similar to a given package
 
         :param packageName: name of the package (e.g. com.android.chrome)
-        :param nb_results: how many results to show (max 100)
+        :param max_per_page: how many results to show (max 100)
         :param offset: used for paging
         :return: a list of apps similar to packageName
         """
         # Check this url for further analysis
         # browseV2?bt=5&c=3&doc=com.android.chrome&rt=1
         path = "rec?c=3&rt=1&doc={0}".format(packageName)
-        if nb_results is not None:
-            path += "&n={0}".format(int(nb_results))
+        if max_per_page is not None:
+            path += "&n={0}".format(int(max_per_page))
         if offset is not None:
             path += "&o={0}".format(int(offset))
 
         message = self.executeRequestApi2(path)
-        return message.payload.listResponse
+        all_messages = message
+        all_details = None
+        if details and message.payload.listResponse.doc:
+            bulk_details = self.bulkDetailsFromDocs(message.payload.listResponse.doc)
+            all_details = bulk_details
+        page = 1
+        while True:
+            if max_pages and page >= max_pages:
+                # break if we have reached the imposed limit
+                break
+            if not message.payload.listResponse.doc:
+                # break if there are no result
+                break
+            next_page = message.payload.listResponse.doc[-1].containerMetadata.nextPageUrl
+            if not next_page:
+                # break if there isn't any page left
+                break
+            message = self.executeRequestApi2(next_page)
+            all_messages.MergeFrom(message)
+            if details:
+                bulk_details = self.bulkDetailsFromDocs(message.payload.listResponse.doc)
+                all_details.MergeFrom(bulk_details)
+            page += 1
+
+        if details:
+            return all_details
+
+        return all_messages.payload.listResponse
 
     def reviews(self, packageName, filterByDevice=False, sort=2, nb_results=None, offset=None):
         """Browse reviews.
