@@ -11,7 +11,7 @@ from google.protobuf.message import Message
 from . import config
 from . import googleplay_pb2
 
-MIN_THROTTLE_TIME = 0.1
+MIN_THROTTLE_TIME = 0.05
 
 ssl_verify = True
 
