@@ -66,6 +66,9 @@ class GooglePlayAPI(object):
             lang = config.get_option("lang")
         self.androidId = androidId
         self.lang = lang
+        self.downloadUserAgent = "AndroidDownloadManager/7.1 (Linux; U; Android 7.1; Pixel Build/NZZ99Z)"
+        self.defaultAgentvername = "7.0.12.H-all [0]"
+        self.defaultAgentvercode = "80701200"  # versionCode should be the version code of the Play Store app
         self.debug = debug
 
     def toDict(self, protoObj):
@@ -161,8 +164,15 @@ class GooglePlayAPI(object):
             else:
                 raise LoginError("Auth token not found.")
 
-    def executeRequestApi2(self, path, datapost=None,
-                           post_content_type="application/x-www-form-urlencoded; charset=UTF-8"):
+    def executeRequestApi2(self, path, sdk=25, agentvername=None, agentvercode=None, devicename="sailfish",
+                           datapost=None, post_content_type="application/x-www-form-urlencoded; charset=UTF-8"):
+        if not agentvername:
+            agentvername = self.defaultAgentvername
+        if not agentvercode:
+            agentvercode = self.defaultAgentvercode
+        user_agent = "Android-Finsky/" + agentvername + " (api=3,versionCode=" + agentvercode + ",sdk=" + str(sdk) + \
+                     ",device=" + devicename + ",hardware=" + devicename + ",product=" + devicename + ",build=NZZ99Z:user)"
+
         if datapost is None and path in self.preFetch:
             data = self.preFetch[path]
         else:
@@ -177,12 +187,11 @@ class GooglePlayAPI(object):
                        "X-DFE-Device-Id": self.androidId,
                        "X-DFE-Client-Id": "am-android-google",
                        # "X-DFE-Logging-Id": self.loggingId2, # Deprecated?
-                       "User-Agent": "Android-Finsky/4.4.3 (api=3,versionCode=8013013,sdk=19,device=hammerhead,"
-                                     "hardware=hammerhead,product=hammerhead)",
-                       "X-DFE-SmallestScreenWidthDp": "335",
+                       "User-Agent": user_agent,
+                       "X-DFE-SmallestScreenWidthDp": "320",
                        "X-DFE-Filter-Level": "3",
                        # "X-DFE-No-Prefetch": 'true',  # avoid prefetch
-                       "Accept-Encoding": "",
+                       "Accept-Encoding": "gzip, deflate",
                        "Host": "android.clients.google.com"}
 
             if datapost is not None:
@@ -213,7 +222,10 @@ class GooglePlayAPI(object):
     #####################################
 
     def search(self, query, nb_results=None, offset=None):
-        """Search for apps."""
+        """Search for apps.
+        @:param dataUrl: pass directly the path, e.g. browse?cat=TRAVEL_AND_LOCAL&c=3 bypassing the query
+
+        """
         path = "search?c=3&q={0}".format(requests.utils.quote(query))  # TODO handle categories
         if offset is not None:
             path += "&o={0}".format(int(offset))
@@ -251,7 +263,8 @@ class GooglePlayAPI(object):
         req = googleplay_pb2.BulkDetailsRequest()
         req.docid.extend(packageNames)
         data = req.SerializeToString()
-        message = self.executeRequestApi2(path, data.decode("utf-8"), "application/x-protobuf")
+        message = self.executeRequestApi2(path, datapost=data.decode("utf-8"),
+                                          post_content_type="application/x-protobuf")
         return message.payload.bulkDetailsResponse
 
     def browse(self, cat=None, ctr=None, dataUrl=None):
@@ -285,10 +298,10 @@ class GooglePlayAPI(object):
             path = "list?c=3&cat={0}".format(cat)
             if ctr is not None:
                 path += "&ctr={0}".format(ctr)
-        if nb_results is not None:
-            path += "&n={0}".format(int(nb_results))
-        if offset is not None:
-            path += "&o={0}".format(int(offset))
+            if nb_results is not None:
+                path += "&n={0}".format(int(nb_results))
+            if offset is not None:
+                path += "&o={0}".format(int(offset))
         message = self.executeRequestApi2(path)
         return message.payload.listResponse
 
@@ -334,7 +347,7 @@ class GooglePlayAPI(object):
         app."""
         path = "purchase"
         data = "ot={0}&doc={1}&vc={2}".format(offerType, packageName, versionCode)
-        message = self.executeRequestApi2(path, data)
+        message = self.executeRequestApi2(path, datapost=data)
 
         url = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadUrl
         cookie = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadAuthCookie[0]
@@ -344,7 +357,7 @@ class GooglePlayAPI(object):
         }
 
         headers = {
-            "User-Agent": "AndroidDownloadManager/4.4.3 (Linux; U; Android 4.4.3; Nexus S Build/JRO03E)",
+            "User-Agent": self.downloadUserAgent,
             "Accept-Encoding": "",
         }
 
