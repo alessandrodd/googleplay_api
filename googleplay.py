@@ -231,7 +231,10 @@ class GooglePlayAPI(object):
             path += "&o={0}".format(int(offset))
 
         message = self.executeRequestApi2(path)
-        remaining = int(nb_results) - len(message.payload.searchResponse.doc[0].child)
+        if message.payload.searchResponse.doc:
+            remaining = int(nb_results) - len(message.payload.searchResponse.doc[0].child)
+        else:
+            remaining = 0
         messagenext = message
         allmessages = message
 
