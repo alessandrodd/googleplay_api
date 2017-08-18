@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import logging
+import operator
 from time import sleep
 
 import requests
@@ -34,10 +35,11 @@ class RequestError(Exception):
 
 # noinspection PyPep8Naming
 class GooglePlayAPI(object):
-    """Google Play Unofficial API Class
+    """
+    Google Play Unofficial API Class
 
     Usual APIs methods are login(), search(), details(), bulkDetails(),
-    download(), browse(), reviews() and list().
+    download(), browse(), reviews() listSimilar() and list().
 
     toStr() can be used to pretty print the result (protobuf object) of the
     previous methods.
@@ -54,7 +56,14 @@ class GooglePlayAPI(object):
     authSubToken = None
 
     def __init__(self, androidId=None, lang=None, debug=False, throttle=False):
-        # you must use a device-associated androidId value
+        """
+        :param androidId: you must use a device-associated androidId value,
+                          decides the kind of result that can be retrieved
+        :param lang: language code to determine play store language, e.g. en_GB or it_IT or en_US
+        :param debug: if True, prints debug info
+        :param throttle: if True, in case of 429 errors (Too Many Requests), uses exponential backoff to
+                         increase delay and retry request until success. If False, ignores 429 errors
+        """
         self.preFetch = {}
         if androidId is None:
             androidId = config.get_option("android_id")
@@ -241,64 +250,94 @@ class GooglePlayAPI(object):
     # Google Play API Methods
     #####################################
 
-    def search(self, query, max_per_page=None, offset=None, max_pages=1, details=False):
-        """Search for apps.
-
-        max_per_page is fixed to 20, it seems that the server ignores other values
-
-        @:param max_per_page: max 20
-        @:param dataUrl: pass directly the path, e.g. browse?cat=TRAVEL_AND_LOCAL&c=3 bypassing the query
-
-        """
-        path = "search?c=3&q={0}".format(requests.utils.quote(query))  # TODO handle categories
-        if max_per_page is not None:
-            path += "&n={0}".format(int(max_per_page))
-        if offset is not None:
-            path += "&o={0}".format(int(offset))
-
-        message = self.executeRequestApi2(path)
-        all_messages = message
-        all_details = None
-        if details and message.payload.searchResponse.doc:
-            bulk_details = self.bulkDetailsFromDocs(message.payload.searchResponse.doc)
-            all_details = bulk_details
-        page = 1
-        while True:
-            if max_pages and page >= max_pages:
-                # break if we have reached the imposed limit
-                break
-            if not message.payload.searchResponse.doc:
-                # break if there are no result
-                break
-            next_page = message.payload.searchResponse.doc[-1].containerMetadata.nextPageUrl
-            if not next_page:
-                # break if there isn't any page left
-                break
-            message = self.executeRequestApi2(next_page)
-            all_messages.MergeFrom(message)
-            if details:
-                bulk_details = self.bulkDetailsFromDocs(message.payload.searchResponse.doc)
-                all_details.MergeFrom(bulk_details)
-            page += 1
-
-        if details:
-            return all_details
-        return all_messages.payload.searchResponse
-
     def details(self, packageName):
-        """Get app details from a package name.
-        packageName is the app unique ID (usually starting with 'com.')."""
+        """
+        Get app details from a package name.
+
+        :param packageName: the app unique ID e.g. 'com.android.chrome' or 'org.mozilla.firefox'
+        :return: details for packageName
+        :rtype: DetailsResponse
+        """
         path = "details?doc={0}".format(packageName)
         message = self.executeRequestApi2(path)
         return message.payload.detailsResponse
 
-    def bulkDetails(self, packageNames):
-        """Get several apps details from a list of package names.
+    def search(self, query, maxResults=None, offset=None):
+        """
+        Search for apps.
 
+        :param query: Query to submit, e.g. 'best riddles game'
+        :param maxResults: max result per page; WARNING despite being seen as parameter during play store
+                              Reverse Engineering, it seems to be ignored by the server (fixed to 20);
+                              use getPages for more results
+        :param offset: skip the first offset results
+        :return: search results for the submitted query
+        :rtype: SearchResponse
+
+        """
+        path = "search?c=3&q={0}".format(requests.utils.quote(query))  # TODO handle categories
+        if maxResults is not None:
+            path += "&n={0}".format(int(maxResults))
+        if offset is not None:
+            path += "&o={0}".format(int(offset))
+
+        message = self.executeRequestApi2(path)
+        return message.payload.searchResponse
+
+    def list(self, cat=None, ctr=None, maxResults=None, offset=None):
+        """
+        List apps for a given category-subcategory pair, subcategories if only category is provided.
+
+        :param cat: category id, e.g. AUTO_AND_VEHICLES or GAME_ARCADE
+        :param ctr: subcategory id, e.g. apps_topselling_free or apps_movers_shakers
+        :param maxResults: max number of results, WARNING: seems to be capped at 100, error for higher values;
+                             use getPages for more results
+        :param offset: skip the first offset results
+        :return: apps for given category-subcategory OR list of subcategories if only cat provided
+        :rtype: ListResponse
+        """
+        path = "list?c=3&cat={0}".format(cat)
+        if ctr is not None:
+            path += "&ctr={0}".format(ctr)
+        if maxResults is not None:
+            path += "&n={0}".format(int(maxResults))
+        if offset is not None:
+            path += "&o={0}".format(int(offset))
+        message = self.executeRequestApi2(path)
+        return message.payload.listResponse
+
+    def listSimilar(self, packageName, maxResults=None, offset=None):
+        """
+        List apps similar to a given package.
+
+        :param packageName: the app unique ID e.g. 'com.android.chrome' or 'org.mozilla.firefox'
+        :param maxResults: max number of results, WARNING: seems to be capped at 100, error for higher values;
+                             use getPages for more results
+        :param offset: skip the first offset results
+        :return: apps similar to the app identified by packageName
+        :rtype: ListResponse
+        """
+        # Check this url for further analysis
+        # browseV2?bt=5&c=3&doc=com.android.chrome&rt=1
+        path = "rec?c=3&rt=1&doc={0}".format(packageName)
+        if maxResults is not None:
+            path += "&n={0}".format(int(maxResults))
+        if offset is not None:
+            path += "&o={0}".format(int(offset))
+
+        message = self.executeRequestApi2(path)
+        return message.payload.listResponse
+
+    def bulkDetails(self, packageNames):
+        """
+        Get several apps details from a list of package names.
         This is much more efficient than calling N times details() since it
         requires only one request.
 
-        packageNames is a list of app ID (usually starting with 'com.')."""
+        :param packageNames: a list of app unique ID e.g. ['com.android.chrome', 'org.mozilla.firefox']
+        :return: details for the packages specified in packageNames
+        :rtype: BulkDetailsResponse
+        """
         path = "bulkDetails"
         req = googleplay_pb2.BulkDetailsRequest()
         req.docid.extend(packageNames)
@@ -308,6 +347,14 @@ class GooglePlayAPI(object):
         return message.payload.bulkDetailsResponse
 
     def bulkDetailsFromDocs(self, docs):
+        """
+        Utility method to retrieve details from a list of DocV2. Used mainly to retrieve details
+        during pagination (getPages).
+
+        :param docs: list of DocV2 documents
+        :return: details for the packages specified in the documents
+        :rtype: BulkDetailsResponse
+        """
         packages = []
         for doc in docs:
             for child in doc.child:
@@ -315,122 +362,94 @@ class GooglePlayAPI(object):
         bulk_details = self.bulkDetails(packages)
         return bulk_details
 
-    def browse(self, cat=None, ctr=None, dataUrl=None):
-        """Browse categories.
-        cat (category ID) and ctr (subcategory ID) are used as filters.
-        @:param dataUrl: pass directly the path, e.g. browse?cat=TRAVEL_AND_LOCAL&c=3 bypassing cat and ctr
+    def getPages(self, response, maxPages=None, details=False):
         """
-        if dataUrl:
-            path = dataUrl
+        Given a SearchResponse or ListResponse from e.g. listSimilar or search, returns the passed response
+        merged to other maxPages-1 pages of responses (or less if not enough results are available).
+        If details is True, returns the details for each app
+
+        :param response: SearchResponse or ListResponse object
+        :param maxPages: max number of pages to retrieve
+        :param details: if True, returns the list of app details
+        :return: a list of apps or app details
+        :rtype: SearchResponse or ListResponse or BulkDetailsResponse
+        """
+        # if response doesn't contain any doc, return directly the response or None if details were requested
+        if not response.doc:
+            if details:
+                return None
+            else:
+                return response
+        if type(response) == googleplay_pb2.SearchResponse:
+            response_location = "payload.searchResponse"
+        elif type(response) == googleplay_pb2.ListResponse:
+            response_location = "payload.listResponse"
         else:
-            path = "browse?c=3"
-            if cat is not None:
-                path += "&cat={0}".format(cat)
-            if ctr is not None:
-                path += "&ctr={0}".format(ctr)
+            logging.error("Unknown response type: {0}; cannot get pages")
+            return
+        all_responses = response
+        all_details = None
+        if details:
+            bulk_details = self.bulkDetailsFromDocs(response.doc)
+            all_details = bulk_details
+        page = 1
+        next_page = response.doc[-1].containerMetadata.nextPageUrl
+        while True:
+            if maxPages and page >= maxPages:
+                # break if we have reached the imposed limit
+                break
+            if not next_page:
+                # break if there isn't any page left
+                break
+            message = self.executeRequestApi2(next_page)
+            response = operator.attrgetter(response_location)(message)
+            if not response.doc:
+                # break if there are no result
+                break
+            all_responses.MergeFrom(response)
+            if details:
+                bulk_details = self.bulkDetailsFromDocs(response.doc)
+                all_details.MergeFrom(bulk_details)
+            page += 1
+            next_page = response.doc[-1].containerMetadata.nextPageUrl
+
+        if details:
+            return all_details
+        return all_responses
+
+    def browse(self, cat=None, ctr=None):
+        """
+        Browse categories; cat (category ID) and ctr (subcategory ID) are used as filters.
+
+        :param cat: category id, e.g. AUTO_AND_VEHICLES or GAME_ARCADE
+        :param ctr: subcategory id, e.g. apps_topselling_free or apps_movers_shakers
+        :return: list of categories or subcategories, if cat is provided
+        :rtype: BrowseResponse
+        """
+        path = "browse?c=3"
+        if cat is not None:
+            path += "&cat={0}".format(cat)
+        if ctr is not None:
+            path += "&ctr={0}".format(ctr)
         message = self.executeRequestApi2(path)
         return message.payload.browseResponse
 
-    def list(self, cat=None, ctr=None, max_per_page=None, offset=None, max_pages=1, details=False):
-        """List apps.
-
-        If ctr (subcategory ID) is None, returns a list of valid subcategories.
-
-        If ctr is provided, list apps within this subcategory.
-        @:param dataUrl: pass directly the path, e.g. browse?cat=TRAVEL_AND_LOCAL&c=3 bypassing cat and ctr
-
+    def reviews(self, packageName, filterByDevice=False, sort=2, maxResults=None, offset=None):
         """
+        Browse reviews.
 
-        path = "list?c=3&cat={0}".format(cat)
-        if ctr is not None:
-            path += "&ctr={0}".format(ctr)
-        if max_per_page is not None:
-            path += "&n={0}".format(int(max_per_page))
-        if offset is not None:
-            path += "&o={0}".format(int(offset))
-        message = self.executeRequestApi2(path)
-        all_messages = message
-        all_details = None
-        if details and message.payload.listResponse.doc:
-            bulk_details = self.bulkDetailsFromDocs(message.payload.listResponse.doc)
-            all_details = bulk_details
-        page = 1
-        while True:
-            if max_pages and page >= max_pages:
-                # break if we have reached the imposed limit
-                break
-            if not message.payload.listResponse.doc:
-                # break if there are no result
-                break
-            next_page = message.payload.listResponse.doc[-1].containerMetadata.nextPageUrl
-            if not next_page:
-                # break if there isn't any page left
-                break
-            message = self.executeRequestApi2(next_page)
-            all_messages.MergeFrom(message)
-            if details:
-                bulk_details = self.bulkDetailsFromDocs(message.payload.listResponse.doc)
-                all_details.MergeFrom(bulk_details)
-            page += 1
-
-        if details:
-            return all_details
-
-        return all_messages.payload.listResponse
-
-    def list_similar(self, packageName, max_per_page=None, offset=None, max_pages=1, details=False):
-        """List apps similar to a given package
-
-        :param packageName: name of the package (e.g. com.android.chrome)
-        :param max_per_page: how many results to show (max 100)
-        :param offset: used for paging
-        :return: a list of apps similar to packageName
+        :param packageName: app unique ID e.g. 'com.android.chrome' or 'org.mozilla.firefox'
+        :param filterByDevice: if True, return only reviews for your device
+        :param sort: sort index
+        :param maxResults: max number of results, WARNING: seems to be capped at 100, error for higher values;
+                             change offset for more results
+        :param offset: skip the first offset results
+        :return: a list of reviews
+        :rtype: ReviewResponse
         """
-        # Check this url for further analysis
-        # browseV2?bt=5&c=3&doc=com.android.chrome&rt=1
-        path = "rec?c=3&rt=1&doc={0}".format(packageName)
-        if max_per_page is not None:
-            path += "&n={0}".format(int(max_per_page))
-        if offset is not None:
-            path += "&o={0}".format(int(offset))
-
-        message = self.executeRequestApi2(path)
-        all_messages = message
-        all_details = None
-        if details and message.payload.listResponse.doc:
-            bulk_details = self.bulkDetailsFromDocs(message.payload.listResponse.doc)
-            all_details = bulk_details
-        page = 1
-        while True:
-            if max_pages and page >= max_pages:
-                # break if we have reached the imposed limit
-                break
-            if not message.payload.listResponse.doc:
-                # break if there are no result
-                break
-            next_page = message.payload.listResponse.doc[-1].containerMetadata.nextPageUrl
-            if not next_page:
-                # break if there isn't any page left
-                break
-            message = self.executeRequestApi2(next_page)
-            all_messages.MergeFrom(message)
-            if details:
-                bulk_details = self.bulkDetailsFromDocs(message.payload.listResponse.doc)
-                all_details.MergeFrom(bulk_details)
-            page += 1
-
-        if details:
-            return all_details
-
-        return all_messages.payload.listResponse
-
-    def reviews(self, packageName, filterByDevice=False, sort=2, nb_results=None, offset=None):
-        """Browse reviews.
-        packageName is the app unique ID.
-        If filterByDevice is True, return only reviews for your device."""
         path = "rev?doc={0}&sort={1}".format(packageName, sort)
-        if nb_results is not None:
-            path += "&n={0}".format(int(nb_results))
+        if maxResults is not None:
+            path += "&n={0}".format(int(maxResults))
         if offset is not None:
             path += "&o={0}".format(int(offset))
         if filterByDevice:
@@ -438,13 +457,17 @@ class GooglePlayAPI(object):
         message = self.executeRequestApi2(path)
         return message.payload.reviewResponse
 
-    def download(self, packageName, versionCode, offerType=1, progress_bar=False):
-        """Download an app and return its raw data (APK file).
+    def download(self, packageName, versionCode, offerType=1, progressBar=False):
+        """
+        Retrieves an apk.
 
-        packageName is the app unique ID (usually starting with 'com.').
-
-        versionCode can be grabbed by using the details() method on the given
-        app."""
+        :param packageName: app unique ID e.g. 'com.android.chrome' or 'org.mozilla.firefox'
+        :param versionCode: can be grabbed by using the details() method on the given
+        :param offerType: seems to have no usage, default at 1
+        :param progressBar: True if a progressbar should be shown
+        :return: the apk content
+        :rtype: str
+        """
         path = "purchase"
         data = "ot={0}&doc={1}&vc={2}".format(offerType, packageName, versionCode)
         message = self.executeRequestApi2(path, datapost=data)
@@ -461,7 +484,7 @@ class GooglePlayAPI(object):
             "Accept-Encoding": "",
         }
 
-        if not progress_bar:
+        if not progressBar:
             response = requests.get(url, headers=headers, cookies=cookies, verify=ssl_verify)
             return response.content
         # If progress_bar is asked
