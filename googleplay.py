@@ -204,13 +204,12 @@ class GooglePlayAPI(object):
                 if self.throttle:
                     sleep(self.throttle_time)
                 if datapost is not None:
-                    response = requests.post(url, data=str(datapost),
-                                             headers=headers, verify=ssl_verify)
+                    response = requests.post(url, data=str(datapost), headers=headers, verify=ssl_verify)
                 else:
-                    response = requests.get(url, headers=headers,
-                                            verify=ssl_verify)
+                    response = requests.get(url, headers=headers, verify=ssl_verify)
                 response_code = response.status_code
                 if int(response_code) == 429 and self.throttle:
+                    # there seems to be no "retry" header, so we have to resort to exponential backoff
                     self.throttle_time *= 2
                     logging.warning("Too many request reached. "
                                     "Throttling connection (sleep {0})...".format(self.throttle_time))
