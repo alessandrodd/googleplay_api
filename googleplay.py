@@ -121,8 +121,7 @@ class GooglePlayAPI(object):
 
     def setAuthSubToken(self, authSubToken):
         self.authSubToken = authSubToken
-
-        # put your auth token in config.py to avoid multiple login requests
+        # put your auth token in config.ini to avoid multiple login requests
         if self.debug:
             print("authSubToken: " + authSubToken)
 
