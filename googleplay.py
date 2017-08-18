@@ -15,6 +15,11 @@ from . import googleplay_pb2
 MIN_THROTTLE_TIME = 0.05
 
 ssl_verify = True
+if not ssl_verify:
+    # noinspection PyUnresolvedReferences
+    import requests.packages.urllib3 as urllib3
+    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+    logging.warning("Warning: you are making unverified HTTPS requests!!!")
 
 
 class LoginError(Exception):
