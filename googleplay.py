@@ -217,7 +217,7 @@ class GooglePlayAPI(object):
                 if self.throttle:
                     sleep(self.throttle_time)
                 if datapost is not None:
-                    response = requests.post(url, data=str(datapost), headers=headers, verify=ssl_verify)
+                    response = requests.post(url, data=datapost, headers=headers, verify=ssl_verify)
                 else:
                     response = requests.get(url, headers=headers, verify=ssl_verify)
                 response_code = response.status_code
@@ -346,7 +346,7 @@ class GooglePlayAPI(object):
         req = googleplay_pb2.BulkDetailsRequest()
         req.docid.extend(packageNames)
         data = req.SerializeToString()
-        message = self.executeRequestApi2(path, datapost=data.decode("utf-8"),
+        message = self.executeRequestApi2(path, datapost=data,
                                           post_content_type="application/x-protobuf")
         return message.payload.bulkDetailsResponse
 
