@@ -470,7 +470,7 @@ class GooglePlayAPI(object):
         :param offerType: seems to have no usage, default at 1
         :param progressBar: True if a progressbar should be shown
         :return: the apk content
-        :rtype: str
+        :rtype: Union[None, bytes, str]
         """
         path = "purchase"
         data = "ot={0}&doc={1}&vc={2}".format(offerType, packageName, versionCode)
