@@ -229,9 +229,10 @@ class GooglePlayAPI(object):
                 else:
                     retry = False
                     if int(response_code) != 200:
-                        logging.warning("Response code: {0} triggered by: {1} "
+                        logging.error("Response code: {0} triggered by: {1} "
                                         "with datapost: {2}".format(response_code, url, str(datapost)))
-                        logging.warning(response.content)
+                        logging.error(response.content)
+                        return None
                     elif self.throttle and self.throttle_time > MIN_THROTTLE_TIME:
                         self.throttle_time /= 2
 
@@ -475,6 +476,9 @@ class GooglePlayAPI(object):
         path = "purchase"
         data = "ot={0}&doc={1}&vc={2}".format(offerType, packageName, versionCode)
         message = self.executeRequestApi2(path, datapost=data)
+
+        if not message:
+            return None
 
         url = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadUrl
         cookie = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadAuthCookie[0]
