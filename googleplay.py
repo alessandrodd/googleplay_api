@@ -18,6 +18,7 @@ ssl_verify = True
 if not ssl_verify:
     # noinspection PyUnresolvedReferences
     import requests.packages.urllib3 as urllib3
+
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
     logging.warning("Warning: you are making unverified HTTPS requests!!!")
 
@@ -60,7 +61,7 @@ class GooglePlayAPI(object):
     ACCOUNT_TYPE_HOSTED_OR_GOOGLE = "HOSTED_OR_GOOGLE"
     authSubToken = None
 
-    def __init__(self, androidId=None, lang=None, debug=False, throttle=False):
+    def __init__(self, androidId=None, lang=None, debug=False, throttle=False, errorRetries=3, errorRetryTimeout=5):
         """
         :param androidId: you must use a device-associated androidId value,
                           decides the kind of result that can be retrieved
@@ -75,10 +76,12 @@ class GooglePlayAPI(object):
         if lang is None:
             lang = config.get_option("lang")
         if throttle:
-            self.throttle_time = MIN_THROTTLE_TIME
+            self.throttleTime = MIN_THROTTLE_TIME
         self.androidId = androidId
         self.lang = lang
         self.throttle = throttle
+        self.errorRetries = errorRetries
+        self.errorRetryTimeout = errorRetryTimeout
         self.downloadUserAgent = "AndroidDownloadManager/7.1 (Linux; U; Android 7.1; Pixel Build/NZZ99Z)"
         self.defaultAgentvername = "7.0.12.H-all [0]"
         self.defaultAgentvercode = "80701200"  # versionCode should be the version code of the Play Store app
@@ -212,10 +215,11 @@ class GooglePlayAPI(object):
 
             url = "https://android.clients.google.com/fdfe/{0}".format(path)
             response = None
+            errorRetries = self.errorRetries
             retry = True
             while retry:
                 if self.throttle:
-                    sleep(self.throttle_time)
+                    sleep(self.throttleTime)
                 if datapost is not None:
                     response = requests.post(url, data=datapost, headers=headers, verify=ssl_verify)
                 else:
@@ -223,18 +227,23 @@ class GooglePlayAPI(object):
                 response_code = response.status_code
                 if int(response_code) == 429 and self.throttle:
                     # there seems to be no "retry" header, so we have to resort to exponential backoff
-                    self.throttle_time *= 2
+                    self.throttleTime *= 2
                     logging.warning("Too many request reached. "
-                                    "Throttling connection (sleep {0})...".format(self.throttle_time))
+                                    "Throttling connection (sleep {0})...".format(self.throttleTime))
+                elif int(response_code) != 200:
+                    logging.error("Response code: {0} triggered by: {1} "
+                                  "with datapost: {2}".format(response_code, url, str(datapost)))
+                    logging.error(response.content)
+                    if errorRetries <= 0:
+                        return None
+                    else:
+                        sleep(max(self.throttleTime, self.errorRetryTimeout))
+                        errorRetries -= 1
                 else:
                     retry = False
-                    if int(response_code) != 200:
-                        logging.error("Response code: {0} triggered by: {1} "
-                                        "with datapost: {2}".format(response_code, url, str(datapost)))
-                        logging.error(response.content)
-                        return None
-                    elif self.throttle and self.throttle_time > MIN_THROTTLE_TIME:
-                        self.throttle_time /= 2
+                    if self.throttle and self.throttleTime > MIN_THROTTLE_TIME:
+                        retry = False
+                        self.throttleTime /= 2
 
             data = response.content
         '''
