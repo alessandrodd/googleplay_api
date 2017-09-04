@@ -490,7 +490,11 @@ class GooglePlayAPI(object):
             return None
 
         url = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadUrl
-        cookie = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadAuthCookie[0]
+        if len(message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadAuthCookie) > 0:
+            cookie = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadAuthCookie[0]
+        else:
+            logging.error(message)
+            return None
 
         cookies = {
             str(cookie.name): str(cookie.value)  # python-requests #459 fixes this
