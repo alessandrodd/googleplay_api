@@ -91,8 +91,8 @@ class GooglePlayAPI(object):
         self.errorRetries = errorRetries
         self.errorRetryTimeout = errorRetryTimeout
         self.downloadUserAgent = "AndroidDownloadManager/7.1 (Linux; U; Android 7.1; Pixel Build/NZZ99Z)"
-        self.defaultAgentvername = "8.1.29.S-all [0]"
-        self.defaultAgentvercode = "80812900"  # versionCode should be the version code of the Play Store app
+        self.defaultAgentvername = "7.0.12.H-all [0]"  # updating these two values could broke the application
+        self.defaultAgentvercode = "80701200"  # versionCode should be the version code of the Play Store app
         self.debug = debug
 
     def toDict(self, protoObj):
