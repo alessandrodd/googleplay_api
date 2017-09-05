@@ -91,8 +91,8 @@ class GooglePlayAPI(object):
         self.errorRetries = errorRetries
         self.errorRetryTimeout = errorRetryTimeout
         self.downloadUserAgent = "AndroidDownloadManager/7.1 (Linux; U; Android 7.1; Pixel Build/NZZ99Z)"
-        self.defaultAgentvername = "7.0.12.H-all [0]"
-        self.defaultAgentvercode = "80701200"  # versionCode should be the version code of the Play Store app
+        self.defaultAgentvername = "8.1.29.S-all [0]"
+        self.defaultAgentvercode = "80812900"  # versionCode should be the version code of the Play Store app
         self.debug = debug
 
     def toDict(self, protoObj):
@@ -196,7 +196,6 @@ class GooglePlayAPI(object):
         user_agent = "Android-Finsky/" + agentvername + " (api=3,versionCode=" + agentvercode + ",sdk=" + \
                      str(sdk) + ",device=" + devicename + ",hardware=" + devicename + ",product=" + \
                      devicename + ",build=NZZ99Z:user)"
-
         if datapost is None and path in self.preFetch:
             data = self.preFetch[path]
         else:
@@ -479,7 +478,7 @@ class GooglePlayAPI(object):
         message = self.executeRequestApi2(path)
         return message.payload.reviewResponse
 
-    def download(self, packageName, versionCode, offerType=1, progressBar=False, purchase=True):
+    def download(self, packageName, versionCode, offerType=1, progressBar=False):
         """
         Retrieves an apk.
 
@@ -490,26 +489,20 @@ class GooglePlayAPI(object):
         :return: the apk content
         :rtype: Union[None, bytes, str]
         """
-        if purchase:
-            path = "purchase"
-            data = "doc={0}&ot={1}&vc={2}".format(packageName, offerType, versionCode)
-        else:
-            path = "delivery"
-            path += "?doc={0}&ot={1}&vc={2}".format(packageName, offerType, versionCode)
-            data = None
+        # first "purchase" the app, then download ("deliver") it.
+        path = "purchase"
+        data = "doc={0}&ot={1}&vc={2}".format(packageName, offerType, versionCode)
         message = self.executeRequestApi2(path, datapost=data)
 
         if not message:
             raise DownloadError("Empty response")
-
-        if purchase:
-            url = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadUrl
-            if len(message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadAuthCookie) > 0:
-                cookie = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadAuthCookie[0]
-            else:
-                logging.error(message)
-                raise DownloadError("Can't find download Authentication Cookie")
+        url = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadUrl
+        if len(message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadAuthCookie) > 0:
+            cookie = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadAuthCookie[0]
         else:
+            path = "delivery"
+            path += "?doc={0}&ot={1}&vc={2}".format(packageName, offerType, versionCode)
+            message = self.executeRequestApi2(path)
             url = message.payload.deliveryResponse.appDeliveryData.downloadUrl
             if len(message.payload.deliveryResponse.appDeliveryData.downloadAuthCookie) > 0:
                 cookie = message.payload.deliveryResponse.appDeliveryData.downloadAuthCookie[0]
