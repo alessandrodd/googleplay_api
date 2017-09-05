@@ -39,6 +39,14 @@ class RequestError(Exception):
         return repr(self.value)
 
 
+class DownloadError(Exception):
+    def __init__(self, value):
+        self.value = value
+
+    def __str__(self):
+        return repr(self.value)
+
+
 # noinspection PyPep8Naming
 class GooglePlayAPI(object):
     """
@@ -146,7 +154,7 @@ class GooglePlayAPI(object):
             self.setAuthSubToken(authSubToken)
         else:
             if not email or not password:
-                raise Exception("You should provide at least authSubToken or (email and password)")
+                raise LoginError("You should provide at least authSubToken or (email and password)")
             params = {"Email": email,
                       "Passwd": password,
                       "service": self.SERVICE,
@@ -471,7 +479,7 @@ class GooglePlayAPI(object):
         message = self.executeRequestApi2(path)
         return message.payload.reviewResponse
 
-    def download(self, packageName, versionCode, offerType=1, progressBar=False):
+    def download(self, packageName, versionCode, offerType=1, progressBar=False, purchase=True):
         """
         Retrieves an apk.
 
@@ -482,19 +490,32 @@ class GooglePlayAPI(object):
         :return: the apk content
         :rtype: Union[None, bytes, str]
         """
-        path = "purchase"
-        data = "ot={0}&doc={1}&vc={2}".format(offerType, packageName, versionCode)
+        if purchase:
+            path = "purchase"
+            data = "doc={0}&ot={1}&vc={2}".format(packageName, offerType, versionCode)
+        else:
+            path = "delivery"
+            path += "?doc={0}&ot={1}&vc={2}".format(packageName, offerType, versionCode)
+            data = None
         message = self.executeRequestApi2(path, datapost=data)
 
         if not message:
-            return None
+            raise DownloadError("Empty response")
 
-        url = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadUrl
-        if len(message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadAuthCookie) > 0:
-            cookie = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadAuthCookie[0]
+        if purchase:
+            url = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadUrl
+            if len(message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadAuthCookie) > 0:
+                cookie = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadAuthCookie[0]
+            else:
+                logging.error(message)
+                raise DownloadError("Can't find download Authentication Cookie")
         else:
-            logging.error(message)
-            return None
+            url = message.payload.deliveryResponse.appDeliveryData.downloadUrl
+            if len(message.payload.deliveryResponse.appDeliveryData.downloadAuthCookie) > 0:
+                cookie = message.payload.deliveryResponse.appDeliveryData.downloadAuthCookie[0]
+            else:
+                logging.error(message)
+                raise DownloadError("Can't find download Authentication Cookie")
 
         cookies = {
             str(cookie.name): str(cookie.value)  # python-requests #459 fixes this
