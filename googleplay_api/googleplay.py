@@ -70,7 +70,7 @@ class GooglePlayAPI(object):
     ACCOUNT_TYPE_HOSTED_OR_GOOGLE = "HOSTED_OR_GOOGLE"
     authSubToken = None
 
-    def __init__(self, androidId=None, lang=None, debug=False, throttle=False, errorRetries=3, errorRetryTimeout=5):
+    def __init__(self, androidId=None, lang=None, debug=False, throttle=False, errorRetries=3, errorRetryTimeout=5, proxies = None):
         """
         :param androidId: you must use a device-associated androidId value,
                           decides the kind of result that can be retrieved
@@ -86,6 +86,13 @@ class GooglePlayAPI(object):
             lang = config.get_option("lang")
         if throttle:
             self.throttleTime = MIN_THROTTLE_TIME
+        if proxies is None:
+            proxies = {}
+            if config.get_option("http_proxy"):
+                proxies["http"] = config.get_option("http_proxy")
+            if config.get_option("https_proxy"):
+                proxies["https"] = config.get_option("https_proxy")
+
         self.androidId = androidId
         self.lang = lang
         self.throttle = throttle
@@ -95,6 +102,7 @@ class GooglePlayAPI(object):
         self.defaultAgentvername = "7.0.12.H-all [0]"  # updating these two values could broke the application
         self.defaultAgentvercode = "80701200"  # versionCode should be the version code of the Play Store app
         self.debug = debug
+        self.proxies = proxies
 
     def toDict(self, protoObj):
         """Converts the (protobuf) result from an API call into a dict, for
@@ -173,7 +181,7 @@ class GooglePlayAPI(object):
                 "Accept-Encoding": "",
             }
             response = requests.post(self.URL_LOGIN, data=params,
-                                     headers=headers, verify=ssl_verify)
+                                     headers=headers, verify=ssl_verify, proxies=self.proxies)
             data = response.text.split()
             params = {}
             for d in data:
@@ -229,9 +237,9 @@ class GooglePlayAPI(object):
                 if self.throttle:
                     sleep(self.throttleTime)
                 if datapost is not None:
-                    response = requests.post(url, data=datapost, headers=headers, verify=ssl_verify)
+                    response = requests.post(url, data=datapost, headers=headers, verify=ssl_verify, proxies=self.proxies)
                 else:
-                    response = requests.get(url, headers=headers, verify=ssl_verify)
+                    response = requests.get(url, headers=headers, verify=ssl_verify, proxies=self.proxies)
                 response_code = response.status_code
                 if int(response_code) == 429 and self.throttle:
                     # there seems to be no "retry" header, so we have to resort to exponential backoff
@@ -550,12 +558,12 @@ class GooglePlayAPI(object):
         }
 
         if not progressBar:
-            response = requests.get(url, headers=headers, cookies=cookies, verify=ssl_verify)
+            response = requests.get(url, headers=headers, cookies=cookies, verify=ssl_verify, proxies=self.proxies)
             return response.content
         # If progress_bar is asked
         from clint.textui import progress
         response_content = bytes()
-        response = requests.get(url, headers=headers, cookies=cookies, verify=ssl_verify, stream=True)
+        response = requests.get(url, headers=headers, cookies=cookies, verify=ssl_verify, stream=True, proxies=self.proxies)
         total_length = int(response.headers.get('content-length'))
         for chunk in progress.bar(response.iter_content(chunk_size=1024), expected_size=(total_length / 1024) + 1):
             if chunk:

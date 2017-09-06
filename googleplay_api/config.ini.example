@@ -1,4 +1,11 @@
 [Main]
+# http proxy used to contact play store
+# e.g.
+# http_proxy = http://127.0.0.1:3128
+# https_proxy = https://144.32.32.32:8080
+http_proxy =
+https_proxy =
+
 # separator used by search.py, categories.py, ...
 separator = \;
 

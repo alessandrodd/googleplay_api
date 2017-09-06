@@ -10,6 +10,10 @@ emulated_device = play_conf.get_option("device")
 play_store = GooglePlayAPI(throttle=True)
 
 
+def get_details(package):
+    print(play_store.details(package))
+
+
 def get_latest_versioncode(package):
     # noinspection PyPep8Naming
     detailsResponse = play_store.details(package)
@@ -32,6 +36,8 @@ def main():
     parser = argparse.ArgumentParser(
         description='Unofficial PlayStore python interface', add_help=True
     )
+    parser.add_argument('--details', action="store", dest='package_to_detail', help='Shows various details for the '
+                                                                                    'given package')
     group = parser.add_argument_group()
     group.add_argument('--download', action="store", dest='package_to_download', help='Download the apk with given '
                                                                                       'package name')
@@ -50,6 +56,10 @@ def main():
         token = response.text
         print("Using auth token: {0}".format(token))
     play_store.login(authSubToken=token)
+
+    if results.package_to_detail:
+        get_details(results.package_to_detail)
+        return
 
     if results.package_to_download:
         package = results.package_to_download
