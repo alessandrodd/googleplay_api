@@ -7,7 +7,7 @@ import requests
 from googleplay_api.googleplay import GooglePlayAPI
 
 emulated_device = play_conf.get_option("device")
-play_store = GooglePlayAPI(throttle=True)
+play_store = None
 
 
 def get_details(package):
@@ -47,9 +47,25 @@ def main():
                                                                               'to download (default: latest)')
     parser.add_argument('--remote-token', action="store", dest='token_url', help='If the authentication token should be'
                                                                                  ' retrieved from a remote server')
+    group_proxy = parser.add_argument_group()
+    group_proxy.add_argument('--http-proxy', action="store", dest='http_proxy', help='http proxy, ONLY used for'
+                                                                                     'Play Store requests!')
+    group_proxy.add_argument('--https-proxy', action="store", dest='https_proxy', help='https proxy, ONLY used for'
+                                                                                       'Play Store requests!')
 
     results = parser.parse_args()
 
+    proxies = None
+    if results.http_proxy:
+        if proxies is None:
+            proxies = {}
+        proxies["http"] = results.http_proxy
+    if results.https_proxy:
+        if proxies is None:
+            proxies = {}
+        proxies["https"] = results.https_proxy
+    global play_store
+    play_store = GooglePlayAPI(throttle=True, proxies=proxies)
     token = None
     if results.token_url:
         response = requests.get(results.token_url)
