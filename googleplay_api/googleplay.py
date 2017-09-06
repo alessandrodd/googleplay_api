@@ -243,7 +243,7 @@ class GooglePlayAPI(object):
                                   "with datapost: {2}".format(response_code, url, str(datapost)))
                     logging.error(response.content)
                     if errorRetries <= 0:
-                        raise RequestError("Error during http request: " + response_code, response_code)
+                        raise RequestError("Error during http request: {0}".format(response_code), response_code)
                     else:
                         sleep(max(self.throttleTime, self.errorRetryTimeout))
                         errorRetries -= 1
@@ -529,7 +529,10 @@ class GooglePlayAPI(object):
         if len(response.purchaseStatusResponse.appDeliveryData.downloadAuthCookie) > 0:
             cookie = response.purchaseStatusResponse.appDeliveryData.downloadAuthCookie[0]
         else:
-            response = self.delivery(packageName, versionCode, offerType)
+            try:
+                response = self.delivery(packageName, versionCode, offerType)
+            except RequestError as e:
+                raise DownloadError(str(e))
             url = response.appDeliveryData.downloadUrl
             if len(response.appDeliveryData.downloadAuthCookie) > 0:
                 cookie = response.appDeliveryData.downloadAuthCookie[0]
