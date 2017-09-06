@@ -20,7 +20,7 @@ def download_apk(package, version_code, output_path):
     if not version_code:
         version_code = get_latest_versioncode(package)
         print("Latest Version Code: {0}".format(version_code))
-    data = play_store.download(package, version_code)
+    data = play_store.download(package, version_code, progressBar=True)
     if not data:
         print("Error downloading apk.")
         return

@@ -32,8 +32,9 @@ class LoginError(Exception):
 
 
 class RequestError(Exception):
-    def __init__(self, value):
+    def __init__(self, value, http_status):
         self.value = value
+        self.http_status = http_status
 
     def __str__(self):
         return repr(self.value)
@@ -242,7 +243,7 @@ class GooglePlayAPI(object):
                                   "with datapost: {2}".format(response_code, url, str(datapost)))
                     logging.error(response.content)
                     if errorRetries <= 0:
-                        return None
+                        raise RequestError("Error during http request: " + response_code, response_code)
                     else:
                         sleep(max(self.throttleTime, self.errorRetryTimeout))
                         errorRetries -= 1
@@ -478,6 +479,36 @@ class GooglePlayAPI(object):
         message = self.executeRequestApi2(path)
         return message.payload.reviewResponse
 
+    def purchase(self, packageName, versionCode, offerType=1):
+        """
+        Purchases an app. Can be used with free apps too.
+
+        :param packageName: app unique ID e.g. 'com.android.chrome' or 'org.mozilla.firefox'
+        :param versionCode: can be grabbed by using the details() method on the given
+        :param offerType: seems to have no usage, default at 1
+        :return: purchase response
+        :rtype: BuyResponse
+        """
+        path = "purchase"
+        data = "doc={0}&ot={1}&vc={2}".format(packageName, offerType, versionCode)
+        message = self.executeRequestApi2(path, datapost=data)
+        return message.payload.buyResponse
+
+    def delivery(self, packageName, versionCode, offerType=1):
+        """
+        Delivers a purchased or free app, used to retrieve download link.
+
+        :param packageName: app unique ID e.g. 'com.android.chrome' or 'org.mozilla.firefox'
+        :param versionCode: can be grabbed by using the details() method on the given
+        :param offerType: seems to have no usage, default at 1
+        :return: delivery response
+        :rtype: DeliveryResponse
+        """
+        path = "delivery"
+        path += "?doc={0}&ot={1}&vc={2}".format(packageName, offerType, versionCode)
+        message = self.executeRequestApi2(path)
+        return message.payload.deliveryResponse
+
     def download(self, packageName, versionCode, offerType=1, progressBar=False):
         """
         Retrieves an apk.
@@ -489,25 +520,21 @@ class GooglePlayAPI(object):
         :return: the apk content
         :rtype: Union[None, bytes, str]
         """
-        # first "purchase" the app, then download ("deliver") it.
-        path = "purchase"
-        data = "doc={0}&ot={1}&vc={2}".format(packageName, offerType, versionCode)
-        message = self.executeRequestApi2(path, datapost=data)
-
-        if not message:
-            raise DownloadError("Empty response")
-        url = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadUrl
-        if len(message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadAuthCookie) > 0:
-            cookie = message.payload.buyResponse.purchaseStatusResponse.appDeliveryData.downloadAuthCookie[0]
+        # first "purchase" the app, then "deliver" it if it was already purchased
+        try:
+            response = self.purchase(packageName, versionCode, offerType)
+        except RequestError as e:
+            raise DownloadError(str(e))
+        url = response.purchaseStatusResponse.appDeliveryData.downloadUrl
+        if len(response.purchaseStatusResponse.appDeliveryData.downloadAuthCookie) > 0:
+            cookie = response.purchaseStatusResponse.appDeliveryData.downloadAuthCookie[0]
         else:
-            path = "delivery"
-            path += "?doc={0}&ot={1}&vc={2}".format(packageName, offerType, versionCode)
-            message = self.executeRequestApi2(path)
-            url = message.payload.deliveryResponse.appDeliveryData.downloadUrl
-            if len(message.payload.deliveryResponse.appDeliveryData.downloadAuthCookie) > 0:
-                cookie = message.payload.deliveryResponse.appDeliveryData.downloadAuthCookie[0]
+            response = self.delivery(packageName, versionCode, offerType)
+            url = response.appDeliveryData.downloadUrl
+            if len(response.appDeliveryData.downloadAuthCookie) > 0:
+                cookie = response.appDeliveryData.downloadAuthCookie[0]
             else:
-                logging.error(message)
+                logging.error(response)
                 raise DownloadError("Can't find download Authentication Cookie")
 
         cookies = {
@@ -524,7 +551,7 @@ class GooglePlayAPI(object):
             return response.content
         # If progress_bar is asked
         from clint.textui import progress
-        response_content = str()
+        response_content = bytes()
         response = requests.get(url, headers=headers, cookies=cookies, verify=ssl_verify, stream=True)
         total_length = int(response.headers.get('content-length'))
         for chunk in progress.bar(response.iter_content(chunk_size=1024), expected_size=(total_length / 1024) + 1):
