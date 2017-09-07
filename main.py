@@ -15,12 +15,23 @@ def get_details(package):
 
 
 def get_latest_versioncode(package):
+    """
+    Gets the version code of latest available apk
+
+    :param package: app's package, e.g. com.android.chrome
+    :return: version code of latest available apk
+    """
     # noinspection PyPep8Naming
     detailsResponse = play_store.details(package)
     return detailsResponse.docV2.details.appDetails.versionCode
 
 
 def download_apk(package, version_code, output_path):
+    """
+    :param package: app's package, e.g. com.android.chrome
+    :param version_code: which version of the app you want to download
+    :param output_path: where to save the apk file
+    """
     if not version_code:
         version_code = get_latest_versioncode(package)
         print("Latest Version Code: {0}".format(version_code))

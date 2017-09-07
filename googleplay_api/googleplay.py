@@ -14,6 +14,7 @@ from . import googleplay_pb2
 
 MIN_THROTTLE_TIME = 0.05
 
+# should be always True, but we leave this here for testing purpose
 ssl_verify = True
 if not ssl_verify:
     # noinspection PyUnresolvedReferences
@@ -63,14 +64,13 @@ class GooglePlayAPI(object):
 
     SERVICE = "androidmarket"
 
-    # https://developers.google.com/identity/protocols/AuthForInstalledApps
     URL_LOGIN = "https://android.clients.google.com/auth"
     ACCOUNT_TYPE_GOOGLE = "GOOGLE"
     ACCOUNT_TYPE_HOSTED = "HOSTED"
     ACCOUNT_TYPE_HOSTED_OR_GOOGLE = "HOSTED_OR_GOOGLE"
-    authSubToken = None
 
-    def __init__(self, androidId=None, lang=None, debug=False, throttle=False, errorRetries=3, errorRetryTimeout=5, proxies = None):
+    def __init__(self, androidId=None, lang=None, debug=False, throttle=False, errorRetries=3, errorRetryTimeout=5,
+                 proxies=None):
         """
         :param androidId: you must use a device-associated androidId value,
                           decides the kind of result that can be retrieved
@@ -78,6 +78,11 @@ class GooglePlayAPI(object):
         :param debug: if True, prints debug info
         :param throttle: if True, in case of 429 errors (Too Many Requests), uses exponential backoff to
                          increase delay and retry request until success. If False, ignores 429 errors
+        :param errorRetries: how many times retry to make a request that failed (except 429 HTTP status)
+        :param errorRetryTimeout: how many second sleep after failing a request (except 429 HTTP status)
+        :param proxies: a dictionary containing (protocol, address) key-value pairs, e.g.
+                        {"http":"http://123.0.123.100:8080", "https": "https://231.1.2.34:3123"}
+                        If None, no proxy will be used
         """
         self.preFetch = {}
         if androidId is None:
@@ -103,10 +108,17 @@ class GooglePlayAPI(object):
         self.defaultAgentvercode = "80701200"  # versionCode should be the version code of the Play Store app
         self.debug = debug
         self.proxies = proxies
+        self.authSubToken = None
 
     def toDict(self, protoObj):
-        """Converts the (protobuf) result from an API call into a dict, for
-        easier introspection."""
+        """
+        Converts the (protobuf) result from an API call into a dict, for
+        easier introspection.
+
+        :param protoObj: protobuf object
+        :return: a dictionary or a list of dictionaries, depending on the protobuf object structure
+        :rtype: Union[None, list, dict]
+        """
         iterable = False
         if isinstance(protoObj, RepeatedCompositeFieldContainer):
             iterable = True
@@ -135,7 +147,13 @@ class GooglePlayAPI(object):
 
     # noinspection PyMethodMayBeStatic
     def toStr(self, protoObj):
-        """Used for pretty printing a result from the API."""
+        """
+        Used for pretty printing a result from the API.
+
+        :param protoObj: protobuf object
+        :return: a string representing the protobuf object
+        :rtype: str
+        """
         return text_format.MessageToString(protoObj)
 
     def _try_register_preFetch(self, protoObj):
@@ -151,9 +169,16 @@ class GooglePlayAPI(object):
             print("authSubToken: " + authSubToken)
 
     def login(self, email=None, password=None, authSubToken=None):
-        """Login to your Google Account. You must provide either:
+        """
+        Login to your Google Account. You must provide either:
         - an email and password
-        - a valid Google authSubToken"""
+        - a valid Google authSubToken
+
+        :param email: your gmail email (e.g. example@gmail.com)
+        :param password: password of tha gmail email
+        :param authSubToken: Play Store authentication token, i.e. something like this:
+                             AQVSHqIoXFwQM4oK57PKp7x3kzo17tk1cA-kAd77kpsPwoeyNNzDiQtQjJPgQuda-D25WA.
+        """
         if email is None and password is None and authSubToken is None:
             # no parameter provided, loading from conf file
             email = config.get_option("google_login")
@@ -198,6 +223,22 @@ class GooglePlayAPI(object):
 
     def executeRequestApi2(self, path, sdk=25, agentvername=None, agentvercode=None, devicename="sailfish",
                            datapost=None, post_content_type="application/x-www-form-urlencoded; charset=UTF-8"):
+        """
+        Builds and submits a valid request to the Google Play Store
+
+        :param path: url path, depends on the endpoint that should be contacted
+                     e.g. details?doc=com.android.chrome
+        :param sdk: from which sdk version should the request appear to come from, e.g. 25
+        :param agentvername: version name of the user agent, i.e. of the market app that we are spoofing;
+                             used to build the User Agent
+        :param agentvercode: version code of the user agent, i.e. of the market app that we are spoofing;
+                             used to build the User Agent
+        :param devicename: from which device should the request appear to come from; used to build the User Agent
+        :param datapost: payload of the post request, if any
+        :param post_content_type: content_type field of the post request
+        :return: a protobuf object with the server response
+        :rtype: ResponseWrapper
+        """
         if not agentvername:
             agentvername = self.defaultAgentvername
         if not agentvercode:
@@ -237,7 +278,8 @@ class GooglePlayAPI(object):
                 if self.throttle:
                     sleep(self.throttleTime)
                 if datapost is not None:
-                    response = requests.post(url, data=datapost, headers=headers, verify=ssl_verify, proxies=self.proxies)
+                    response = requests.post(url, data=datapost, headers=headers, verify=ssl_verify,
+                                             proxies=self.proxies)
                 else:
                     response = requests.get(url, headers=headers, verify=ssl_verify, proxies=self.proxies)
                 response_code = response.status_code
@@ -563,7 +605,8 @@ class GooglePlayAPI(object):
         # If progress_bar is asked
         from clint.textui import progress
         response_content = bytes()
-        response = requests.get(url, headers=headers, cookies=cookies, verify=ssl_verify, stream=True, proxies=self.proxies)
+        response = requests.get(url, headers=headers, cookies=cookies, verify=ssl_verify, stream=True,
+                                proxies=self.proxies)
         total_length = int(response.headers.get('content-length'))
         for chunk in progress.bar(response.iter_content(chunk_size=1024), expected_size=(total_length / 1024) + 1):
             if chunk:

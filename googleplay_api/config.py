@@ -11,6 +11,12 @@ c.read(CONFIG_FILE)
 
 
 def config_section_map(section):
+    """
+    :param section: name of the section in the .ini file (i.e. Main)
+    :return: returns a dictionary that contains all the configuration settings in the
+    given section
+    :rtype: dict
+    """
     dict1 = {}
     options = c.options(section)
     for option in options:
