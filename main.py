@@ -14,6 +14,10 @@ def get_details(package):
     print(play_store.details(package))
 
 
+def get_similar(package):
+    print(play_store.getPages(play_store.listSimilar(package)))
+
+
 def get_latest_versioncode(package):
     """
     Gets the version code of latest available apk
@@ -49,6 +53,8 @@ def main():
     )
     parser.add_argument('--details', action="store", dest='package_to_detail', help='Shows various details for the '
                                                                                     'given package')
+    parser.add_argument('--similar', action="store", dest='package_similar', help='Shows various packages similar '
+                                                                                  'to the given package')
     group = parser.add_argument_group()
     group.add_argument('--download', action="store", dest='package_to_download', help='Download the apk with given '
                                                                                       'package name')
@@ -86,6 +92,10 @@ def main():
 
     if results.package_to_detail:
         get_details(results.package_to_detail)
+        return
+
+    if results.package_similar:
+        get_similar(results.package_similar)
         return
 
     if results.package_to_download:
