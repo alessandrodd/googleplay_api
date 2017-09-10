@@ -400,19 +400,23 @@ class GooglePlayAPI(object):
         message = self.executeRequestApi2(path)
         return message.payload.listResponse
 
-    def bulkDetails(self, packageNames):
+    def bulkDetails(self, packageNames, includeChildDocs=False, includeDetails=False):
         """
         Get several apps details from a list of package names.
         This is much more efficient than calling N times details() since it
         requires only one request.
 
         :param packageNames: a list of app unique ID e.g. ['com.android.chrome', 'org.mozilla.firefox']
+        :param includeChildDocs: include child docs if present
+        :param includeDetails: include more details, such as html description and so on
         :return: details for the packages specified in packageNames
         :rtype: BulkDetailsResponse
         """
         path = "bulkDetails"
         req = googleplay_pb2.BulkDetailsRequest()
         req.docid.extend(packageNames)
+        req.includeChildDocs = includeChildDocs
+        req.includeDetails = includeDetails
         data = req.SerializeToString()
         message = self.executeRequestApi2(path, datapost=data,
                                           post_content_type="application/x-protobuf")

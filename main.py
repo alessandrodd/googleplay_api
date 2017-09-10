@@ -1,5 +1,4 @@
 import argparse
-
 import os
 
 import googleplay_api.config as play_conf
@@ -12,6 +11,10 @@ play_store = None
 
 def get_details(package):
     print(play_store.details(package))
+
+
+def get_bulk_details(packages):
+    print(play_store.bulkDetails(packages))
 
 
 def get_similar(package):
@@ -55,6 +58,8 @@ def main():
                                                                                     'given package')
     parser.add_argument('--similar', action="store", dest='package_similar', help='Shows various packages similar '
                                                                                   'to the given package')
+    parser.add_argument('--bulk-details', action="store", dest='packages_to_detail', nargs='+', type=str,
+                        help='Shows details for a list of packages')
     group = parser.add_argument_group()
     group.add_argument('--download', action="store", dest='package_to_download', help='Download the apk with given '
                                                                                       'package name')
@@ -92,6 +97,10 @@ def main():
 
     if results.package_to_detail:
         get_details(results.package_to_detail)
+        return
+
+    if results.packages_to_detail:
+        get_bulk_details(results.packages_to_detail)
         return
 
     if results.package_similar:

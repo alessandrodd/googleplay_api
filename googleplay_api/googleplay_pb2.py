@@ -19,8 +19,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='googleplay.proto',
   package='',
   syntax='proto2',
-  serialized_pb=_b('\n\x10googleplay.proto\"\x19\n\x17\x41\x63kNotificationResponse\"\x8b\x03\n\x16\x41ndroidAppDeliveryData\x12\x14\n\x0c\x64ownloadSize\x18\x01 \x01(\x03\x12\x11\n\tsignature\x18\x02 \x01(\t\x12\x13\n\x0b\x64ownloadUrl\x18\x03 \x01(\t\x12(\n\x0e\x61\x64\x64itionalFile\x18\x04 \x03(\x0b\x32\x10.AppFileMetadata\x12\'\n\x12\x64ownloadAuthCookie\x18\x05 \x03(\x0b\x32\x0b.HttpCookie\x12\x15\n\rforwardLocked\x18\x06 \x01(\x08\x12\x15\n\rrefundTimeout\x18\x07 \x01(\x03\x12\x17\n\x0fserverInitiated\x18\x08 \x01(\x08\x12%\n\x1dpostInstallRefundWindowMillis\x18\t \x01(\x03\x12\x1c\n\x14immediateStartNeeded\x18\n \x01(\x08\x12\'\n\tpatchData\x18\x0b \x01(\x0b\x32\x14.AndroidAppPatchData\x12+\n\x10\x65ncryptionParams\x18\x0c \x01(\x0b\x32\x11.EncryptionParams\"\x85\x01\n\x13\x41ndroidAppPatchData\x12\x17\n\x0f\x62\x61seVersionCode\x18\x01 \x01(\x05\x12\x15\n\rbaseSignature\x18\x02 \x01(\t\x12\x13\n\x0b\x64ownloadUrl\x18\x03 \x01(\t\x12\x13\n\x0bpatchFormat\x18\x04 \x01(\x05\x12\x14\n\x0cmaxPatchSize\x18\x05 \x01(\x03\"[\n\x0f\x41ppFileMetadata\x12\x10\n\x08\x66ileType\x18\x01 \x01(\x05\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0c\n\x04size\x18\x03 \x01(\x03\x12\x13\n\x0b\x64ownloadUrl\x18\x04 \x01(\t\"K\n\x10\x45ncryptionParams\x12\x0f\n\x07version\x18\x01 \x01(\x05\x12\x15\n\rencryptionKey\x18\x02 \x01(\t\x12\x0f\n\x07hmacKey\x18\x03 \x01(\t\")\n\nHttpCookie\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xad\x02\n\x07\x41\x64\x64ress\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0c\x61\x64\x64ressLine1\x18\x02 \x01(\t\x12\x14\n\x0c\x61\x64\x64ressLine2\x18\x03 \x01(\t\x12\x0c\n\x04\x63ity\x18\x04 \x01(\t\x12\r\n\x05state\x18\x05 \x01(\t\x12\x12\n\npostalCode\x18\x06 \x01(\t\x12\x15\n\rpostalCountry\x18\x07 \x01(\t\x12\x19\n\x11\x64\x65pendentLocality\x18\x08 \x01(\t\x12\x13\n\x0bsortingCode\x18\t \x01(\t\x12\x14\n\x0clanguageCode\x18\n \x01(\t\x12\x13\n\x0bphoneNumber\x18\x0b \x01(\t\x12\x11\n\tisReduced\x18\x0c \x01(\x08\x12\x11\n\tfirstName\x18\r \x01(\t\x12\x10\n\x08lastName\x18\x0e \x01(\t\x12\r\n\x05\x65mail\x18\x0f \x01(\t\"J\n\nBookAuthor\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x17\n\x0f\x64\x65precatedQuery\x18\x02 \x01(\t\x12\x15\n\x05\x64ocid\x18\x03 \x01(\x0b\x32\x06.Docid\"\xc3\x03\n\x0b\x42ookDetails\x12\x1d\n\x07subject\x18\x03 \x03(\x0b\x32\x0c.BookSubject\x12\x11\n\tpublisher\x18\x04 \x01(\t\x12\x17\n\x0fpublicationDate\x18\x05 \x01(\t\x12\x0c\n\x04isbn\x18\x06 \x01(\t\x12\x15\n\rnumberOfPages\x18\x07 \x01(\x05\x12\x10\n\x08subtitle\x18\x08 \x01(\t\x12\x1b\n\x06\x61uthor\x18\t \x03(\x0b\x32\x0b.BookAuthor\x12\x11\n\treaderUrl\x18\n \x01(\t\x12\x17\n\x0f\x64ownloadEpubUrl\x18\x0b \x01(\t\x12\x16\n\x0e\x64ownloadPdfUrl\x18\x0c \x01(\t\x12\x17\n\x0f\x61\x63sEpubTokenUrl\x18\r \x01(\t\x12\x16\n\x0e\x61\x63sPdfTokenUrl\x18\x0e \x01(\t\x12\x15\n\repubAvailable\x18\x0f \x01(\x08\x12\x14\n\x0cpdfAvailable\x18\x10 \x01(\x08\x12\x16\n\x0e\x61\x62outTheAuthor\x18\x11 \x01(\t\x12+\n\nidentifier\x18\x12 \x03(\n2\x17.BookDetails.Identifier\x1a.\n\nIdentifier\x12\x0c\n\x04type\x18\x13 \x01(\x05\x12\x12\n\nidentifier\x18\x14 \x01(\t\"=\n\x0b\x42ookSubject\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05query\x18\x02 \x01(\t\x12\x11\n\tsubjectId\x18\x03 \x01(\t\"+\n\nBrowseLink\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07\x64\x61taUrl\x18\x03 \x01(\t\"w\n\x0e\x42rowseResponse\x12\x13\n\x0b\x63ontentsUrl\x18\x01 \x01(\t\x12\x10\n\x08promoUrl\x18\x02 \x01(\t\x12\x1d\n\x08\x63\x61tegory\x18\x03 \x03(\x0b\x32\x0b.BrowseLink\x12\x1f\n\nbreadcrumb\x18\x04 \x03(\x0b\x32\x0b.BrowseLink\"\x8f\x02\n\x10\x41\x64\x64ressChallenge\x12\x1c\n\x14responseAddressParam\x18\x01 \x01(\t\x12\x1f\n\x17responseCheckboxesParam\x18\x02 \x01(\t\x12\r\n\x05title\x18\x03 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x04 \x01(\t\x12\x1f\n\x08\x63heckbox\x18\x05 \x03(\x0b\x32\r.FormCheckbox\x12\x19\n\x07\x61\x64\x64ress\x18\x06 \x01(\x0b\x32\x08.Address\x12.\n\x0f\x65rrorInputField\x18\x07 \x03(\x0b\x32\x15.InputValidationError\x12\x11\n\terrorHtml\x18\x08 \x01(\t\x12\x15\n\rrequiredField\x18\t \x03(\x05\"\xef\x01\n\x17\x41uthenticationChallenge\x12\x1a\n\x12\x61uthenticationType\x18\x01 \x01(\x05\x12\'\n\x1fresponseAuthenticationTypeParam\x18\x02 \x01(\t\x12\x1f\n\x17responseRetryCountParam\x18\x03 \x01(\t\x12\x15\n\rpinHeaderText\x18\x04 \x01(\t\x12\x1e\n\x16pinDescriptionTextHtml\x18\x05 \x01(\t\x12\x16\n\x0egaiaHeaderText\x18\x06 \x01(\t\x12\x1f\n\x17gaiaDescriptionTextHtml\x18\x07 \x01(\t\"\x81\t\n\x0b\x42uyResponse\x12\x37\n\x10purchaseResponse\x18\x01 \x01(\x0b\x32\x1d.PurchaseNotificationResponse\x12/\n\x0c\x63heckoutinfo\x18\x02 \x01(\n2\x19.BuyResponse.CheckoutInfo\x12\x16\n\x0e\x63ontinueViaUrl\x18\x08 \x01(\t\x12\x19\n\x11purchaseStatusUrl\x18\t \x01(\t\x12\x19\n\x11\x63heckoutServiceId\x18\x0c \x01(\t\x12\x1d\n\x15\x63heckoutTokenRequired\x18\r \x01(\x08\x12\x17\n\x0f\x62\x61seCheckoutUrl\x18\x0e \x01(\t\x12\x17\n\x0ftosCheckboxHtml\x18% \x03(\t\x12\x1a\n\x12iabPermissionError\x18& \x01(\x05\x12\x37\n\x16purchaseStatusResponse\x18\' \x01(\x0b\x32\x17.PurchaseStatusResponse\x12\x16\n\x0epurchaseCookie\x18. \x01(\t\x12\x1d\n\tchallenge\x18\x31 \x01(\x0b\x32\n.Challenge\x1a\xdc\x05\n\x0c\x43heckoutInfo\x12\x17\n\x04item\x18\x03 \x01(\x0b\x32\t.LineItem\x12\x1a\n\x07subItem\x18\x04 \x03(\x0b\x32\t.LineItem\x12@\n\x0e\x63heckoutoption\x18\x05 \x03(\n2(.BuyResponse.CheckoutInfo.CheckoutOption\x12\x1d\n\x15\x64\x65precatedCheckoutUrl\x18\n \x01(\t\x12\x18\n\x10\x61\x64\x64InstrumentUrl\x18\x0b \x01(\t\x12\x12\n\nfooterHtml\x18\x14 \x03(\t\x12 \n\x18\x65ligibleInstrumentFamily\x18\x1f \x03(\x05\x12\x14\n\x0c\x66ootnoteHtml\x18$ \x03(\t\x12\'\n\x12\x65ligibleInstrument\x18, \x03(\x0b\x32\x0b.Instrument\x1a\xa6\x03\n\x0e\x43heckoutOption\x12\x15\n\rformOfPayment\x18\x06 \x01(\t\x12\x1b\n\x13\x65ncodedAdjustedCart\x18\x07 \x01(\t\x12\x14\n\x0cinstrumentId\x18\x0f \x01(\t\x12\x17\n\x04item\x18\x10 \x03(\x0b\x32\t.LineItem\x12\x1a\n\x07subItem\x18\x11 \x03(\x0b\x32\t.LineItem\x12\x18\n\x05total\x18\x12 \x01(\x0b\x32\t.LineItem\x12\x12\n\nfooterHtml\x18\x13 \x03(\t\x12\x18\n\x10instrumentFamily\x18\x1d \x01(\x05\x12.\n&deprecatedInstrumentInapplicableReason\x18\x1e \x03(\x05\x12\x1a\n\x12selectedInstrument\x18  \x01(\x08\x12\x1a\n\x07summary\x18! \x01(\x0b\x32\t.LineItem\x12\x14\n\x0c\x66ootnoteHtml\x18# \x03(\t\x12\x1f\n\ninstrument\x18+ \x01(\x0b\x32\x0b.Instrument\x12\x16\n\x0epurchaseCookie\x18- \x01(\t\x12\x16\n\x0e\x64isabledReason\x18\x30 \x03(\t\"s\n\tChallenge\x12+\n\x10\x61\x64\x64ressChallenge\x18\x01 \x01(\x0b\x32\x11.AddressChallenge\x12\x39\n\x17\x61uthenticationChallenge\x18\x02 \x01(\x0b\x32\x18.AuthenticationChallenge\"F\n\x0c\x46ormCheckbox\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\t\x12\x0f\n\x07\x63hecked\x18\x02 \x01(\x08\x12\x10\n\x08required\x18\x03 \x01(\x08\"\\\n\x08LineItem\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x15\n\x05offer\x18\x03 \x01(\x0b\x32\x06.Offer\x12\x16\n\x06\x61mount\x18\x04 \x01(\x0b\x32\x06.Money\"F\n\x05Money\x12\x0e\n\x06micros\x18\x01 \x01(\x03\x12\x14\n\x0c\x63urrencyCode\x18\x02 \x01(\t\x12\x17\n\x0f\x66ormattedAmount\x18\x03 \x01(\t\"\x80\x01\n\x1cPurchaseNotificationResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x1d\n\tdebugInfo\x18\x02 \x01(\x0b\x32\n.DebugInfo\x12\x1d\n\x15localizedErrorMessage\x18\x03 \x01(\t\x12\x12\n\npurchaseId\x18\x04 \x01(\t\"\xf9\x01\n\x16PurchaseStatusResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x11\n\tstatusMsg\x18\x02 \x01(\t\x12\x13\n\x0bstatusTitle\x18\x03 \x01(\t\x12\x14\n\x0c\x62riefMessage\x18\x04 \x01(\t\x12\x0f\n\x07infoUrl\x18\x05 \x01(\t\x12%\n\rlibraryUpdate\x18\x06 \x01(\x0b\x32\x0e.LibraryUpdate\x12\'\n\x12rejectedInstrument\x18\x07 \x01(\x0b\x32\x0b.Instrument\x12\x30\n\x0f\x61ppDeliveryData\x18\x08 \x01(\x0b\x32\x17.AndroidAppDeliveryData\"\xa2\x01\n\x17\x43heckInstrumentResponse\x12\x1e\n\x16userHasValidInstrument\x18\x01 \x01(\x08\x12\x1d\n\x15\x63heckoutTokenRequired\x18\x02 \x01(\x08\x12\x1f\n\ninstrument\x18\x04 \x03(\x0b\x32\x0b.Instrument\x12\'\n\x12\x65ligibleInstrument\x18\x05 \x03(\x0b\x32\x0b.Instrument\"Q\n\x17UpdateInstrumentRequest\x12\x1f\n\ninstrument\x18\x01 \x01(\x0b\x32\x0b.Instrument\x12\x15\n\rcheckoutToken\x18\x02 \x01(\t\"\xd4\x01\n\x18UpdateInstrumentResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0cinstrumentId\x18\x02 \x01(\t\x12\x17\n\x0fuserMessageHtml\x18\x03 \x01(\t\x12.\n\x0f\x65rrorInputField\x18\x04 \x03(\x0b\x32\x15.InputValidationError\x12\x1d\n\x15\x63heckoutTokenRequired\x18\x05 \x01(\x08\x12*\n\rredeemedOffer\x18\x06 \x01(\x0b\x32\x13.RedeemedPromoOffer\"0\n\x1bInitiateAssociationResponse\x12\x11\n\tuserToken\x18\x01 \x01(\t\"n\n\x19VerifyAssociationResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12 \n\x0e\x62illingAddress\x18\x02 \x01(\x0b\x32\x08.Address\x12\x1f\n\ncarrierTos\x18\x03 \x01(\x0b\x32\x0b.CarrierTos\"\xcc\x01\n\x17\x41\x64\x64\x43reditCardPromoOffer\x12\x12\n\nheaderText\x18\x01 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x02 \x01(\t\x12\x15\n\x05image\x18\x03 \x01(\x0b\x32\x06.Image\x12\x1c\n\x14introductoryTextHtml\x18\x04 \x01(\t\x12\x12\n\nofferTitle\x18\x05 \x01(\t\x12\x1b\n\x13noActionDescription\x18\x06 \x01(\t\x12\x1e\n\x16termsAndConditionsHtml\x18\x07 \x01(\t\"K\n\x13\x41vailablePromoOffer\x12\x34\n\x12\x61\x64\x64\x43reditCardOffer\x18\x01 \x01(\x0b\x32\x18.AddCreditCardPromoOffer\"\x92\x01\n\x17\x43heckPromoOfferResponse\x12,\n\x0e\x61vailableOffer\x18\x01 \x03(\x0b\x32\x14.AvailablePromoOffer\x12*\n\rredeemedOffer\x18\x02 \x01(\x0b\x32\x13.RedeemedPromoOffer\x12\x1d\n\x15\x63heckoutTokenRequired\x18\x03 \x01(\x08\"X\n\x12RedeemedPromoOffer\x12\x12\n\nheaderText\x18\x01 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x02 \x01(\t\x12\x15\n\x05image\x18\x03 \x01(\x0b\x32\x06.Image\"<\n\x05\x44ocid\x12\x14\n\x0c\x62\x61\x63kendDocid\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\x0f\n\x07\x62\x61\x63kend\x18\x03 \x01(\x05\">\n\x07Install\x12\x11\n\tandroidId\x18\x01 \x01(\x06\x12\x0f\n\x07version\x18\x02 \x01(\x05\x12\x0f\n\x07\x62undled\x18\x03 \x01(\x08\"\x80\x03\n\x05Offer\x12\x0e\n\x06micros\x18\x01 \x01(\x03\x12\x14\n\x0c\x63urrencyCode\x18\x02 \x01(\t\x12\x17\n\x0f\x66ormattedAmount\x18\x03 \x01(\t\x12\x1e\n\x0e\x63onvertedPrice\x18\x04 \x03(\x0b\x32\x06.Offer\x12\x1c\n\x14\x63heckoutFlowRequired\x18\x05 \x01(\x08\x12\x17\n\x0f\x66ullPriceMicros\x18\x06 \x01(\x03\x12\x1b\n\x13\x66ormattedFullAmount\x18\x07 \x01(\t\x12\x11\n\tofferType\x18\x08 \x01(\x05\x12!\n\x0brentalTerms\x18\t \x01(\x0b\x32\x0c.RentalTerms\x12\x12\n\nonSaleDate\x18\n \x01(\x03\x12\x16\n\x0epromotionLabel\x18\x0b \x03(\t\x12-\n\x11subscriptionTerms\x18\x0c \x01(\x0b\x32\x12.SubscriptionTerms\x12\x15\n\rformattedName\x18\r \x01(\t\x12\x1c\n\x14\x66ormattedDescription\x18\x0e \x01(\t\"\xb1\x01\n\rOwnershipInfo\x12\x1f\n\x17initiationTimestampMsec\x18\x01 \x01(\x03\x12\x1f\n\x17validUntilTimestampMsec\x18\x02 \x01(\x03\x12\x14\n\x0c\x61utoRenewing\x18\x03 \x01(\x08\x12\"\n\x1arefundTimeoutTimestampMsec\x18\x04 \x01(\x03\x12$\n\x1cpostDeliveryRefundWindowMsec\x18\x05 \x01(\x03\"H\n\x0bRentalTerms\x12\x1a\n\x12grantPeriodSeconds\x18\x01 \x01(\x05\x12\x1d\n\x15\x61\x63tivatePeriodSeconds\x18\x02 \x01(\x05\"[\n\x11SubscriptionTerms\x12$\n\x0frecurringPeriod\x18\x01 \x01(\x0b\x32\x0b.TimePeriod\x12 \n\x0btrialPeriod\x18\x02 \x01(\x0b\x32\x0b.TimePeriod\")\n\nTimePeriod\x12\x0c\n\x04unit\x18\x01 \x01(\x05\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\"G\n\x12\x42illingAddressSpec\x12\x1a\n\x12\x62illingAddressType\x18\x01 \x01(\x05\x12\x15\n\rrequiredField\x18\x02 \x03(\x05\">\n\x19\x43\x61rrierBillingCredentials\x12\r\n\x05value\x18\x01 \x01(\t\x12\x12\n\nexpiration\x18\x02 \x01(\x03\"\xa9\x02\n\x18\x43\x61rrierBillingInstrument\x12\x15\n\rinstrumentKey\x18\x01 \x01(\t\x12\x13\n\x0b\x61\x63\x63ountType\x18\x02 \x01(\t\x12\x14\n\x0c\x63urrencyCode\x18\x03 \x01(\t\x12\x18\n\x10transactionLimit\x18\x04 \x01(\x03\x12\x1c\n\x14subscriberIdentifier\x18\x05 \x01(\t\x12\x39\n\x17\x65ncryptedSubscriberInfo\x18\x06 \x01(\x0b\x32\x18.EncryptedSubscriberInfo\x12/\n\x0b\x63redentials\x18\x07 \x01(\x0b\x32\x1a.CarrierBillingCredentials\x12\'\n\x12\x61\x63\x63\x65ptedCarrierTos\x18\x08 \x01(\x0b\x32\x0b.CarrierTos\"\xca\x01\n\x1e\x43\x61rrierBillingInstrumentStatus\x12\x1f\n\ncarrierTos\x18\x01 \x01(\x0b\x32\x0b.CarrierTos\x12\x1b\n\x13\x61ssociationRequired\x18\x02 \x01(\x08\x12\x18\n\x10passwordRequired\x18\x03 \x01(\x08\x12.\n\x15\x63\x61rrierPasswordPrompt\x18\x04 \x01(\x0b\x32\x0f.PasswordPrompt\x12\x12\n\napiVersion\x18\x05 \x01(\x05\x12\x0c\n\x04name\x18\x06 \x01(\t\"\x8e\x01\n\nCarrierTos\x12 \n\x06\x64\x63\x62Tos\x18\x01 \x01(\x0b\x32\x10.CarrierTosEntry\x12 \n\x06piiTos\x18\x02 \x01(\x0b\x32\x10.CarrierTosEntry\x12\x1d\n\x15needsDcbTosAcceptance\x18\x03 \x01(\x08\x12\x1d\n\x15needsPiiTosAcceptance\x18\x04 \x01(\x08\"/\n\x0f\x43\x61rrierTosEntry\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\"\xa2\x01\n\x14\x43reditCardInstrument\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x14\n\x0c\x65scrowHandle\x18\x02 \x01(\t\x12\x12\n\nlastDigits\x18\x03 \x01(\t\x12\x17\n\x0f\x65xpirationMonth\x18\x04 \x01(\x05\x12\x16\n\x0e\x65xpirationYear\x18\x05 \x01(\x05\x12!\n\x0e\x65scrowEfeParam\x18\x06 \x03(\x0b\x32\t.EfeParam\"&\n\x08\x45\x66\x65Param\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\t\"@\n\x14InputValidationError\x12\x12\n\ninputField\x18\x01 \x01(\x05\x12\x14\n\x0c\x65rrorMessage\x18\x02 \x01(\t\"\xc2\x02\n\nInstrument\x12\x14\n\x0cinstrumentId\x18\x01 \x01(\t\x12 \n\x0e\x62illingAddress\x18\x02 \x01(\x0b\x32\x08.Address\x12)\n\ncreditCard\x18\x03 \x01(\x0b\x32\x15.CreditCardInstrument\x12\x31\n\x0e\x63\x61rrierBilling\x18\x04 \x01(\x0b\x32\x19.CarrierBillingInstrument\x12/\n\x12\x62illingAddressSpec\x18\x05 \x01(\x0b\x32\x13.BillingAddressSpec\x12\x18\n\x10instrumentFamily\x18\x06 \x01(\x05\x12=\n\x14\x63\x61rrierBillingStatus\x18\x07 \x01(\x0b\x32\x1f.CarrierBillingInstrumentStatus\x12\x14\n\x0c\x64isplayTitle\x18\x08 \x01(\t\";\n\x0ePasswordPrompt\x12\x0e\n\x06prompt\x18\x01 \x01(\t\x12\x19\n\x11\x66orgotPasswordUrl\x18\x02 \x01(\t\"\x92\x01\n\x11\x43ontainerMetadata\x12\x11\n\tbrowseUrl\x18\x01 \x01(\t\x12\x13\n\x0bnextPageUrl\x18\x02 \x01(\t\x12\x11\n\trelevance\x18\x03 \x01(\x01\x12\x18\n\x10\x65stimatedResults\x18\x04 \x01(\x03\x12\x17\n\x0f\x61nalyticsCookie\x18\x05 \x01(\t\x12\x0f\n\x07ordered\x18\x06 \x01(\x08\"\x15\n\x13\x46lagContentResponse\"i\n\tDebugInfo\x12\x0f\n\x07message\x18\x01 \x03(\t\x12!\n\x06timing\x18\x02 \x03(\n2\x11.DebugInfo.Timing\x1a(\n\x06Timing\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x10\n\x08timeInMs\x18\x04 \x01(\x01\"T\n\x10\x44\x65liveryResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x30\n\x0f\x61ppDeliveryData\x18\x02 \x01(\x0b\x32\x17.AndroidAppDeliveryData\"\'\n\x10\x42ulkDetailsEntry\x12\x13\n\x03\x64oc\x18\x01 \x01(\x0b\x32\x06.DocV2\"=\n\x12\x42ulkDetailsRequest\x12\r\n\x05\x64ocid\x18\x01 \x03(\t\x12\x18\n\x10includeChildDocs\x18\x02 \x01(\x08\"7\n\x13\x42ulkDetailsResponse\x12 \n\x05\x65ntry\x18\x01 \x03(\x0b\x32\x11.BulkDetailsEntry\"\x89\x01\n\x0f\x44\x65tailsResponse\x12\x15\n\x05\x64ocV1\x18\x01 \x01(\x0b\x32\x06.DocV1\x12\x17\n\x0f\x61nalyticsCookie\x18\x02 \x01(\t\x12\x1b\n\nuserReview\x18\x03 \x01(\x0b\x32\x07.Review\x12\x15\n\x05\x64ocV2\x18\x04 \x01(\x0b\x32\x06.DocV2\x12\x12\n\nfooterHtml\x18\x05 \x01(\t\"\xb5\x03\n\x18\x44\x65viceConfigurationProto\x12\x13\n\x0btouchScreen\x18\x01 \x01(\x05\x12\x10\n\x08keyboard\x18\x02 \x01(\x05\x12\x12\n\nnavigation\x18\x03 \x01(\x05\x12\x14\n\x0cscreenLayout\x18\x04 \x01(\x05\x12\x17\n\x0fhasHardKeyboard\x18\x05 \x01(\x08\x12\x1c\n\x14hasFiveWayNavigation\x18\x06 \x01(\x08\x12\x15\n\rscreenDensity\x18\x07 \x01(\x05\x12\x13\n\x0bglEsVersion\x18\x08 \x01(\x05\x12\x1b\n\x13systemSharedLibrary\x18\t \x03(\t\x12\x1e\n\x16systemAvailableFeature\x18\n \x03(\t\x12\x16\n\x0enativePlatform\x18\x0b \x03(\t\x12\x13\n\x0bscreenWidth\x18\x0c \x01(\x05\x12\x14\n\x0cscreenHeight\x18\r \x01(\x05\x12\x1d\n\x15systemSupportedLocale\x18\x0e \x03(\t\x12\x13\n\x0bglExtension\x18\x0f \x03(\t\x12\x13\n\x0b\x64\x65viceClass\x18\x10 \x01(\x05\x12\x1c\n\x14maxApkDownloadSizeMb\x18\x11 \x01(\x05\"\xff\x03\n\x08\x44ocument\x12\x15\n\x05\x64ocid\x18\x01 \x01(\x0b\x32\x06.Docid\x12\x1a\n\nfetchDocid\x18\x02 \x01(\x0b\x32\x06.Docid\x12\x1b\n\x0bsampleDocid\x18\x03 \x01(\x0b\x32\x06.Docid\x12\r\n\x05title\x18\x04 \x01(\t\x12\x0b\n\x03url\x18\x05 \x01(\t\x12\x0f\n\x07snippet\x18\x06 \x03(\t\x12\x1f\n\x0fpriceDeprecated\x18\x07 \x01(\x0b\x32\x06.Offer\x12#\n\x0c\x61vailability\x18\t \x01(\x0b\x32\r.Availability\x12\x15\n\x05image\x18\n \x03(\x0b\x32\x06.Image\x12\x18\n\x05\x63hild\x18\x0b \x03(\x0b\x32\t.Document\x12)\n\x0f\x61ggregateRating\x18\r \x01(\x0b\x32\x10.AggregateRating\x12\x15\n\x05offer\x18\x0e \x03(\x0b\x32\x06.Offer\x12*\n\x11translatedSnippet\x18\x0f \x03(\x0b\x32\x0f.TranslatedText\x12)\n\x0f\x64ocumentVariant\x18\x10 \x03(\x0b\x32\x10.DocumentVariant\x12\x12\n\ncategoryId\x18\x11 \x03(\t\x12\x1d\n\ndecoration\x18\x12 \x03(\x0b\x32\t.Document\x12\x19\n\x06parent\x18\x13 \x03(\x0b\x32\t.Document\x12\x18\n\x10privacyPolicyUrl\x18\x14 \x01(\t\"\x81\x02\n\x0f\x44ocumentVariant\x12\x15\n\rvariationType\x18\x01 \x01(\x05\x12\x13\n\x04rule\x18\x02 \x01(\x0b\x32\x05.Rule\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0f\n\x07snippet\x18\x04 \x03(\t\x12\x15\n\rrecentChanges\x18\x05 \x01(\t\x12(\n\x0f\x61utoTranslation\x18\x06 \x03(\x0b\x32\x0f.TranslatedText\x12\x15\n\x05offer\x18\x07 \x03(\x0b\x32\x06.Offer\x12\x11\n\tchannelId\x18\t \x01(\x03\x12\x18\n\x05\x63hild\x18\n \x03(\x0b\x32\t.Document\x12\x1d\n\ndecoration\x18\x0b \x03(\x0b\x32\t.Document\"\xba\x02\n\x05Image\x12\x11\n\timageType\x18\x01 \x01(\x05\x12#\n\tdimension\x18\x02 \x01(\n2\x10.Image.Dimension\x12\x10\n\x08imageUrl\x18\x05 \x01(\t\x12\x18\n\x10\x61ltTextLocalized\x18\x06 \x01(\t\x12\x11\n\tsecureUrl\x18\x07 \x01(\t\x12\x1a\n\x12positionInSequence\x18\x08 \x01(\x05\x12\x1e\n\x16supportsFifeUrlOptions\x18\t \x01(\x08\x12!\n\x08\x63itation\x18\n \x01(\n2\x0f.Image.Citation\x1a*\n\tDimension\x12\r\n\x05width\x18\x03 \x01(\x05\x12\x0e\n\x06height\x18\x04 \x01(\x05\x1a/\n\x08\x43itation\x12\x16\n\x0etitleLocalized\x18\x0b \x01(\t\x12\x0b\n\x03url\x18\x0c \x01(\t\"J\n\x0eTranslatedText\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x14\n\x0csourceLocale\x18\x02 \x01(\t\x12\x14\n\x0ctargetLocale\x18\x03 \x01(\t\"@\n\x05\x42\x61\x64ge\x12\r\n\x05title\x18\x01 \x01(\t\x12\x15\n\x05image\x18\x02 \x03(\x0b\x32\x06.Image\x12\x11\n\tbrowseUrl\x18\x03 \x01(\t\"-\n\x13\x43ontainerWithBanner\x12\x16\n\x0e\x63olorThemeArgb\x18\x01 \x01(\t\">\n\x0c\x44\x65\x61lOfTheDay\x12\x16\n\x0e\x66\x65\x61turedHeader\x18\x01 \x01(\t\x12\x16\n\x0e\x63olorThemeArgb\x18\x02 \x01(\t\"\x8e\x01\n\x18\x45\x64itorialSeriesContainer\x12\x13\n\x0bseriesTitle\x18\x01 \x01(\t\x12\x16\n\x0eseriesSubtitle\x18\x02 \x01(\t\x12\x14\n\x0c\x65pisodeTitle\x18\x03 \x01(\t\x12\x17\n\x0f\x65pisodeSubtitle\x18\x04 \x01(\t\x12\x16\n\x0e\x63olorThemeArgb\x18\x05 \x01(\t\"\x13\n\x04Link\x12\x0b\n\x03uri\x18\x01 \x01(\t\"i\n\x0bPlusOneData\x12\x11\n\tsetByUser\x18\x01 \x01(\x08\x12\r\n\x05total\x18\x02 \x01(\x03\x12\x14\n\x0c\x63irclesTotal\x18\x03 \x01(\x03\x12\"\n\rcirclesPeople\x18\x04 \x03(\x0b\x32\x0b.PlusPerson\":\n\nPlusPerson\x12\x13\n\x0b\x64isplayName\x18\x02 \x01(\t\x12\x17\n\x0fprofileImageUrl\x18\x04 \x01(\t\"r\n\x0bPromotedDoc\x12\r\n\x05title\x18\x01 \x01(\t\x12\x10\n\x08subtitle\x18\x02 \x01(\t\x12\x15\n\x05image\x18\x03 \x03(\x0b\x32\x06.Image\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x04 \x01(\t\x12\x12\n\ndetailsUrl\x18\x05 \x01(\t\"G\n\x06Reason\x12\x13\n\x0b\x62riefReason\x18\x01 \x01(\t\x12\x16\n\x0e\x64\x65tailedReason\x18\x02 \x01(\t\x12\x10\n\x08uniqueId\x18\x03 \x01(\t\"^\n\x0fSectionMetadata\x12\x0e\n\x06header\x18\x01 \x01(\t\x12\x0f\n\x07listUrl\x18\x02 \x01(\t\x12\x11\n\tbrowseUrl\x18\x03 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x04 \x01(\t\"\xd5\x01\n\rSeriesAntenna\x12\x13\n\x0bseriesTitle\x18\x01 \x01(\t\x12\x16\n\x0eseriesSubtitle\x18\x02 \x01(\t\x12\x14\n\x0c\x65pisodeTitle\x18\x03 \x01(\t\x12\x17\n\x0f\x65pisodeSubtitle\x18\x04 \x01(\t\x12\x16\n\x0e\x63olorThemeArgb\x18\x05 \x01(\t\x12\'\n\rsectionTracks\x18\x06 \x01(\x0b\x32\x10.SectionMetadata\x12\'\n\rsectionAlbums\x18\x07 \x01(\x0b\x32\x10.SectionMetadata\"\x8f\x04\n\x08Template\x12%\n\rseriesAntenna\x18\x01 \x01(\x0b\x32\x0e.SeriesAntenna\x12%\n\x0etileGraphic2X1\x18\x02 \x01(\x0b\x32\r.TileTemplate\x12%\n\x0etileGraphic4X2\x18\x03 \x01(\x0b\x32\r.TileTemplate\x12\x31\n\x1atileGraphicColoredTitle2X1\x18\x04 \x01(\x0b\x32\r.TileTemplate\x12\x33\n\x1ctileGraphicUpperLeftTitle2X1\x18\x05 \x01(\x0b\x32\r.TileTemplate\x12\x35\n\x1etileDetailsReflectedGraphic2X2\x18\x06 \x01(\x0b\x32\r.TileTemplate\x12\'\n\x10tileFourBlock4X2\x18\x07 \x01(\x0b\x32\r.TileTemplate\x12\x31\n\x13\x63ontainerWithBanner\x18\x08 \x01(\x0b\x32\x14.ContainerWithBanner\x12#\n\x0c\x64\x65\x61lOfTheDay\x18\t \x01(\x0b\x32\r.DealOfTheDay\x12\x31\n\x1atileGraphicColoredTitle4X2\x18\n \x01(\x0b\x32\r.TileTemplate\x12;\n\x18\x65\x64itorialSeriesContainer\x18\x0b \x01(\x0b\x32\x19.EditorialSeriesContainer\"=\n\x0cTileTemplate\x12\x16\n\x0e\x63olorThemeArgb\x18\x01 \x01(\t\x12\x15\n\rcolorTextArgb\x18\x02 \x01(\t\"#\n\x07Warning\x12\x18\n\x10localizedMessage\x18\x01 \x01(\t\"c\n\x0c\x41lbumDetails\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1e\n\x07\x64\x65tails\x18\x02 \x01(\x0b\x32\r.MusicDetails\x12%\n\rdisplayArtist\x18\x03 \x01(\x0b\x32\x0e.ArtistDetails\"\x8e\x03\n\nAppDetails\x12\x15\n\rdeveloperName\x18\x01 \x01(\t\x12\x1a\n\x12majorVersionNumber\x18\x02 \x01(\x05\x12\x13\n\x0bversionCode\x18\x03 \x01(\x05\x12\x15\n\rversionString\x18\x04 \x01(\t\x12\r\n\x05title\x18\x05 \x01(\t\x12\x13\n\x0b\x61ppCategory\x18\x07 \x03(\t\x12\x15\n\rcontentRating\x18\x08 \x01(\x05\x12\x18\n\x10installationSize\x18\t \x01(\x03\x12\x12\n\npermission\x18\n \x03(\t\x12\x16\n\x0e\x64\x65veloperEmail\x18\x0b \x01(\t\x12\x18\n\x10\x64\x65veloperWebsite\x18\x0c \x01(\t\x12\x14\n\x0cnumDownloads\x18\r \x01(\t\x12\x13\n\x0bpackageName\x18\x0e \x01(\t\x12\x19\n\x11recentChangesHtml\x18\x0f \x01(\t\x12\x12\n\nuploadDate\x18\x10 \x01(\t\x12\x1b\n\x04\x66ile\x18\x11 \x03(\x0b\x32\r.FileMetadata\x12\x0f\n\x07\x61ppType\x18\x12 \x01(\t\"^\n\rArtistDetails\x12\x12\n\ndetailsUrl\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12+\n\rexternalLinks\x18\x03 \x01(\x0b\x32\x14.ArtistExternalLinks\"b\n\x13\x41rtistExternalLinks\x12\x12\n\nwebsiteUrl\x18\x01 \x03(\t\x12\x1c\n\x14googlePlusProfileUrl\x18\x02 \x01(\t\x12\x19\n\x11youtubeChannelUrl\x18\x03 \x01(\t\"\xc6\x03\n\x0f\x44ocumentDetails\x12\x1f\n\nappDetails\x18\x01 \x01(\x0b\x32\x0b.AppDetails\x12#\n\x0c\x61lbumDetails\x18\x02 \x01(\x0b\x32\r.AlbumDetails\x12%\n\rartistDetails\x18\x03 \x01(\x0b\x32\x0e.ArtistDetails\x12!\n\x0bsongDetails\x18\x04 \x01(\x0b\x32\x0c.SongDetails\x12!\n\x0b\x62ookDetails\x18\x05 \x01(\x0b\x32\x0c.BookDetails\x12#\n\x0cvideoDetails\x18\x06 \x01(\x0b\x32\r.VideoDetails\x12\x31\n\x13subscriptionDetails\x18\x07 \x01(\x0b\x32\x14.SubscriptionDetails\x12)\n\x0fmagazineDetails\x18\x08 \x01(\x0b\x32\x10.MagazineDetails\x12%\n\rtvShowDetails\x18\t \x01(\x0b\x32\x0e.TvShowDetails\x12)\n\x0ftvSeasonDetails\x18\n \x01(\x0b\x32\x10.TvSeasonDetails\x12+\n\x10tvEpisodeDetails\x18\x0b \x01(\x0b\x32\x11.TvEpisodeDetails\"C\n\x0c\x46ileMetadata\x12\x10\n\x08\x66ileType\x18\x01 \x01(\x05\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0c\n\x04size\x18\x03 \x01(\x03\"\x94\x01\n\x0fMagazineDetails\x12\x18\n\x10parentDetailsUrl\x18\x01 \x01(\t\x12)\n!deviceAvailabilityDescriptionHtml\x18\x02 \x01(\t\x12\x16\n\x0epsvDescription\x18\x03 \x01(\t\x12$\n\x1c\x64\x65liveryFrequencyDescription\x18\x04 \x01(\t\"\xbb\x01\n\x0cMusicDetails\x12\x11\n\tcensoring\x18\x01 \x01(\x05\x12\x13\n\x0b\x64urationSec\x18\x02 \x01(\x05\x12\x1b\n\x13originalReleaseDate\x18\x03 \x01(\t\x12\r\n\x05label\x18\x04 \x01(\t\x12\x1e\n\x06\x61rtist\x18\x05 \x03(\x0b\x32\x0e.ArtistDetails\x12\r\n\x05genre\x18\x06 \x03(\t\x12\x13\n\x0breleaseDate\x18\x07 \x01(\t\x12\x13\n\x0breleaseType\x18\x08 \x03(\x05\"\x9e\x01\n\x0bSongDetails\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1e\n\x07\x64\x65tails\x18\x02 \x01(\x0b\x32\r.MusicDetails\x12\x11\n\talbumName\x18\x03 \x01(\t\x12\x13\n\x0btrackNumber\x18\x04 \x01(\x05\x12\x12\n\npreviewUrl\x18\x05 \x01(\t\x12%\n\rdisplayArtist\x18\x06 \x01(\x0b\x32\x0e.ArtistDetails\"1\n\x13SubscriptionDetails\x12\x1a\n\x12subscriptionPeriod\x18\x01 \x01(\x05\"e\n\x07Trailer\x12\x11\n\ttrailerId\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\x14\n\x0cthumbnailUrl\x18\x03 \x01(\t\x12\x10\n\x08watchUrl\x18\x04 \x01(\t\x12\x10\n\x08\x64uration\x18\x05 \x01(\t\"W\n\x10TvEpisodeDetails\x12\x18\n\x10parentDetailsUrl\x18\x01 \x01(\t\x12\x14\n\x0c\x65pisodeIndex\x18\x02 \x01(\x05\x12\x13\n\x0breleaseDate\x18\x03 \x01(\t\"j\n\x0fTvSeasonDetails\x12\x18\n\x10parentDetailsUrl\x18\x01 \x01(\t\x12\x13\n\x0bseasonIndex\x18\x02 \x01(\x05\x12\x13\n\x0breleaseDate\x18\x03 \x01(\t\x12\x13\n\x0b\x62roadcaster\x18\x04 \x01(\t\"]\n\rTvShowDetails\x12\x13\n\x0bseasonCount\x18\x01 \x01(\x05\x12\x11\n\tstartYear\x18\x02 \x01(\x05\x12\x0f\n\x07\x65ndYear\x18\x03 \x01(\x05\x12\x13\n\x0b\x62roadcaster\x18\x04 \x01(\t\"?\n\x0bVideoCredit\x12\x12\n\ncreditType\x18\x01 \x01(\x05\x12\x0e\n\x06\x63redit\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x03(\t\"\xdb\x01\n\x0cVideoDetails\x12\x1c\n\x06\x63redit\x18\x01 \x03(\x0b\x32\x0c.VideoCredit\x12\x10\n\x08\x64uration\x18\x02 \x01(\t\x12\x13\n\x0breleaseDate\x18\x03 \x01(\t\x12\x15\n\rcontentRating\x18\x04 \x01(\t\x12\r\n\x05likes\x18\x05 \x01(\x03\x12\x10\n\x08\x64islikes\x18\x06 \x01(\x03\x12\r\n\x05genre\x18\x07 \x03(\t\x12\x19\n\x07trailer\x18\x08 \x03(\x0b\x32\x08.Trailer\x12$\n\nrentalTerm\x18\t \x03(\x0b\x32\x10.VideoRentalTerm\"\xa0\x01\n\x0fVideoRentalTerm\x12\x11\n\tofferType\x18\x01 \x01(\x05\x12\x19\n\x11offerAbbreviation\x18\x02 \x01(\t\x12\x14\n\x0crentalHeader\x18\x03 \x01(\t\x12#\n\x04term\x18\x04 \x03(\n2\x15.VideoRentalTerm.Term\x1a$\n\x04Term\x12\x0e\n\x06header\x18\x05 \x01(\t\x12\x0c\n\x04\x62ody\x18\x06 \x01(\t\"\xf9\x01\n\x06\x42ucket\x12\x18\n\x08\x64ocument\x18\x01 \x03(\x0b\x32\x06.DocV1\x12\x13\n\x0bmultiCorpus\x18\x02 \x01(\x08\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0f\n\x07iconUrl\x18\x04 \x01(\t\x12\x17\n\x0f\x66ullContentsUrl\x18\x05 \x01(\t\x12\x11\n\trelevance\x18\x06 \x01(\x01\x12\x18\n\x10\x65stimatedResults\x18\x07 \x01(\x03\x12\x17\n\x0f\x61nalyticsCookie\x18\x08 \x01(\t\x12\x1b\n\x13\x66ullContentsListUrl\x18\t \x01(\t\x12\x13\n\x0bnextPageUrl\x18\n \x01(\t\x12\x0f\n\x07ordered\x18\x0b \x01(\x08\"<\n\x0cListResponse\x12\x17\n\x06\x62ucket\x18\x01 \x03(\x0b\x32\x07.Bucket\x12\x13\n\x03\x64oc\x18\x02 \x03(\x0b\x32\x06.DocV2\"\x94\x03\n\x05\x44ocV1\x12\x1c\n\tfinskyDoc\x18\x01 \x01(\x0b\x32\t.Document\x12\r\n\x05\x64ocid\x18\x02 \x01(\t\x12\x12\n\ndetailsUrl\x18\x03 \x01(\t\x12\x12\n\nreviewsUrl\x18\x04 \x01(\t\x12\x16\n\x0erelatedListUrl\x18\x05 \x01(\t\x12\x15\n\rmoreByListUrl\x18\x06 \x01(\t\x12\x10\n\x08shareUrl\x18\x07 \x01(\t\x12\x0f\n\x07\x63reator\x18\x08 \x01(\t\x12!\n\x07\x64\x65tails\x18\t \x01(\x0b\x32\x10.DocumentDetails\x12\x17\n\x0f\x64\x65scriptionHtml\x18\n \x01(\t\x12\x18\n\x10relatedBrowseUrl\x18\x0b \x01(\t\x12\x17\n\x0fmoreByBrowseUrl\x18\x0c \x01(\t\x12\x15\n\rrelatedHeader\x18\r \x01(\t\x12\x14\n\x0cmoreByHeader\x18\x0e \x01(\t\x12\r\n\x05title\x18\x0f \x01(\t\x12!\n\x0bplusOneData\x18\x10 \x01(\x0b\x32\x0c.PlusOneData\x12\x16\n\x0ewarningMessage\x18\x11 \x01(\t\"\xcd\x04\n\x0b\x41nnotations\x12(\n\x0esectionRelated\x18\x01 \x01(\x0b\x32\x10.SectionMetadata\x12\'\n\rsectionMoreBy\x18\x02 \x01(\x0b\x32\x10.SectionMetadata\x12!\n\x0bplusOneData\x18\x03 \x01(\x0b\x32\x0c.PlusOneData\x12\x19\n\x07warning\x18\x04 \x03(\x0b\x32\x08.Warning\x12+\n\x11sectionBodyOfWork\x18\x05 \x01(\x0b\x32\x10.SectionMetadata\x12,\n\x12sectionCoreContent\x18\x06 \x01(\x0b\x32\x10.SectionMetadata\x12\x1b\n\x08template\x18\x07 \x01(\x0b\x32\t.Template\x12\x1f\n\x0f\x62\x61\x64geForCreator\x18\x08 \x03(\x0b\x32\x06.Badge\x12\x1b\n\x0b\x62\x61\x64geForDoc\x18\t \x03(\x0b\x32\x06.Badge\x12\x13\n\x04link\x18\n \x01(\x0b\x32\x05.Link\x12*\n\x10sectionCrossSell\x18\x0b \x01(\x0b\x32\x10.SectionMetadata\x12/\n\x15sectionRelatedDocType\x18\x0c \x01(\x0b\x32\x10.SectionMetadata\x12!\n\x0bpromotedDoc\x18\r \x03(\x0b\x32\x0c.PromotedDoc\x12\x11\n\tofferNote\x18\x0e \x01(\t\x12\x1c\n\x0csubscription\x18\x10 \x03(\x0b\x32\x06.DocV2\x12\x17\n\x06reason\x18\x11 \x01(\x0b\x32\x07.Reason\x12\x18\n\x10privacyPolicyUrl\x18\x12 \x01(\t\"\xa8\x04\n\x05\x44ocV2\x12\r\n\x05\x64ocid\x18\x01 \x01(\t\x12\x14\n\x0c\x62\x61\x63kendDocid\x18\x02 \x01(\t\x12\x0f\n\x07\x64ocType\x18\x03 \x01(\x05\x12\x11\n\tbackendId\x18\x04 \x01(\x05\x12\r\n\x05title\x18\x05 \x01(\t\x12\x0f\n\x07\x63reator\x18\x06 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x07 \x01(\t\x12\x15\n\x05offer\x18\x08 \x03(\x0b\x32\x06.Offer\x12#\n\x0c\x61vailability\x18\t \x01(\x0b\x32\r.Availability\x12\x15\n\x05image\x18\n \x03(\x0b\x32\x06.Image\x12\x15\n\x05\x63hild\x18\x0b \x03(\x0b\x32\x06.DocV2\x12-\n\x11\x63ontainerMetadata\x18\x0c \x01(\x0b\x32\x12.ContainerMetadata\x12!\n\x07\x64\x65tails\x18\r \x01(\x0b\x32\x10.DocumentDetails\x12)\n\x0f\x61ggregateRating\x18\x0e \x01(\x0b\x32\x10.AggregateRating\x12!\n\x0b\x61nnotations\x18\x0f \x01(\x0b\x32\x0c.Annotations\x12\x12\n\ndetailsUrl\x18\x10 \x01(\t\x12\x10\n\x08shareUrl\x18\x11 \x01(\t\x12\x12\n\nreviewsUrl\x18\x12 \x01(\t\x12\x12\n\nbackendUrl\x18\x13 \x01(\t\x12\x1a\n\x12purchaseDetailsUrl\x18\x14 \x01(\t\x12\x17\n\x0f\x64\x65tailsReusable\x18\x15 \x01(\x08\x12\x10\n\x08subtitle\x18\x16 \x01(\t\"\x99\x01\n\x17\x45ncryptedSubscriberInfo\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\x12\x14\n\x0c\x65ncryptedKey\x18\x02 \x01(\t\x12\x11\n\tsignature\x18\x03 \x01(\t\x12\x12\n\ninitVector\x18\x04 \x01(\t\x12\x18\n\x10googleKeyVersion\x18\x05 \x01(\x05\x12\x19\n\x11\x63\x61rrierKeyVersion\x18\x06 \x01(\x05\"\xbd\x03\n\x0c\x41vailability\x12\x13\n\x0brestriction\x18\x05 \x01(\x05\x12\x11\n\tofferType\x18\x06 \x01(\x05\x12\x13\n\x04rule\x18\x07 \x01(\x0b\x32\x05.Rule\x12X\n perdeviceavailabilityrestriction\x18\t \x03(\n2..Availability.PerDeviceAvailabilityRestriction\x12\x18\n\x10\x61vailableIfOwned\x18\r \x01(\x08\x12\x19\n\x07install\x18\x0e \x03(\x0b\x32\x08.Install\x12)\n\nfilterInfo\x18\x10 \x01(\x0b\x32\x15.FilterEvaluationInfo\x12%\n\rownershipInfo\x18\x11 \x01(\x0b\x32\x0e.OwnershipInfo\x1a\x8e\x01\n PerDeviceAvailabilityRestriction\x12\x11\n\tandroidId\x18\n \x01(\x06\x12\x19\n\x11\x64\x65viceRestriction\x18\x0b \x01(\x05\x12\x11\n\tchannelId\x18\x0c \x01(\x03\x12)\n\nfilterInfo\x18\x0f \x01(\x0b\x32\x15.FilterEvaluationInfo\"?\n\x14\x46ilterEvaluationInfo\x12\'\n\x0eruleEvaluation\x18\x01 \x03(\x0b\x32\x0f.RuleEvaluation\"\xd4\x01\n\x04Rule\x12\x0e\n\x06negate\x18\x01 \x01(\x08\x12\x10\n\x08operator\x18\x02 \x01(\x05\x12\x0b\n\x03key\x18\x03 \x01(\x05\x12\x11\n\tstringArg\x18\x04 \x03(\t\x12\x0f\n\x07longArg\x18\x05 \x03(\x03\x12\x11\n\tdoubleArg\x18\x06 \x03(\x01\x12\x16\n\x07subrule\x18\x07 \x03(\x0b\x32\x05.Rule\x12\x14\n\x0cresponseCode\x18\x08 \x01(\x05\x12\x0f\n\x07\x63omment\x18\t \x01(\t\x12\x15\n\rstringArgHash\x18\n \x03(\x06\x12\x10\n\x08\x63onstArg\x18\x0b \x03(\x05\"\x8d\x01\n\x0eRuleEvaluation\x12\x13\n\x04rule\x18\x01 \x01(\x0b\x32\x05.Rule\x12\x19\n\x11\x61\x63tualStringValue\x18\x02 \x03(\t\x12\x17\n\x0f\x61\x63tualLongValue\x18\x03 \x03(\x03\x12\x17\n\x0f\x61\x63tualBoolValue\x18\x04 \x03(\x08\x12\x19\n\x11\x61\x63tualDoubleValue\x18\x05 \x03(\x01\"v\n\x11LibraryAppDetails\x12\x17\n\x0f\x63\x65rtificateHash\x18\x02 \x01(\t\x12\"\n\x1arefundTimeoutTimestampMsec\x18\x03 \x01(\x03\x12$\n\x1cpostDeliveryRefundWindowMsec\x18\x04 \x01(\x03\"\xc4\x01\n\x0fLibraryMutation\x12\x15\n\x05\x64ocid\x18\x01 \x01(\x0b\x32\x06.Docid\x12\x11\n\tofferType\x18\x02 \x01(\x05\x12\x14\n\x0c\x64ocumentHash\x18\x03 \x01(\x03\x12\x0f\n\x07\x64\x65leted\x18\x04 \x01(\x08\x12&\n\nappDetails\x18\x05 \x01(\x0b\x32\x12.LibraryAppDetails\x12\x38\n\x13subscriptionDetails\x18\x06 \x01(\x0b\x32\x1b.LibrarySubscriptionDetails\"\x95\x01\n\x1aLibrarySubscriptionDetails\x12\x1f\n\x17initiationTimestampMsec\x18\x01 \x01(\x03\x12\x1f\n\x17validUntilTimestampMsec\x18\x02 \x01(\x03\x12\x14\n\x0c\x61utoRenewing\x18\x03 \x01(\x08\x12\x1f\n\x17trialUntilTimestampMsec\x18\x04 \x01(\x03\"\x8c\x01\n\rLibraryUpdate\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x0e\n\x06\x63orpus\x18\x02 \x01(\x05\x12\x13\n\x0bserverToken\x18\x03 \x01(\x0c\x12\"\n\x08mutation\x18\x04 \x03(\x0b\x32\x10.LibraryMutation\x12\x0f\n\x07hasMore\x18\x05 \x01(\x08\x12\x11\n\tlibraryId\x18\x06 \x01(\t\"c\n\x12\x43lientLibraryState\x12\x0e\n\x06\x63orpus\x18\x01 \x01(\x05\x12\x13\n\x0bserverToken\x18\x02 \x01(\x0c\x12\x13\n\x0bhashCodeSum\x18\x03 \x01(\x03\x12\x13\n\x0blibrarySize\x18\x04 \x01(\x05\"F\n\x19LibraryReplicationRequest\x12)\n\x0clibraryState\x18\x01 \x03(\x0b\x32\x13.ClientLibraryState\"<\n\x1aLibraryReplicationResponse\x12\x1e\n\x06update\x18\x01 \x03(\x0b\x32\x0e.LibraryUpdate\"l\n\rClickLogEvent\x12\x11\n\teventTime\x18\x01 \x01(\x03\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x0e\n\x06listId\x18\x03 \x01(\t\x12\x13\n\x0breferrerUrl\x18\x04 \x01(\t\x12\x16\n\x0ereferrerListId\x18\x05 \x01(\t\"0\n\nLogRequest\x12\"\n\nclickEvent\x18\x01 \x03(\x0b\x32\x0e.ClickLogEvent\"\r\n\x0bLogResponse\"B\n\x1a\x41ndroidAppNotificationData\x12\x13\n\x0bversionCode\x18\x01 \x01(\x05\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\"M\n\x15InAppNotificationData\x12\x17\n\x0f\x63heckoutOrderId\x18\x01 \x01(\t\x12\x1b\n\x13inAppNotificationId\x18\x02 \x01(\t\"#\n\x10LibraryDirtyData\x12\x0f\n\x07\x62\x61\x63kend\x18\x01 \x01(\x05\"\x97\x04\n\x0cNotification\x12\x18\n\x10notificationType\x18\x01 \x01(\x05\x12\x11\n\ttimestamp\x18\x03 \x01(\x03\x12\x15\n\x05\x64ocid\x18\x04 \x01(\x0b\x32\x06.Docid\x12\x10\n\x08\x64ocTitle\x18\x05 \x01(\t\x12\x11\n\tuserEmail\x18\x06 \x01(\t\x12,\n\x07\x61ppData\x18\x07 \x01(\x0b\x32\x1b.AndroidAppNotificationData\x12\x30\n\x0f\x61ppDeliveryData\x18\x08 \x01(\x0b\x32\x17.AndroidAppDeliveryData\x12\x31\n\x13purchaseRemovalData\x18\t \x01(\x0b\x32\x14.PurchaseRemovalData\x12\x33\n\x14userNotificationData\x18\n \x01(\x0b\x32\x15.UserNotificationData\x12\x35\n\x15inAppNotificationData\x18\x0b \x01(\x0b\x32\x16.InAppNotificationData\x12\x33\n\x14purchaseDeclinedData\x18\x0c \x01(\x0b\x32\x15.PurchaseDeclinedData\x12\x16\n\x0enotificationId\x18\r \x01(\t\x12%\n\rlibraryUpdate\x18\x0e \x01(\x0b\x32\x0e.LibraryUpdate\x12+\n\x10libraryDirtyData\x18\x0f \x01(\x0b\x32\x11.LibraryDirtyData\"@\n\x14PurchaseDeclinedData\x12\x0e\n\x06reason\x18\x01 \x01(\x05\x12\x18\n\x10showNotification\x18\x02 \x01(\x08\"(\n\x13PurchaseRemovalData\x12\x11\n\tmalicious\x18\x01 \x01(\x08\"\x88\x01\n\x14UserNotificationData\x12\x19\n\x11notificationTitle\x18\x01 \x01(\t\x12\x18\n\x10notificationText\x18\x02 \x01(\t\x12\x12\n\ntickerText\x18\x03 \x01(\t\x12\x13\n\x0b\x64ialogTitle\x18\x04 \x01(\t\x12\x12\n\ndialogText\x18\x05 \x01(\t\"\x11\n\x0fPlusOneResponse\"\x1e\n\x1cRateSuggestedContentResponse\"\xa7\x02\n\x0f\x41ggregateRating\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x12\n\nstarRating\x18\x02 \x01(\x02\x12\x14\n\x0cratingsCount\x18\x03 \x01(\x04\x12\x16\n\x0eoneStarRatings\x18\x04 \x01(\x04\x12\x16\n\x0etwoStarRatings\x18\x05 \x01(\x04\x12\x18\n\x10threeStarRatings\x18\x06 \x01(\x04\x12\x17\n\x0f\x66ourStarRatings\x18\x07 \x01(\x04\x12\x17\n\x0f\x66iveStarRatings\x18\x08 \x01(\x04\x12\x15\n\rthumbsUpCount\x18\t \x01(\x04\x12\x17\n\x0fthumbsDownCount\x18\n \x01(\x04\x12\x14\n\x0c\x63ommentCount\x18\x0b \x01(\x04\x12\x1a\n\x12\x62\x61yesianMeanRating\x18\x0c \x01(\x01\"c\n\x0e\x44irectPurchase\x12\x12\n\ndetailsUrl\x18\x01 \x01(\t\x12\x15\n\rpurchaseDocid\x18\x02 \x01(\t\x12\x13\n\x0bparentDocid\x18\x03 \x01(\t\x12\x11\n\tofferType\x18\x04 \x01(\x05\"\x89\x01\n\x13ResolveLinkResponse\x12\x12\n\ndetailsUrl\x18\x01 \x01(\t\x12\x11\n\tbrowseUrl\x18\x02 \x01(\t\x12\x11\n\tsearchUrl\x18\x03 \x01(\t\x12\'\n\x0e\x64irectPurchase\x18\x04 \x01(\x0b\x32\x0f.DirectPurchase\x12\x0f\n\x07homeUrl\x18\x05 \x01(\t\"\xb5\t\n\x07Payload\x12#\n\x0clistResponse\x18\x01 \x01(\x0b\x32\r.ListResponse\x12)\n\x0f\x64\x65tailsResponse\x18\x02 \x01(\x0b\x32\x10.DetailsResponse\x12\'\n\x0ereviewResponse\x18\x03 \x01(\x0b\x32\x0f.ReviewResponse\x12!\n\x0b\x62uyResponse\x18\x04 \x01(\x0b\x32\x0c.BuyResponse\x12\'\n\x0esearchResponse\x18\x05 \x01(\x0b\x32\x0f.SearchResponse\x12!\n\x0btocResponse\x18\x06 \x01(\x0b\x32\x0c.TocResponse\x12\'\n\x0e\x62rowseResponse\x18\x07 \x01(\x0b\x32\x0f.BrowseResponse\x12\x37\n\x16purchaseStatusResponse\x18\x08 \x01(\x0b\x32\x17.PurchaseStatusResponse\x12;\n\x18updateInstrumentResponse\x18\t \x01(\x0b\x32\x19.UpdateInstrumentResponse\x12!\n\x0blogResponse\x18\n \x01(\x0b\x32\x0c.LogResponse\x12\x39\n\x17\x63heckInstrumentResponse\x18\x0b \x01(\x0b\x32\x18.CheckInstrumentResponse\x12)\n\x0fplusOneResponse\x18\x0c \x01(\x0b\x32\x10.PlusOneResponse\x12\x31\n\x13\x66lagContentResponse\x18\r \x01(\x0b\x32\x14.FlagContentResponse\x12\x39\n\x17\x61\x63kNotificationResponse\x18\x0e \x01(\x0b\x32\x18.AckNotificationResponse\x12\x41\n\x1binitiateAssociationResponse\x18\x0f \x01(\x0b\x32\x1c.InitiateAssociationResponse\x12=\n\x19verifyAssociationResponse\x18\x10 \x01(\x0b\x32\x1a.VerifyAssociationResponse\x12?\n\x1alibraryReplicationResponse\x18\x11 \x01(\x0b\x32\x1b.LibraryReplicationResponse\x12\'\n\x0erevokeResponse\x18\x12 \x01(\x0b\x32\x0f.RevokeResponse\x12\x31\n\x13\x62ulkDetailsResponse\x18\x13 \x01(\x0b\x32\x14.BulkDetailsResponse\x12\x31\n\x13resolveLinkResponse\x18\x14 \x01(\x0b\x32\x14.ResolveLinkResponse\x12+\n\x10\x64\x65liveryResponse\x18\x15 \x01(\x0b\x32\x11.DeliveryResponse\x12-\n\x11\x61\x63\x63\x65ptTosResponse\x18\x16 \x01(\x0b\x32\x12.AcceptTosResponse\x12\x43\n\x1crateSuggestedContentResponse\x18\x17 \x01(\x0b\x32\x1d.RateSuggestedContentResponse\x12\x39\n\x17\x63heckPromoOfferResponse\x18\x18 \x01(\x0b\x32\x18.CheckPromoOfferResponse\"U\n\x08PreFetch\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x10\n\x08response\x18\x02 \x01(\x0c\x12\x0c\n\x04\x65tag\x18\x03 \x01(\t\x12\x0b\n\x03ttl\x18\x04 \x01(\x03\x12\x0f\n\x07softTtl\x18\x05 \x01(\x03\"\x91\x01\n\x0fResponseWrapper\x12\x19\n\x07payload\x18\x01 \x01(\x0b\x32\x08.Payload\x12!\n\x08\x63ommands\x18\x02 \x01(\x0b\x32\x0f.ServerCommands\x12\x1b\n\x08preFetch\x18\x03 \x03(\x0b\x32\t.PreFetch\x12#\n\x0cnotification\x18\x04 \x03(\x0b\x32\r.Notification\"]\n\x0eServerCommands\x12\x12\n\nclearCache\x18\x01 \x01(\x08\x12\x1b\n\x13\x64isplayErrorMessage\x18\x02 \x01(\t\x12\x1a\n\x12logErrorStacktrace\x18\x03 \x01(\t\"D\n\x12GetReviewsResponse\x12\x17\n\x06review\x18\x01 \x03(\x0b\x32\x07.Review\x12\x15\n\rmatchingCount\x18\x02 \x01(\x03\"\xf3\x01\n\x06Review\x12\x12\n\nauthorName\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x0e\n\x06source\x18\x03 \x01(\t\x12\x17\n\x0f\x64ocumentVersion\x18\x04 \x01(\t\x12\x15\n\rtimestampMsec\x18\x05 \x01(\x03\x12\x12\n\nstarRating\x18\x06 \x01(\x05\x12\r\n\x05title\x18\x07 \x01(\t\x12\x0f\n\x07\x63omment\x18\x08 \x01(\t\x12\x11\n\tcommentId\x18\t \x01(\t\x12\x12\n\ndeviceName\x18\x13 \x01(\t\x12\x11\n\treplyText\x18\x1d \x01(\t\x12\x1a\n\x12replyTimestampMsec\x18\x1e \x01(\x03\"O\n\x0eReviewResponse\x12(\n\x0bgetResponse\x18\x01 \x01(\x0b\x32\x13.GetReviewsResponse\x12\x13\n\x0bnextPageUrl\x18\x02 \x01(\t\"7\n\x0eRevokeResponse\x12%\n\rlibraryUpdate\x18\x01 \x01(\x0b\x32\x0e.LibraryUpdate\"g\n\rRelatedSearch\x12\x11\n\tsearchUrl\x18\x01 \x01(\t\x12\x0e\n\x06header\x18\x02 \x01(\t\x12\x11\n\tbackendId\x18\x03 \x01(\x05\x12\x0f\n\x07\x64ocType\x18\x04 \x01(\x05\x12\x0f\n\x07\x63urrent\x18\x05 \x01(\x08\"\xac\x01\n\x0eSearchResponse\x12\x15\n\roriginalQuery\x18\x01 \x01(\t\x12\x16\n\x0esuggestedQuery\x18\x02 \x01(\t\x12\x16\n\x0e\x61ggregateQuery\x18\x03 \x01(\x08\x12\x17\n\x06\x62ucket\x18\x04 \x03(\x0b\x32\x07.Bucket\x12\x13\n\x03\x64oc\x18\x05 \x03(\x0b\x32\x06.DocV2\x12%\n\rrelatedSearch\x18\x06 \x03(\x0b\x32\x0e.RelatedSearch\"X\n\x0e\x43orpusMetadata\x12\x0f\n\x07\x62\x61\x63kend\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\nlandingUrl\x18\x03 \x01(\t\x12\x13\n\x0blibraryName\x18\x04 \x01(\t\"#\n\x0b\x45xperiments\x12\x14\n\x0c\x65xperimentId\x18\x01 \x03(\t\"\x8c\x02\n\x0bTocResponse\x12\x1f\n\x06\x63orpus\x18\x01 \x03(\x0b\x32\x0f.CorpusMetadata\x12\x1c\n\x14tosVersionDeprecated\x18\x02 \x01(\x05\x12\x12\n\ntosContent\x18\x03 \x01(\t\x12\x0f\n\x07homeUrl\x18\x04 \x01(\t\x12!\n\x0b\x65xperiments\x18\x05 \x01(\x0b\x32\x0c.Experiments\x12&\n\x1etosCheckboxTextMarketingEmails\x18\x06 \x01(\t\x12\x10\n\x08tosToken\x18\x07 \x01(\t\x12#\n\x0cuserSettings\x18\x08 \x01(\x0b\x32\r.UserSettings\x12\x17\n\x0ficonOverrideUrl\x18\t \x01(\t\"9\n\x0cUserSettings\x12)\n!tosCheckboxMarketingEmailsOptedIn\x18\x01 \x01(\x08\"\x13\n\x11\x41\x63\x63\x65ptTosResponse\"~\n\x1c\x41\x63kNotificationsRequestProto\x12\x16\n\x0enotificationId\x18\x01 \x03(\t\x12*\n\rsignatureHash\x18\x02 \x01(\x0b\x32\x13.SignatureHashProto\x12\x1a\n\x12nackNotificationId\x18\x03 \x03(\t\"\x1f\n\x1d\x41\x63kNotificationsResponseProto\"\x9f\x01\n\x0c\x41\x64\x64ressProto\x12\x10\n\x08\x61\x64\x64ress1\x18\x01 \x01(\t\x12\x10\n\x08\x61\x64\x64ress2\x18\x02 \x01(\t\x12\x0c\n\x04\x63ity\x18\x03 \x01(\t\x12\r\n\x05state\x18\x04 \x01(\t\x12\x12\n\npostalCode\x18\x05 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x06 \x01(\t\x12\x0c\n\x04name\x18\x07 \x01(\t\x12\x0c\n\x04type\x18\x08 \x01(\t\x12\r\n\x05phone\x18\t \x01(\t\"*\n\x0c\x41ppDataProto\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"<\n\x12\x41ppSuggestionProto\x12&\n\tassetInfo\x18\x01 \x01(\x0b\x32\x13.ExternalAssetProto\"Q\n\x14\x41ssetIdentifierProto\x12\x13\n\x0bpackageName\x18\x01 \x01(\t\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0f\n\x07\x61ssetId\x18\x03 \x01(\t\"\x8c\x03\n\x12\x41ssetsRequestProto\x12\x11\n\tassetType\x18\x01 \x01(\x05\x12\r\n\x05query\x18\x02 \x01(\t\x12\x12\n\ncategoryId\x18\x03 \x01(\t\x12\x0f\n\x07\x61ssetId\x18\x04 \x03(\t\x12\x1e\n\x16retrieveVendingHistory\x18\x05 \x01(\x08\x12\x1c\n\x14retrieveExtendedInfo\x18\x06 \x01(\x08\x12\x11\n\tsortOrder\x18\x07 \x01(\x05\x12\x12\n\nstartIndex\x18\x08 \x01(\x03\x12\x12\n\nnumEntries\x18\t \x01(\x03\x12\x12\n\nviewFilter\x18\n \x01(\x05\x12\x13\n\x0brankingType\x18\x0b \x01(\t\x12\x1e\n\x16retrieveCarrierChannel\x18\x0c \x01(\x08\x12\x1e\n\x16pendingDownloadAssetId\x18\r \x03(\t\x12!\n\x19reconstructVendingHistory\x18\x0e \x01(\x08\x12\x19\n\x11unfilteredResults\x18\x0f \x01(\x08\x12\x0f\n\x07\x62\x61\x64geId\x18\x10 \x03(\t\"\xd0\x01\n\x13\x41ssetsResponseProto\x12\"\n\x05\x61sset\x18\x01 \x03(\x0b\x32\x13.ExternalAssetProto\x12\x17\n\x0fnumTotalEntries\x18\x02 \x01(\x03\x12\x16\n\x0e\x63orrectedQuery\x18\x03 \x01(\t\x12%\n\x08\x61ltAsset\x18\x04 \x03(\x0b\x32\x13.ExternalAssetProto\x12\x1b\n\x13numCorrectedEntries\x18\x05 \x01(\x03\x12\x0e\n\x06header\x18\x06 \x01(\t\x12\x10\n\x08listType\x18\x07 \x01(\x05\"\xbb\x01\n\x18\x42illingEventRequestProto\x12\x11\n\teventType\x18\x01 \x01(\x05\x12\x1b\n\x13\x62illingParametersId\x18\x02 \x01(\t\x12\x15\n\rresultSuccess\x18\x03 \x01(\x08\x12\x15\n\rclientMessage\x18\x04 \x01(\t\x12\x41\n\x11\x63\x61rrierInstrument\x18\x05 \x01(\x0b\x32&.ExternalCarrierBillingInstrumentProto\"\x1b\n\x19\x42illingEventResponseProto\"\xbc\x03\n\x15\x42illingParameterProto\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06mncMcc\x18\x03 \x03(\t\x12\x12\n\nbackendUrl\x18\x04 \x03(\t\x12\x0e\n\x06iconId\x18\x05 \x01(\t\x12\x1d\n\x15\x62illingInstrumentType\x18\x06 \x01(\x05\x12\x15\n\rapplicationId\x18\x07 \x01(\t\x12\x0e\n\x06tosUrl\x18\x08 \x01(\t\x12\x1d\n\x15instrumentTosRequired\x18\t \x01(\x08\x12\x12\n\napiVersion\x18\n \x01(\x05\x12)\n!perTransactionCredentialsRequired\x18\x0b \x01(\x08\x12\x32\n*sendSubscriberIdWithCarrierBillingRequests\x18\x0c \x01(\x08\x12\x1f\n\x17\x64\x65viceAssociationMethod\x18\r \x01(\x05\x12\x1f\n\x17userTokenRequestMessage\x18\x0e \x01(\t\x12\x1f\n\x17userTokenRequestAddress\x18\x0f \x01(\t\x12\x1a\n\x12passphraseRequired\x18\x10 \x01(\x08\"Q\n\x1e\x43\x61rrierBillingCredentialsProto\x12\x13\n\x0b\x63redentials\x18\x01 \x01(\t\x12\x1a\n\x12\x63redentialsTimeout\x18\x02 \x01(\x03\"\xff\x01\n\rCategoryProto\x12\x11\n\tassetType\x18\x02 \x01(\x05\x12\x12\n\ncategoryId\x18\x03 \x01(\t\x12\x17\n\x0f\x63\x61tegoryDisplay\x18\x04 \x01(\t\x12\x18\n\x10\x63\x61tegorySubtitle\x18\x05 \x01(\t\x12\x19\n\x11promotedAssetsNew\x18\x06 \x03(\t\x12\x1a\n\x12promotedAssetsHome\x18\x07 \x03(\t\x12%\n\rsubCategories\x18\x08 \x03(\x0b\x32\x0e.CategoryProto\x12\x1a\n\x12promotedAssetsPaid\x18\t \x03(\t\x12\x1a\n\x12promotedAssetsFree\x18\n \x03(\t\":\n!CheckForNotificationsRequestProto\x12\x15\n\ralarmDuration\x18\x01 \x01(\x03\"$\n\"CheckForNotificationsResponseProto\"S\n\x18\x43heckLicenseRequestProto\x12\x13\n\x0bpackageName\x18\x01 \x01(\t\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\r\n\x05nonce\x18\x03 \x01(\x03\"X\n\x19\x43heckLicenseResponseProto\x12\x14\n\x0cresponseCode\x18\x01 \x01(\x05\x12\x12\n\nsignedData\x18\x02 \x01(\t\x12\x11\n\tsignature\x18\x03 \x01(\t\"\x87\x01\n\x14\x43ommentsRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x12\n\nstartIndex\x18\x02 \x01(\x03\x12\x12\n\nnumEntries\x18\x03 \x01(\x03\x12\x1f\n\x17shouldReturnSelfComment\x18\x04 \x01(\x08\x12\x15\n\rassetReferrer\x18\x05 \x01(\t\"\x84\x01\n\x15\x43ommentsResponseProto\x12&\n\x07\x63omment\x18\x01 \x03(\x0b\x32\x15.ExternalCommentProto\x12\x17\n\x0fnumTotalEntries\x18\x02 \x01(\x03\x12*\n\x0bselfComment\x18\x03 \x01(\x0b\x32\x15.ExternalCommentProto\"\xc0\x03\n\x17\x43ontentSyncRequestProto\x12\x13\n\x0bincremental\x18\x01 \x01(\x08\x12\x45\n\x11\x61ssetinstallstate\x18\x02 \x03(\n2*.ContentSyncRequestProto.AssetInstallState\x12\x35\n\tsystemapp\x18\n \x03(\n2\".ContentSyncRequestProto.SystemApp\x12\x1a\n\x12sideloadedAppCount\x18\x0e \x01(\x05\x1a\xa5\x01\n\x11\x41ssetInstallState\x12\x0f\n\x07\x61ssetId\x18\x03 \x01(\t\x12\x12\n\nassetState\x18\x04 \x01(\x05\x12\x13\n\x0binstallTime\x18\x05 \x01(\x03\x12\x15\n\runinstallTime\x18\x06 \x01(\x03\x12\x13\n\x0bpackageName\x18\x07 \x01(\t\x12\x13\n\x0bversionCode\x18\x08 \x01(\x05\x12\x15\n\rassetReferrer\x18\t \x01(\t\x1aN\n\tSystemApp\x12\x13\n\x0bpackageName\x18\x0b \x01(\t\x12\x13\n\x0bversionCode\x18\x0c \x01(\x05\x12\x17\n\x0f\x63\x65rtificateHash\x18\r \x03(\t\"7\n\x18\x43ontentSyncResponseProto\x12\x1b\n\x13numUpdatesAvailable\x18\x01 \x01(\x05\"D\n\x10\x44\x61taMessageProto\x12\x10\n\x08\x63\x61tegory\x18\x01 \x01(\t\x12\x1e\n\x07\x61ppData\x18\x03 \x03(\x0b\x32\r.AppDataProto\"P\n\x11\x44ownloadInfoProto\x12\x0f\n\x07\x61pkSize\x18\x01 \x01(\x03\x12*\n\x0e\x61\x64\x64itionalFile\x18\x02 \x03(\x0b\x32\x12.FileMetadataProto\"\xe6\n\n\x12\x45xternalAssetProto\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\x11\n\tassetType\x18\x03 \x01(\x05\x12\r\n\x05owner\x18\x04 \x01(\t\x12\x0f\n\x07version\x18\x05 \x01(\t\x12\r\n\x05price\x18\x06 \x01(\t\x12\x15\n\raverageRating\x18\x07 \x01(\t\x12\x12\n\nnumRatings\x18\x08 \x01(\x03\x12\x44\n\x13purchaseinformation\x18\t \x01(\n2\'.ExternalAssetProto.PurchaseInformation\x12\x36\n\x0c\x65xtendedinfo\x18\x0c \x01(\n2 .ExternalAssetProto.ExtendedInfo\x12\x0f\n\x07ownerId\x18\x16 \x01(\t\x12\x13\n\x0bpackageName\x18\x18 \x01(\t\x12\x13\n\x0bversionCode\x18\x19 \x01(\x05\x12\x14\n\x0c\x62undledAsset\x18\x1d \x01(\x08\x12\x15\n\rpriceCurrency\x18  \x01(\t\x12\x13\n\x0bpriceMicros\x18! \x01(\x03\x12\x14\n\x0c\x66ilterReason\x18# \x01(\t\x12\x19\n\x11\x61\x63tualSellerPrice\x18( \x01(\t\x12%\n\x08\x61ppBadge\x18/ \x03(\x0b\x32\x13.ExternalBadgeProto\x12\'\n\nownerBadge\x18\x30 \x03(\x0b\x32\x13.ExternalBadgeProto\x1a\x7f\n\x13PurchaseInformation\x12\x14\n\x0cpurchaseTime\x18\n \x01(\x03\x12\x19\n\x11refundTimeoutTime\x18\x0b \x01(\x03\x12\x19\n\x11refundStartPolicy\x18- \x01(\x05\x12\x1c\n\x14refundWindowDuration\x18. \x01(\x03\x1a\xca\x05\n\x0c\x45xtendedInfo\x12\x13\n\x0b\x64\x65scription\x18\r \x01(\t\x12\x15\n\rdownloadCount\x18\x0e \x01(\x03\x12\x1f\n\x17\x61pplicationPermissionId\x18\x0f \x03(\t\x12 \n\x18requiredInstallationSize\x18\x10 \x01(\x03\x12\x13\n\x0bpackageName\x18\x11 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x12 \x01(\t\x12\x15\n\rforwardLocked\x18\x13 \x01(\x08\x12\x14\n\x0c\x63ontactEmail\x18\x14 \x01(\t\x12\x1b\n\x13\x65verInstalledByUser\x18\x15 \x01(\x08\x12\x1b\n\x13\x64ownloadCountString\x18\x17 \x01(\t\x12\x14\n\x0c\x63ontactPhone\x18\x1a \x01(\t\x12\x16\n\x0e\x63ontactWebsite\x18\x1b \x01(\t\x12\x1e\n\x16nextPurchaseRefundable\x18\x1c \x01(\x08\x12\x16\n\x0enumScreenshots\x18\x1e \x01(\x05\x12\x1e\n\x16promotionalDescription\x18\x1f \x01(\t\x12\x18\n\x10serverAssetState\x18\" \x01(\x05\x12\x1a\n\x12\x63ontentRatingLevel\x18$ \x01(\x05\x12\x1b\n\x13\x63ontentRatingString\x18% \x01(\t\x12\x15\n\rrecentChanges\x18& \x01(\t\x12M\n\x11packagedependency\x18\' \x03(\n22.ExternalAssetProto.ExtendedInfo.PackageDependency\x12\x11\n\tvideoLink\x18+ \x01(\t\x12(\n\x0c\x64ownloadInfo\x18\x31 \x01(\x0b\x32\x12.DownloadInfoProto\x1a\x41\n\x11PackageDependency\x12\x13\n\x0bpackageName\x18) \x01(\t\x12\x17\n\x0fskipPermissions\x18* \x01(\x08\"5\n\x17\x45xternalBadgeImageProto\x12\r\n\x05usage\x18\x01 \x01(\x05\x12\x0b\n\x03url\x18\x02 \x01(\t\"\x8a\x01\n\x12\x45xternalBadgeProto\x12\x16\n\x0elocalizedTitle\x18\x01 \x01(\t\x12\x1c\n\x14localizedDescription\x18\x02 \x01(\t\x12,\n\nbadgeImage\x18\x03 \x03(\x0b\x32\x18.ExternalBadgeImageProto\x12\x10\n\x08searchId\x18\x04 \x01(\t\"\xe0\x02\n%ExternalCarrierBillingInstrumentProto\x12\x15\n\rinstrumentKey\x18\x01 \x01(\t\x12\x1c\n\x14subscriberIdentifier\x18\x02 \x01(\t\x12\x13\n\x0b\x61\x63\x63ountType\x18\x03 \x01(\t\x12\x1a\n\x12subscriberCurrency\x18\x04 \x01(\t\x12\x18\n\x10transactionLimit\x18\x05 \x01(\x04\x12\x16\n\x0esubscriberName\x18\x06 \x01(\t\x12\x10\n\x08\x61\x64\x64ress1\x18\x07 \x01(\t\x12\x10\n\x08\x61\x64\x64ress2\x18\x08 \x01(\t\x12\x0c\n\x04\x63ity\x18\t \x01(\t\x12\r\n\x05state\x18\n \x01(\t\x12\x12\n\npostalCode\x18\x0b \x01(\t\x12\x0f\n\x07\x63ountry\x18\x0c \x01(\t\x12\x39\n\x17\x65ncryptedSubscriberInfo\x18\r \x01(\x0b\x32\x18.EncryptedSubscriberInfo\"r\n\x14\x45xternalCommentProto\x12\x0c\n\x04\x62ody\x18\x01 \x01(\t\x12\x0e\n\x06rating\x18\x02 \x01(\x05\x12\x13\n\x0b\x63reatorName\x18\x03 \x01(\t\x12\x14\n\x0c\x63reationTime\x18\x04 \x01(\x03\x12\x11\n\tcreatorId\x18\x05 \x01(\t\"\xfb\x01\n\x12\x45xternalCreditCard\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x12\n\nlastDigits\x18\x02 \x01(\t\x12\x0f\n\x07\x65xpYear\x18\x03 \x01(\x05\x12\x10\n\x08\x65xpMonth\x18\x04 \x01(\x05\x12\x12\n\npersonName\x18\x05 \x01(\t\x12\x13\n\x0b\x63ountryCode\x18\x06 \x01(\t\x12\x12\n\npostalCode\x18\x07 \x01(\t\x12\x13\n\x0bmakeDefault\x18\x08 \x01(\x08\x12\x10\n\x08\x61\x64\x64ress1\x18\t \x01(\t\x12\x10\n\x08\x61\x64\x64ress2\x18\n \x01(\t\x12\x0c\n\x04\x63ity\x18\x0b \x01(\t\x12\r\n\x05state\x18\x0c \x01(\t\x12\r\n\x05phone\x18\r \x01(\t\"\xb5\x01\n\x1d\x45xternalPaypalInstrumentProto\x12\x15\n\rinstrumentKey\x18\x01 \x01(\t\x12\x16\n\x0epreapprovalKey\x18\x02 \x01(\t\x12\x13\n\x0bpaypalEmail\x18\x03 \x01(\t\x12$\n\rpaypalAddress\x18\x04 \x01(\x0b\x32\r.AddressProto\x12*\n\"multiplePaypalInstrumentsSupported\x18\x05 \x01(\x08\"]\n\x11\x46ileMetadataProto\x12\x10\n\x08\x66ileType\x18\x01 \x01(\x05\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0c\n\x04size\x18\x03 \x01(\x03\x12\x13\n\x0b\x64ownloadUrl\x18\x04 \x01(\t\"Z\n\x1dGetAddressSnippetRequestProto\x12\x39\n\x17\x65ncryptedSubscriberInfo\x18\x01 \x01(\x0b\x32\x18.EncryptedSubscriberInfo\"8\n\x1eGetAddressSnippetResponseProto\x12\x16\n\x0e\x61\x64\x64ressSnippet\x18\x01 \x01(\t\"B\n\x14GetAssetRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x19\n\x11\x64irectDownloadKey\x18\x02 \x01(\t\"\xda\x03\n\x15GetAssetResponseProto\x12\x39\n\x0cinstallasset\x18\x01 \x01(\n2#.GetAssetResponseProto.InstallAsset\x12*\n\x0e\x61\x64\x64itionalFile\x18\x0f \x03(\x0b\x32\x12.FileMetadataProto\x1a\xd9\x02\n\x0cInstallAsset\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\x12\x11\n\tassetName\x18\x03 \x01(\t\x12\x11\n\tassetType\x18\x04 \x01(\t\x12\x14\n\x0c\x61ssetPackage\x18\x05 \x01(\t\x12\x0f\n\x07\x62lobUrl\x18\x06 \x01(\t\x12\x16\n\x0e\x61ssetSignature\x18\x07 \x01(\t\x12\x11\n\tassetSize\x18\x08 \x01(\x03\x12\x1b\n\x13refundTimeoutMillis\x18\t \x01(\x03\x12\x15\n\rforwardLocked\x18\n \x01(\x08\x12\x0f\n\x07secured\x18\x0b \x01(\x08\x12\x13\n\x0bversionCode\x18\x0c \x01(\x05\x12\x1e\n\x16\x64ownloadAuthCookieName\x18\r \x01(\t\x12\x1f\n\x17\x64ownloadAuthCookieValue\x18\x0e \x01(\t\x12%\n\x1dpostInstallRefundWindowMillis\x18\x10 \x01(\x03\"\x1c\n\x1aGetCarrierInfoRequestProto\"\xb8\x01\n\x1bGetCarrierInfoResponseProto\x12\x1d\n\x15\x63\x61rrierChannelEnabled\x18\x01 \x01(\x08\x12\x17\n\x0f\x63\x61rrierLogoIcon\x18\x02 \x01(\x0c\x12\x15\n\rcarrierBanner\x18\x03 \x01(\x0c\x12\x17\n\x0f\x63\x61rrierSubtitle\x18\x04 \x01(\t\x12\x14\n\x0c\x63\x61rrierTitle\x18\x05 \x01(\t\x12\x1b\n\x13\x63\x61rrierImageDensity\x18\x06 \x01(\x05\"6\n\x19GetCategoriesRequestProto\x12\x19\n\x11prefetchPromoData\x18\x01 \x01(\x08\"@\n\x1aGetCategoriesResponseProto\x12\"\n\ncategories\x18\x01 \x03(\x0b\x32\x0e.CategoryProto\"\xbb\x01\n\x14GetImageRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x12\n\nimageUsage\x18\x03 \x01(\x05\x12\x0f\n\x07imageId\x18\x04 \x01(\t\x12\x1b\n\x13screenPropertyWidth\x18\x05 \x01(\x05\x12\x1c\n\x14screenPropertyHeight\x18\x06 \x01(\x05\x12\x1d\n\x15screenPropertyDensity\x18\x07 \x01(\x05\x12\x13\n\x0bproductType\x18\x08 \x01(\x05\"@\n\x15GetImageResponseProto\x12\x11\n\timageData\x18\x01 \x01(\x0c\x12\x14\n\x0cimageDensity\x18\x02 \x01(\x05\"\xf4\x01\n\x1dGetMarketMetadataRequestProto\x12\x17\n\x0flastRequestTime\x18\x01 \x01(\x03\x12\x36\n\x13\x64\x65viceConfiguration\x18\x02 \x01(\x0b\x32\x19.DeviceConfigurationProto\x12\x15\n\rdeviceRoaming\x18\x03 \x01(\x08\x12\x1b\n\x13marketSignatureHash\x18\x04 \x03(\t\x12\x15\n\rcontentRating\x18\x05 \x01(\x05\x12\x17\n\x0f\x64\x65viceModelName\x18\x06 \x01(\t\x12\x1e\n\x16\x64\x65viceManufacturerName\x18\x07 \x01(\t\"\xb7\x02\n\x1eGetMarketMetadataResponseProto\x12\x1f\n\x17latestClientVersionCode\x18\x01 \x01(\x05\x12\x17\n\x0flatestClientUrl\x18\x02 \x01(\t\x12\x17\n\x0fpaidAppsEnabled\x18\x03 \x01(\x08\x12\x30\n\x10\x62illingParameter\x18\x04 \x03(\x0b\x32\x16.BillingParameterProto\x12\x1a\n\x12\x63ommentPostEnabled\x18\x05 \x01(\x08\x12\x1c\n\x14\x62illingEventsEnabled\x18\x06 \x01(\x08\x12\x16\n\x0ewarningMessage\x18\x07 \x01(\t\x12\x1b\n\x13inAppBillingEnabled\x18\x08 \x01(\x08\x12!\n\x19inAppBillingMaxApiVersion\x18\t \x01(\x05\"1\n\x1cGetSubCategoriesRequestProto\x12\x11\n\tassetType\x18\x01 \x01(\x05\"\xa2\x01\n\x1dGetSubCategoriesResponseProto\x12?\n\x0bsubcategory\x18\x01 \x03(\n2*.GetSubCategoriesResponseProto.SubCategory\x1a@\n\x0bSubCategory\x12\x1a\n\x12subCategoryDisplay\x18\x02 \x01(\t\x12\x15\n\rsubCategoryId\x18\x03 \x01(\t\"\xb0\x01\n$InAppPurchaseInformationRequestProto\x12*\n\rsignatureHash\x18\x01 \x01(\x0b\x32\x13.SignatureHashProto\x12\r\n\x05nonce\x18\x02 \x01(\x03\x12\x16\n\x0enotificationId\x18\x03 \x03(\t\x12\x1a\n\x12signatureAlgorithm\x18\x04 \x01(\t\x12\x19\n\x11\x62illingApiVersion\x18\x05 \x01(\x05\"\xbb\x01\n%InAppPurchaseInformationResponseProto\x12(\n\x0esignedResponse\x18\x01 \x01(\x0b\x32\x10.SignedDataProto\x12:\n\x15statusBarNotification\x18\x02 \x03(\x0b\x32\x1b.StatusBarNotificationProto\x12,\n\x0epurchaseResult\x18\x03 \x01(\x0b\x32\x14.PurchaseResultProto\"\x98\x01\n$InAppRestoreTransactionsRequestProto\x12*\n\rsignatureHash\x18\x01 \x01(\x0b\x32\x13.SignatureHashProto\x12\r\n\x05nonce\x18\x02 \x01(\x03\x12\x1a\n\x12signatureAlgorithm\x18\x03 \x01(\t\x12\x19\n\x11\x62illingApiVersion\x18\x04 \x01(\x05\"\x7f\n%InAppRestoreTransactionsResponseProto\x12(\n\x0esignedResponse\x18\x01 \x01(\x0b\x32\x10.SignedDataProto\x12,\n\x0epurchaseResult\x18\x02 \x01(\x0b\x32\x14.PurchaseResultProto\"\xba\x01\n\x19ModifyCommentRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12&\n\x07\x63omment\x18\x02 \x01(\x0b\x32\x15.ExternalCommentProto\x12\x15\n\rdeleteComment\x18\x03 \x01(\x08\x12\x11\n\tflagAsset\x18\x04 \x01(\x08\x12\x10\n\x08\x66lagType\x18\x05 \x01(\x05\x12\x13\n\x0b\x66lagMessage\x18\x06 \x01(\t\x12\x13\n\x0bnonFlagFlow\x18\x07 \x01(\x08\"\x1c\n\x1aModifyCommentResponseProto\"v\n\x16PaypalCountryInfoProto\x12\x19\n\x11\x62irthDateRequired\x18\x01 \x01(\x08\x12\x0f\n\x07tosText\x18\x02 \x01(\t\x12\x1c\n\x14\x62illingAgreementText\x18\x03 \x01(\t\x12\x12\n\npreTosText\x18\x04 \x01(\t\"y\n\x1fPaypalCreateAccountRequestProto\x12\x11\n\tfirstName\x18\x01 \x01(\t\x12\x10\n\x08lastName\x18\x02 \x01(\t\x12\x1e\n\x07\x61\x64\x64ress\x18\x03 \x01(\x0b\x32\r.AddressProto\x12\x11\n\tbirthDate\x18\x04 \x01(\t\"<\n PaypalCreateAccountResponseProto\x12\x18\n\x10\x63reateAccountKey\x18\x01 \x01(\t\"E\n\x16PaypalCredentialsProto\x12\x16\n\x0epreapprovalKey\x18\x01 \x01(\t\x12\x13\n\x0bpaypalEmail\x18\x02 \x01(\t\"B\n PaypalMassageAddressRequestProto\x12\x1e\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0b\x32\r.AddressProto\"C\n!PaypalMassageAddressResponseProto\x12\x1e\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0b\x32\r.AddressProto\"^\n(PaypalPreapprovalCredentialsRequestProto\x12\x15\n\rgaiaAuthToken\x18\x01 \x01(\t\x12\x1b\n\x13\x62illingInstrumentId\x18\x02 \x01(\t\"n\n)PaypalPreapprovalCredentialsResponseProto\x12\x12\n\nresultCode\x18\x01 \x01(\x05\x12\x18\n\x10paypalAccountKey\x18\x02 \x01(\t\x12\x13\n\x0bpaypalEmail\x18\x03 \x01(\t\"R\n$PaypalPreapprovalDetailsRequestProto\x12\x12\n\ngetAddress\x18\x01 \x01(\x08\x12\x16\n\x0epreapprovalKey\x18\x02 \x01(\t\"\\\n%PaypalPreapprovalDetailsResponseProto\x12\x13\n\x0bpaypalEmail\x18\x01 \x01(\t\x12\x1e\n\x07\x61\x64\x64ress\x18\x02 \x01(\x0b\x32\r.AddressProto\"\x1f\n\x1dPaypalPreapprovalRequestProto\"8\n\x1ePaypalPreapprovalResponseProto\x12\x16\n\x0epreapprovalKey\x18\x01 \x01(\t\"]\n\x19PendingNotificationsProto\x12\'\n\x0cnotification\x18\x01 \x03(\x0b\x32\x11.DataMessageProto\x12\x17\n\x0fnextCheckMillis\x18\x02 \x01(\x03\"e\n\x15PrefetchedBundleProto\x12$\n\x07request\x18\x01 \x01(\x0b\x32\x13.SingleRequestProto\x12&\n\x08response\x18\x02 \x01(\x0b\x32\x14.SingleResponseProto\"\xbc\x01\n\x15PurchaseCartInfoProto\x12\x11\n\titemPrice\x18\x01 \x01(\t\x12\x14\n\x0ctaxInclusive\x18\x02 \x01(\t\x12\x14\n\x0ctaxExclusive\x18\x03 \x01(\t\x12\r\n\x05total\x18\x04 \x01(\t\x12\x12\n\ntaxMessage\x18\x05 \x01(\t\x12\x15\n\rfooterMessage\x18\x06 \x01(\t\x12\x15\n\rpriceCurrency\x18\x07 \x01(\t\x12\x13\n\x0bpriceMicros\x18\x08 \x01(\x03\"\x93\x04\n\x11PurchaseInfoProto\x12\x15\n\rtransactionId\x18\x01 \x01(\t\x12(\n\x08\x63\x61rtInfo\x18\x02 \x01(\x0b\x32\x16.PurchaseCartInfoProto\x12\x41\n\x12\x62illinginstruments\x18\x03 \x01(\n2%.PurchaseInfoProto.BillingInstruments\x12\x18\n\x10\x65rrorInputFields\x18\t \x03(\x05\x12\x14\n\x0crefundPolicy\x18\n \x01(\t\x12\x15\n\ruserCanAddGdd\x18\x0c \x01(\x08\x12\x1f\n\x17\x65ligibleInstrumentTypes\x18\r \x03(\x05\x12\x0f\n\x07orderId\x18\x0f \x01(\t\x1a\x80\x02\n\x12\x42illingInstruments\x12R\n\x11\x62illinginstrument\x18\x04 \x03(\n27.PurchaseInfoProto.BillingInstruments.BillingInstrument\x12\"\n\x1a\x64\x65\x66\x61ultBillingInstrumentId\x18\x08 \x01(\t\x1ar\n\x11\x42illingInstrument\x12\n\n\x02id\x18\x05 \x01(\t\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\x11\n\tisInvalid\x18\x07 \x01(\x08\x12\x16\n\x0einstrumentType\x18\x0b \x01(\x05\x12\x18\n\x10instrumentStatus\x18\x0e \x01(\x05\"i\n\x1cPurchaseMetadataRequestProto\x12*\n\"deprecatedRetrieveBillingCountries\x18\x01 \x01(\x08\x12\x1d\n\x15\x62illingInstrumentType\x18\x02 \x01(\x05\"\x87\x04\n\x1dPurchaseMetadataResponseProto\x12;\n\tcountries\x18\x01 \x01(\n2(.PurchaseMetadataResponseProto.Countries\x1a\xa8\x03\n\tCountries\x12\x41\n\x07\x63ountry\x18\x02 \x03(\n20.PurchaseMetadataResponseProto.Countries.Country\x1a\xd7\x02\n\x07\x43ountry\x12\x13\n\x0b\x63ountryCode\x18\x03 \x01(\t\x12\x13\n\x0b\x63ountryName\x18\x04 \x01(\t\x12\x32\n\x11paypalCountryInfo\x18\x05 \x01(\x0b\x32\x17.PaypalCountryInfoProto\x12#\n\x1b\x61llowsReducedBillingAddress\x18\x06 \x01(\x08\x12\x65\n\x15instrumentaddressspec\x18\x07 \x03(\n2F.PurchaseMetadataResponseProto.Countries.Country.InstrumentAddressSpec\x1a\x62\n\x15InstrumentAddressSpec\x12\x18\n\x10instrumentFamily\x18\x08 \x01(\x05\x12/\n\x12\x62illingAddressSpec\x18\t \x01(\x0b\x32\x13.BillingAddressSpec\"\xe2\x03\n\x19PurchaseOrderRequestProto\x12\x15\n\rgaiaAuthToken\x18\x01 \x01(\t\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\x12\x15\n\rtransactionId\x18\x03 \x01(\t\x12\x1b\n\x13\x62illingInstrumentId\x18\x04 \x01(\t\x12\x13\n\x0btosAccepted\x18\x05 \x01(\x08\x12\x42\n\x19\x63\x61rrierBillingCredentials\x18\x06 \x01(\x0b\x32\x1f.CarrierBillingCredentialsProto\x12\x17\n\x0f\x65xistingOrderId\x18\x07 \x01(\t\x12\x1d\n\x15\x62illingInstrumentType\x18\x08 \x01(\x05\x12\x1b\n\x13\x62illingParametersId\x18\t \x01(\t\x12\x32\n\x11paypalCredentials\x18\n \x01(\x0b\x32\x17.PaypalCredentialsProto\x12,\n\x0eriskHeaderInfo\x18\x0b \x01(\x0b\x32\x14.RiskHeaderInfoProto\x12\x13\n\x0bproductType\x18\x0c \x01(\x05\x12*\n\rsignatureHash\x18\r \x01(\x0b\x32\x13.SignatureHashProto\x12\x18\n\x10\x64\x65veloperPayload\x18\x0e \x01(\t\"\xb6\x01\n\x1aPurchaseOrderResponseProto\x12\x1c\n\x14\x64\x65precatedResultCode\x18\x01 \x01(\x05\x12(\n\x0cpurchaseInfo\x18\x02 \x01(\x0b\x32\x12.PurchaseInfoProto\x12\"\n\x05\x61sset\x18\x03 \x01(\x0b\x32\x13.ExternalAssetProto\x12,\n\x0epurchaseResult\x18\x04 \x01(\x0b\x32\x14.PurchaseResultProto\"\x92\x04\n\x18PurchasePostRequestProto\x12\x15\n\rgaiaAuthToken\x18\x01 \x01(\t\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\x12\x15\n\rtransactionId\x18\x03 \x01(\t\x12N\n\x15\x62illinginstrumentinfo\x18\x04 \x01(\n2/.PurchasePostRequestProto.BillingInstrumentInfo\x12\x13\n\x0btosAccepted\x18\x07 \x01(\x08\x12\x17\n\x0f\x63\x62InstrumentKey\x18\x08 \x01(\t\x12\x1b\n\x13paypalAuthConfirmed\x18\x0b \x01(\x08\x12\x13\n\x0bproductType\x18\x0c \x01(\x05\x12*\n\rsignatureHash\x18\r \x01(\x0b\x32\x13.SignatureHashProto\x1a\xda\x01\n\x15\x42illingInstrumentInfo\x12\x1b\n\x13\x62illingInstrumentId\x18\x05 \x01(\t\x12\'\n\ncreditCard\x18\x06 \x01(\x0b\x32\x13.ExternalCreditCard\x12\x41\n\x11\x63\x61rrierInstrument\x18\t \x01(\x0b\x32&.ExternalCarrierBillingInstrumentProto\x12\x38\n\x10paypalInstrument\x18\n \x01(\x0b\x32\x1e.ExternalPaypalInstrumentProto\"\xaa\x02\n\x19PurchasePostResponseProto\x12\x1c\n\x14\x64\x65precatedResultCode\x18\x01 \x01(\x05\x12(\n\x0cpurchaseInfo\x18\x02 \x01(\x0b\x32\x12.PurchaseInfoProto\x12\x19\n\x11termsOfServiceUrl\x18\x03 \x01(\t\x12\x1a\n\x12termsOfServiceText\x18\x04 \x01(\t\x12\x1a\n\x12termsOfServiceName\x18\x05 \x01(\t\x12\"\n\x1atermsOfServiceCheckboxText\x18\x06 \x01(\t\x12 \n\x18termsOfServiceHeaderText\x18\x07 \x01(\t\x12,\n\x0epurchaseResult\x18\x08 \x01(\x0b\x32\x14.PurchaseResultProto\"q\n\x1bPurchaseProductRequestProto\x12\x13\n\x0bproductType\x18\x01 \x01(\x05\x12\x11\n\tproductId\x18\x02 \x01(\t\x12*\n\rsignatureHash\x18\x03 \x01(\x0b\x32\x13.SignatureHashProto\"p\n\x1cPurchaseProductResponseProto\x12\r\n\x05title\x18\x01 \x01(\t\x12\x11\n\titemTitle\x18\x02 \x01(\t\x12\x17\n\x0fitemDescription\x18\x03 \x01(\t\x12\x15\n\rmerchantField\x18\x04 \x01(\t\"D\n\x13PurchaseResultProto\x12\x12\n\nresultCode\x18\x01 \x01(\x05\x12\x19\n\x11resultCodeMessage\x18\x02 \x01(\t\"W\n\x14QuerySuggestionProto\x12\r\n\x05query\x18\x01 \x01(\t\x12\x1b\n\x13\x65stimatedNumResults\x18\x02 \x01(\x05\x12\x13\n\x0bqueryWeight\x18\x03 \x01(\x05\"A\n\x1bQuerySuggestionRequestProto\x12\r\n\x05query\x18\x01 \x01(\t\x12\x13\n\x0brequestType\x18\x02 \x01(\x05\"\x90\x02\n\x1cQuerySuggestionResponseProto\x12<\n\nsuggestion\x18\x01 \x03(\n2(.QuerySuggestionResponseProto.Suggestion\x12\"\n\x1a\x65stimatedNumAppSuggestions\x18\x04 \x01(\x05\x12$\n\x1c\x65stimatedNumQuerySuggestions\x18\x05 \x01(\x05\x1ah\n\nSuggestion\x12*\n\rappSuggestion\x18\x02 \x01(\x0b\x32\x13.AppSuggestionProto\x12.\n\x0fquerySuggestion\x18\x03 \x01(\x0b\x32\x15.QuerySuggestionProto\"T\n\x17RateCommentRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x11\n\tcreatorId\x18\x02 \x01(\t\x12\x15\n\rcommentRating\x18\x03 \x01(\x05\"\x1a\n\x18RateCommentResponseProto\">\n\x1fReconstructDatabaseRequestProto\x12\x1b\n\x13retrieveFullHistory\x18\x01 \x01(\x08\"H\n ReconstructDatabaseResponseProto\x12$\n\x05\x61sset\x18\x01 \x03(\x0b\x32\x15.AssetIdentifierProto\"%\n\x12RefundRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\"_\n\x13RefundResponseProto\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\"\n\x05\x61sset\x18\x02 \x01(\x0b\x32\x13.ExternalAssetProto\x12\x14\n\x0cresultDetail\x18\x03 \x01(\t\"*\n\x17RemoveAssetRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\"\xcd\x02\n\x16RequestPropertiesProto\x12\x15\n\ruserAuthToken\x18\x01 \x01(\t\x12\x1b\n\x13userAuthTokenSecure\x18\x02 \x01(\x08\x12\x17\n\x0fsoftwareVersion\x18\x03 \x01(\x05\x12\x0b\n\x03\x61id\x18\x04 \x01(\t\x12\x1d\n\x15productNameAndVersion\x18\x05 \x01(\t\x12\x14\n\x0cuserLanguage\x18\x06 \x01(\t\x12\x13\n\x0buserCountry\x18\x07 \x01(\t\x12\x14\n\x0coperatorName\x18\x08 \x01(\t\x12\x17\n\x0fsimOperatorName\x18\t \x01(\t\x12\x1b\n\x13operatorNumericName\x18\n \x01(\t\x12\x1e\n\x16simOperatorNumericName\x18\x0b \x01(\t\x12\x10\n\x08\x63lientId\x18\x0c \x01(\t\x12\x11\n\tloggingId\x18\r \x01(\t\"\xbe\x11\n\x0cRequestProto\x12\x32\n\x11requestProperties\x18\x01 \x01(\x0b\x32\x17.RequestPropertiesProto\x12&\n\x07request\x18\x02 \x03(\n2\x15.RequestProto.Request\x1a\xd1\x10\n\x07Request\x12\x42\n\x19requestSpecificProperties\x18\x03 \x01(\x0b\x32\x1f.RequestSpecificPropertiesProto\x12)\n\x0c\x61ssetRequest\x18\x04 \x01(\x0b\x32\x13.AssetsRequestProto\x12.\n\x0f\x63ommentsRequest\x18\x05 \x01(\x0b\x32\x15.CommentsRequestProto\x12\x38\n\x14modifyCommentRequest\x18\x06 \x01(\x0b\x32\x1a.ModifyCommentRequestProto\x12\x36\n\x13purchasePostRequest\x18\x07 \x01(\x0b\x32\x19.PurchasePostRequestProto\x12\x38\n\x14purchaseOrderRequest\x18\x08 \x01(\x0b\x32\x1a.PurchaseOrderRequestProto\x12\x34\n\x12\x63ontentSyncRequest\x18\t \x01(\x0b\x32\x18.ContentSyncRequestProto\x12.\n\x0fgetAssetRequest\x18\n \x01(\x0b\x32\x15.GetAssetRequestProto\x12.\n\x0fgetImageRequest\x18\x0b \x01(\x0b\x32\x15.GetImageRequestProto\x12*\n\rrefundRequest\x18\x0c \x01(\x0b\x32\x13.RefundRequestProto\x12>\n\x17purchaseMetadataRequest\x18\r \x01(\x0b\x32\x1d.PurchaseMetadataRequestProto\x12;\n\x14subCategoriesRequest\x18\x0e \x01(\x0b\x32\x1d.GetSubCategoriesRequestProto\x12<\n\x16uninstallReasonRequest\x18\x10 \x01(\x0b\x32\x1c.UninstallReasonRequestProto\x12\x34\n\x12rateCommentRequest\x18\x11 \x01(\x0b\x32\x18.RateCommentRequestProto\x12\x36\n\x13\x63heckLicenseRequest\x18\x12 \x01(\x0b\x32\x19.CheckLicenseRequestProto\x12@\n\x18getMarketMetadataRequest\x18\x13 \x01(\x0b\x32\x1e.GetMarketMetadataRequestProto\x12\x38\n\x14getCategoriesRequest\x18\x15 \x01(\x0b\x32\x1a.GetCategoriesRequestProto\x12:\n\x15getCarrierInfoRequest\x18\x16 \x01(\x0b\x32\x1b.GetCarrierInfoRequestProto\x12\x34\n\x12removeAssetRequest\x18\x17 \x01(\x0b\x32\x18.RemoveAssetRequestProto\x12\x44\n\x1arestoreApplicationsRequest\x18\x18 \x01(\x0b\x32 .RestoreApplicationsRequestProto\x12<\n\x16querySuggestionRequest\x18\x19 \x01(\x0b\x32\x1c.QuerySuggestionRequestProto\x12\x36\n\x13\x62illingEventRequest\x18\x1a \x01(\x0b\x32\x19.BillingEventRequestProto\x12@\n\x18paypalPreapprovalRequest\x18\x1b \x01(\x0b\x32\x1e.PaypalPreapprovalRequestProto\x12N\n\x1fpaypalPreapprovalDetailsRequest\x18\x1c \x01(\x0b\x32%.PaypalPreapprovalDetailsRequestProto\x12\x44\n\x1apaypalCreateAccountRequest\x18\x1d \x01(\x0b\x32 .PaypalCreateAccountRequestProto\x12V\n#paypalPreapprovalCredentialsRequest\x18\x1e \x01(\x0b\x32).PaypalPreapprovalCredentialsRequestProto\x12N\n\x1finAppRestoreTransactionsRequest\x18\x1f \x01(\x0b\x32%.InAppRestoreTransactionsRequestProto\x12N\n\x1finAppPurchaseInformationRequest\x18  \x01(\x0b\x32%.InAppPurchaseInformationRequestProto\x12H\n\x1c\x63heckForNotificationsRequest\x18! \x01(\x0b\x32\".CheckForNotificationsRequestProto\x12>\n\x17\x61\x63kNotificationsRequest\x18\" \x01(\x0b\x32\x1d.AckNotificationsRequestProto\x12<\n\x16purchaseProductRequest\x18# \x01(\x0b\x32\x1c.PurchaseProductRequestProto\x12\x44\n\x1areconstructDatabaseRequest\x18$ \x01(\x0b\x32 .ReconstructDatabaseRequestProto\x12\x46\n\x1bpaypalMassageAddressRequest\x18% \x01(\x0b\x32!.PaypalMassageAddressRequestProto\x12@\n\x18getAddressSnippetRequest\x18& \x01(\x0b\x32\x1e.GetAddressSnippetRequestProto\"5\n\x1eRequestSpecificPropertiesProto\x12\x13\n\x0bifNoneMatch\x18\x01 \x01(\t\"\xbe\x01\n\x17ResponsePropertiesProto\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06maxAge\x18\x02 \x01(\x05\x12\x0c\n\x04\x65tag\x18\x03 \x01(\t\x12\x15\n\rserverVersion\x18\x04 \x01(\x05\x12\x18\n\x10maxAgeConsumable\x18\x06 \x01(\x05\x12\x14\n\x0c\x65rrorMessage\x18\x07 \x01(\t\x12.\n\x0f\x65rrorInputField\x18\x08 \x03(\x0b\x32\x15.InputValidationError\"\xf7\x11\n\rResponseProto\x12)\n\x08response\x18\x01 \x03(\n2\x17.ResponseProto.Response\x12\x38\n\x14pendingNotifications\x18& \x01(\x0b\x32\x1a.PendingNotificationsProto\x1a\x80\x11\n\x08Response\x12\x34\n\x12responseProperties\x18\x02 \x01(\x0b\x32\x18.ResponsePropertiesProto\x12,\n\x0e\x61ssetsResponse\x18\x03 \x01(\x0b\x32\x14.AssetsResponseProto\x12\x30\n\x10\x63ommentsResponse\x18\x04 \x01(\x0b\x32\x16.CommentsResponseProto\x12:\n\x15modifyCommentResponse\x18\x05 \x01(\x0b\x32\x1b.ModifyCommentResponseProto\x12\x38\n\x14purchasePostResponse\x18\x06 \x01(\x0b\x32\x1a.PurchasePostResponseProto\x12:\n\x15purchaseOrderResponse\x18\x07 \x01(\x0b\x32\x1b.PurchaseOrderResponseProto\x12\x36\n\x13\x63ontentSyncResponse\x18\x08 \x01(\x0b\x32\x19.ContentSyncResponseProto\x12\x30\n\x10getAssetResponse\x18\t \x01(\x0b\x32\x16.GetAssetResponseProto\x12\x30\n\x10getImageResponse\x18\n \x01(\x0b\x32\x16.GetImageResponseProto\x12,\n\x0erefundResponse\x18\x0b \x01(\x0b\x32\x14.RefundResponseProto\x12@\n\x18purchaseMetadataResponse\x18\x0c \x01(\x0b\x32\x1e.PurchaseMetadataResponseProto\x12=\n\x15subCategoriesResponse\x18\r \x01(\x0b\x32\x1e.GetSubCategoriesResponseProto\x12>\n\x17uninstallReasonResponse\x18\x0f \x01(\x0b\x32\x1d.UninstallReasonResponseProto\x12\x36\n\x13rateCommentResponse\x18\x10 \x01(\x0b\x32\x19.RateCommentResponseProto\x12\x38\n\x14\x63heckLicenseResponse\x18\x11 \x01(\x0b\x32\x1a.CheckLicenseResponseProto\x12\x42\n\x19getMarketMetadataResponse\x18\x12 \x01(\x0b\x32\x1f.GetMarketMetadataResponseProto\x12\x30\n\x10prefetchedBundle\x18\x13 \x03(\x0b\x32\x16.PrefetchedBundleProto\x12:\n\x15getCategoriesResponse\x18\x14 \x01(\x0b\x32\x1b.GetCategoriesResponseProto\x12<\n\x16getCarrierInfoResponse\x18\x15 \x01(\x0b\x32\x1c.GetCarrierInfoResponseProto\x12\x45\n\x1arestoreApplicationResponse\x18\x17 \x01(\x0b\x32!.RestoreApplicationsResponseProto\x12>\n\x17querySuggestionResponse\x18\x18 \x01(\x0b\x32\x1d.QuerySuggestionResponseProto\x12\x38\n\x14\x62illingEventResponse\x18\x19 \x01(\x0b\x32\x1a.BillingEventResponseProto\x12\x42\n\x19paypalPreapprovalResponse\x18\x1a \x01(\x0b\x32\x1f.PaypalPreapprovalResponseProto\x12P\n paypalPreapprovalDetailsResponse\x18\x1b \x01(\x0b\x32&.PaypalPreapprovalDetailsResponseProto\x12\x46\n\x1bpaypalCreateAccountResponse\x18\x1c \x01(\x0b\x32!.PaypalCreateAccountResponseProto\x12X\n$paypalPreapprovalCredentialsResponse\x18\x1d \x01(\x0b\x32*.PaypalPreapprovalCredentialsResponseProto\x12P\n inAppRestoreTransactionsResponse\x18\x1e \x01(\x0b\x32&.InAppRestoreTransactionsResponseProto\x12P\n inAppPurchaseInformationResponse\x18\x1f \x01(\x0b\x32&.InAppPurchaseInformationResponseProto\x12J\n\x1d\x63heckForNotificationsResponse\x18  \x01(\x0b\x32#.CheckForNotificationsResponseProto\x12@\n\x18\x61\x63kNotificationsResponse\x18! \x01(\x0b\x32\x1e.AckNotificationsResponseProto\x12>\n\x17purchaseProductResponse\x18\" \x01(\x0b\x32\x1d.PurchaseProductResponseProto\x12\x46\n\x1breconstructDatabaseResponse\x18# \x01(\x0b\x32!.ReconstructDatabaseResponseProto\x12H\n\x1cpaypalMassageAddressResponse\x18$ \x01(\x0b\x32\".PaypalMassageAddressResponseProto\x12\x42\n\x19getAddressSnippetResponse\x18% \x01(\x0b\x32\x1f.GetAddressSnippetResponseProto\"\x86\x01\n\x1fRestoreApplicationsRequestProto\x12\x17\n\x0f\x62\x61\x63kupAndroidId\x18\x01 \x01(\t\x12\x12\n\ntosVersion\x18\x02 \x01(\t\x12\x36\n\x13\x64\x65viceConfiguration\x18\x03 \x01(\x0b\x32\x19.DeviceConfigurationProto\"I\n RestoreApplicationsResponseProto\x12%\n\x05\x61sset\x18\x01 \x03(\x0b\x32\x16.GetAssetResponseProto\"/\n\x13RiskHeaderInfoProto\x12\x18\n\x10hashedDeviceInfo\x18\x01 \x01(\t\"L\n\x12SignatureHashProto\x12\x13\n\x0bpackageName\x18\x01 \x01(\t\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0c\n\x04hash\x18\x03 \x01(\x0c\"8\n\x0fSignedDataProto\x12\x12\n\nsignedData\x18\x01 \x01(\t\x12\x11\n\tsignature\x18\x02 \x01(\t\"\xdf\x10\n\x12SingleRequestProto\x12\x42\n\x19requestSpecificProperties\x18\x03 \x01(\x0b\x32\x1f.RequestSpecificPropertiesProto\x12)\n\x0c\x61ssetRequest\x18\x04 \x01(\x0b\x32\x13.AssetsRequestProto\x12.\n\x0f\x63ommentsRequest\x18\x05 \x01(\x0b\x32\x15.CommentsRequestProto\x12\x38\n\x14modifyCommentRequest\x18\x06 \x01(\x0b\x32\x1a.ModifyCommentRequestProto\x12\x36\n\x13purchasePostRequest\x18\x07 \x01(\x0b\x32\x19.PurchasePostRequestProto\x12\x38\n\x14purchaseOrderRequest\x18\x08 \x01(\x0b\x32\x1a.PurchaseOrderRequestProto\x12\x34\n\x12\x63ontentSyncRequest\x18\t \x01(\x0b\x32\x18.ContentSyncRequestProto\x12.\n\x0fgetAssetRequest\x18\n \x01(\x0b\x32\x15.GetAssetRequestProto\x12.\n\x0fgetImageRequest\x18\x0b \x01(\x0b\x32\x15.GetImageRequestProto\x12*\n\rrefundRequest\x18\x0c \x01(\x0b\x32\x13.RefundRequestProto\x12>\n\x17purchaseMetadataRequest\x18\r \x01(\x0b\x32\x1d.PurchaseMetadataRequestProto\x12;\n\x14subCategoriesRequest\x18\x0e \x01(\x0b\x32\x1d.GetSubCategoriesRequestProto\x12<\n\x16uninstallReasonRequest\x18\x10 \x01(\x0b\x32\x1c.UninstallReasonRequestProto\x12\x34\n\x12rateCommentRequest\x18\x11 \x01(\x0b\x32\x18.RateCommentRequestProto\x12\x36\n\x13\x63heckLicenseRequest\x18\x12 \x01(\x0b\x32\x19.CheckLicenseRequestProto\x12@\n\x18getMarketMetadataRequest\x18\x13 \x01(\x0b\x32\x1e.GetMarketMetadataRequestProto\x12\x38\n\x14getCategoriesRequest\x18\x15 \x01(\x0b\x32\x1a.GetCategoriesRequestProto\x12:\n\x15getCarrierInfoRequest\x18\x16 \x01(\x0b\x32\x1b.GetCarrierInfoRequestProto\x12\x34\n\x12removeAssetRequest\x18\x17 \x01(\x0b\x32\x18.RemoveAssetRequestProto\x12\x44\n\x1arestoreApplicationsRequest\x18\x18 \x01(\x0b\x32 .RestoreApplicationsRequestProto\x12<\n\x16querySuggestionRequest\x18\x19 \x01(\x0b\x32\x1c.QuerySuggestionRequestProto\x12\x36\n\x13\x62illingEventRequest\x18\x1a \x01(\x0b\x32\x19.BillingEventRequestProto\x12@\n\x18paypalPreapprovalRequest\x18\x1b \x01(\x0b\x32\x1e.PaypalPreapprovalRequestProto\x12N\n\x1fpaypalPreapprovalDetailsRequest\x18\x1c \x01(\x0b\x32%.PaypalPreapprovalDetailsRequestProto\x12\x44\n\x1apaypalCreateAccountRequest\x18\x1d \x01(\x0b\x32 .PaypalCreateAccountRequestProto\x12V\n#paypalPreapprovalCredentialsRequest\x18\x1e \x01(\x0b\x32).PaypalPreapprovalCredentialsRequestProto\x12N\n\x1finAppRestoreTransactionsRequest\x18\x1f \x01(\x0b\x32%.InAppRestoreTransactionsRequestProto\x12Q\n\"getInAppPurchaseInformationRequest\x18  \x01(\x0b\x32%.InAppPurchaseInformationRequestProto\x12H\n\x1c\x63heckForNotificationsRequest\x18! \x01(\x0b\x32\".CheckForNotificationsRequestProto\x12>\n\x17\x61\x63kNotificationsRequest\x18\" \x01(\x0b\x32\x1d.AckNotificationsRequestProto\x12<\n\x16purchaseProductRequest\x18# \x01(\x0b\x32\x1c.PurchaseProductRequestProto\x12\x44\n\x1areconstructDatabaseRequest\x18$ \x01(\x0b\x32 .ReconstructDatabaseRequestProto\x12\x46\n\x1bpaypalMassageAddressRequest\x18% \x01(\x0b\x32!.PaypalMassageAddressRequestProto\x12@\n\x18getAddressSnippetRequest\x18& \x01(\x0b\x32\x1e.GetAddressSnippetRequestProto\"\xdc\x10\n\x13SingleResponseProto\x12\x34\n\x12responseProperties\x18\x02 \x01(\x0b\x32\x18.ResponsePropertiesProto\x12,\n\x0e\x61ssetsResponse\x18\x03 \x01(\x0b\x32\x14.AssetsResponseProto\x12\x30\n\x10\x63ommentsResponse\x18\x04 \x01(\x0b\x32\x16.CommentsResponseProto\x12:\n\x15modifyCommentResponse\x18\x05 \x01(\x0b\x32\x1b.ModifyCommentResponseProto\x12\x38\n\x14purchasePostResponse\x18\x06 \x01(\x0b\x32\x1a.PurchasePostResponseProto\x12:\n\x15purchaseOrderResponse\x18\x07 \x01(\x0b\x32\x1b.PurchaseOrderResponseProto\x12\x36\n\x13\x63ontentSyncResponse\x18\x08 \x01(\x0b\x32\x19.ContentSyncResponseProto\x12\x30\n\x10getAssetResponse\x18\t \x01(\x0b\x32\x16.GetAssetResponseProto\x12\x30\n\x10getImageResponse\x18\n \x01(\x0b\x32\x16.GetImageResponseProto\x12,\n\x0erefundResponse\x18\x0b \x01(\x0b\x32\x14.RefundResponseProto\x12@\n\x18purchaseMetadataResponse\x18\x0c \x01(\x0b\x32\x1e.PurchaseMetadataResponseProto\x12=\n\x15subCategoriesResponse\x18\r \x01(\x0b\x32\x1e.GetSubCategoriesResponseProto\x12>\n\x17uninstallReasonResponse\x18\x0f \x01(\x0b\x32\x1d.UninstallReasonResponseProto\x12\x36\n\x13rateCommentResponse\x18\x10 \x01(\x0b\x32\x19.RateCommentResponseProto\x12\x38\n\x14\x63heckLicenseResponse\x18\x11 \x01(\x0b\x32\x1a.CheckLicenseResponseProto\x12\x42\n\x19getMarketMetadataResponse\x18\x12 \x01(\x0b\x32\x1f.GetMarketMetadataResponseProto\x12:\n\x15getCategoriesResponse\x18\x14 \x01(\x0b\x32\x1b.GetCategoriesResponseProto\x12<\n\x16getCarrierInfoResponse\x18\x15 \x01(\x0b\x32\x1c.GetCarrierInfoResponseProto\x12\x45\n\x1arestoreApplicationResponse\x18\x17 \x01(\x0b\x32!.RestoreApplicationsResponseProto\x12>\n\x17querySuggestionResponse\x18\x18 \x01(\x0b\x32\x1d.QuerySuggestionResponseProto\x12\x38\n\x14\x62illingEventResponse\x18\x19 \x01(\x0b\x32\x1a.BillingEventResponseProto\x12\x42\n\x19paypalPreapprovalResponse\x18\x1a \x01(\x0b\x32\x1f.PaypalPreapprovalResponseProto\x12P\n paypalPreapprovalDetailsResponse\x18\x1b \x01(\x0b\x32&.PaypalPreapprovalDetailsResponseProto\x12\x46\n\x1bpaypalCreateAccountResponse\x18\x1c \x01(\x0b\x32!.PaypalCreateAccountResponseProto\x12X\n$paypalPreapprovalCredentialsResponse\x18\x1d \x01(\x0b\x32*.PaypalPreapprovalCredentialsResponseProto\x12P\n inAppRestoreTransactionsResponse\x18\x1e \x01(\x0b\x32&.InAppRestoreTransactionsResponseProto\x12S\n#getInAppPurchaseInformationResponse\x18\x1f \x01(\x0b\x32&.InAppPurchaseInformationResponseProto\x12J\n\x1d\x63heckForNotificationsResponse\x18  \x01(\x0b\x32#.CheckForNotificationsResponseProto\x12@\n\x18\x61\x63kNotificationsResponse\x18! \x01(\x0b\x32\x1e.AckNotificationsResponseProto\x12>\n\x17purchaseProductResponse\x18\" \x01(\x0b\x32\x1d.PurchaseProductResponseProto\x12\x46\n\x1breconstructDatabaseResponse\x18# \x01(\x0b\x32!.ReconstructDatabaseResponseProto\x12H\n\x1cpaypalMassageAddressResponse\x18$ \x01(\x0b\x32\".PaypalMassageAddressResponseProto\x12\x42\n\x19getAddressSnippetResponse\x18% \x01(\x0b\x32\x1f.GetAddressSnippetResponseProto\"[\n\x1aStatusBarNotificationProto\x12\x12\n\ntickerText\x18\x01 \x01(\t\x12\x14\n\x0c\x63ontentTitle\x18\x02 \x01(\t\x12\x13\n\x0b\x63ontentText\x18\x03 \x01(\t\">\n\x1bUninstallReasonRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x0e\n\x06reason\x18\x02 \x01(\x05\"\x1e\n\x1cUninstallReasonResponseProto')
+  serialized_pb=_b('\n\x10googleplay.proto\"\x19\n\x17\x41\x63kNotificationResponse\"\x8c\x04\n\x16\x41ndroidAppDeliveryData\x12\x14\n\x0c\x64ownloadSize\x18\x01 \x01(\x03\x12\x11\n\tsignature\x18\x02 \x01(\t\x12\x13\n\x0b\x64ownloadUrl\x18\x03 \x01(\t\x12(\n\x0e\x61\x64\x64itionalFile\x18\x04 \x03(\x0b\x32\x10.AppFileMetadata\x12\'\n\x12\x64ownloadAuthCookie\x18\x05 \x03(\x0b\x32\x0b.HttpCookie\x12\x15\n\rforwardLocked\x18\x06 \x01(\x08\x12\x15\n\rrefundTimeout\x18\x07 \x01(\x03\x12\x17\n\x0fserverInitiated\x18\x08 \x01(\x08\x12%\n\x1dpostInstallRefundWindowMillis\x18\t \x01(\x03\x12\x1c\n\x14immediateStartNeeded\x18\n \x01(\x08\x12\'\n\tpatchData\x18\x0b \x01(\x0b\x32\x14.AndroidAppPatchData\x12+\n\x10\x65ncryptionParams\x18\x0c \x01(\x0b\x32\x11.EncryptionParams\x12\x1a\n\x12gzippedDownloadUrl\x18\r \x01(\t\x12\x1b\n\x13gzippedDownloadSize\x18\x0e \x01(\x03\x12-\n\x11splitDeliveryData\x18\x0f \x03(\x0b\x32\x12.SplitDeliveryData\x12\x17\n\x0finstallLocation\x18\x10 \x01(\x05\"\xbf\x01\n\x11SplitDeliveryData\x12\n\n\x02id\x18\x01 \x01(\t\x12\x14\n\x0c\x64ownloadSize\x18\x02 \x01(\x03\x12\x1b\n\x13gzippedDownloadSize\x18\x03 \x01(\x03\x12\x11\n\tsignature\x18\x04 \x01(\t\x12\x13\n\x0b\x64ownloadUrl\x18\x05 \x01(\t\x12\x1a\n\x12gzippedDownloadUrl\x18\x06 \x01(\t\x12\'\n\tpatchData\x18\x07 \x01(\x0b\x32\x14.AndroidAppPatchData\"\x85\x01\n\x13\x41ndroidAppPatchData\x12\x17\n\x0f\x62\x61seVersionCode\x18\x01 \x01(\x05\x12\x15\n\rbaseSignature\x18\x02 \x01(\t\x12\x13\n\x0b\x64ownloadUrl\x18\x03 \x01(\t\x12\x13\n\x0bpatchFormat\x18\x04 \x01(\x05\x12\x14\n\x0cmaxPatchSize\x18\x05 \x01(\x03\"[\n\x0f\x41ppFileMetadata\x12\x10\n\x08\x66ileType\x18\x01 \x01(\x05\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0c\n\x04size\x18\x03 \x01(\x03\x12\x13\n\x0b\x64ownloadUrl\x18\x04 \x01(\t\"K\n\x10\x45ncryptionParams\x12\x0f\n\x07version\x18\x01 \x01(\x05\x12\x15\n\rencryptionKey\x18\x02 \x01(\t\x12\x0f\n\x07hmacKey\x18\x03 \x01(\t\")\n\nHttpCookie\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xb7\x02\n\x07\x41\x64\x64ress\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0c\x61\x64\x64ressLine1\x18\x02 \x01(\t\x12\x14\n\x0c\x61\x64\x64ressLine2\x18\x03 \x01(\t\x12\x0c\n\x04\x63ity\x18\x04 \x01(\t\x12\r\n\x05state\x18\x05 \x01(\t\x12\x12\n\npostalCode\x18\x06 \x01(\t\x12\x15\n\rpostalCountry\x18\x07 \x01(\t\x12\x19\n\x11\x64\x65pendentLocality\x18\x08 \x01(\t\x12\x13\n\x0bsortingCode\x18\t \x01(\t\x12\x14\n\x0clanguageCode\x18\n \x01(\t\x12\x13\n\x0bphoneNumber\x18\x0b \x01(\t\x12\x1b\n\x13\x64\x65precatedIsReduced\x18\x0c \x01(\x08\x12\x11\n\tfirstName\x18\r \x01(\t\x12\x10\n\x08lastName\x18\x0e \x01(\t\x12\r\n\x05\x65mail\x18\x0f \x01(\t\"J\n\nBookAuthor\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x17\n\x0f\x64\x65precatedQuery\x18\x02 \x01(\t\x12\x15\n\x05\x64ocid\x18\x03 \x01(\x0b\x32\x06.Docid\"\x90\x04\n\x0b\x42ookDetails\x12\x1d\n\x07subject\x18\x03 \x03(\x0b\x32\x0c.BookSubject\x12\x11\n\tpublisher\x18\x04 \x01(\t\x12\x17\n\x0fpublicationDate\x18\x05 \x01(\t\x12\x0c\n\x04isbn\x18\x06 \x01(\t\x12\x15\n\rnumberOfPages\x18\x07 \x01(\x05\x12\x10\n\x08subtitle\x18\x08 \x01(\t\x12\x1b\n\x06\x61uthor\x18\t \x03(\x0b\x32\x0b.BookAuthor\x12\x11\n\treaderUrl\x18\n \x01(\t\x12\x17\n\x0f\x64ownloadEpubUrl\x18\x0b \x01(\t\x12\x16\n\x0e\x64ownloadPdfUrl\x18\x0c \x01(\t\x12\x17\n\x0f\x61\x63sEpubTokenUrl\x18\r \x01(\t\x12\x16\n\x0e\x61\x63sPdfTokenUrl\x18\x0e \x01(\t\x12\x15\n\repubAvailable\x18\x0f \x01(\x08\x12\x14\n\x0cpdfAvailable\x18\x10 \x01(\x08\x12\x16\n\x0e\x61\x62outTheAuthor\x18\x11 \x01(\t\x12+\n\nidentifier\x18\x12 \x03(\n2\x17.BookDetails.Identifier\x12\x1a\n\x12\x66ixedLayoutContent\x18\x15 \x01(\x08\x12\x19\n\x11\x61udioVideoContent\x18\x16 \x01(\x08\x12\x14\n\x0cisAgencyBook\x18\x17 \x01(\x08\x1a.\n\nIdentifier\x12\x0c\n\x04type\x18\x13 \x01(\x05\x12\x12\n\nidentifier\x18\x14 \x01(\t\"=\n\x0b\x42ookSubject\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05query\x18\x02 \x01(\t\x12\x11\n\tsubjectId\x18\x03 \x01(\t\"E\n\nBrowseLink\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07\x64\x61taUrl\x18\x03 \x01(\t\x12\x18\n\x10serverLogsCookie\x18\x04 \x01(\x0c\"\xb0\x01\n\x0e\x42rowseResponse\x12\x13\n\x0b\x63ontentsUrl\x18\x01 \x01(\t\x12\x10\n\x08promoUrl\x18\x02 \x01(\t\x12\x1d\n\x08\x63\x61tegory\x18\x03 \x03(\x0b\x32\x0b.BrowseLink\x12\x1f\n\nbreadcrumb\x18\x04 \x03(\x0b\x32\x0b.BrowseLink\x12\x1d\n\tquickLink\x18\x05 \x03(\x0b\x32\n.QuickLink\x12\x18\n\x10serverLogsCookie\x18\x06 \x01(\x0c\"\xa7\x01\n\tQuickLink\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x15\n\x05image\x18\x02 \x01(\x0b\x32\x06.Image\x12\x1b\n\x04link\x18\x03 \x01(\x0b\x32\r.ResolvedLink\x12\x17\n\x0f\x64isplayRequired\x18\x04 \x01(\x08\x12\x18\n\x10serverLogsCookie\x18\x05 \x01(\x0c\x12\x11\n\tbackendId\x18\x06 \x01(\x05\x12\x12\n\nprismStyle\x18\x07 \x01(\x08\"\x88\n\n\x0b\x42uyResponse\x12\x37\n\x10purchaseResponse\x18\x01 \x01(\x0b\x32\x1d.PurchaseNotificationResponse\x12/\n\x0c\x63heckoutinfo\x18\x02 \x01(\n2\x19.BuyResponse.CheckoutInfo\x12\x16\n\x0e\x63ontinueViaUrl\x18\x08 \x01(\t\x12\x19\n\x11purchaseStatusUrl\x18\t \x01(\t\x12\x19\n\x11\x63heckoutServiceId\x18\x0c \x01(\t\x12\x1d\n\x15\x63heckoutTokenRequired\x18\r \x01(\x08\x12\x17\n\x0f\x62\x61seCheckoutUrl\x18\x0e \x01(\t\x12\x17\n\x0ftosCheckboxHtml\x18% \x03(\t\x12\x17\n\x0fpermissionError\x18& \x01(\x05\x12\x37\n\x16purchaseStatusResponse\x18\' \x01(\x0b\x32\x17.PurchaseStatusResponse\x12\x16\n\x0epurchaseCookie\x18. \x01(\t\x12\x1d\n\tchallenge\x18\x31 \x01(\x0b\x32\n.Challenge\x12\x1f\n\x17\x61\x64\x64InstrumentPromptHtml\x18\x32 \x01(\t\x12\x19\n\x11\x63onfirmButtonText\x18\x33 \x01(\t\x12 \n\x18permissionErrorTitleText\x18\x34 \x01(\t\x12\"\n\x1apermissionErrorMessageText\x18\x35 \x01(\t\x12\x18\n\x10serverLogsCookie\x18\x36 \x01(\x0c\x12\x1c\n\x14\x65ncodedDeliveryToken\x18\x37 \x01(\t\x1a\xac\x05\n\x0c\x43heckoutInfo\x12\x17\n\x04item\x18\x03 \x01(\x0b\x32\t.LineItem\x12\x1a\n\x07subItem\x18\x04 \x03(\x0b\x32\t.LineItem\x12@\n\x0e\x63heckoutoption\x18\x05 \x03(\n2(.BuyResponse.CheckoutInfo.CheckoutOption\x12\x1d\n\x15\x64\x65precatedCheckoutUrl\x18\n \x01(\t\x12\x18\n\x10\x61\x64\x64InstrumentUrl\x18\x0b \x01(\t\x12\x12\n\nfooterHtml\x18\x14 \x03(\t\x12 \n\x18\x65ligibleInstrumentFamily\x18\x1f \x03(\x05\x12\x14\n\x0c\x66ootnoteHtml\x18$ \x03(\t\x12\'\n\x12\x65ligibleInstrument\x18, \x03(\x0b\x32\x0b.Instrument\x1a\xf6\x02\n\x0e\x43heckoutOption\x12\x15\n\rformOfPayment\x18\x06 \x01(\t\x12\x1b\n\x13\x65ncodedAdjustedCart\x18\x07 \x01(\t\x12\x14\n\x0cinstrumentId\x18\x0f \x01(\t\x12\x17\n\x04item\x18\x10 \x03(\x0b\x32\t.LineItem\x12\x1a\n\x07subItem\x18\x11 \x03(\x0b\x32\t.LineItem\x12\x18\n\x05total\x18\x12 \x01(\x0b\x32\t.LineItem\x12\x12\n\nfooterHtml\x18\x13 \x03(\t\x12\x18\n\x10instrumentFamily\x18\x1d \x01(\x05\x12\x1a\n\x12selectedInstrument\x18  \x01(\x08\x12\x1a\n\x07summary\x18! \x01(\x0b\x32\t.LineItem\x12\x14\n\x0c\x66ootnoteHtml\x18# \x03(\t\x12\x1f\n\ninstrument\x18+ \x01(\x0b\x32\x0b.Instrument\x12\x16\n\x0epurchaseCookie\x18- \x01(\t\x12\x16\n\x0e\x64isabledReason\x18\x30 \x03(\t\"\\\n\x08LineItem\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x15\n\x05offer\x18\x03 \x01(\x0b\x32\x06.Offer\x12\x16\n\x06\x61mount\x18\x04 \x01(\x0b\x32\x06.Money\"F\n\x05Money\x12\x0e\n\x06micros\x18\x01 \x01(\x03\x12\x14\n\x0c\x63urrencyCode\x18\x02 \x01(\t\x12\x17\n\x0f\x66ormattedAmount\x18\x03 \x01(\t\"\x80\x01\n\x1cPurchaseNotificationResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x1d\n\tdebugInfo\x18\x02 \x01(\x0b\x32\n.DebugInfo\x12\x1d\n\x15localizedErrorMessage\x18\x03 \x01(\t\x12\x12\n\npurchaseId\x18\x04 \x01(\t\"\xf9\x01\n\x16PurchaseStatusResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x11\n\tstatusMsg\x18\x02 \x01(\t\x12\x13\n\x0bstatusTitle\x18\x03 \x01(\t\x12\x14\n\x0c\x62riefMessage\x18\x04 \x01(\t\x12\x0f\n\x07infoUrl\x18\x05 \x01(\t\x12%\n\rlibraryUpdate\x18\x06 \x01(\x0b\x32\x0e.LibraryUpdate\x12\'\n\x12rejectedInstrument\x18\x07 \x01(\x0b\x32\x0b.Instrument\x12\x30\n\x0f\x61ppDeliveryData\x18\x08 \x01(\x0b\x32\x17.AndroidAppDeliveryData\"j\n\x16\x42illingProfileResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\'\n\x0e\x62illingProfile\x18\x02 \x01(\x0b\x32\x0f.BillingProfile\x12\x17\n\x0fuserMessageHtml\x18\x03 \x01(\t\"\xa2\x01\n\x17\x43heckInstrumentResponse\x12\x1e\n\x16userHasValidInstrument\x18\x01 \x01(\x08\x12\x1d\n\x15\x63heckoutTokenRequired\x18\x02 \x01(\x08\x12\x1f\n\ninstrument\x18\x04 \x03(\x0b\x32\x0b.Instrument\x12\'\n\x12\x65ligibleInstrument\x18\x05 \x03(\x0b\x32\x0b.Instrument\"e\n\x1bInstrumentSetupInfoResponse\x12\'\n\tsetupInfo\x18\x01 \x03(\x0b\x32\x14.InstrumentSetupInfo\x12\x1d\n\x15\x63heckoutTokenRequired\x18\x02 \x01(\x08\"\x7f\n\x15RedeemGiftCardRequest\x12\x13\n\x0bgiftCardPin\x18\x01 \x01(\t\x12\x19\n\x07\x61\x64\x64ress\x18\x02 \x01(\x0b\x32\x08.Address\x12\x1f\n\x17\x61\x63\x63\x65ptedLegalDocumentId\x18\x03 \x03(\t\x12\x15\n\rcheckoutToken\x18\x04 \x01(\t\"\xa2\x01\n\x16RedeemGiftCardResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x17\n\x0fuserMessageHtml\x18\x02 \x01(\t\x12\x13\n\x0b\x62\x61lanceHtml\x18\x03 \x01(\t\x12+\n\x10\x61\x64\x64ressChallenge\x18\x04 \x01(\x0b\x32\x11.AddressChallenge\x12\x1d\n\x15\x63heckoutTokenRequired\x18\x05 \x01(\x08\"Q\n\x17UpdateInstrumentRequest\x12\x1f\n\ninstrument\x18\x01 \x01(\x0b\x32\x0b.Instrument\x12\x15\n\rcheckoutToken\x18\x02 \x01(\t\"\xd4\x01\n\x18UpdateInstrumentResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0cinstrumentId\x18\x02 \x01(\t\x12\x17\n\x0fuserMessageHtml\x18\x03 \x01(\t\x12.\n\x0f\x65rrorInputField\x18\x04 \x03(\x0b\x32\x15.InputValidationError\x12\x1d\n\x15\x63heckoutTokenRequired\x18\x05 \x01(\x08\x12*\n\rredeemedOffer\x18\x06 \x01(\x0b\x32\x13.RedeemedPromoOffer\"0\n\x1bInitiateAssociationResponse\x12\x11\n\tuserToken\x18\x01 \x01(\t\"\x8b\x01\n\x19VerifyAssociationResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12 \n\x0e\x62illingAddress\x18\x02 \x01(\x0b\x32\x08.Address\x12\x1f\n\ncarrierTos\x18\x03 \x01(\x0b\x32\x0b.CarrierTos\x12\x1b\n\x13\x63\x61rrierErrorMessage\x18\x04 \x01(\t\"\xb3\x02\n\x10\x41\x64\x64ressChallenge\x12\x1c\n\x14responseAddressParam\x18\x01 \x01(\t\x12\x1f\n\x17responseCheckboxesParam\x18\x02 \x01(\t\x12\r\n\x05title\x18\x03 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x04 \x01(\t\x12\x1f\n\x08\x63heckbox\x18\x05 \x03(\x0b\x32\r.FormCheckbox\x12\x19\n\x07\x61\x64\x64ress\x18\x06 \x01(\x0b\x32\x08.Address\x12.\n\x0f\x65rrorInputField\x18\x07 \x03(\x0b\x32\x15.InputValidationError\x12\x11\n\terrorHtml\x18\x08 \x01(\t\x12\x15\n\rrequiredField\x18\t \x03(\x05\x12\"\n\x10supportedCountry\x18\n \x03(\x0b\x32\x08.Country\"\xa6\x02\n\x17\x41uthenticationChallenge\x12\x1a\n\x12\x61uthenticationType\x18\x01 \x01(\x05\x12\'\n\x1fresponseAuthenticationTypeParam\x18\x02 \x01(\t\x12\x1f\n\x17responseRetryCountParam\x18\x03 \x01(\t\x12\x16\n\x0egaiaHeaderText\x18\x06 \x01(\t\x12\x1f\n\x17gaiaDescriptionTextHtml\x18\x07 \x01(\t\x12\x1a\n\x12gaiaFooterTextHtml\x18\x08 \x01(\t\x12)\n\x12gaiaOptOutCheckbox\x18\t \x01(\x0b\x32\r.FormCheckbox\x12%\n\x1dgaiaOptOutDescriptionTextHtml\x18\n \x01(\t\"\xa0\x01\n\tChallenge\x12+\n\x10\x61\x64\x64ressChallenge\x18\x01 \x01(\x0b\x32\x11.AddressChallenge\x12\x39\n\x17\x61uthenticationChallenge\x18\x02 \x01(\x0b\x32\x18.AuthenticationChallenge\x12+\n\x10webViewChallenge\x18\x03 \x01(\x0b\x32\x11.WebViewChallenge\"2\n\x07\x43ountry\x12\x12\n\nregionCode\x18\x01 \x01(\t\x12\x13\n\x0b\x64isplayName\x18\x02 \x01(\t\"R\n\x0c\x46ormCheckbox\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\t\x12\x0f\n\x07\x63hecked\x18\x02 \x01(\x08\x12\x10\n\x08required\x18\x03 \x01(\x08\x12\n\n\x02id\x18\x04 \x01(\t\"@\n\x14InputValidationError\x12\x12\n\ninputField\x18\x01 \x01(\x05\x12\x14\n\x0c\x65rrorMessage\x18\x02 \x01(\t\"\xa7\x01\n\x10WebViewChallenge\x12\x10\n\x08startUrl\x18\x01 \x01(\t\x12\x17\n\x0ftargetUrlRegexp\x18\x02 \x01(\t\x12 \n\x18\x63\x61ncelButtonDisplayLabel\x18\x03 \x01(\t\x12\x1e\n\x16responseTargetUrlParam\x18\x04 \x01(\t\x12\x17\n\x0f\x63\x61ncelUrlRegexp\x18\x05 \x01(\t\x12\r\n\x05title\x18\x06 \x01(\t\"\xcc\x01\n\x17\x41\x64\x64\x43reditCardPromoOffer\x12\x12\n\nheaderText\x18\x01 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x02 \x01(\t\x12\x15\n\x05image\x18\x03 \x01(\x0b\x32\x06.Image\x12\x1c\n\x14introductoryTextHtml\x18\x04 \x01(\t\x12\x12\n\nofferTitle\x18\x05 \x01(\t\x12\x1b\n\x13noActionDescription\x18\x06 \x01(\t\x12\x1e\n\x16termsAndConditionsHtml\x18\x07 \x01(\t\"K\n\x13\x41vailablePromoOffer\x12\x34\n\x12\x61\x64\x64\x43reditCardOffer\x18\x01 \x01(\x0b\x32\x18.AddCreditCardPromoOffer\"\x92\x01\n\x17\x43heckPromoOfferResponse\x12,\n\x0e\x61vailableOffer\x18\x01 \x03(\x0b\x32\x14.AvailablePromoOffer\x12*\n\rredeemedOffer\x18\x02 \x01(\x0b\x32\x13.RedeemedPromoOffer\x12\x1d\n\x15\x63heckoutTokenRequired\x18\x03 \x01(\x08\"X\n\x12RedeemedPromoOffer\x12\x12\n\nheaderText\x18\x01 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x02 \x01(\t\x12\x15\n\x05image\x18\x03 \x01(\x0b\x32\x06.Image\"e\n\x11\x41\x63tiveExperiments\x12 \n\x18\x63lientAlteringExperiment\x18\x01 \x03(\t\x12\x17\n\x0fotherExperiment\x18\x02 \x03(\t\x12\x15\n\rgwsExperiment\x18\x03 \x03(\x05\"\xeb\x01\n\x11\x41ndroidClientInfo\x12\x11\n\tandroidId\x18\x01 \x01(\x03\x12\x11\n\tloggingId\x18\x02 \x01(\t\x12\x12\n\nsdkVersion\x18\x03 \x01(\x05\x12\r\n\x05model\x18\x04 \x01(\t\x12\x0f\n\x07product\x18\x05 \x01(\t\x12\x0f\n\x07osBuild\x18\x06 \x01(\t\x12\x18\n\x10\x61pplicationBuild\x18\x07 \x01(\t\x12\x10\n\x08hardware\x18\x08 \x01(\t\x12\x0e\n\x06\x64\x65vice\x18\t \x01(\t\x12\x0e\n\x06mccMnc\x18\n \x01(\t\x12\x0e\n\x06locale\x18\x0b \x01(\t\x12\x0f\n\x07\x63ountry\x18\x0c \x01(\t\"\xa5\x01\n\nClientInfo\x12\x12\n\nclientType\x18\x01 \x01(\x05\x12-\n\x11\x61ndroidClientInfo\x18\x02 \x01(\x0b\x32\x12.AndroidClientInfo\x12-\n\x11\x64\x65sktopClientInfo\x18\x03 \x01(\x0b\x32\x12.DesktopClientInfo\x12%\n\riosClientInfo\x18\x04 \x01(\x0b\x32\x0e.IosClientInfo\"\x8d\x01\n\x11\x44\x65sktopClientInfo\x12\x10\n\x08\x63lientId\x18\x01 \x01(\t\x12\x11\n\tloggingId\x18\x02 \x01(\t\x12\n\n\x02os\x18\x03 \x01(\t\x12\x16\n\x0eosMajorVersion\x18\x04 \x01(\t\x12\x15\n\rosFullVersion\x18\x05 \x01(\t\x12\x18\n\x10\x61pplicationBuild\x18\x06 \x01(\t\"\x1e\n\x10\x45xperimentIdList\x12\n\n\x02id\x18\x01 \x03(\t\"}\n\rIosClientInfo\x12\x10\n\x08\x63lientId\x18\x01 \x01(\t\x12\x11\n\tloggingId\x18\x02 \x01(\t\x12\x16\n\x0eosMajorVersion\x18\x03 \x01(\t\x12\x15\n\rosFullVersion\x18\x04 \x01(\t\x12\x18\n\x10\x61pplicationBuild\x18\x05 \x01(\t\"\xac\x01\n\x08LogEvent\x12\x13\n\x0b\x65ventTimeMs\x18\x01 \x01(\x03\x12\x0b\n\x03tag\x18\x02 \x01(\t\x12!\n\x05value\x18\x03 \x03(\x0b\x32\x12.LogEventKeyValues\x12!\n\x05store\x18\x04 \x01(\x0b\x32\x12.PlayStoreLogEvent\x12\x17\n\x0fsourceExtension\x18\x06 \x01(\x0c\x12\x1f\n\x03\x65xp\x18\x07 \x01(\x0b\x32\x12.ActiveExperiments\"/\n\x11LogEventKeyValues\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\x91\x01\n\nLogRequest\x12\x1f\n\nclientInfo\x18\x01 \x01(\x0b\x32\x0b.ClientInfo\x12\x11\n\tlogSource\x18\x02 \x01(\x05\x12\x1b\n\x08logEvent\x18\x03 \x03(\x0b\x32\t.LogEvent\x12\x15\n\rrequestTimeMs\x18\x04 \x01(\x03\x12\x1b\n\x13serializedLogEvents\x18\x05 \x01(\x0c\"T\n\x0bLogResponse\x12\x1d\n\x15nextRequestWaitMillis\x18\x01 \x01(\x03\x12&\n\x0b\x65xperiments\x18\x02 \x01(\x0b\x32\x11.ExperimentIdList\"<\n\x05\x44ocid\x12\x14\n\x0c\x62\x61\x63kendDocid\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\x0f\n\x07\x62\x61\x63kend\x18\x03 \x01(\x05\"O\n\x07Install\x12\x11\n\tandroidId\x18\x01 \x01(\x06\x12\x0f\n\x07version\x18\x02 \x01(\x05\x12\x0f\n\x07\x62undled\x18\x03 \x01(\x08\x12\x0f\n\x07pending\x18\x04 \x01(\x08\"\x11\n\x0fGroupLicenseKey\"9\n\x0cLicenseTerms\x12)\n\x0fgroupLicenseKey\x18\x01 \x01(\x0b\x32\x10.GroupLicenseKey\"\xab\x06\n\x05Offer\x12\x0e\n\x06micros\x18\x01 \x01(\x03\x12\x14\n\x0c\x63urrencyCode\x18\x02 \x01(\t\x12\x17\n\x0f\x66ormattedAmount\x18\x03 \x01(\t\x12\x1e\n\x0e\x63onvertedPrice\x18\x04 \x03(\x0b\x32\x06.Offer\x12\x1c\n\x14\x63heckoutFlowRequired\x18\x05 \x01(\x08\x12\x17\n\x0f\x66ullPriceMicros\x18\x06 \x01(\x03\x12\x1b\n\x13\x66ormattedFullAmount\x18\x07 \x01(\t\x12\x11\n\tofferType\x18\x08 \x01(\x05\x12!\n\x0brentalTerms\x18\t \x01(\x0b\x32\x0c.RentalTerms\x12\x12\n\nonSaleDate\x18\n \x01(\x03\x12\x16\n\x0epromotionLabel\x18\x0b \x03(\t\x12-\n\x11subscriptionTerms\x18\x0c \x01(\x0b\x32\x12.SubscriptionTerms\x12\x15\n\rformattedName\x18\r \x01(\t\x12\x1c\n\x14\x66ormattedDescription\x18\x0e \x01(\t\x12\x10\n\x08preorder\x18\x0f \x01(\x08\x12+\n#onSaleDateDisplayTimeZoneOffsetMsec\x18\x10 \x01(\x05\x12\x19\n\x11licensedOfferType\x18\x11 \x01(\x05\x12;\n\x18subscriptionContentTerms\x18\x12 \x01(\x0b\x32\x19.SubscriptionContentTerms\x12\x0f\n\x07offerId\x18\x13 \x01(\t\x12&\n\x1epreorderFulfillmentDisplayDate\x18\x14 \x01(\x03\x12#\n\x0clicenseTerms\x18\x15 \x01(\x0b\x32\r.LicenseTerms\x12\x17\n\x0ftemporarilyFree\x18\x16 \x01(\x08\x12#\n\x0cvoucherTerms\x18\x17 \x01(\x0b\x32\r.VoucherTerms\x12#\n\x0cofferPayment\x18\x18 \x03(\x0b\x32\r.OfferPayment\x12\x19\n\x11repeatLastPayment\x18\x19 \x01(\x08\x12\x16\n\x0e\x62uyButtonLabel\x18\x1a \x01(\t\x12\x1e\n\x16instantPurchaseEnabled\x18\x1b \x01(\x08\")\n\x0bMonthAndDay\x12\r\n\x05month\x18\x01 \x01(\r\x12\x0b\n\x03\x64\x61y\x18\x02 \x01(\r\"k\n\x12OfferPaymentPeriod\x12\x1d\n\x08\x64uration\x18\x01 \x01(\x0b\x32\x0b.TimePeriod\x12\x1b\n\x05start\x18\x02 \x01(\x0b\x32\x0c.MonthAndDay\x12\x19\n\x03\x65nd\x18\x03 \x01(\x0b\x32\x0c.MonthAndDay\"^\n\x14OfferPaymentOverride\x12\x0e\n\x06micros\x18\x01 \x01(\x03\x12\x1b\n\x05start\x18\x02 \x01(\x0b\x32\x0c.MonthAndDay\x12\x19\n\x03\x65nd\x18\x03 \x01(\x0b\x32\x0c.MonthAndDay\"\x9a\x01\n\x0cOfferPayment\x12\x0e\n\x06micros\x18\x01 \x01(\x03\x12\x14\n\x0c\x63urrencyCode\x18\x02 \x01(\t\x12/\n\x12offerPaymentPeriod\x18\x03 \x01(\x0b\x32\x13.OfferPaymentPeriod\x12\x33\n\x14offerPaymentOverride\x18\x04 \x03(\x0b\x32\x15.OfferPaymentOverride\"\x0e\n\x0cVoucherTerms\"\xa3\x01\n\x0bRentalTerms\x12$\n\x1c\x64\x45PRECATEDGrantPeriodSeconds\x18\x01 \x01(\x05\x12\'\n\x1f\x64\x45PRECATEDActivatePeriodSeconds\x18\x02 \x01(\x05\x12 \n\x0bgrantPeriod\x18\x03 \x01(\x0b\x32\x0b.TimePeriod\x12#\n\x0e\x61\x63tivatePeriod\x18\x04 \x01(\x0b\x32\x0b.TimePeriod\"3\n\nSignedData\x12\x12\n\nsignedData\x18\x01 \x01(\t\x12\x11\n\tsignature\x18\x02 \x01(\t\"@\n\x18SubscriptionContentTerms\x12$\n\x14requiredSubscription\x18\x01 \x01(\x0b\x32\x06.Docid\"[\n\x11SubscriptionTerms\x12$\n\x0frecurringPeriod\x18\x01 \x01(\x0b\x32\x0b.TimePeriod\x12 \n\x0btrialPeriod\x18\x02 \x01(\x0b\x32\x0b.TimePeriod\")\n\nTimePeriod\x12\x0c\n\x04unit\x18\x01 \x01(\x05\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\"G\n\x12\x42illingAddressSpec\x12\x1a\n\x12\x62illingAddressType\x18\x01 \x01(\x05\x12\x15\n\rrequiredField\x18\x02 \x03(\x05\"\x8c\x01\n\x0e\x42illingProfile\x12\x1f\n\ninstrument\x18\x01 \x03(\x0b\x32\x0b.Instrument\x12$\n\x1cselectedExternalInstrumentId\x18\x02 \x01(\t\x12\x33\n\x14\x62illingProfileOption\x18\x03 \x03(\x0b\x32\x15.BillingProfileOption\"\xc0\x01\n\x14\x42illingProfileOption\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x14\n\x0c\x64isplayTitle\x18\x02 \x01(\t\x12\x1c\n\x14\x65xternalInstrumentId\x18\x03 \x01(\t\x12\x1d\n\ttopupInfo\x18\x04 \x01(\x0b\x32\n.TopupInfo\x12G\n\x1e\x63\x61rrierBillingInstrumentStatus\x18\x05 \x01(\x0b\x32\x1f.CarrierBillingInstrumentStatus\">\n\x19\x43\x61rrierBillingCredentials\x12\r\n\x05value\x18\x01 \x01(\t\x12\x12\n\nexpiration\x18\x02 \x01(\x03\"\xa9\x02\n\x18\x43\x61rrierBillingInstrument\x12\x15\n\rinstrumentKey\x18\x01 \x01(\t\x12\x13\n\x0b\x61\x63\x63ountType\x18\x02 \x01(\t\x12\x14\n\x0c\x63urrencyCode\x18\x03 \x01(\t\x12\x18\n\x10transactionLimit\x18\x04 \x01(\x03\x12\x1c\n\x14subscriberIdentifier\x18\x05 \x01(\t\x12\x39\n\x17\x65ncryptedSubscriberInfo\x18\x06 \x01(\x0b\x32\x18.EncryptedSubscriberInfo\x12/\n\x0b\x63redentials\x18\x07 \x01(\x0b\x32\x1a.CarrierBillingCredentials\x12\'\n\x12\x61\x63\x63\x65ptedCarrierTos\x18\x08 \x01(\x0b\x32\x0b.CarrierTos\"\x9c\x02\n\x1e\x43\x61rrierBillingInstrumentStatus\x12\x1f\n\ncarrierTos\x18\x01 \x01(\x0b\x32\x0b.CarrierTos\x12\x1b\n\x13\x61ssociationRequired\x18\x02 \x01(\x08\x12\x18\n\x10passwordRequired\x18\x03 \x01(\x08\x12.\n\x15\x63\x61rrierPasswordPrompt\x18\x04 \x01(\x0b\x32\x0f.PasswordPrompt\x12\x12\n\napiVersion\x18\x05 \x01(\x05\x12\x0c\n\x04name\x18\x06 \x01(\t\x12-\n\x11\x64\x65viceAssociation\x18\x07 \x01(\x0b\x32\x12.DeviceAssociation\x12!\n\x19\x63\x61rrierSupportPhoneNumber\x18\x08 \x01(\t\"\x8e\x01\n\nCarrierTos\x12 \n\x06\x64\x63\x62Tos\x18\x01 \x01(\x0b\x32\x10.CarrierTosEntry\x12 \n\x06piiTos\x18\x02 \x01(\x0b\x32\x10.CarrierTosEntry\x12\x1d\n\x15needsDcbTosAcceptance\x18\x03 \x01(\x08\x12\x1d\n\x15needsPiiTosAcceptance\x18\x04 \x01(\x08\"/\n\x0f\x43\x61rrierTosEntry\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\"\xa2\x01\n\x14\x43reditCardInstrument\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x14\n\x0c\x65scrowHandle\x18\x02 \x01(\t\x12\x12\n\nlastDigits\x18\x03 \x01(\t\x12\x17\n\x0f\x65xpirationMonth\x18\x04 \x01(\x05\x12\x16\n\x0e\x65xpirationYear\x18\x05 \x01(\x05\x12!\n\x0e\x65scrowEfeParam\x18\x06 \x03(\x0b\x32\t.EfeParam\"U\n\x11\x44\x65viceAssociation\x12\x1f\n\x17userTokenRequestMessage\x18\x01 \x01(\t\x12\x1f\n\x17userTokenRequestAddress\x18\x02 \x01(\t\"Y\n\x0c\x44isabledInfo\x12\x16\n\x0e\x64isabledReason\x18\x01 \x01(\x05\x12\x1b\n\x13\x64isabledMessageHtml\x18\x02 \x01(\t\x12\x14\n\x0c\x65rrorMessage\x18\x03 \x01(\t\"&\n\x08\x45\x66\x65Param\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\t\"\xd6\x03\n\nInstrument\x12\x1c\n\x14\x65xternalInstrumentId\x18\x01 \x01(\t\x12 \n\x0e\x62illingAddress\x18\x02 \x01(\x0b\x32\x08.Address\x12)\n\ncreditCard\x18\x03 \x01(\x0b\x32\x15.CreditCardInstrument\x12\x31\n\x0e\x63\x61rrierBilling\x18\x04 \x01(\x0b\x32\x19.CarrierBillingInstrument\x12/\n\x12\x62illingAddressSpec\x18\x05 \x01(\x0b\x32\x13.BillingAddressSpec\x12\x18\n\x10instrumentFamily\x18\x06 \x01(\x05\x12=\n\x14\x63\x61rrierBillingStatus\x18\x07 \x01(\x0b\x32\x1f.CarrierBillingInstrumentStatus\x12\x14\n\x0c\x64isplayTitle\x18\x08 \x01(\t\x12\'\n\x13topupInfoDeprecated\x18\t \x01(\x0b\x32\n.TopupInfo\x12\x0f\n\x07version\x18\n \x01(\x05\x12+\n\x0bstoredValue\x18\x0b \x01(\x0b\x32\x16.StoredValueInstrument\x12#\n\x0c\x64isabledInfo\x18\x0c \x03(\x0b\x32\r.DisabledInfo\"\x9c\x01\n\x13InstrumentSetupInfo\x12\x18\n\x10instrumentFamily\x18\x01 \x01(\x05\x12\x11\n\tsupported\x18\x02 \x01(\x08\x12+\n\x10\x61\x64\x64ressChallenge\x18\x03 \x01(\x0b\x32\x11.AddressChallenge\x12\x17\n\x07\x62\x61lance\x18\x04 \x01(\x0b\x32\x06.Money\x12\x12\n\nfooterHtml\x18\x05 \x03(\t\";\n\x0ePasswordPrompt\x12\x0e\n\x06prompt\x18\x01 \x01(\t\x12\x19\n\x11\x66orgotPasswordUrl\x18\x02 \x01(\t\"]\n\x15StoredValueInstrument\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x17\n\x07\x62\x61lance\x18\x02 \x01(\x0b\x32\x06.Money\x12\x1d\n\ttopupInfo\x18\x03 \x01(\x0b\x32\n.TopupInfo\"\x85\x01\n\tTopupInfo\x12\'\n\x1foptionsContainerDocidDeprecated\x18\x01 \x01(\t\x12\x16\n\x0eoptionsListUrl\x18\x02 \x01(\t\x12\x10\n\x08subtitle\x18\x03 \x01(\t\x12%\n\x15optionsContainerDocid\x18\x04 \x01(\x0b\x32\x06.Docid\"P\n\x17\x43onsumePurchaseResponse\x12%\n\rlibraryUpdate\x18\x01 \x01(\x0b\x32\x0e.LibraryUpdate\x12\x0e\n\x06status\x18\x02 \x01(\x05\"\xb9\x01\n\x11\x43ontainerMetadata\x12\x11\n\tbrowseUrl\x18\x01 \x01(\t\x12\x13\n\x0bnextPageUrl\x18\x02 \x01(\t\x12\x11\n\trelevance\x18\x03 \x01(\x01\x12\x18\n\x10\x65stimatedResults\x18\x04 \x01(\x03\x12\x17\n\x0f\x61nalyticsCookie\x18\x05 \x01(\t\x12\x0f\n\x07ordered\x18\x06 \x01(\x08\x12%\n\rcontainerView\x18\x07 \x03(\x0b\x32\x0e.ContainerView\"[\n\rContainerView\x12\x10\n\x08selected\x18\x01 \x01(\x08\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0f\n\x07listUrl\x18\x03 \x01(\t\x12\x18\n\x10serverLogsCookie\x18\x04 \x01(\x0c\"\x15\n\x13\x46lagContentResponse\"\xe9\x07\n\x15\x43lientDownloadRequest\x12\x0b\n\x03url\x18\x01 \x01(\t\x12/\n\x07\x64igests\x18\x02 \x01(\x0b\x32\x1e.ClientDownloadRequest.Digests\x12\x0e\n\x06length\x18\x03 \x01(\x03\x12\x32\n\tresources\x18\x04 \x03(\x0b\x32\x1f.ClientDownloadRequest.Resource\x12\x37\n\tsignature\x18\x05 \x01(\x0b\x32$.ClientDownloadRequest.SignatureInfo\x12\x15\n\ruserInitiated\x18\x06 \x01(\x08\x12\x11\n\tclientAsn\x18\x08 \x03(\t\x12\x14\n\x0c\x66ileBasename\x18\t \x01(\t\x12\x14\n\x0c\x64ownloadType\x18\n \x01(\x05\x12\x0e\n\x06locale\x18\x0b \x01(\t\x12/\n\x07\x61pkInfo\x18\x0c \x01(\x0b\x32\x1e.ClientDownloadRequest.ApkInfo\x12\x11\n\tandroidId\x18\r \x01(\x06\x12\x1b\n\x13originatingPackages\x18\x0f \x03(\t\x12\x42\n\x14originatingSignature\x18\x11 \x01(\x0b\x32$.ClientDownloadRequest.SignatureInfo\x1a\x33\n\x07\x41pkInfo\x12\x13\n\x0bpackageName\x18\x01 \x01(\t\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x1a\xee\x01\n\x10\x43\x65rtificateChain\x12@\n\x07\x65lement\x18\x01 \x03(\x0b\x32/.ClientDownloadRequest.CertificateChain.Element\x1a\x97\x01\n\x07\x45lement\x12\x13\n\x0b\x63\x65rtificate\x18\x01 \x01(\x0c\x12\x1a\n\x12parsedSuccessfully\x18\x02 \x01(\x08\x12\x0f\n\x07subject\x18\x03 \x01(\x0c\x12\x0e\n\x06issuer\x18\x04 \x01(\x0c\x12\x13\n\x0b\x66ingerprint\x18\x05 \x01(\x0c\x12\x12\n\nexpiryTime\x18\x06 \x01(\x03\x12\x11\n\tstartTime\x18\x07 \x01(\x03\x1a\x34\n\x07\x44igests\x12\x0e\n\x06sha256\x18\x01 \x01(\x0c\x12\x0c\n\x04sha1\x18\x02 \x01(\x0c\x12\x0b\n\x03md5\x18\x03 \x01(\x0c\x1aI\n\x08Resource\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\x10\n\x08remoteIp\x18\x03 \x01(\x0c\x12\x10\n\x08referrer\x18\x04 \x01(\t\x1a\x63\n\rSignatureInfo\x12\x41\n\x10\x63\x65rtificateChain\x18\x01 \x03(\x0b\x32\'.ClientDownloadRequest.CertificateChain\x12\x0f\n\x07trusted\x18\x02 \x01(\x08\"\x9a\x01\n\x16\x43lientDownloadResponse\x12\x0f\n\x07verdict\x18\x01 \x01(\x05\x12\x32\n\x08moreInfo\x18\x02 \x01(\x0b\x32 .ClientDownloadResponse.MoreInfo\x12\r\n\x05token\x18\x03 \x01(\x0c\x1a,\n\x08MoreInfo\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\"A\n\x1a\x43lientDownloadStatsRequest\x12\x14\n\x0cuserDecision\x18\x01 \x01(\x05\x12\r\n\x05token\x18\x02 \x01(\x0c\"i\n\tDebugInfo\x12\x0f\n\x07message\x18\x01 \x03(\t\x12!\n\x06timing\x18\x02 \x03(\n2\x11.DebugInfo.Timing\x1a(\n\x06Timing\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x10\n\x08timeInMs\x18\x04 \x01(\x01\"R\n\x15\x44\x65\x62ugSettingsResponse\x12\x1b\n\x13playCountryOverride\x18\x01 \x01(\t\x12\x1c\n\x14playCountryDebugInfo\x18\x02 \x01(\t\"T\n\x10\x44\x65liveryResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x30\n\x0f\x61ppDeliveryData\x18\x02 \x01(\x0b\x32\x17.AndroidAppDeliveryData\"\'\n\x10\x42ulkDetailsEntry\x12\x13\n\x03\x64oc\x18\x01 \x01(\x0b\x32\x06.DocV2\"\x8e\x01\n\x12\x42ulkDetailsRequest\x12\r\n\x05\x64ocid\x18\x01 \x03(\t\x12\x18\n\x10includeChildDocs\x18\x02 \x01(\x08\x12\x16\n\x0eincludeDetails\x18\x03 \x01(\x08\x12\x19\n\x11sourcePackageName\x18\x04 \x01(\t\x12\x1c\n\x14installedVersionCode\x18\x05 \x03(\x05\"7\n\x13\x42ulkDetailsResponse\x12 \n\x05\x65ntry\x18\x01 \x03(\x0b\x32\x11.BulkDetailsEntry\"\xcc\x01\n\x0f\x44\x65tailsResponse\x12\x15\n\x05\x64ocV1\x18\x01 \x01(\x0b\x32\x06.DocV1\x12\x17\n\x0f\x61nalyticsCookie\x18\x02 \x01(\t\x12\x1b\n\nuserReview\x18\x03 \x01(\x0b\x32\x07.Review\x12\x15\n\x05\x64ocV2\x18\x04 \x01(\x0b\x32\x06.DocV2\x12\x12\n\nfooterHtml\x18\x05 \x01(\t\x12\x18\n\x10serverLogsCookie\x18\x06 \x01(\x0c\x12\'\n\x0e\x64iscoveryBadge\x18\x07 \x03(\x0b\x32\x0f.DiscoveryBadge\"\xa8\x02\n\x0e\x44iscoveryBadge\x12\r\n\x05title\x18\x01 \x01(\t\x12\x15\n\x05image\x18\x02 \x01(\x0b\x32\x06.Image\x12\x17\n\x0f\x62\x61\x63kgroundColor\x18\x03 \x01(\x05\x12/\n\x12\x64iscoveryBadgeLink\x18\x04 \x01(\x0b\x32\x13.DiscoveryBadgeLink\x12\x18\n\x10serverLogsCookie\x18\x05 \x01(\x0c\x12\x11\n\tisPlusOne\x18\x06 \x01(\x08\x12\x17\n\x0f\x61ggregateRating\x18\x07 \x01(\x02\x12\x16\n\x0euserStarRating\x18\x08 \x01(\x05\x12\x15\n\rdownloadCount\x18\t \x01(\t\x12\x15\n\rdownloadUnits\x18\n \x01(\t\x12\x1a\n\x12\x63ontentDescription\x18\x0b \x01(\t\"[\n\x12\x44iscoveryBadgeLink\x12\x13\n\x04link\x18\x01 \x01(\x0b\x32\x05.Link\x12\x16\n\x0euserReviewsUrl\x18\x02 \x01(\t\x12\x18\n\x10\x63riticReviewsUrl\x18\x03 \x01(\t\"\xb5\x03\n\x18\x44\x65viceConfigurationProto\x12\x13\n\x0btouchScreen\x18\x01 \x01(\x05\x12\x10\n\x08keyboard\x18\x02 \x01(\x05\x12\x12\n\nnavigation\x18\x03 \x01(\x05\x12\x14\n\x0cscreenLayout\x18\x04 \x01(\x05\x12\x17\n\x0fhasHardKeyboard\x18\x05 \x01(\x08\x12\x1c\n\x14hasFiveWayNavigation\x18\x06 \x01(\x08\x12\x15\n\rscreenDensity\x18\x07 \x01(\x05\x12\x13\n\x0bglEsVersion\x18\x08 \x01(\x05\x12\x1b\n\x13systemSharedLibrary\x18\t \x03(\t\x12\x1e\n\x16systemAvailableFeature\x18\n \x03(\t\x12\x16\n\x0enativePlatform\x18\x0b \x03(\t\x12\x13\n\x0bscreenWidth\x18\x0c \x01(\x05\x12\x14\n\x0cscreenHeight\x18\r \x01(\x05\x12\x1d\n\x15systemSupportedLocale\x18\x0e \x03(\t\x12\x13\n\x0bglExtension\x18\x0f \x03(\t\x12\x13\n\x0b\x64\x65viceClass\x18\x10 \x01(\x05\x12\x1c\n\x14maxApkDownloadSizeMb\x18\x11 \x01(\x05\"\xc7\x04\n\x08\x44ocument\x12\x15\n\x05\x64ocid\x18\x01 \x01(\x0b\x32\x06.Docid\x12\x1a\n\nfetchDocid\x18\x02 \x01(\x0b\x32\x06.Docid\x12\x1b\n\x0bsampleDocid\x18\x03 \x01(\x0b\x32\x06.Docid\x12\r\n\x05title\x18\x04 \x01(\t\x12\x0b\n\x03url\x18\x05 \x01(\t\x12\x0f\n\x07snippet\x18\x06 \x03(\t\x12\x1f\n\x0fpriceDeprecated\x18\x07 \x01(\x0b\x32\x06.Offer\x12#\n\x0c\x61vailability\x18\t \x01(\x0b\x32\r.Availability\x12\x15\n\x05image\x18\n \x03(\x0b\x32\x06.Image\x12\x18\n\x05\x63hild\x18\x0b \x03(\x0b\x32\t.Document\x12)\n\x0f\x61ggregateRating\x18\r \x01(\x0b\x32\x10.AggregateRating\x12\x15\n\x05offer\x18\x0e \x03(\x0b\x32\x06.Offer\x12*\n\x11translatedSnippet\x18\x0f \x03(\x0b\x32\x0f.TranslatedText\x12)\n\x0f\x64ocumentVariant\x18\x10 \x03(\x0b\x32\x10.DocumentVariant\x12\x12\n\ncategoryId\x18\x11 \x03(\t\x12\x1d\n\ndecoration\x18\x12 \x03(\x0b\x32\t.Document\x12\x19\n\x06parent\x18\x13 \x03(\x0b\x32\t.Document\x12\x18\n\x10privacyPolicyUrl\x18\x14 \x01(\t\x12\x16\n\x0e\x63onsumptionUrl\x18\x15 \x01(\t\x12\x1c\n\x14\x65stimatedNumChildren\x18\x16 \x01(\x05\x12\x10\n\x08subtitle\x18\x17 \x01(\t\"\xbe\x02\n\x0f\x44ocumentVariant\x12\x15\n\rvariationType\x18\x01 \x01(\x05\x12\x13\n\x04rule\x18\x02 \x01(\x0b\x32\x05.Rule\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0f\n\x07snippet\x18\x04 \x03(\t\x12\x15\n\rrecentChanges\x18\x05 \x01(\t\x12(\n\x0f\x61utoTranslation\x18\x06 \x03(\x0b\x32\x0f.TranslatedText\x12\x15\n\x05offer\x18\x07 \x03(\x0b\x32\x06.Offer\x12\x11\n\tchannelId\x18\t \x01(\x03\x12\x18\n\x05\x63hild\x18\n \x03(\x0b\x32\t.Document\x12\x1d\n\ndecoration\x18\x0b \x03(\x0b\x32\t.Document\x12\x15\n\x05image\x18\x0c \x03(\x0b\x32\x06.Image\x12\x12\n\ncategoryId\x18\r \x03(\t\x12\x10\n\x08subtitle\x18\x0e \x01(\t\"\x92\x04\n\x05Image\x12\x11\n\timageType\x18\x01 \x01(\x05\x12#\n\tdimension\x18\x02 \x01(\n2\x10.Image.Dimension\x12\x10\n\x08imageUrl\x18\x05 \x01(\t\x12\x18\n\x10\x61ltTextLocalized\x18\x06 \x01(\t\x12\x11\n\tsecureUrl\x18\x07 \x01(\t\x12\x1a\n\x12positionInSequence\x18\x08 \x01(\x05\x12\x1e\n\x16supportsFifeUrlOptions\x18\t \x01(\x08\x12!\n\x08\x63itation\x18\n \x01(\n2\x0f.Image.Citation\x12\x17\n\x0f\x64urationSeconds\x18\x0e \x01(\x05\x12\x14\n\x0c\x66illColorRgb\x18\x0f \x01(\t\x12\x0f\n\x07\x61utogen\x18\x10 \x01(\x08\x12!\n\x0b\x61ttribution\x18\x11 \x01(\x0b\x32\x0c.Attribution\x12\x1a\n\x12\x62\x61\x63kgroundColorRgb\x18\x13 \x01(\t\x12\x1e\n\x07palette\x18\x14 \x01(\x0b\x32\r.ImagePalette\x12\x13\n\x0b\x64\x65viceClass\x18\x15 \x01(\x05\x12\"\n\x1asupportsFifeMonogramOption\x18\x16 \x01(\x08\x1a*\n\tDimension\x12\r\n\x05width\x18\x03 \x01(\x05\x12\x0e\n\x06height\x18\x04 \x01(\x05\x1a/\n\x08\x43itation\x12\x16\n\x0etitleLocalized\x18\x0b \x01(\t\x12\x0b\n\x03url\x18\x0c \x01(\t\"\x0e\n\x0cImagePalette\"_\n\x0b\x41ttribution\x12\x13\n\x0bsourceTitle\x18\x01 \x01(\t\x12\x11\n\tsourceUrl\x18\x02 \x01(\t\x12\x14\n\x0clicenseTitle\x18\x03 \x01(\t\x12\x12\n\nlicenseUrl\x18\x04 \x01(\t\"J\n\x0eTranslatedText\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x14\n\x0csourceLocale\x18\x02 \x01(\t\x12\x14\n\x0ctargetLocale\x18\x03 \x01(\t\"U\n\x05\x42\x61\x64ge\x12\r\n\x05title\x18\x01 \x01(\t\x12\x15\n\x05image\x18\x02 \x03(\x0b\x32\x06.Image\x12\x11\n\tbrowseUrl\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\"M\n\x0e\x42\x61\x64geContainer\x12\r\n\x05title\x18\x01 \x01(\t\x12\x15\n\x05image\x18\x02 \x03(\x0b\x32\x06.Image\x12\x15\n\x05\x62\x61\x64ge\x18\x03 \x03(\x0b\x32\x06.Badge\"-\n\x13\x43ontainerWithBanner\x12\x16\n\x0e\x63olorThemeArgb\x18\x01 \x01(\t\">\n\x0c\x44\x65\x61lOfTheDay\x12\x16\n\x0e\x66\x65\x61turedHeader\x18\x01 \x01(\t\x12\x16\n\x0e\x63olorThemeArgb\x18\x02 \x01(\t\"1\n\tDismissal\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x02 \x01(\t\"\xb3\x01\n\x18\x45\x64itorialSeriesContainer\x12\x13\n\x0bseriesTitle\x18\x01 \x01(\t\x12\x16\n\x0eseriesSubtitle\x18\x02 \x01(\t\x12\x14\n\x0c\x65pisodeTitle\x18\x03 \x01(\t\x12\x17\n\x0f\x65pisodeSubtitle\x18\x04 \x01(\t\x12\x16\n\x0e\x63olorThemeArgb\x18\x05 \x01(\t\x12#\n\x0cvideoSnippet\x18\x06 \x03(\x0b\x32\r.VideoSnippet\"L\n\x04Link\x12\x0b\n\x03uri\x18\x01 \x01(\t\x12#\n\x0cresolvedLink\x18\x02 \x01(\x0b\x32\r.ResolvedLink\x12\x12\n\nuriBackend\x18\x03 \x01(\x05\"D\n\nNextBanner\x12\r\n\x05title\x18\x01 \x01(\t\x12\x10\n\x08subtitle\x18\x02 \x01(\t\x12\x15\n\rcolorTextArgb\x18\x03 \x01(\t\"X\n\x0fOBSOLETE_Reason\x12\x13\n\x0b\x62riefReason\x18\x01 \x01(\t\x12\x1e\n\x16oBSOLETEDetailedReason\x18\x02 \x01(\t\x12\x10\n\x08uniqueId\x18\x03 \x01(\t\"l\n\x0bPlusOneData\x12\x11\n\tsetByUser\x18\x01 \x01(\x08\x12\r\n\x05total\x18\x02 \x01(\x03\x12\x14\n\x0c\x63irclesTotal\x18\x03 \x01(\x03\x12%\n\x0f\x63irclesProfiles\x18\x04 \x03(\x0b\x32\x0c.PlusProfile\"r\n\x0bPromotedDoc\x12\r\n\x05title\x18\x01 \x01(\t\x12\x10\n\x08subtitle\x18\x02 \x01(\t\x12\x15\n\x05image\x18\x03 \x03(\x0b\x32\x06.Image\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x04 \x01(\t\x12\x12\n\ndetailsUrl\x18\x05 \x01(\t\"\x96\x01\n\x06Reason\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x03 \x01(\t\x12/\n\x12reasonPlusProfiles\x18\x04 \x01(\x0b\x32\x13.ReasonPlusProfiles\x12#\n\x0creasonReview\x18\x05 \x01(\x0b\x32\r.ReasonReview\x12\x1d\n\tdismissal\x18\x07 \x01(\x0b\x32\n.Dismissal\"Y\n\x12ReasonPlusProfiles\x12 \n\x18localizedDescriptionHtml\x18\x01 \x01(\t\x12!\n\x0bplusProfile\x18\x02 \x03(\x0b\x32\x0c.PlusProfile\"\'\n\x0cReasonReview\x12\x17\n\x06review\x18\x01 \x01(\x0b\x32\x07.Review\"\x1a\n\x18RecommendationsContainer\"^\n\x0fSectionMetadata\x12\x0e\n\x06header\x18\x01 \x01(\t\x12\x0f\n\x07listUrl\x18\x02 \x01(\t\x12\x11\n\tbrowseUrl\x18\x03 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x04 \x01(\t\"\xd5\x01\n\rSeriesAntenna\x12\x13\n\x0bseriesTitle\x18\x01 \x01(\t\x12\x16\n\x0eseriesSubtitle\x18\x02 \x01(\t\x12\x14\n\x0c\x65pisodeTitle\x18\x03 \x01(\t\x12\x17\n\x0f\x65pisodeSubtitle\x18\x04 \x01(\t\x12\x16\n\x0e\x63olorThemeArgb\x18\x05 \x01(\t\x12\'\n\rsectionTracks\x18\x06 \x01(\x0b\x32\x10.SectionMetadata\x12\'\n\rsectionAlbums\x18\x07 \x01(\x0b\x32\x10.SectionMetadata\"y\n\x11SuggestionReasons\x12\x17\n\x06reason\x18\x02 \x03(\x0b\x32\x07.Reason\x12$\n\x10neutralDismissal\x18\x04 \x01(\x0b\x32\n.Dismissal\x12%\n\x11positiveDismissal\x18\x05 \x01(\x0b\x32\n.Dismissal\"\xed\x04\n\x08Template\x12%\n\rseriesAntenna\x18\x01 \x01(\x0b\x32\x0e.SeriesAntenna\x12%\n\x0etileGraphic2X1\x18\x02 \x01(\x0b\x32\r.TileTemplate\x12%\n\x0etileGraphic4X2\x18\x03 \x01(\x0b\x32\r.TileTemplate\x12\x31\n\x1atileGraphicColoredTitle2X1\x18\x04 \x01(\x0b\x32\r.TileTemplate\x12\x33\n\x1ctileGraphicUpperLeftTitle2X1\x18\x05 \x01(\x0b\x32\r.TileTemplate\x12\x35\n\x1etileDetailsReflectedGraphic2X2\x18\x06 \x01(\x0b\x32\r.TileTemplate\x12\'\n\x10tileFourBlock4X2\x18\x07 \x01(\x0b\x32\r.TileTemplate\x12\x31\n\x13\x63ontainerWithBanner\x18\x08 \x01(\x0b\x32\x14.ContainerWithBanner\x12#\n\x0c\x64\x65\x61lOfTheDay\x18\t \x01(\x0b\x32\r.DealOfTheDay\x12\x31\n\x1atileGraphicColoredTitle4X2\x18\n \x01(\x0b\x32\r.TileTemplate\x12;\n\x18\x65\x64itorialSeriesContainer\x18\x0b \x01(\x0b\x32\x19.EditorialSeriesContainer\x12;\n\x18recommendationsContainer\x18\x0c \x01(\x0b\x32\x19.RecommendationsContainer\x12\x1f\n\nnextBanner\x18\r \x01(\x0b\x32\x0b.NextBanner\"=\n\x0cTileTemplate\x12\x16\n\x0e\x63olorThemeArgb\x18\x01 \x01(\t\x12\x15\n\rcolorTextArgb\x18\x02 \x01(\t\"I\n\x0cVideoSnippet\x12\x15\n\x05image\x18\x01 \x03(\x0b\x32\x06.Image\x12\r\n\x05title\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"#\n\x07Warning\x12\x18\n\x10localizedMessage\x18\x01 \x01(\t\"c\n\x0c\x41lbumDetails\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1e\n\x07\x64\x65tails\x18\x02 \x01(\x0b\x32\r.MusicDetails\x12%\n\rdisplayArtist\x18\x03 \x01(\x0b\x32\x0e.ArtistDetails\"k\n\nDependency\x12\x13\n\x0bpackageName\x18\x01 \x01(\t\x12\x16\n\x0eminVersionCode\x18\x02 \x01(\x05\x12\x17\n\x0fversionCodeMask\x18\x03 \x01(\x05\x12\x17\n\x0fskipPermissions\x18\x04 \x01(\x08\"r\n\x0eInstallDetails\x12\x17\n\x0finstallLocation\x18\x01 \x01(\x05\x12\x0c\n\x04size\x18\x02 \x01(\x03\x12\x1f\n\ndependency\x18\x03 \x01(\x0b\x32\x0b.Dependency\x12\x18\n\x10targetSdkVersion\x18\x04 \x01(\x05\"\xae\x06\n\nAppDetails\x12\x15\n\rdeveloperName\x18\x01 \x01(\t\x12\x1a\n\x12majorVersionNumber\x18\x02 \x01(\x05\x12\x13\n\x0bversionCode\x18\x03 \x01(\x05\x12\x15\n\rversionString\x18\x04 \x01(\t\x12\r\n\x05title\x18\x05 \x01(\t\x12\x13\n\x0b\x61ppCategory\x18\x07 \x03(\t\x12\x15\n\rcontentRating\x18\x08 \x01(\x05\x12\x18\n\x10installationSize\x18\t \x01(\x03\x12\x12\n\npermission\x18\n \x03(\t\x12\x16\n\x0e\x64\x65veloperEmail\x18\x0b \x01(\t\x12\x18\n\x10\x64\x65veloperWebsite\x18\x0c \x01(\t\x12\x14\n\x0cnumDownloads\x18\r \x01(\t\x12\x13\n\x0bpackageName\x18\x0e \x01(\t\x12\x19\n\x11recentChangesHtml\x18\x0f \x01(\t\x12\x12\n\nuploadDate\x18\x10 \x01(\t\x12\x1b\n\x04\x66ile\x18\x11 \x03(\x0b\x32\r.FileMetadata\x12\x0f\n\x07\x61ppType\x18\x12 \x01(\t\x12\x17\n\x0f\x63\x65rtificateHash\x18\x13 \x03(\t\x12\x17\n\x0fvariesByAccount\x18\x15 \x01(\x08\x12\'\n\x0e\x63\x65rtificateSet\x18\x16 \x03(\x0b\x32\x0f.CertificateSet\x12\x35\n-autoAcquireFreeAppIfHigherVersionAvailableTag\x18\x17 \x03(\t\x12\x13\n\x0b\x64\x65\x63laresIab\x18\x18 \x01(\x08\x12\x0f\n\x07splitId\x18\x19 \x03(\t\x12\x17\n\x0fgamepadRequired\x18\x1a \x01(\x08\x12\x18\n\x10\x65xternallyHosted\x18\x1b \x01(\x08\x12\x1c\n\x14\x65verExternallyHosted\x18\x1c \x01(\x08\x12\x14\n\x0cinstallNotes\x18\x1e \x01(\t\x12\x17\n\x0finstallLocation\x18\x1f \x01(\x05\x12\x18\n\x10targetSdkVersion\x18  \x01(\x05\x12#\n\x1bhasPreregistrationPromoCode\x18! \x01(\t\x12\'\n\x0einstallDetails\x18\" \x01(\x0b\x32\x0f.InstallDetails\")\n\x0e\x43\x65rtificateSet\x12\x17\n\x0f\x63\x65rtificateHash\x18\x01 \x03(\t\"8\n\rAppPermission\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1a\n\x12permissionRequired\x18\x02 \x01(\x08\"^\n\rArtistDetails\x12\x12\n\ndetailsUrl\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12+\n\rexternalLinks\x18\x03 \x01(\x0b\x32\x14.ArtistExternalLinks\"b\n\x13\x41rtistExternalLinks\x12\x12\n\nwebsiteUrl\x18\x01 \x03(\t\x12\x1c\n\x14googlePlusProfileUrl\x18\x02 \x01(\t\x12\x19\n\x11youtubeChannelUrl\x18\x03 \x01(\t\"\xc6\x03\n\x0f\x44ocumentDetails\x12\x1f\n\nappDetails\x18\x01 \x01(\x0b\x32\x0b.AppDetails\x12#\n\x0c\x61lbumDetails\x18\x02 \x01(\x0b\x32\r.AlbumDetails\x12%\n\rartistDetails\x18\x03 \x01(\x0b\x32\x0e.ArtistDetails\x12!\n\x0bsongDetails\x18\x04 \x01(\x0b\x32\x0c.SongDetails\x12!\n\x0b\x62ookDetails\x18\x05 \x01(\x0b\x32\x0c.BookDetails\x12#\n\x0cvideoDetails\x18\x06 \x01(\x0b\x32\r.VideoDetails\x12\x31\n\x13subscriptionDetails\x18\x07 \x01(\x0b\x32\x14.SubscriptionDetails\x12)\n\x0fmagazineDetails\x18\x08 \x01(\x0b\x32\x10.MagazineDetails\x12%\n\rtvShowDetails\x18\t \x01(\x0b\x32\x0e.TvShowDetails\x12)\n\x0ftvSeasonDetails\x18\n \x01(\x0b\x32\x10.TvSeasonDetails\x12+\n\x10tvEpisodeDetails\x18\x0b \x01(\x0b\x32\x11.TvEpisodeDetails\"5\n\x0cPatchDetails\x12\x17\n\x0f\x62\x61seVersionCode\x18\x01 \x01(\x05\x12\x0c\n\x04size\x18\x02 \x01(\x03\"\x91\x01\n\x0c\x46ileMetadata\x12\x10\n\x08\x66ileType\x18\x01 \x01(\x05\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0c\n\x04size\x18\x03 \x01(\x03\x12\x0f\n\x07splitId\x18\x04 \x01(\t\x12\x16\n\x0e\x63ompressedSize\x18\x05 \x01(\x03\x12#\n\x0cpatchDetails\x18\x06 \x03(\x0b\x32\r.PatchDetails\"\x94\x01\n\x0fMagazineDetails\x12\x18\n\x10parentDetailsUrl\x18\x01 \x01(\t\x12)\n!deviceAvailabilityDescriptionHtml\x18\x02 \x01(\t\x12\x16\n\x0epsvDescription\x18\x03 \x01(\t\x12$\n\x1c\x64\x65liveryFrequencyDescription\x18\x04 \x01(\t\"\xbb\x01\n\x0cMusicDetails\x12\x11\n\tcensoring\x18\x01 \x01(\x05\x12\x13\n\x0b\x64urationSec\x18\x02 \x01(\x05\x12\x1b\n\x13originalReleaseDate\x18\x03 \x01(\t\x12\r\n\x05label\x18\x04 \x01(\t\x12\x1e\n\x06\x61rtist\x18\x05 \x03(\x0b\x32\x0e.ArtistDetails\x12\r\n\x05genre\x18\x06 \x03(\t\x12\x13\n\x0breleaseDate\x18\x07 \x01(\t\x12\x13\n\x0breleaseType\x18\x08 \x03(\x05\"?\n\x0bNewsDetails\x12\x18\n\x10parentDetailsUrl\x18\x01 \x01(\t\x12\x16\n\x0epsvDescription\x18\x03 \x01(\t\"\xb5\x01\n\x0bSongDetails\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1e\n\x07\x64\x65tails\x18\x02 \x01(\x0b\x32\r.MusicDetails\x12\x11\n\talbumName\x18\x03 \x01(\t\x12\x13\n\x0btrackNumber\x18\x04 \x01(\x05\x12\x12\n\npreviewUrl\x18\x05 \x01(\t\x12%\n\rdisplayArtist\x18\x06 \x01(\x0b\x32\x0e.ArtistDetails\x12\x15\n\x05\x62\x61\x64ge\x18\x07 \x01(\x0b\x32\x06.Badge\"1\n\x13SubscriptionDetails\x12\x1a\n\x12subscriptionPeriod\x18\x01 \x01(\x05\"e\n\x07Trailer\x12\x11\n\ttrailerId\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\x14\n\x0cthumbnailUrl\x18\x03 \x01(\t\x12\x10\n\x08watchUrl\x18\x04 \x01(\t\x12\x10\n\x08\x64uration\x18\x05 \x01(\t\"W\n\x10TvEpisodeDetails\x12\x18\n\x10parentDetailsUrl\x18\x01 \x01(\t\x12\x14\n\x0c\x65pisodeIndex\x18\x02 \x01(\x05\x12\x13\n\x0breleaseDate\x18\x03 \x01(\t\"\x9e\x01\n\x0fTvSeasonDetails\x12\x18\n\x10parentDetailsUrl\x18\x01 \x01(\t\x12\x13\n\x0bseasonIndex\x18\x02 \x01(\x05\x12\x13\n\x0breleaseDate\x18\x03 \x01(\t\x12\x13\n\x0b\x62roadcaster\x18\x04 \x01(\t\x12\x14\n\x0c\x65pisodeCount\x18\x05 \x01(\x05\x12\x1c\n\x14\x65xpectedEpisodeCount\x18\x06 \x01(\x05\"]\n\rTvShowDetails\x12\x13\n\x0bseasonCount\x18\x01 \x01(\x05\x12\x11\n\tstartYear\x18\x02 \x01(\x05\x12\x0f\n\x07\x65ndYear\x18\x03 \x01(\x05\x12\x13\n\x0b\x62roadcaster\x18\x04 \x01(\t\"?\n\x0bVideoCredit\x12\x12\n\ncreditType\x18\x01 \x01(\x05\x12\x0e\n\x06\x63redit\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x03(\t\"\x8b\x02\n\x0cVideoDetails\x12\x1c\n\x06\x63redit\x18\x01 \x03(\x0b\x32\x0c.VideoCredit\x12\x10\n\x08\x64uration\x18\x02 \x01(\t\x12\x13\n\x0breleaseDate\x18\x03 \x01(\t\x12\x15\n\rcontentRating\x18\x04 \x01(\t\x12\r\n\x05likes\x18\x05 \x01(\x03\x12\x10\n\x08\x64islikes\x18\x06 \x01(\x03\x12\r\n\x05genre\x18\x07 \x03(\t\x12\x19\n\x07trailer\x18\x08 \x03(\x0b\x32\x08.Trailer\x12$\n\nrentalTerm\x18\t \x03(\x0b\x32\x10.VideoRentalTerm\x12\x15\n\raudioLanguage\x18\n \x03(\t\x12\x17\n\x0f\x63\x61ptionLanguage\x18\x0b \x03(\t\"\xa0\x01\n\x0fVideoRentalTerm\x12\x11\n\tofferType\x18\x01 \x01(\x05\x12\x19\n\x11offerAbbreviation\x18\x02 \x01(\t\x12\x14\n\x0crentalHeader\x18\x03 \x01(\t\x12#\n\x04term\x18\x04 \x03(\n2\x15.VideoRentalTerm.Term\x1a$\n\x04Term\x12\x0e\n\x06header\x18\x05 \x01(\t\x12\x0c\n\x04\x62ody\x18\x06 \x01(\t\"\xf9\x01\n\x06\x42ucket\x12\x18\n\x08\x64ocument\x18\x01 \x03(\x0b\x32\x06.DocV1\x12\x13\n\x0bmultiCorpus\x18\x02 \x01(\x08\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0f\n\x07iconUrl\x18\x04 \x01(\t\x12\x17\n\x0f\x66ullContentsUrl\x18\x05 \x01(\t\x12\x11\n\trelevance\x18\x06 \x01(\x01\x12\x18\n\x10\x65stimatedResults\x18\x07 \x01(\x03\x12\x17\n\x0f\x61nalyticsCookie\x18\x08 \x01(\t\x12\x1b\n\x13\x66ullContentsListUrl\x18\t \x01(\t\x12\x13\n\x0bnextPageUrl\x18\n \x01(\t\x12\x0f\n\x07ordered\x18\x0b \x01(\x08\"<\n\x0cListResponse\x12\x17\n\x06\x62ucket\x18\x01 \x03(\x0b\x32\x07.Bucket\x12\x13\n\x03\x64oc\x18\x02 \x03(\x0b\x32\x06.DocV2\"\x94\x03\n\x05\x44ocV1\x12\x1c\n\tfinskyDoc\x18\x01 \x01(\x0b\x32\t.Document\x12\r\n\x05\x64ocid\x18\x02 \x01(\t\x12\x12\n\ndetailsUrl\x18\x03 \x01(\t\x12\x12\n\nreviewsUrl\x18\x04 \x01(\t\x12\x16\n\x0erelatedListUrl\x18\x05 \x01(\t\x12\x15\n\rmoreByListUrl\x18\x06 \x01(\t\x12\x10\n\x08shareUrl\x18\x07 \x01(\t\x12\x0f\n\x07\x63reator\x18\x08 \x01(\t\x12!\n\x07\x64\x65tails\x18\t \x01(\x0b\x32\x10.DocumentDetails\x12\x17\n\x0f\x64\x65scriptionHtml\x18\n \x01(\t\x12\x18\n\x10relatedBrowseUrl\x18\x0b \x01(\t\x12\x17\n\x0fmoreByBrowseUrl\x18\x0c \x01(\t\x12\x15\n\rrelatedHeader\x18\r \x01(\t\x12\x14\n\x0cmoreByHeader\x18\x0e \x01(\t\x12\r\n\x05title\x18\x0f \x01(\t\x12!\n\x0bplusOneData\x18\x10 \x01(\x0b\x32\x0c.PlusOneData\x12\x16\n\x0ewarningMessage\x18\x11 \x01(\t\"\xbe\x07\n\x0b\x41nnotations\x12(\n\x0esectionRelated\x18\x01 \x01(\x0b\x32\x10.SectionMetadata\x12\'\n\rsectionMoreBy\x18\x02 \x01(\x0b\x32\x10.SectionMetadata\x12!\n\x0bplusOneData\x18\x03 \x01(\x0b\x32\x0c.PlusOneData\x12\x19\n\x07warning\x18\x04 \x03(\x0b\x32\x08.Warning\x12+\n\x11sectionBodyOfWork\x18\x05 \x01(\x0b\x32\x10.SectionMetadata\x12,\n\x12sectionCoreContent\x18\x06 \x01(\x0b\x32\x10.SectionMetadata\x12\x1b\n\x08template\x18\x07 \x01(\x0b\x32\t.Template\x12\x1f\n\x0f\x62\x61\x64geForCreator\x18\x08 \x03(\x0b\x32\x06.Badge\x12\x1b\n\x0b\x62\x61\x64geForDoc\x18\t \x03(\x0b\x32\x06.Badge\x12\x13\n\x04link\x18\n \x01(\x0b\x32\x05.Link\x12*\n\x10sectionCrossSell\x18\x0b \x01(\x0b\x32\x10.SectionMetadata\x12/\n\x15sectionRelatedDocType\x18\x0c \x01(\x0b\x32\x10.SectionMetadata\x12!\n\x0bpromotedDoc\x18\r \x03(\x0b\x32\x0c.PromotedDoc\x12\x11\n\tofferNote\x18\x0e \x01(\t\x12\x1c\n\x0csubscription\x18\x10 \x03(\x0b\x32\x06.DocV2\x12(\n\x0eoBSOLETEReason\x18\x11 \x01(\x0b\x32\x10.OBSOLETE_Reason\x12\x18\n\x10privacyPolicyUrl\x18\x12 \x01(\t\x12-\n\x11suggestionReasons\x18\x13 \x01(\x0b\x32\x12.SuggestionReasons\x12+\n\x19optimalDeviceClassWarning\x18\x14 \x01(\x0b\x32\x08.Warning\x12*\n\x11\x64ocBadgeContainer\x18\x15 \x03(\x0b\x32\x0f.BadgeContainer\x12\x31\n\x17sectionSuggestForRating\x18\x16 \x01(\x0b\x32\x10.SectionMetadata\x12.\n\x14sectionRateAndReview\x18\x17 \x01(\x0b\x32\x10.SectionMetadata\x12\x32\n\x18sectionPurchaseCrossSell\x18\x18 \x01(\x0b\x32\x10.SectionMetadata\x12#\n\x0coverflowLink\x18\x19 \x03(\x0b\x32\r.OverflowLink\x12\x1a\n\ncreatorDoc\x18\x1a \x01(\x0b\x32\x06.DocV2\"2\n\x0cOverflowLink\x12\r\n\x05title\x18\x01 \x01(\t\x12\x13\n\x04link\x18\x02 \x01(\x0b\x32\x05.Link\"P\n\tReviewTip\x12\x0e\n\x06tipUrl\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12\x10\n\x08polarity\x18\x03 \x01(\x05\x12\x13\n\x0breviewCount\x18\x04 \x01(\x03\"\xd1\x06\n\x05\x44ocV2\x12\r\n\x05\x64ocid\x18\x01 \x01(\t\x12\x14\n\x0c\x62\x61\x63kendDocid\x18\x02 \x01(\t\x12\x0f\n\x07\x64ocType\x18\x03 \x01(\x05\x12\x11\n\tbackendId\x18\x04 \x01(\x05\x12\r\n\x05title\x18\x05 \x01(\t\x12\x0f\n\x07\x63reator\x18\x06 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x07 \x01(\t\x12\x15\n\x05offer\x18\x08 \x03(\x0b\x32\x06.Offer\x12#\n\x0c\x61vailability\x18\t \x01(\x0b\x32\r.Availability\x12\x15\n\x05image\x18\n \x03(\x0b\x32\x06.Image\x12\x15\n\x05\x63hild\x18\x0b \x03(\x0b\x32\x06.DocV2\x12-\n\x11\x63ontainerMetadata\x18\x0c \x01(\x0b\x32\x12.ContainerMetadata\x12!\n\x07\x64\x65tails\x18\r \x01(\x0b\x32\x10.DocumentDetails\x12)\n\x0f\x61ggregateRating\x18\x0e \x01(\x0b\x32\x10.AggregateRating\x12!\n\x0b\x61nnotations\x18\x0f \x01(\x0b\x32\x0c.Annotations\x12\x12\n\ndetailsUrl\x18\x10 \x01(\t\x12\x10\n\x08shareUrl\x18\x11 \x01(\t\x12\x12\n\nreviewsUrl\x18\x12 \x01(\t\x12\x12\n\nbackendUrl\x18\x13 \x01(\t\x12\x1a\n\x12purchaseDetailsUrl\x18\x14 \x01(\t\x12\x17\n\x0f\x64\x65tailsReusable\x18\x15 \x01(\x08\x12\x10\n\x08subtitle\x18\x16 \x01(\t\x12!\n\x19translatedDescriptionHtml\x18\x17 \x01(\t\x12\x18\n\x10serverLogsCookie\x18\x18 \x01(\x0c\x12\'\n\x0eproductDetails\x18\x19 \x01(\x0b\x32\x0f.ProductDetails\x12\x0e\n\x06mature\x18\x1a \x01(\x08\x12\x1e\n\x16promotionalDescription\x18\x1b \x01(\t\x12$\n\x1c\x61vailabileForPreregistration\x18\x1d \x01(\x08\x12\x17\n\x03tip\x18\x1e \x03(\x0b\x32\n.ReviewTip\x12\x13\n\x0bsnippetsUrl\x18\x1f \x01(\t\x12\x19\n\x11\x66orceShareability\x18  \x01(\x08\x12\"\n\x1auseWishlistAsPrimaryAction\x18! \x01(\x08\"H\n\x0eProductDetails\x12\r\n\x05title\x18\x01 \x01(\t\x12\'\n\x07section\x18\x02 \x03(\x0b\x32\x16.ProductDetailsSection\"W\n\x15ProductDetailsSection\x12\r\n\x05title\x18\x01 \x01(\t\x12/\n\x0b\x64\x65scription\x18\x03 \x03(\x0b\x32\x1a.ProductDetailsDescription\"G\n\x19ProductDetailsDescription\x12\x15\n\x05image\x18\x01 \x01(\x0b\x32\x06.Image\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\x99\x01\n\x17\x45ncryptedSubscriberInfo\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\x12\x14\n\x0c\x65ncryptedKey\x18\x02 \x01(\t\x12\x11\n\tsignature\x18\x03 \x01(\t\x12\x12\n\ninitVector\x18\x04 \x01(\t\x12\x18\n\x10googleKeyVersion\x18\x05 \x01(\x05\x12\x19\n\x11\x63\x61rrierKeyVersion\x18\x06 \x01(\x05\"\x80\x04\n\x0c\x41vailability\x12\x13\n\x0brestriction\x18\x05 \x01(\x05\x12\x11\n\tofferType\x18\x06 \x01(\x05\x12\x13\n\x04rule\x18\x07 \x01(\x0b\x32\x05.Rule\x12X\n perdeviceavailabilityrestriction\x18\t \x03(\n2..Availability.PerDeviceAvailabilityRestriction\x12\x18\n\x10\x61vailableIfOwned\x18\r \x01(\x08\x12\x19\n\x07install\x18\x0e \x03(\x0b\x32\x08.Install\x12)\n\nfilterInfo\x18\x10 \x01(\x0b\x32\x15.FilterEvaluationInfo\x12%\n\rownershipInfo\x18\x11 \x01(\x0b\x32\x0e.OwnershipInfo\x12\x31\n\x13\x61vailabilityProblem\x18\x12 \x03(\x0b\x32\x14.AvailabilityProblem\x12\x0e\n\x06hidden\x18\x15 \x01(\x08\x1a\x8e\x01\n PerDeviceAvailabilityRestriction\x12\x11\n\tandroidId\x18\n \x01(\x06\x12\x19\n\x11\x64\x65viceRestriction\x18\x0b \x01(\x05\x12\x11\n\tchannelId\x18\x0c \x01(\x03\x12)\n\nfilterInfo\x18\x0f \x01(\x0b\x32\x15.FilterEvaluationInfo\"@\n\x13\x41vailabilityProblem\x12\x13\n\x0bproblemType\x18\x01 \x01(\x05\x12\x14\n\x0cmissingValue\x18\x02 \x03(\t\"?\n\x14\x46ilterEvaluationInfo\x12\'\n\x0eruleEvaluation\x18\x01 \x03(\x0b\x32\x0f.RuleEvaluation\"\x93\x02\n\x04Rule\x12\x0e\n\x06negate\x18\x01 \x01(\x08\x12\x10\n\x08operator\x18\x02 \x01(\x05\x12\x0b\n\x03key\x18\x03 \x01(\x05\x12\x11\n\tstringArg\x18\x04 \x03(\t\x12\x0f\n\x07longArg\x18\x05 \x03(\x03\x12\x11\n\tdoubleArg\x18\x06 \x03(\x01\x12\x16\n\x07subrule\x18\x07 \x03(\x0b\x32\x05.Rule\x12\x14\n\x0cresponseCode\x18\x08 \x01(\x05\x12\x0f\n\x07\x63omment\x18\t \x01(\t\x12\x15\n\rstringArgHash\x18\n \x03(\x06\x12\x10\n\x08\x63onstArg\x18\x0b \x03(\x05\x12\x1f\n\x17\x61vailabilityProblemType\x18\x0c \x01(\x05\x12\x1c\n\x14includeMissingValues\x18\r \x01(\x08\"\x8d\x01\n\x0eRuleEvaluation\x12\x13\n\x04rule\x18\x01 \x01(\x0b\x32\x05.Rule\x12\x19\n\x11\x61\x63tualStringValue\x18\x02 \x03(\t\x12\x17\n\x0f\x61\x63tualLongValue\x18\x03 \x03(\x03\x12\x17\n\x0f\x61\x63tualBoolValue\x18\x04 \x03(\x08\x12\x19\n\x11\x61\x63tualDoubleValue\x18\x05 \x03(\x01\"B\n\x10GroupLicenseInfo\x12\x19\n\x11licensedOfferType\x18\x01 \x01(\x05\x12\x13\n\x0bgaiaGroupId\x18\x02 \x01(\x06\"+\n\x14LicensedDocumentInfo\x12\x13\n\x0bgaiaGroupId\x18\x01 \x03(\x06\"v\n\x11LibraryAppDetails\x12\x17\n\x0f\x63\x65rtificateHash\x18\x02 \x01(\t\x12\"\n\x1arefundTimeoutTimestampMsec\x18\x03 \x01(\x03\x12$\n\x1cpostDeliveryRefundWindowMsec\x18\x04 \x01(\x03\"D\n\x13LibraryInAppDetails\x12\x1a\n\x12signedPurchaseData\x18\x01 \x01(\t\x12\x11\n\tsignature\x18\x02 \x01(\t\"\x91\x02\n\x0fLibraryMutation\x12\x15\n\x05\x64ocid\x18\x01 \x01(\x0b\x32\x06.Docid\x12\x11\n\tofferType\x18\x02 \x01(\x05\x12\x14\n\x0c\x64ocumentHash\x18\x03 \x01(\x03\x12\x0f\n\x07\x64\x65leted\x18\x04 \x01(\x08\x12&\n\nappDetails\x18\x05 \x01(\x0b\x32\x12.LibraryAppDetails\x12\x38\n\x13subscriptionDetails\x18\x06 \x01(\x0b\x32\x1b.LibrarySubscriptionDetails\x12*\n\x0cinAppDetails\x18\x07 \x01(\x0b\x32\x14.LibraryInAppDetails\x12\x1f\n\x17validUntilTimestampMsec\x18\x08 \x01(\x03\"\xce\x01\n\x1aLibrarySubscriptionDetails\x12\x1f\n\x17initiationTimestampMsec\x18\x01 \x01(\x03\x12)\n!deprecatedValidUntilTimestampMsec\x18\x02 \x01(\x03\x12\x14\n\x0c\x61utoRenewing\x18\x03 \x01(\x08\x12\x1f\n\x17trialUntilTimestampMsec\x18\x04 \x01(\x03\x12\x1a\n\x12signedPurchaseData\x18\x05 \x01(\t\x12\x11\n\tsignature\x18\x06 \x01(\t\"\x8c\x01\n\rLibraryUpdate\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x0e\n\x06\x63orpus\x18\x02 \x01(\x05\x12\x13\n\x0bserverToken\x18\x03 \x01(\x0c\x12\"\n\x08mutation\x18\x04 \x03(\x0b\x32\x10.LibraryMutation\x12\x0f\n\x07hasMore\x18\x05 \x01(\x08\x12\x11\n\tlibraryId\x18\x06 \x01(\t\"v\n\x12\x43lientLibraryState\x12\x0e\n\x06\x63orpus\x18\x01 \x01(\x05\x12\x13\n\x0bserverToken\x18\x02 \x01(\x0c\x12\x13\n\x0bhashCodeSum\x18\x03 \x01(\x03\x12\x13\n\x0blibrarySize\x18\x04 \x01(\x05\x12\x11\n\tlibraryId\x18\x05 \x01(\t\"F\n\x19LibraryReplicationRequest\x12)\n\x0clibraryState\x18\x01 \x03(\x0b\x32\x13.ClientLibraryState\"<\n\x1aLibraryReplicationResponse\x12\x1e\n\x06update\x18\x01 \x03(\x0b\x32\x0e.LibraryUpdate\"l\n\rClickLogEvent\x12\x11\n\teventTime\x18\x01 \x01(\x03\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x0e\n\x06listId\x18\x03 \x01(\t\x12\x13\n\x0breferrerUrl\x18\x04 \x01(\t\x12\x16\n\x0ereferrerListId\x18\x05 \x01(\t\"p\n\x14ModifyLibraryRequest\x12\x11\n\tlibraryId\x18\x01 \x01(\t\x12\x13\n\x0b\x66orAddDocid\x18\x02 \x03(\t\x12\x17\n\x0f\x66orRemovalDocid\x18\x03 \x03(\t\x12\x17\n\x0f\x66orArchiveDocid\x18\x04 \x03(\t\">\n\x15ModifyLibraryResponse\x12%\n\rlibraryUpdate\x18\x01 \x01(\x0b\x32\x0e.LibraryUpdate\"B\n\x1a\x41ndroidAppNotificationData\x12\x13\n\x0bversionCode\x18\x01 \x01(\x05\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\"M\n\x15InAppNotificationData\x12\x17\n\x0f\x63heckoutOrderId\x18\x01 \x01(\t\x12\x1b\n\x13inAppNotificationId\x18\x02 \x01(\t\"6\n\x10LibraryDirtyData\x12\x0f\n\x07\x62\x61\x63kend\x18\x01 \x01(\x05\x12\x11\n\tlibraryId\x18\x02 \x01(\t\"\x97\x04\n\x0cNotification\x12\x18\n\x10notificationType\x18\x01 \x01(\x05\x12\x11\n\ttimestamp\x18\x03 \x01(\x03\x12\x15\n\x05\x64ocid\x18\x04 \x01(\x0b\x32\x06.Docid\x12\x10\n\x08\x64ocTitle\x18\x05 \x01(\t\x12\x11\n\tuserEmail\x18\x06 \x01(\t\x12,\n\x07\x61ppData\x18\x07 \x01(\x0b\x32\x1b.AndroidAppNotificationData\x12\x30\n\x0f\x61ppDeliveryData\x18\x08 \x01(\x0b\x32\x17.AndroidAppDeliveryData\x12\x31\n\x13purchaseRemovalData\x18\t \x01(\x0b\x32\x14.PurchaseRemovalData\x12\x33\n\x14userNotificationData\x18\n \x01(\x0b\x32\x15.UserNotificationData\x12\x35\n\x15inAppNotificationData\x18\x0b \x01(\x0b\x32\x16.InAppNotificationData\x12\x33\n\x14purchaseDeclinedData\x18\x0c \x01(\x0b\x32\x15.PurchaseDeclinedData\x12\x16\n\x0enotificationId\x18\r \x01(\t\x12%\n\rlibraryUpdate\x18\x0e \x01(\x0b\x32\x0e.LibraryUpdate\x12+\n\x10libraryDirtyData\x18\x0f \x01(\x0b\x32\x11.LibraryDirtyData\"@\n\x14PurchaseDeclinedData\x12\x0e\n\x06reason\x18\x01 \x01(\x05\x12\x18\n\x10showNotification\x18\x02 \x01(\x08\"(\n\x13PurchaseRemovalData\x12\x11\n\tmalicious\x18\x01 \x01(\x08\"\x88\x01\n\x14UserNotificationData\x12\x19\n\x11notificationTitle\x18\x01 \x01(\t\x12\x18\n\x10notificationText\x18\x02 \x01(\t\x12\x12\n\ntickerText\x18\x03 \x01(\t\x12\x13\n\x0b\x64ialogTitle\x18\x04 \x01(\t\x12\x12\n\ndialogText\x18\x05 \x01(\t\"\xc0\x03\n\rOwnershipInfo\x12\x1f\n\x17initiationTimestampMsec\x18\x01 \x01(\x03\x12\x1f\n\x17validUntilTimestampMsec\x18\x02 \x01(\x03\x12\x14\n\x0c\x61utoRenewing\x18\x03 \x01(\x08\x12\"\n\x1arefundTimeoutTimestampMsec\x18\x04 \x01(\x03\x12$\n\x1cpostDeliveryRefundWindowMsec\x18\x05 \x01(\x03\x12*\n\x15\x64\x65veloperPurchaseInfo\x18\x06 \x01(\x0b\x32\x0b.SignedData\x12\x12\n\npreordered\x18\x07 \x01(\x08\x12\x0e\n\x06hidden\x18\x08 \x01(\x08\x12!\n\x0brentalTerms\x18\t \x01(\x0b\x32\x0c.RentalTerms\x12+\n\x10groupLicenseInfo\x18\n \x01(\x0b\x32\x11.GroupLicenseInfo\x12\x33\n\x14licensedDocumentInfo\x18\x0b \x01(\x0b\x32\x15.LicensedDocumentInfo\x12\x10\n\x08quantity\x18\x0c \x01(\x05\x12&\n\x1elibraryExpirationTimestampMsec\x18\x0e \x01(\x03\"A\n\x07\x41ppData\x12\x0f\n\x07version\x18\x01 \x01(\x05\x12\x12\n\noldVersion\x18\x02 \x01(\x05\x12\x11\n\tsystemApp\x18\x03 \x01(\x08\"\xc8\x02\n\x1ePlayStoreBackgroundActionEvent\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x10\n\x08\x64ocument\x18\x02 \x01(\t\x12\x0e\n\x06reason\x18\x03 \x01(\t\x12\x11\n\terrorCode\x18\x04 \x01(\x05\x12\x15\n\rexceptionType\x18\x05 \x01(\t\x12\x18\n\x10serverLogsCookie\x18\x06 \x01(\x0c\x12\x11\n\tofferType\x18\x07 \x01(\x05\x12\x13\n\x0b\x66romSetting\x18\x08 \x01(\x05\x12\x11\n\ttoSetting\x18\t \x01(\x05\x12*\n\x0bsessionInfo\x18\n \x01(\x0b\x32\x15.PlayStoreSessionData\x12\x19\n\x07\x61ppData\x18\x0b \x01(\x0b\x32\x08.AppData\x12\x17\n\x0fserverLatencyMs\x18\x0c \x01(\x03\x12\x17\n\x0f\x63lientLatencyMs\x18\r \x01(\x03\"?\n\x13PlayStoreClickEvent\x12(\n\x0b\x65lementPath\x18\x01 \x03(\x0b\x32\x13.PlayStoreUiElement\"C\n\x16PlayStoreDeepLinkEvent\x12\x13\n\x0b\x65xternalUrl\x18\x01 \x01(\t\x12\x14\n\x0cresolvedType\x18\x02 \x01(\x05\"t\n\x18PlayStoreImpressionEvent\x12!\n\x04tree\x18\x01 \x01(\x0b\x32\x13.PlayStoreUiElement\x12)\n\x0creferrerPath\x18\x02 \x03(\x0b\x32\x13.PlayStoreUiElement\x12\n\n\x02id\x18\x03 \x01(\x03\"\xf4\x01\n\x11PlayStoreLogEvent\x12-\n\nimpression\x18\x01 \x01(\x0b\x32\x19.PlayStoreImpressionEvent\x12#\n\x05\x63lick\x18\x03 \x01(\x0b\x32\x14.PlayStoreClickEvent\x12\x39\n\x10\x62\x61\x63kgroundAction\x18\x04 \x01(\x0b\x32\x1f.PlayStoreBackgroundActionEvent\x12%\n\x06search\x18\x05 \x01(\x0b\x32\x15.PlayStoreSearchEvent\x12)\n\x08\x64\x65\x65pLink\x18\x06 \x01(\x0b\x32\x17.PlayStoreDeepLinkEvent\"L\n\x14PlayStoreSearchEvent\x12\r\n\x05query\x18\x01 \x01(\t\x12\x10\n\x08queryUrl\x18\x02 \x01(\t\x12\x13\n\x0breferrerUrl\x18\x03 \x01(\t\"\x99\x03\n\x14PlayStoreSessionData\x12\x1f\n\x17globalAutoUpdateEnabled\x18\x01 \x01(\x08\x12$\n\x1cglobalAutoUpdateOverWifiOnly\x18\x02 \x01(\x08\x12,\n$autoUpdateCleanupDialogNumTimesShown\x18\x03 \x01(\x05\x12\x13\n\x0bnetworkType\x18\x04 \x01(\x05\x12\x16\n\x0enetworkSubType\x18\x05 \x01(\x05\x12\x1b\n\x13numAccountsOnDevice\x18\x06 \x01(\x05\x12\x18\n\x10numInstalledApps\x18\x07 \x01(\x05\x12$\n\x1cnumAutoUpdatingInstalledApps\x18\x08 \x01(\x05\x12\'\n\x1fnumInstalledAppsNotAutoUpdating\x18\t \x01(\x05\x12 \n\x18gaiaPasswordAuthOptedOut\x18\n \x01(\x08\x12\x1a\n\x12\x63ontentFilterLevel\x18\x0b \x01(\x05\x12\x1b\n\x13\x61llowUnknownSources\x18\x0c \x01(\x08\"\x93\x01\n\x12PlayStoreUiElement\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x18\n\x10serverLogsCookie\x18\x02 \x01(\x0c\x12\x31\n\x10\x63lientLogsCookie\x18\x03 \x01(\x0b\x32\x17.PlayStoreUiElementInfo\x12\"\n\x05\x63hild\x18\x04 \x03(\x0b\x32\x13.PlayStoreUiElement\"\xac\x01\n\x16PlayStoreUiElementInfo\x12>\n\x0einstrumentInfo\x18\x01 \x01(\x0b\x32&.PlayStoreUiElementInfo.InstrumentInfo\x12\x13\n\x0bserialDocid\x18\x02 \x01(\t\x1a=\n\x0eInstrumentInfo\x12\x18\n\x10instrumentFamily\x18\x01 \x01(\x05\x12\x11\n\tisDefault\x18\x02 \x01(\x08\"Y\n\x0bPlusProfile\x12\x13\n\x0b\x64isplayName\x18\x02 \x01(\t\x12\x17\n\x0fprofileImageUrl\x18\x04 \x01(\t\x12\x1c\n\x0cprofileImage\x18\x05 \x01(\x0b\x32\x06.Image\"\x11\n\x0fPlusOneResponse\"8\n\x13PlusProfileResponse\x12!\n\x0bplusProfile\x18\x01 \x01(\x0b\x32\x0c.PlusProfile\"\xaf\x02\n\nClientCart\x12\r\n\x05title\x18\x01 \x01(\t\x12\x16\n\x0e\x66ormattedPrice\x18\x02 \x01(\t\x12\x1c\n\x14purchaseContextToken\x18\x03 \x01(\t\x12\x1f\n\ninstrument\x18\x04 \x01(\x0b\x32\x0b.Instrument\x12\x1a\n\x12\x65xtendedDetailHtml\x18\x05 \x03(\t\x12\x12\n\nfooterHtml\x18\x06 \x01(\t\x12\x1f\n\x17\x61\x64\x64InstrumentPromptHtml\x18\x07 \x01(\t\x12\x12\n\nbuttonText\x18\x08 \x01(\t\x12-\n\x19\x63ompletePurchaseChallenge\x18\t \x01(\x0b\x32\n.Challenge\x12\x13\n\x0bpriceByline\x18\n \x01(\t\x12\x12\n\ndetailHtml\x18\x0b \x03(\t\"\xd3\x01\n\x16\x43ommitPurchaseResponse\x12\'\n\x0epurchaseStatus\x18\x01 \x01(\x0b\x32\x0f.PurchaseStatus\x12\x1d\n\tchallenge\x18\x02 \x01(\x0b\x32\n.Challenge\x12%\n\rlibraryUpdate\x18\x03 \x03(\x0b\x32\x0e.LibraryUpdate\x12\x30\n\x0f\x61ppDeliveryData\x18\x04 \x01(\x0b\x32\x17.AndroidAppDeliveryData\x12\x18\n\x10serverLogsCookie\x18\x05 \x01(\x0c\"\xbd\x01\n\x17PreparePurchaseResponse\x12\'\n\x0epurchaseStatus\x18\x01 \x01(\x0b\x32\x0f.PurchaseStatus\x12\x1d\n\tchallenge\x18\x02 \x01(\x0b\x32\n.Challenge\x12\x19\n\x04\x63\x61rt\x18\x03 \x01(\x0b\x32\x0b.ClientCart\x12%\n\rlibraryUpdate\x18\x04 \x03(\x0b\x32\x0e.LibraryUpdate\x12\x18\n\x10serverLogsCookie\x18\x05 \x01(\x0c\"W\n\x0ePurchaseStatus\x12\x12\n\nstatusCode\x18\x01 \x01(\x05\x12\x18\n\x10\x65rrorMessageHtml\x18\x02 \x01(\t\x12\x17\n\x0fpermissionError\x18\x03 \x01(\x05\"\x1e\n\x1cRateSuggestedContentResponse\"\xa7\x02\n\x0f\x41ggregateRating\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x12\n\nstarRating\x18\x02 \x01(\x02\x12\x14\n\x0cratingsCount\x18\x03 \x01(\x04\x12\x16\n\x0eoneStarRatings\x18\x04 \x01(\x04\x12\x16\n\x0etwoStarRatings\x18\x05 \x01(\x04\x12\x18\n\x10threeStarRatings\x18\x06 \x01(\x04\x12\x17\n\x0f\x66ourStarRatings\x18\x07 \x01(\x04\x12\x17\n\x0f\x66iveStarRatings\x18\x08 \x01(\x04\x12\x15\n\rthumbsUpCount\x18\t \x01(\x04\x12\x17\n\x0fthumbsDownCount\x18\n \x01(\x04\x12\x14\n\x0c\x63ommentCount\x18\x0b \x01(\x04\x12\x1a\n\x12\x62\x61yesianMeanRating\x18\x0c \x01(\x01\"c\n\x0e\x44irectPurchase\x12\x12\n\ndetailsUrl\x18\x01 \x01(\t\x12\x15\n\rpurchaseDocid\x18\x02 \x01(\t\x12\x13\n\x0bparentDocid\x18\x03 \x01(\t\x12\x11\n\tofferType\x18\x04 \x01(\x05\"=\n\x0eRedeemGiftCard\x12\x13\n\x0bprefillCode\x18\x01 \x01(\t\x12\x16\n\x0epartnerPayload\x18\x02 \x01(\t\"\x91\x02\n\x0cResolvedLink\x12\x12\n\ndetailsUrl\x18\x01 \x01(\t\x12\x11\n\tbrowseUrl\x18\x02 \x01(\t\x12\x11\n\tsearchUrl\x18\x03 \x01(\t\x12\'\n\x0e\x64irectPurchase\x18\x04 \x01(\x0b\x32\x0f.DirectPurchase\x12\x0f\n\x07homeUrl\x18\x05 \x01(\t\x12\'\n\x0eredeemGiftCard\x18\x06 \x01(\x0b\x32\x0f.RedeemGiftCard\x12\x18\n\x10serverLogsCookie\x18\x07 \x01(\x0c\x12\x15\n\x05\x64ocid\x18\x08 \x01(\x0b\x32\x06.Docid\x12\x13\n\x0bwishlistUrl\x18\t \x01(\t\x12\x0f\n\x07\x62\x61\x63kend\x18\n \x01(\x05\x12\r\n\x05query\x18\x0b \x01(\t\"\x97\x19\n\x07Payload\x12#\n\x0clistResponse\x18\x01 \x01(\x0b\x32\r.ListResponse\x12)\n\x0f\x64\x65tailsResponse\x18\x02 \x01(\x0b\x32\x10.DetailsResponse\x12\'\n\x0ereviewResponse\x18\x03 \x01(\x0b\x32\x0f.ReviewResponse\x12!\n\x0b\x62uyResponse\x18\x04 \x01(\x0b\x32\x0c.BuyResponse\x12\'\n\x0esearchResponse\x18\x05 \x01(\x0b\x32\x0f.SearchResponse\x12!\n\x0btocResponse\x18\x06 \x01(\x0b\x32\x0c.TocResponse\x12\'\n\x0e\x62rowseResponse\x18\x07 \x01(\x0b\x32\x0f.BrowseResponse\x12\x37\n\x16purchaseStatusResponse\x18\x08 \x01(\x0b\x32\x17.PurchaseStatusResponse\x12;\n\x18updateInstrumentResponse\x18\t \x01(\x0b\x32\x19.UpdateInstrumentResponse\x12!\n\x0blogResponse\x18\n \x01(\x0b\x32\x0c.LogResponse\x12\x39\n\x17\x63heckInstrumentResponse\x18\x0b \x01(\x0b\x32\x18.CheckInstrumentResponse\x12)\n\x0fplusOneResponse\x18\x0c \x01(\x0b\x32\x10.PlusOneResponse\x12\x31\n\x13\x66lagContentResponse\x18\r \x01(\x0b\x32\x14.FlagContentResponse\x12\x39\n\x17\x61\x63kNotificationResponse\x18\x0e \x01(\x0b\x32\x18.AckNotificationResponse\x12\x41\n\x1binitiateAssociationResponse\x18\x0f \x01(\x0b\x32\x1c.InitiateAssociationResponse\x12=\n\x19verifyAssociationResponse\x18\x10 \x01(\x0b\x32\x1a.VerifyAssociationResponse\x12?\n\x1alibraryReplicationResponse\x18\x11 \x01(\x0b\x32\x1b.LibraryReplicationResponse\x12\'\n\x0erevokeResponse\x18\x12 \x01(\x0b\x32\x0f.RevokeResponse\x12\x31\n\x13\x62ulkDetailsResponse\x18\x13 \x01(\x0b\x32\x14.BulkDetailsResponse\x12*\n\x13resolveLinkResponse\x18\x14 \x01(\x0b\x32\r.ResolvedLink\x12+\n\x10\x64\x65liveryResponse\x18\x15 \x01(\x0b\x32\x11.DeliveryResponse\x12-\n\x11\x61\x63\x63\x65ptTosResponse\x18\x16 \x01(\x0b\x32\x12.AcceptTosResponse\x12\x43\n\x1crateSuggestedContentResponse\x18\x17 \x01(\x0b\x32\x1d.RateSuggestedContentResponse\x12\x39\n\x17\x63heckPromoOfferResponse\x18\x18 \x01(\x0b\x32\x18.CheckPromoOfferResponse\x12\x41\n\x1binstrumentSetupInfoResponse\x18\x19 \x01(\x0b\x32\x1c.InstrumentSetupInfoResponse\x12\x37\n\x16redeemGiftCardResponse\x18\x1a \x01(\x0b\x32\x17.RedeemGiftCardResponse\x12\x35\n\x15modifyLibraryResponse\x18\x1b \x01(\x0b\x32\x16.ModifyLibraryResponse\x12?\n\x1auploadDeviceConfigResponse\x18\x1c \x01(\x0b\x32\x1b.UploadDeviceConfigResponse\x12\x31\n\x13plusProfileResponse\x18\x1d \x01(\x0b\x32\x14.PlusProfileResponse\x12\x39\n\x17\x63onsumePurchaseResponse\x18\x1e \x01(\x0b\x32\x18.ConsumePurchaseResponse\x12\x37\n\x16\x62illingProfileResponse\x18\x1f \x01(\x0b\x32\x17.BillingProfileResponse\x12\x39\n\x17preparePurchaseResponse\x18  \x01(\x0b\x32\x18.PreparePurchaseResponse\x12\x37\n\x16\x63ommitPurchaseResponse\x18! \x01(\x0b\x32\x17.CommitPurchaseResponse\x12\x35\n\x15\x64\x65\x62ugSettingsResponse\x18\" \x01(\x0b\x32\x16.DebugSettingsResponse\x12\x35\n\x15\x63heckIabPromoResponse\x18# \x01(\x0b\x32\x16.CheckIabPromoResponse\x12\x43\n\x1cuserActivitySettingsResponse\x18$ \x01(\x0b\x32\x1d.UserActivitySettingsResponse\x12?\n\x1arecordUserActivityResponse\x18% \x01(\x0b\x32\x1b.RecordUserActivityResponse\x12/\n\x12redeemCodeResponse\x18& \x01(\x0b\x32\x13.RedeemCodeResponse\x12/\n\x12selfUpdateResponse\x18\' \x01(\x0b\x32\x13.SelfUpdateResponse\x12\x35\n\x15searchSuggestResponse\x18( \x01(\x0b\x32\x16.searchSuggestResponse\x12U\n%getInitialInstrumentFlowStateResponse\x18) \x01(\x0b\x32&.GetInitialInstrumentFlowStateResponse\x12;\n\x18\x63reateInstrumentResponse\x18* \x01(\x0b\x32\x19.CreateInstrumentResponse\x12-\n\x11\x63hallengeResponse\x18+ \x01(\x0b\x32\x12.ChallengeResponse\x12?\n\x1b\x62\x61\x63kupDeviceChoicesResponse\x18, \x01(\x0b\x32\x1a.BackDeviceChoicesResponse\x12\x45\n\x1d\x62\x61\x63kupDocumentChoicesResponse\x18- \x01(\x0b\x32\x1e.BackupDocumentChoicesResponse\x12\x31\n\x13\x65\x61rlyUpdateResponse\x18. \x01(\x0b\x32\x14.EarlyUpdateResponse\x12+\n\x10preloadsResponse\x18/ \x01(\x0b\x32\x11.PreloadsResponse\x12/\n\x12myAccountsResponse\x18\x30 \x01(\x0b\x32\x13.MyAccountsResponse\x12\x35\n\x15\x63ontentFilterResponse\x18\x31 \x01(\x0b\x32\x16.ContentFilterResponse\x12\x31\n\x13\x65xperimentsResponse\x18\x32 \x01(\x0b\x32\x14.ExperimentsResponse\x12\'\n\x0esurveyResponse\x18\x33 \x01(\x0b\x32\x0f.SurveyResponse\x12#\n\x0cpingResponse\x18\x34 \x01(\x0b\x32\r.PingResponse\x12=\n\x19updateUserSettingResponse\x18\x35 \x01(\x0b\x32\x1a.UpdateUserSettingResponse\x12\x39\n\x17getUserSettingsREsponse\x18\x36 \x01(\x0b\x32\x18.GetUserSettingsResponse\x12?\n\x1agetSharingSettingsResponse\x18\x38 \x01(\x0b\x32\x1b.GetSharingSettingsResponse\x12\x45\n\x1dupdateSharingSettingsResponse\x18\x39 \x01(\x0b\x32\x1e.UpdateSharingSettingsResponse\x12\x37\n\x16reviewSnippetsResponse\x18: \x01(\x0b\x32\x17.ReviewSnippetsResponse\x12\x43\n\x1c\x64ocumentSharingStateResponse\x18; \x01(\x0b\x32\x1d.DocumentSharingStateResponse\x12\x37\n\x16moduleDeliveryResponse\x18\x46 \x01(\x0b\x32\x17.ModuleDeliveryResponse\"\x17\n\x15\x43heckIabPromoResponse\"\x1e\n\x1cUserActivitySettingsResponse\"\x1c\n\x1aRecordUserActivityResponse\"\x14\n\x12RedeemCodeResponse\"\x14\n\x12SelfUpdateResponse\"\x17\n\x15searchSuggestResponse\"\'\n%GetInitialInstrumentFlowStateResponse\"\x1a\n\x18\x43reateInstrumentResponse\"\x13\n\x11\x43hallengeResponse\"\x1b\n\x19\x42\x61\x63kDeviceChoicesResponse\"\x1f\n\x1d\x42\x61\x63kupDocumentChoicesResponse\"\x15\n\x13\x45\x61rlyUpdateResponse\"\x12\n\x10PreloadsResponse\"\x14\n\x12MyAccountsResponse\"\x17\n\x15\x43ontentFilterResponse\"\x15\n\x13\x45xperimentsResponse\"\x10\n\x0eSurveyResponse\"\x0e\n\x0cPingResponse\"\x1b\n\x19UpdateUserSettingResponse\"\x19\n\x17GetUserSettingsResponse\"\x1c\n\x1aGetSharingSettingsResponse\"\x1f\n\x1dUpdateSharingSettingsResponse\"\x18\n\x16ReviewSnippetsResponse\"\x1e\n\x1c\x44ocumentSharingStateResponse\"\x18\n\x16ModuleDeliveryResponse\"U\n\x08PreFetch\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x10\n\x08response\x18\x02 \x01(\x0c\x12\x0c\n\x04\x65tag\x18\x03 \x01(\t\x12\x0b\n\x03ttl\x18\x04 \x01(\x03\x12\x0f\n\x07softTtl\x18\x05 \x01(\x03\"\xba\x01\n\x0fResponseWrapper\x12\x19\n\x07payload\x18\x01 \x01(\x0b\x32\x08.Payload\x12!\n\x08\x63ommands\x18\x02 \x01(\x0b\x32\x0f.ServerCommands\x12\x1b\n\x08preFetch\x18\x03 \x03(\x0b\x32\t.PreFetch\x12#\n\x0cnotification\x18\x04 \x03(\x0b\x32\r.Notification\x12\'\n\x0eserverMetadata\x18\x05 \x01(\x0b\x32\x0f.ServerMetadata\"]\n\x0eServerCommands\x12\x12\n\nclearCache\x18\x01 \x01(\x08\x12\x1b\n\x13\x64isplayErrorMessage\x18\x02 \x01(\t\x12\x1a\n\x12logErrorStacktrace\x18\x03 \x01(\t\"\'\n\x0eServerMetadata\x12\x15\n\rlatencyMillis\x18\x01 \x01(\x03\"D\n\x12GetReviewsResponse\x12\x17\n\x06review\x18\x01 \x03(\x0b\x32\x07.Review\x12\x15\n\rmatchingCount\x18\x02 \x01(\x03\"\xc9\x02\n\x06Review\x12\x12\n\nauthorName\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x0e\n\x06source\x18\x03 \x01(\t\x12\x17\n\x0f\x64ocumentVersion\x18\x04 \x01(\t\x12\x15\n\rtimestampMsec\x18\x05 \x01(\x03\x12\x12\n\nstarRating\x18\x06 \x01(\x05\x12\r\n\x05title\x18\x07 \x01(\t\x12\x0f\n\x07\x63omment\x18\x08 \x01(\t\x12\x11\n\tcommentId\x18\t \x01(\t\x12\x12\n\ndeviceName\x18\x13 \x01(\t\x12\x11\n\treplyText\x18\x1d \x01(\t\x12\x1a\n\x12replyTimestampMsec\x18\x1e \x01(\x03\x12!\n\x0bplusProfile\x18\x1f \x01(\x0b\x32\x0c.PlusProfile\x12\x16\n\x06\x61uthor\x18! \x01(\x0b\x32\x06.DocV2\x12\x19\n\tsentiment\x18\" \x01(\x0b\x32\x06.Image\"o\n\x0eReviewResponse\x12(\n\x0bgetResponse\x18\x01 \x01(\x0b\x32\x13.GetReviewsResponse\x12\x13\n\x0bnextPageUrl\x18\x02 \x01(\t\x12\x1e\n\rupdatedReview\x18\x03 \x01(\x0b\x32\x07.Review\"7\n\x0eRevokeResponse\x12%\n\rlibraryUpdate\x18\x01 \x01(\x0b\x32\x0e.LibraryUpdate\"g\n\rRelatedSearch\x12\x11\n\tsearchUrl\x18\x01 \x01(\t\x12\x0e\n\x06header\x18\x02 \x01(\t\x12\x11\n\tbackendId\x18\x03 \x01(\x05\x12\x0f\n\x07\x64ocType\x18\x04 \x01(\x05\x12\x0f\n\x07\x63urrent\x18\x05 \x01(\x08\"\xc6\x01\n\x0eSearchResponse\x12\x15\n\roriginalQuery\x18\x01 \x01(\t\x12\x16\n\x0esuggestedQuery\x18\x02 \x01(\t\x12\x16\n\x0e\x61ggregateQuery\x18\x03 \x01(\x08\x12\x17\n\x06\x62ucket\x18\x04 \x03(\x0b\x32\x07.Bucket\x12\x13\n\x03\x64oc\x18\x05 \x03(\x0b\x32\x06.DocV2\x12%\n\rrelatedSearch\x18\x06 \x03(\x0b\x32\x0e.RelatedSearch\x12\x18\n\x10serverLogsCookie\x18\x07 \x01(\x0c\"^\n\rBillingConfig\x12\x33\n\x14\x63\x61rrierBillingConfig\x18\x01 \x01(\x0b\x32\x15.CarrierBillingConfig\x12\x18\n\x10maxIabApiVersion\x18\x02 \x01(\x05\"\xe9\x01\n\x14\x43\x61rrierBillingConfig\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\napiVersion\x18\x03 \x01(\x05\x12\x17\n\x0fprovisioningUrl\x18\x04 \x01(\t\x12\x16\n\x0e\x63redentialsUrl\x18\x05 \x01(\t\x12\x13\n\x0btosRequired\x18\x06 \x01(\x08\x12)\n!perTransactionCredentialsRequired\x18\x07 \x01(\x08\x12\x32\n*sendSubscriberIdWithCarrierBillingRequests\x18\x08 \x01(\x08\"o\n\x0e\x43orpusMetadata\x12\x0f\n\x07\x62\x61\x63kend\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\nlandingUrl\x18\x03 \x01(\t\x12\x13\n\x0blibraryName\x18\x04 \x01(\t\x12\x15\n\rrecsWidgetUrl\x18\x06 \x01(\t\"#\n\x0b\x45xperiments\x12\x14\n\x0c\x65xperimentId\x18\x01 \x03(\t\"3\n\x10SelfUpdateConfig\x12\x1f\n\x17latestClientVersionCode\x18\x01 \x01(\x05\"\x9b\x03\n\x0bTocResponse\x12\x1f\n\x06\x63orpus\x18\x01 \x03(\x0b\x32\x0f.CorpusMetadata\x12\x1c\n\x14tosVersionDeprecated\x18\x02 \x01(\x05\x12\x12\n\ntosContent\x18\x03 \x01(\t\x12\x0f\n\x07homeUrl\x18\x04 \x01(\t\x12!\n\x0b\x65xperiments\x18\x05 \x01(\x0b\x32\x0c.Experiments\x12&\n\x1etosCheckboxTextMarketingEmails\x18\x06 \x01(\t\x12\x10\n\x08tosToken\x18\x07 \x01(\t\x12#\n\x0cuserSettings\x18\x08 \x01(\x0b\x32\r.UserSettings\x12\x17\n\x0ficonOverrideUrl\x18\t \x01(\t\x12+\n\x10selfUpdateConfig\x18\n \x01(\x0b\x32\x11.SelfUpdateConfig\x12\"\n\x1arequiresUploadDeviceConfig\x18\x0b \x01(\x08\x12%\n\rbillingConfig\x18\x0c \x01(\x0b\x32\x0e.BillingConfig\x12\x15\n\rrecsWidgetUrl\x18\r \x01(\t\"9\n\x0cUserSettings\x12)\n!tosCheckboxMarketingEmailsOptedIn\x18\x01 \x01(\x08\"\x13\n\x11\x41\x63\x63\x65ptTosResponse\"\x84\x01\n\x19UploadDeviceConfigRequest\x12\x36\n\x13\x64\x65viceConfiguration\x18\x01 \x01(\x0b\x32\x19.DeviceConfigurationProto\x12\x14\n\x0cmanufacturer\x18\x02 \x01(\t\x12\x19\n\x11gcmRegistrationId\x18\x03 \x01(\t\"=\n\x1aUploadDeviceConfigResponse\x12\x1f\n\x17uploadDeviceConfigToken\x18\x01 \x01(\t\"~\n\x1c\x41\x63kNotificationsRequestProto\x12\x16\n\x0enotificationId\x18\x01 \x03(\t\x12*\n\rsignatureHash\x18\x02 \x01(\x0b\x32\x13.SignatureHashProto\x12\x1a\n\x12nackNotificationId\x18\x03 \x03(\t\"\x1f\n\x1d\x41\x63kNotificationsResponseProto\"\x9f\x01\n\x0c\x41\x64\x64ressProto\x12\x10\n\x08\x61\x64\x64ress1\x18\x01 \x01(\t\x12\x10\n\x08\x61\x64\x64ress2\x18\x02 \x01(\t\x12\x0c\n\x04\x63ity\x18\x03 \x01(\t\x12\r\n\x05state\x18\x04 \x01(\t\x12\x12\n\npostalCode\x18\x05 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x06 \x01(\t\x12\x0c\n\x04name\x18\x07 \x01(\t\x12\x0c\n\x04type\x18\x08 \x01(\t\x12\r\n\x05phone\x18\t \x01(\t\"*\n\x0c\x41ppDataProto\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"<\n\x12\x41ppSuggestionProto\x12&\n\tassetInfo\x18\x01 \x01(\x0b\x32\x13.ExternalAssetProto\"Q\n\x14\x41ssetIdentifierProto\x12\x13\n\x0bpackageName\x18\x01 \x01(\t\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0f\n\x07\x61ssetId\x18\x03 \x01(\t\"\x8c\x03\n\x12\x41ssetsRequestProto\x12\x11\n\tassetType\x18\x01 \x01(\x05\x12\r\n\x05query\x18\x02 \x01(\t\x12\x12\n\ncategoryId\x18\x03 \x01(\t\x12\x0f\n\x07\x61ssetId\x18\x04 \x03(\t\x12\x1e\n\x16retrieveVendingHistory\x18\x05 \x01(\x08\x12\x1c\n\x14retrieveExtendedInfo\x18\x06 \x01(\x08\x12\x11\n\tsortOrder\x18\x07 \x01(\x05\x12\x12\n\nstartIndex\x18\x08 \x01(\x03\x12\x12\n\nnumEntries\x18\t \x01(\x03\x12\x12\n\nviewFilter\x18\n \x01(\x05\x12\x13\n\x0brankingType\x18\x0b \x01(\t\x12\x1e\n\x16retrieveCarrierChannel\x18\x0c \x01(\x08\x12\x1e\n\x16pendingDownloadAssetId\x18\r \x03(\t\x12!\n\x19reconstructVendingHistory\x18\x0e \x01(\x08\x12\x19\n\x11unfilteredResults\x18\x0f \x01(\x08\x12\x0f\n\x07\x62\x61\x64geId\x18\x10 \x03(\t\"\xd0\x01\n\x13\x41ssetsResponseProto\x12\"\n\x05\x61sset\x18\x01 \x03(\x0b\x32\x13.ExternalAssetProto\x12\x17\n\x0fnumTotalEntries\x18\x02 \x01(\x03\x12\x16\n\x0e\x63orrectedQuery\x18\x03 \x01(\t\x12%\n\x08\x61ltAsset\x18\x04 \x03(\x0b\x32\x13.ExternalAssetProto\x12\x1b\n\x13numCorrectedEntries\x18\x05 \x01(\x03\x12\x0e\n\x06header\x18\x06 \x01(\t\x12\x10\n\x08listType\x18\x07 \x01(\x05\"\xbb\x01\n\x18\x42illingEventRequestProto\x12\x11\n\teventType\x18\x01 \x01(\x05\x12\x1b\n\x13\x62illingParametersId\x18\x02 \x01(\t\x12\x15\n\rresultSuccess\x18\x03 \x01(\x08\x12\x15\n\rclientMessage\x18\x04 \x01(\t\x12\x41\n\x11\x63\x61rrierInstrument\x18\x05 \x01(\x0b\x32&.ExternalCarrierBillingInstrumentProto\"\x1b\n\x19\x42illingEventResponseProto\"\xbc\x03\n\x15\x42illingParameterProto\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06mncMcc\x18\x03 \x03(\t\x12\x12\n\nbackendUrl\x18\x04 \x03(\t\x12\x0e\n\x06iconId\x18\x05 \x01(\t\x12\x1d\n\x15\x62illingInstrumentType\x18\x06 \x01(\x05\x12\x15\n\rapplicationId\x18\x07 \x01(\t\x12\x0e\n\x06tosUrl\x18\x08 \x01(\t\x12\x1d\n\x15instrumentTosRequired\x18\t \x01(\x08\x12\x12\n\napiVersion\x18\n \x01(\x05\x12)\n!perTransactionCredentialsRequired\x18\x0b \x01(\x08\x12\x32\n*sendSubscriberIdWithCarrierBillingRequests\x18\x0c \x01(\x08\x12\x1f\n\x17\x64\x65viceAssociationMethod\x18\r \x01(\x05\x12\x1f\n\x17userTokenRequestMessage\x18\x0e \x01(\t\x12\x1f\n\x17userTokenRequestAddress\x18\x0f \x01(\t\x12\x1a\n\x12passphraseRequired\x18\x10 \x01(\x08\"Q\n\x1e\x43\x61rrierBillingCredentialsProto\x12\x13\n\x0b\x63redentials\x18\x01 \x01(\t\x12\x1a\n\x12\x63redentialsTimeout\x18\x02 \x01(\x03\"\xff\x01\n\rCategoryProto\x12\x11\n\tassetType\x18\x02 \x01(\x05\x12\x12\n\ncategoryId\x18\x03 \x01(\t\x12\x17\n\x0f\x63\x61tegoryDisplay\x18\x04 \x01(\t\x12\x18\n\x10\x63\x61tegorySubtitle\x18\x05 \x01(\t\x12\x19\n\x11promotedAssetsNew\x18\x06 \x03(\t\x12\x1a\n\x12promotedAssetsHome\x18\x07 \x03(\t\x12%\n\rsubCategories\x18\x08 \x03(\x0b\x32\x0e.CategoryProto\x12\x1a\n\x12promotedAssetsPaid\x18\t \x03(\t\x12\x1a\n\x12promotedAssetsFree\x18\n \x03(\t\":\n!CheckForNotificationsRequestProto\x12\x15\n\ralarmDuration\x18\x01 \x01(\x03\"$\n\"CheckForNotificationsResponseProto\"S\n\x18\x43heckLicenseRequestProto\x12\x13\n\x0bpackageName\x18\x01 \x01(\t\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\r\n\x05nonce\x18\x03 \x01(\x03\"X\n\x19\x43heckLicenseResponseProto\x12\x14\n\x0cresponseCode\x18\x01 \x01(\x05\x12\x12\n\nsignedData\x18\x02 \x01(\t\x12\x11\n\tsignature\x18\x03 \x01(\t\"\x87\x01\n\x14\x43ommentsRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x12\n\nstartIndex\x18\x02 \x01(\x03\x12\x12\n\nnumEntries\x18\x03 \x01(\x03\x12\x1f\n\x17shouldReturnSelfComment\x18\x04 \x01(\x08\x12\x15\n\rassetReferrer\x18\x05 \x01(\t\"\x84\x01\n\x15\x43ommentsResponseProto\x12&\n\x07\x63omment\x18\x01 \x03(\x0b\x32\x15.ExternalCommentProto\x12\x17\n\x0fnumTotalEntries\x18\x02 \x01(\x03\x12*\n\x0bselfComment\x18\x03 \x01(\x0b\x32\x15.ExternalCommentProto\"\xc0\x03\n\x17\x43ontentSyncRequestProto\x12\x13\n\x0bincremental\x18\x01 \x01(\x08\x12\x45\n\x11\x61ssetinstallstate\x18\x02 \x03(\n2*.ContentSyncRequestProto.AssetInstallState\x12\x35\n\tsystemapp\x18\n \x03(\n2\".ContentSyncRequestProto.SystemApp\x12\x1a\n\x12sideloadedAppCount\x18\x0e \x01(\x05\x1a\xa5\x01\n\x11\x41ssetInstallState\x12\x0f\n\x07\x61ssetId\x18\x03 \x01(\t\x12\x12\n\nassetState\x18\x04 \x01(\x05\x12\x13\n\x0binstallTime\x18\x05 \x01(\x03\x12\x15\n\runinstallTime\x18\x06 \x01(\x03\x12\x13\n\x0bpackageName\x18\x07 \x01(\t\x12\x13\n\x0bversionCode\x18\x08 \x01(\x05\x12\x15\n\rassetReferrer\x18\t \x01(\t\x1aN\n\tSystemApp\x12\x13\n\x0bpackageName\x18\x0b \x01(\t\x12\x13\n\x0bversionCode\x18\x0c \x01(\x05\x12\x17\n\x0f\x63\x65rtificateHash\x18\r \x03(\t\"7\n\x18\x43ontentSyncResponseProto\x12\x1b\n\x13numUpdatesAvailable\x18\x01 \x01(\x05\"D\n\x10\x44\x61taMessageProto\x12\x10\n\x08\x63\x61tegory\x18\x01 \x01(\t\x12\x1e\n\x07\x61ppData\x18\x03 \x03(\x0b\x32\r.AppDataProto\"P\n\x11\x44ownloadInfoProto\x12\x0f\n\x07\x61pkSize\x18\x01 \x01(\x03\x12*\n\x0e\x61\x64\x64itionalFile\x18\x02 \x03(\x0b\x32\x12.FileMetadataProto\"\xe6\n\n\x12\x45xternalAssetProto\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\x11\n\tassetType\x18\x03 \x01(\x05\x12\r\n\x05owner\x18\x04 \x01(\t\x12\x0f\n\x07version\x18\x05 \x01(\t\x12\r\n\x05price\x18\x06 \x01(\t\x12\x15\n\raverageRating\x18\x07 \x01(\t\x12\x12\n\nnumRatings\x18\x08 \x01(\x03\x12\x44\n\x13purchaseinformation\x18\t \x01(\n2\'.ExternalAssetProto.PurchaseInformation\x12\x36\n\x0c\x65xtendedinfo\x18\x0c \x01(\n2 .ExternalAssetProto.ExtendedInfo\x12\x0f\n\x07ownerId\x18\x16 \x01(\t\x12\x13\n\x0bpackageName\x18\x18 \x01(\t\x12\x13\n\x0bversionCode\x18\x19 \x01(\x05\x12\x14\n\x0c\x62undledAsset\x18\x1d \x01(\x08\x12\x15\n\rpriceCurrency\x18  \x01(\t\x12\x13\n\x0bpriceMicros\x18! \x01(\x03\x12\x14\n\x0c\x66ilterReason\x18# \x01(\t\x12\x19\n\x11\x61\x63tualSellerPrice\x18( \x01(\t\x12%\n\x08\x61ppBadge\x18/ \x03(\x0b\x32\x13.ExternalBadgeProto\x12\'\n\nownerBadge\x18\x30 \x03(\x0b\x32\x13.ExternalBadgeProto\x1a\x7f\n\x13PurchaseInformation\x12\x14\n\x0cpurchaseTime\x18\n \x01(\x03\x12\x19\n\x11refundTimeoutTime\x18\x0b \x01(\x03\x12\x19\n\x11refundStartPolicy\x18- \x01(\x05\x12\x1c\n\x14refundWindowDuration\x18. \x01(\x03\x1a\xca\x05\n\x0c\x45xtendedInfo\x12\x13\n\x0b\x64\x65scription\x18\r \x01(\t\x12\x15\n\rdownloadCount\x18\x0e \x01(\x03\x12\x1f\n\x17\x61pplicationPermissionId\x18\x0f \x03(\t\x12 \n\x18requiredInstallationSize\x18\x10 \x01(\x03\x12\x13\n\x0bpackageName\x18\x11 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x12 \x01(\t\x12\x15\n\rforwardLocked\x18\x13 \x01(\x08\x12\x14\n\x0c\x63ontactEmail\x18\x14 \x01(\t\x12\x1b\n\x13\x65verInstalledByUser\x18\x15 \x01(\x08\x12\x1b\n\x13\x64ownloadCountString\x18\x17 \x01(\t\x12\x14\n\x0c\x63ontactPhone\x18\x1a \x01(\t\x12\x16\n\x0e\x63ontactWebsite\x18\x1b \x01(\t\x12\x1e\n\x16nextPurchaseRefundable\x18\x1c \x01(\x08\x12\x16\n\x0enumScreenshots\x18\x1e \x01(\x05\x12\x1e\n\x16promotionalDescription\x18\x1f \x01(\t\x12\x18\n\x10serverAssetState\x18\" \x01(\x05\x12\x1a\n\x12\x63ontentRatingLevel\x18$ \x01(\x05\x12\x1b\n\x13\x63ontentRatingString\x18% \x01(\t\x12\x15\n\rrecentChanges\x18& \x01(\t\x12M\n\x11packagedependency\x18\' \x03(\n22.ExternalAssetProto.ExtendedInfo.PackageDependency\x12\x11\n\tvideoLink\x18+ \x01(\t\x12(\n\x0c\x64ownloadInfo\x18\x31 \x01(\x0b\x32\x12.DownloadInfoProto\x1a\x41\n\x11PackageDependency\x12\x13\n\x0bpackageName\x18) \x01(\t\x12\x17\n\x0fskipPermissions\x18* \x01(\x08\"5\n\x17\x45xternalBadgeImageProto\x12\r\n\x05usage\x18\x01 \x01(\x05\x12\x0b\n\x03url\x18\x02 \x01(\t\"\x8a\x01\n\x12\x45xternalBadgeProto\x12\x16\n\x0elocalizedTitle\x18\x01 \x01(\t\x12\x1c\n\x14localizedDescription\x18\x02 \x01(\t\x12,\n\nbadgeImage\x18\x03 \x03(\x0b\x32\x18.ExternalBadgeImageProto\x12\x10\n\x08searchId\x18\x04 \x01(\t\"\xe0\x02\n%ExternalCarrierBillingInstrumentProto\x12\x15\n\rinstrumentKey\x18\x01 \x01(\t\x12\x1c\n\x14subscriberIdentifier\x18\x02 \x01(\t\x12\x13\n\x0b\x61\x63\x63ountType\x18\x03 \x01(\t\x12\x1a\n\x12subscriberCurrency\x18\x04 \x01(\t\x12\x18\n\x10transactionLimit\x18\x05 \x01(\x04\x12\x16\n\x0esubscriberName\x18\x06 \x01(\t\x12\x10\n\x08\x61\x64\x64ress1\x18\x07 \x01(\t\x12\x10\n\x08\x61\x64\x64ress2\x18\x08 \x01(\t\x12\x0c\n\x04\x63ity\x18\t \x01(\t\x12\r\n\x05state\x18\n \x01(\t\x12\x12\n\npostalCode\x18\x0b \x01(\t\x12\x0f\n\x07\x63ountry\x18\x0c \x01(\t\x12\x39\n\x17\x65ncryptedSubscriberInfo\x18\r \x01(\x0b\x32\x18.EncryptedSubscriberInfo\"r\n\x14\x45xternalCommentProto\x12\x0c\n\x04\x62ody\x18\x01 \x01(\t\x12\x0e\n\x06rating\x18\x02 \x01(\x05\x12\x13\n\x0b\x63reatorName\x18\x03 \x01(\t\x12\x14\n\x0c\x63reationTime\x18\x04 \x01(\x03\x12\x11\n\tcreatorId\x18\x05 \x01(\t\"\xfb\x01\n\x12\x45xternalCreditCard\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x12\n\nlastDigits\x18\x02 \x01(\t\x12\x0f\n\x07\x65xpYear\x18\x03 \x01(\x05\x12\x10\n\x08\x65xpMonth\x18\x04 \x01(\x05\x12\x12\n\npersonName\x18\x05 \x01(\t\x12\x13\n\x0b\x63ountryCode\x18\x06 \x01(\t\x12\x12\n\npostalCode\x18\x07 \x01(\t\x12\x13\n\x0bmakeDefault\x18\x08 \x01(\x08\x12\x10\n\x08\x61\x64\x64ress1\x18\t \x01(\t\x12\x10\n\x08\x61\x64\x64ress2\x18\n \x01(\t\x12\x0c\n\x04\x63ity\x18\x0b \x01(\t\x12\r\n\x05state\x18\x0c \x01(\t\x12\r\n\x05phone\x18\r \x01(\t\"\xb5\x01\n\x1d\x45xternalPaypalInstrumentProto\x12\x15\n\rinstrumentKey\x18\x01 \x01(\t\x12\x16\n\x0epreapprovalKey\x18\x02 \x01(\t\x12\x13\n\x0bpaypalEmail\x18\x03 \x01(\t\x12$\n\rpaypalAddress\x18\x04 \x01(\x0b\x32\r.AddressProto\x12*\n\"multiplePaypalInstrumentsSupported\x18\x05 \x01(\x08\"]\n\x11\x46ileMetadataProto\x12\x10\n\x08\x66ileType\x18\x01 \x01(\x05\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0c\n\x04size\x18\x03 \x01(\x03\x12\x13\n\x0b\x64ownloadUrl\x18\x04 \x01(\t\"Z\n\x1dGetAddressSnippetRequestProto\x12\x39\n\x17\x65ncryptedSubscriberInfo\x18\x01 \x01(\x0b\x32\x18.EncryptedSubscriberInfo\"8\n\x1eGetAddressSnippetResponseProto\x12\x16\n\x0e\x61\x64\x64ressSnippet\x18\x01 \x01(\t\"B\n\x14GetAssetRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x19\n\x11\x64irectDownloadKey\x18\x02 \x01(\t\"\xda\x03\n\x15GetAssetResponseProto\x12\x39\n\x0cinstallasset\x18\x01 \x01(\n2#.GetAssetResponseProto.InstallAsset\x12*\n\x0e\x61\x64\x64itionalFile\x18\x0f \x03(\x0b\x32\x12.FileMetadataProto\x1a\xd9\x02\n\x0cInstallAsset\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\x12\x11\n\tassetName\x18\x03 \x01(\t\x12\x11\n\tassetType\x18\x04 \x01(\t\x12\x14\n\x0c\x61ssetPackage\x18\x05 \x01(\t\x12\x0f\n\x07\x62lobUrl\x18\x06 \x01(\t\x12\x16\n\x0e\x61ssetSignature\x18\x07 \x01(\t\x12\x11\n\tassetSize\x18\x08 \x01(\x03\x12\x1b\n\x13refundTimeoutMillis\x18\t \x01(\x03\x12\x15\n\rforwardLocked\x18\n \x01(\x08\x12\x0f\n\x07secured\x18\x0b \x01(\x08\x12\x13\n\x0bversionCode\x18\x0c \x01(\x05\x12\x1e\n\x16\x64ownloadAuthCookieName\x18\r \x01(\t\x12\x1f\n\x17\x64ownloadAuthCookieValue\x18\x0e \x01(\t\x12%\n\x1dpostInstallRefundWindowMillis\x18\x10 \x01(\x03\"\x1c\n\x1aGetCarrierInfoRequestProto\"\xb8\x01\n\x1bGetCarrierInfoResponseProto\x12\x1d\n\x15\x63\x61rrierChannelEnabled\x18\x01 \x01(\x08\x12\x17\n\x0f\x63\x61rrierLogoIcon\x18\x02 \x01(\x0c\x12\x15\n\rcarrierBanner\x18\x03 \x01(\x0c\x12\x17\n\x0f\x63\x61rrierSubtitle\x18\x04 \x01(\t\x12\x14\n\x0c\x63\x61rrierTitle\x18\x05 \x01(\t\x12\x1b\n\x13\x63\x61rrierImageDensity\x18\x06 \x01(\x05\"6\n\x19GetCategoriesRequestProto\x12\x19\n\x11prefetchPromoData\x18\x01 \x01(\x08\"@\n\x1aGetCategoriesResponseProto\x12\"\n\ncategories\x18\x01 \x03(\x0b\x32\x0e.CategoryProto\"\xbb\x01\n\x14GetImageRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x12\n\nimageUsage\x18\x03 \x01(\x05\x12\x0f\n\x07imageId\x18\x04 \x01(\t\x12\x1b\n\x13screenPropertyWidth\x18\x05 \x01(\x05\x12\x1c\n\x14screenPropertyHeight\x18\x06 \x01(\x05\x12\x1d\n\x15screenPropertyDensity\x18\x07 \x01(\x05\x12\x13\n\x0bproductType\x18\x08 \x01(\x05\"@\n\x15GetImageResponseProto\x12\x11\n\timageData\x18\x01 \x01(\x0c\x12\x14\n\x0cimageDensity\x18\x02 \x01(\x05\"\xf4\x01\n\x1dGetMarketMetadataRequestProto\x12\x17\n\x0flastRequestTime\x18\x01 \x01(\x03\x12\x36\n\x13\x64\x65viceConfiguration\x18\x02 \x01(\x0b\x32\x19.DeviceConfigurationProto\x12\x15\n\rdeviceRoaming\x18\x03 \x01(\x08\x12\x1b\n\x13marketSignatureHash\x18\x04 \x03(\t\x12\x15\n\rcontentRating\x18\x05 \x01(\x05\x12\x17\n\x0f\x64\x65viceModelName\x18\x06 \x01(\t\x12\x1e\n\x16\x64\x65viceManufacturerName\x18\x07 \x01(\t\"\xb7\x02\n\x1eGetMarketMetadataResponseProto\x12\x1f\n\x17latestClientVersionCode\x18\x01 \x01(\x05\x12\x17\n\x0flatestClientUrl\x18\x02 \x01(\t\x12\x17\n\x0fpaidAppsEnabled\x18\x03 \x01(\x08\x12\x30\n\x10\x62illingParameter\x18\x04 \x03(\x0b\x32\x16.BillingParameterProto\x12\x1a\n\x12\x63ommentPostEnabled\x18\x05 \x01(\x08\x12\x1c\n\x14\x62illingEventsEnabled\x18\x06 \x01(\x08\x12\x16\n\x0ewarningMessage\x18\x07 \x01(\t\x12\x1b\n\x13inAppBillingEnabled\x18\x08 \x01(\x08\x12!\n\x19inAppBillingMaxApiVersion\x18\t \x01(\x05\"1\n\x1cGetSubCategoriesRequestProto\x12\x11\n\tassetType\x18\x01 \x01(\x05\"\xa2\x01\n\x1dGetSubCategoriesResponseProto\x12?\n\x0bsubcategory\x18\x01 \x03(\n2*.GetSubCategoriesResponseProto.SubCategory\x1a@\n\x0bSubCategory\x12\x1a\n\x12subCategoryDisplay\x18\x02 \x01(\t\x12\x15\n\rsubCategoryId\x18\x03 \x01(\t\"\xb0\x01\n$InAppPurchaseInformationRequestProto\x12*\n\rsignatureHash\x18\x01 \x01(\x0b\x32\x13.SignatureHashProto\x12\r\n\x05nonce\x18\x02 \x01(\x03\x12\x16\n\x0enotificationId\x18\x03 \x03(\t\x12\x1a\n\x12signatureAlgorithm\x18\x04 \x01(\t\x12\x19\n\x11\x62illingApiVersion\x18\x05 \x01(\x05\"\xbb\x01\n%InAppPurchaseInformationResponseProto\x12(\n\x0esignedResponse\x18\x01 \x01(\x0b\x32\x10.SignedDataProto\x12:\n\x15statusBarNotification\x18\x02 \x03(\x0b\x32\x1b.StatusBarNotificationProto\x12,\n\x0epurchaseResult\x18\x03 \x01(\x0b\x32\x14.PurchaseResultProto\"\x98\x01\n$InAppRestoreTransactionsRequestProto\x12*\n\rsignatureHash\x18\x01 \x01(\x0b\x32\x13.SignatureHashProto\x12\r\n\x05nonce\x18\x02 \x01(\x03\x12\x1a\n\x12signatureAlgorithm\x18\x03 \x01(\t\x12\x19\n\x11\x62illingApiVersion\x18\x04 \x01(\x05\"\x7f\n%InAppRestoreTransactionsResponseProto\x12(\n\x0esignedResponse\x18\x01 \x01(\x0b\x32\x10.SignedDataProto\x12,\n\x0epurchaseResult\x18\x02 \x01(\x0b\x32\x14.PurchaseResultProto\"\xba\x01\n\x19ModifyCommentRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12&\n\x07\x63omment\x18\x02 \x01(\x0b\x32\x15.ExternalCommentProto\x12\x15\n\rdeleteComment\x18\x03 \x01(\x08\x12\x11\n\tflagAsset\x18\x04 \x01(\x08\x12\x10\n\x08\x66lagType\x18\x05 \x01(\x05\x12\x13\n\x0b\x66lagMessage\x18\x06 \x01(\t\x12\x13\n\x0bnonFlagFlow\x18\x07 \x01(\x08\"\x1c\n\x1aModifyCommentResponseProto\"v\n\x16PaypalCountryInfoProto\x12\x19\n\x11\x62irthDateRequired\x18\x01 \x01(\x08\x12\x0f\n\x07tosText\x18\x02 \x01(\t\x12\x1c\n\x14\x62illingAgreementText\x18\x03 \x01(\t\x12\x12\n\npreTosText\x18\x04 \x01(\t\"y\n\x1fPaypalCreateAccountRequestProto\x12\x11\n\tfirstName\x18\x01 \x01(\t\x12\x10\n\x08lastName\x18\x02 \x01(\t\x12\x1e\n\x07\x61\x64\x64ress\x18\x03 \x01(\x0b\x32\r.AddressProto\x12\x11\n\tbirthDate\x18\x04 \x01(\t\"<\n PaypalCreateAccountResponseProto\x12\x18\n\x10\x63reateAccountKey\x18\x01 \x01(\t\"E\n\x16PaypalCredentialsProto\x12\x16\n\x0epreapprovalKey\x18\x01 \x01(\t\x12\x13\n\x0bpaypalEmail\x18\x02 \x01(\t\"B\n PaypalMassageAddressRequestProto\x12\x1e\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0b\x32\r.AddressProto\"C\n!PaypalMassageAddressResponseProto\x12\x1e\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0b\x32\r.AddressProto\"^\n(PaypalPreapprovalCredentialsRequestProto\x12\x15\n\rgaiaAuthToken\x18\x01 \x01(\t\x12\x1b\n\x13\x62illingInstrumentId\x18\x02 \x01(\t\"n\n)PaypalPreapprovalCredentialsResponseProto\x12\x12\n\nresultCode\x18\x01 \x01(\x05\x12\x18\n\x10paypalAccountKey\x18\x02 \x01(\t\x12\x13\n\x0bpaypalEmail\x18\x03 \x01(\t\"R\n$PaypalPreapprovalDetailsRequestProto\x12\x12\n\ngetAddress\x18\x01 \x01(\x08\x12\x16\n\x0epreapprovalKey\x18\x02 \x01(\t\"\\\n%PaypalPreapprovalDetailsResponseProto\x12\x13\n\x0bpaypalEmail\x18\x01 \x01(\t\x12\x1e\n\x07\x61\x64\x64ress\x18\x02 \x01(\x0b\x32\r.AddressProto\"\x1f\n\x1dPaypalPreapprovalRequestProto\"8\n\x1ePaypalPreapprovalResponseProto\x12\x16\n\x0epreapprovalKey\x18\x01 \x01(\t\"]\n\x19PendingNotificationsProto\x12\'\n\x0cnotification\x18\x01 \x03(\x0b\x32\x11.DataMessageProto\x12\x17\n\x0fnextCheckMillis\x18\x02 \x01(\x03\"e\n\x15PrefetchedBundleProto\x12$\n\x07request\x18\x01 \x01(\x0b\x32\x13.SingleRequestProto\x12&\n\x08response\x18\x02 \x01(\x0b\x32\x14.SingleResponseProto\"\xbc\x01\n\x15PurchaseCartInfoProto\x12\x11\n\titemPrice\x18\x01 \x01(\t\x12\x14\n\x0ctaxInclusive\x18\x02 \x01(\t\x12\x14\n\x0ctaxExclusive\x18\x03 \x01(\t\x12\r\n\x05total\x18\x04 \x01(\t\x12\x12\n\ntaxMessage\x18\x05 \x01(\t\x12\x15\n\rfooterMessage\x18\x06 \x01(\t\x12\x15\n\rpriceCurrency\x18\x07 \x01(\t\x12\x13\n\x0bpriceMicros\x18\x08 \x01(\x03\"\x93\x04\n\x11PurchaseInfoProto\x12\x15\n\rtransactionId\x18\x01 \x01(\t\x12(\n\x08\x63\x61rtInfo\x18\x02 \x01(\x0b\x32\x16.PurchaseCartInfoProto\x12\x41\n\x12\x62illinginstruments\x18\x03 \x01(\n2%.PurchaseInfoProto.BillingInstruments\x12\x18\n\x10\x65rrorInputFields\x18\t \x03(\x05\x12\x14\n\x0crefundPolicy\x18\n \x01(\t\x12\x15\n\ruserCanAddGdd\x18\x0c \x01(\x08\x12\x1f\n\x17\x65ligibleInstrumentTypes\x18\r \x03(\x05\x12\x0f\n\x07orderId\x18\x0f \x01(\t\x1a\x80\x02\n\x12\x42illingInstruments\x12R\n\x11\x62illinginstrument\x18\x04 \x03(\n27.PurchaseInfoProto.BillingInstruments.BillingInstrument\x12\"\n\x1a\x64\x65\x66\x61ultBillingInstrumentId\x18\x08 \x01(\t\x1ar\n\x11\x42illingInstrument\x12\n\n\x02id\x18\x05 \x01(\t\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\x11\n\tisInvalid\x18\x07 \x01(\x08\x12\x16\n\x0einstrumentType\x18\x0b \x01(\x05\x12\x18\n\x10instrumentStatus\x18\x0e \x01(\x05\"i\n\x1cPurchaseMetadataRequestProto\x12*\n\"deprecatedRetrieveBillingCountries\x18\x01 \x01(\x08\x12\x1d\n\x15\x62illingInstrumentType\x18\x02 \x01(\x05\"\x87\x04\n\x1dPurchaseMetadataResponseProto\x12;\n\tcountries\x18\x01 \x01(\n2(.PurchaseMetadataResponseProto.Countries\x1a\xa8\x03\n\tCountries\x12\x41\n\x07\x63ountry\x18\x02 \x03(\n20.PurchaseMetadataResponseProto.Countries.Country\x1a\xd7\x02\n\x07\x43ountry\x12\x13\n\x0b\x63ountryCode\x18\x03 \x01(\t\x12\x13\n\x0b\x63ountryName\x18\x04 \x01(\t\x12\x32\n\x11paypalCountryInfo\x18\x05 \x01(\x0b\x32\x17.PaypalCountryInfoProto\x12#\n\x1b\x61llowsReducedBillingAddress\x18\x06 \x01(\x08\x12\x65\n\x15instrumentaddressspec\x18\x07 \x03(\n2F.PurchaseMetadataResponseProto.Countries.Country.InstrumentAddressSpec\x1a\x62\n\x15InstrumentAddressSpec\x12\x18\n\x10instrumentFamily\x18\x08 \x01(\x05\x12/\n\x12\x62illingAddressSpec\x18\t \x01(\x0b\x32\x13.BillingAddressSpec\"\xe2\x03\n\x19PurchaseOrderRequestProto\x12\x15\n\rgaiaAuthToken\x18\x01 \x01(\t\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\x12\x15\n\rtransactionId\x18\x03 \x01(\t\x12\x1b\n\x13\x62illingInstrumentId\x18\x04 \x01(\t\x12\x13\n\x0btosAccepted\x18\x05 \x01(\x08\x12\x42\n\x19\x63\x61rrierBillingCredentials\x18\x06 \x01(\x0b\x32\x1f.CarrierBillingCredentialsProto\x12\x17\n\x0f\x65xistingOrderId\x18\x07 \x01(\t\x12\x1d\n\x15\x62illingInstrumentType\x18\x08 \x01(\x05\x12\x1b\n\x13\x62illingParametersId\x18\t \x01(\t\x12\x32\n\x11paypalCredentials\x18\n \x01(\x0b\x32\x17.PaypalCredentialsProto\x12,\n\x0eriskHeaderInfo\x18\x0b \x01(\x0b\x32\x14.RiskHeaderInfoProto\x12\x13\n\x0bproductType\x18\x0c \x01(\x05\x12*\n\rsignatureHash\x18\r \x01(\x0b\x32\x13.SignatureHashProto\x12\x18\n\x10\x64\x65veloperPayload\x18\x0e \x01(\t\"\xb6\x01\n\x1aPurchaseOrderResponseProto\x12\x1c\n\x14\x64\x65precatedResultCode\x18\x01 \x01(\x05\x12(\n\x0cpurchaseInfo\x18\x02 \x01(\x0b\x32\x12.PurchaseInfoProto\x12\"\n\x05\x61sset\x18\x03 \x01(\x0b\x32\x13.ExternalAssetProto\x12,\n\x0epurchaseResult\x18\x04 \x01(\x0b\x32\x14.PurchaseResultProto\"\x92\x04\n\x18PurchasePostRequestProto\x12\x15\n\rgaiaAuthToken\x18\x01 \x01(\t\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\x12\x15\n\rtransactionId\x18\x03 \x01(\t\x12N\n\x15\x62illinginstrumentinfo\x18\x04 \x01(\n2/.PurchasePostRequestProto.BillingInstrumentInfo\x12\x13\n\x0btosAccepted\x18\x07 \x01(\x08\x12\x17\n\x0f\x63\x62InstrumentKey\x18\x08 \x01(\t\x12\x1b\n\x13paypalAuthConfirmed\x18\x0b \x01(\x08\x12\x13\n\x0bproductType\x18\x0c \x01(\x05\x12*\n\rsignatureHash\x18\r \x01(\x0b\x32\x13.SignatureHashProto\x1a\xda\x01\n\x15\x42illingInstrumentInfo\x12\x1b\n\x13\x62illingInstrumentId\x18\x05 \x01(\t\x12\'\n\ncreditCard\x18\x06 \x01(\x0b\x32\x13.ExternalCreditCard\x12\x41\n\x11\x63\x61rrierInstrument\x18\t \x01(\x0b\x32&.ExternalCarrierBillingInstrumentProto\x12\x38\n\x10paypalInstrument\x18\n \x01(\x0b\x32\x1e.ExternalPaypalInstrumentProto\"\xaa\x02\n\x19PurchasePostResponseProto\x12\x1c\n\x14\x64\x65precatedResultCode\x18\x01 \x01(\x05\x12(\n\x0cpurchaseInfo\x18\x02 \x01(\x0b\x32\x12.PurchaseInfoProto\x12\x19\n\x11termsOfServiceUrl\x18\x03 \x01(\t\x12\x1a\n\x12termsOfServiceText\x18\x04 \x01(\t\x12\x1a\n\x12termsOfServiceName\x18\x05 \x01(\t\x12\"\n\x1atermsOfServiceCheckboxText\x18\x06 \x01(\t\x12 \n\x18termsOfServiceHeaderText\x18\x07 \x01(\t\x12,\n\x0epurchaseResult\x18\x08 \x01(\x0b\x32\x14.PurchaseResultProto\"q\n\x1bPurchaseProductRequestProto\x12\x13\n\x0bproductType\x18\x01 \x01(\x05\x12\x11\n\tproductId\x18\x02 \x01(\t\x12*\n\rsignatureHash\x18\x03 \x01(\x0b\x32\x13.SignatureHashProto\"p\n\x1cPurchaseProductResponseProto\x12\r\n\x05title\x18\x01 \x01(\t\x12\x11\n\titemTitle\x18\x02 \x01(\t\x12\x17\n\x0fitemDescription\x18\x03 \x01(\t\x12\x15\n\rmerchantField\x18\x04 \x01(\t\"D\n\x13PurchaseResultProto\x12\x12\n\nresultCode\x18\x01 \x01(\x05\x12\x19\n\x11resultCodeMessage\x18\x02 \x01(\t\"W\n\x14QuerySuggestionProto\x12\r\n\x05query\x18\x01 \x01(\t\x12\x1b\n\x13\x65stimatedNumResults\x18\x02 \x01(\x05\x12\x13\n\x0bqueryWeight\x18\x03 \x01(\x05\"A\n\x1bQuerySuggestionRequestProto\x12\r\n\x05query\x18\x01 \x01(\t\x12\x13\n\x0brequestType\x18\x02 \x01(\x05\"\x90\x02\n\x1cQuerySuggestionResponseProto\x12<\n\nsuggestion\x18\x01 \x03(\n2(.QuerySuggestionResponseProto.Suggestion\x12\"\n\x1a\x65stimatedNumAppSuggestions\x18\x04 \x01(\x05\x12$\n\x1c\x65stimatedNumQuerySuggestions\x18\x05 \x01(\x05\x1ah\n\nSuggestion\x12*\n\rappSuggestion\x18\x02 \x01(\x0b\x32\x13.AppSuggestionProto\x12.\n\x0fquerySuggestion\x18\x03 \x01(\x0b\x32\x15.QuerySuggestionProto\"T\n\x17RateCommentRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x11\n\tcreatorId\x18\x02 \x01(\t\x12\x15\n\rcommentRating\x18\x03 \x01(\x05\"\x1a\n\x18RateCommentResponseProto\">\n\x1fReconstructDatabaseRequestProto\x12\x1b\n\x13retrieveFullHistory\x18\x01 \x01(\x08\"H\n ReconstructDatabaseResponseProto\x12$\n\x05\x61sset\x18\x01 \x03(\x0b\x32\x15.AssetIdentifierProto\"%\n\x12RefundRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\"_\n\x13RefundResponseProto\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\"\n\x05\x61sset\x18\x02 \x01(\x0b\x32\x13.ExternalAssetProto\x12\x14\n\x0cresultDetail\x18\x03 \x01(\t\"*\n\x17RemoveAssetRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\"\xcd\x02\n\x16RequestPropertiesProto\x12\x15\n\ruserAuthToken\x18\x01 \x01(\t\x12\x1b\n\x13userAuthTokenSecure\x18\x02 \x01(\x08\x12\x17\n\x0fsoftwareVersion\x18\x03 \x01(\x05\x12\x0b\n\x03\x61id\x18\x04 \x01(\t\x12\x1d\n\x15productNameAndVersion\x18\x05 \x01(\t\x12\x14\n\x0cuserLanguage\x18\x06 \x01(\t\x12\x13\n\x0buserCountry\x18\x07 \x01(\t\x12\x14\n\x0coperatorName\x18\x08 \x01(\t\x12\x17\n\x0fsimOperatorName\x18\t \x01(\t\x12\x1b\n\x13operatorNumericName\x18\n \x01(\t\x12\x1e\n\x16simOperatorNumericName\x18\x0b \x01(\t\x12\x10\n\x08\x63lientId\x18\x0c \x01(\t\x12\x11\n\tloggingId\x18\r \x01(\t\"\xbe\x11\n\x0cRequestProto\x12\x32\n\x11requestProperties\x18\x01 \x01(\x0b\x32\x17.RequestPropertiesProto\x12&\n\x07request\x18\x02 \x03(\n2\x15.RequestProto.Request\x1a\xd1\x10\n\x07Request\x12\x42\n\x19requestSpecificProperties\x18\x03 \x01(\x0b\x32\x1f.RequestSpecificPropertiesProto\x12)\n\x0c\x61ssetRequest\x18\x04 \x01(\x0b\x32\x13.AssetsRequestProto\x12.\n\x0f\x63ommentsRequest\x18\x05 \x01(\x0b\x32\x15.CommentsRequestProto\x12\x38\n\x14modifyCommentRequest\x18\x06 \x01(\x0b\x32\x1a.ModifyCommentRequestProto\x12\x36\n\x13purchasePostRequest\x18\x07 \x01(\x0b\x32\x19.PurchasePostRequestProto\x12\x38\n\x14purchaseOrderRequest\x18\x08 \x01(\x0b\x32\x1a.PurchaseOrderRequestProto\x12\x34\n\x12\x63ontentSyncRequest\x18\t \x01(\x0b\x32\x18.ContentSyncRequestProto\x12.\n\x0fgetAssetRequest\x18\n \x01(\x0b\x32\x15.GetAssetRequestProto\x12.\n\x0fgetImageRequest\x18\x0b \x01(\x0b\x32\x15.GetImageRequestProto\x12*\n\rrefundRequest\x18\x0c \x01(\x0b\x32\x13.RefundRequestProto\x12>\n\x17purchaseMetadataRequest\x18\r \x01(\x0b\x32\x1d.PurchaseMetadataRequestProto\x12;\n\x14subCategoriesRequest\x18\x0e \x01(\x0b\x32\x1d.GetSubCategoriesRequestProto\x12<\n\x16uninstallReasonRequest\x18\x10 \x01(\x0b\x32\x1c.UninstallReasonRequestProto\x12\x34\n\x12rateCommentRequest\x18\x11 \x01(\x0b\x32\x18.RateCommentRequestProto\x12\x36\n\x13\x63heckLicenseRequest\x18\x12 \x01(\x0b\x32\x19.CheckLicenseRequestProto\x12@\n\x18getMarketMetadataRequest\x18\x13 \x01(\x0b\x32\x1e.GetMarketMetadataRequestProto\x12\x38\n\x14getCategoriesRequest\x18\x15 \x01(\x0b\x32\x1a.GetCategoriesRequestProto\x12:\n\x15getCarrierInfoRequest\x18\x16 \x01(\x0b\x32\x1b.GetCarrierInfoRequestProto\x12\x34\n\x12removeAssetRequest\x18\x17 \x01(\x0b\x32\x18.RemoveAssetRequestProto\x12\x44\n\x1arestoreApplicationsRequest\x18\x18 \x01(\x0b\x32 .RestoreApplicationsRequestProto\x12<\n\x16querySuggestionRequest\x18\x19 \x01(\x0b\x32\x1c.QuerySuggestionRequestProto\x12\x36\n\x13\x62illingEventRequest\x18\x1a \x01(\x0b\x32\x19.BillingEventRequestProto\x12@\n\x18paypalPreapprovalRequest\x18\x1b \x01(\x0b\x32\x1e.PaypalPreapprovalRequestProto\x12N\n\x1fpaypalPreapprovalDetailsRequest\x18\x1c \x01(\x0b\x32%.PaypalPreapprovalDetailsRequestProto\x12\x44\n\x1apaypalCreateAccountRequest\x18\x1d \x01(\x0b\x32 .PaypalCreateAccountRequestProto\x12V\n#paypalPreapprovalCredentialsRequest\x18\x1e \x01(\x0b\x32).PaypalPreapprovalCredentialsRequestProto\x12N\n\x1finAppRestoreTransactionsRequest\x18\x1f \x01(\x0b\x32%.InAppRestoreTransactionsRequestProto\x12N\n\x1finAppPurchaseInformationRequest\x18  \x01(\x0b\x32%.InAppPurchaseInformationRequestProto\x12H\n\x1c\x63heckForNotificationsRequest\x18! \x01(\x0b\x32\".CheckForNotificationsRequestProto\x12>\n\x17\x61\x63kNotificationsRequest\x18\" \x01(\x0b\x32\x1d.AckNotificationsRequestProto\x12<\n\x16purchaseProductRequest\x18# \x01(\x0b\x32\x1c.PurchaseProductRequestProto\x12\x44\n\x1areconstructDatabaseRequest\x18$ \x01(\x0b\x32 .ReconstructDatabaseRequestProto\x12\x46\n\x1bpaypalMassageAddressRequest\x18% \x01(\x0b\x32!.PaypalMassageAddressRequestProto\x12@\n\x18getAddressSnippetRequest\x18& \x01(\x0b\x32\x1e.GetAddressSnippetRequestProto\"5\n\x1eRequestSpecificPropertiesProto\x12\x13\n\x0bifNoneMatch\x18\x01 \x01(\t\"\xbe\x01\n\x17ResponsePropertiesProto\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06maxAge\x18\x02 \x01(\x05\x12\x0c\n\x04\x65tag\x18\x03 \x01(\t\x12\x15\n\rserverVersion\x18\x04 \x01(\x05\x12\x18\n\x10maxAgeConsumable\x18\x06 \x01(\x05\x12\x14\n\x0c\x65rrorMessage\x18\x07 \x01(\t\x12.\n\x0f\x65rrorInputField\x18\x08 \x03(\x0b\x32\x15.InputValidationError\"\xf7\x11\n\rResponseProto\x12)\n\x08response\x18\x01 \x03(\n2\x17.ResponseProto.Response\x12\x38\n\x14pendingNotifications\x18& \x01(\x0b\x32\x1a.PendingNotificationsProto\x1a\x80\x11\n\x08Response\x12\x34\n\x12responseProperties\x18\x02 \x01(\x0b\x32\x18.ResponsePropertiesProto\x12,\n\x0e\x61ssetsResponse\x18\x03 \x01(\x0b\x32\x14.AssetsResponseProto\x12\x30\n\x10\x63ommentsResponse\x18\x04 \x01(\x0b\x32\x16.CommentsResponseProto\x12:\n\x15modifyCommentResponse\x18\x05 \x01(\x0b\x32\x1b.ModifyCommentResponseProto\x12\x38\n\x14purchasePostResponse\x18\x06 \x01(\x0b\x32\x1a.PurchasePostResponseProto\x12:\n\x15purchaseOrderResponse\x18\x07 \x01(\x0b\x32\x1b.PurchaseOrderResponseProto\x12\x36\n\x13\x63ontentSyncResponse\x18\x08 \x01(\x0b\x32\x19.ContentSyncResponseProto\x12\x30\n\x10getAssetResponse\x18\t \x01(\x0b\x32\x16.GetAssetResponseProto\x12\x30\n\x10getImageResponse\x18\n \x01(\x0b\x32\x16.GetImageResponseProto\x12,\n\x0erefundResponse\x18\x0b \x01(\x0b\x32\x14.RefundResponseProto\x12@\n\x18purchaseMetadataResponse\x18\x0c \x01(\x0b\x32\x1e.PurchaseMetadataResponseProto\x12=\n\x15subCategoriesResponse\x18\r \x01(\x0b\x32\x1e.GetSubCategoriesResponseProto\x12>\n\x17uninstallReasonResponse\x18\x0f \x01(\x0b\x32\x1d.UninstallReasonResponseProto\x12\x36\n\x13rateCommentResponse\x18\x10 \x01(\x0b\x32\x19.RateCommentResponseProto\x12\x38\n\x14\x63heckLicenseResponse\x18\x11 \x01(\x0b\x32\x1a.CheckLicenseResponseProto\x12\x42\n\x19getMarketMetadataResponse\x18\x12 \x01(\x0b\x32\x1f.GetMarketMetadataResponseProto\x12\x30\n\x10prefetchedBundle\x18\x13 \x03(\x0b\x32\x16.PrefetchedBundleProto\x12:\n\x15getCategoriesResponse\x18\x14 \x01(\x0b\x32\x1b.GetCategoriesResponseProto\x12<\n\x16getCarrierInfoResponse\x18\x15 \x01(\x0b\x32\x1c.GetCarrierInfoResponseProto\x12\x45\n\x1arestoreApplicationResponse\x18\x17 \x01(\x0b\x32!.RestoreApplicationsResponseProto\x12>\n\x17querySuggestionResponse\x18\x18 \x01(\x0b\x32\x1d.QuerySuggestionResponseProto\x12\x38\n\x14\x62illingEventResponse\x18\x19 \x01(\x0b\x32\x1a.BillingEventResponseProto\x12\x42\n\x19paypalPreapprovalResponse\x18\x1a \x01(\x0b\x32\x1f.PaypalPreapprovalResponseProto\x12P\n paypalPreapprovalDetailsResponse\x18\x1b \x01(\x0b\x32&.PaypalPreapprovalDetailsResponseProto\x12\x46\n\x1bpaypalCreateAccountResponse\x18\x1c \x01(\x0b\x32!.PaypalCreateAccountResponseProto\x12X\n$paypalPreapprovalCredentialsResponse\x18\x1d \x01(\x0b\x32*.PaypalPreapprovalCredentialsResponseProto\x12P\n inAppRestoreTransactionsResponse\x18\x1e \x01(\x0b\x32&.InAppRestoreTransactionsResponseProto\x12P\n inAppPurchaseInformationResponse\x18\x1f \x01(\x0b\x32&.InAppPurchaseInformationResponseProto\x12J\n\x1d\x63heckForNotificationsResponse\x18  \x01(\x0b\x32#.CheckForNotificationsResponseProto\x12@\n\x18\x61\x63kNotificationsResponse\x18! \x01(\x0b\x32\x1e.AckNotificationsResponseProto\x12>\n\x17purchaseProductResponse\x18\" \x01(\x0b\x32\x1d.PurchaseProductResponseProto\x12\x46\n\x1breconstructDatabaseResponse\x18# \x01(\x0b\x32!.ReconstructDatabaseResponseProto\x12H\n\x1cpaypalMassageAddressResponse\x18$ \x01(\x0b\x32\".PaypalMassageAddressResponseProto\x12\x42\n\x19getAddressSnippetResponse\x18% \x01(\x0b\x32\x1f.GetAddressSnippetResponseProto\"\x86\x01\n\x1fRestoreApplicationsRequestProto\x12\x17\n\x0f\x62\x61\x63kupAndroidId\x18\x01 \x01(\t\x12\x12\n\ntosVersion\x18\x02 \x01(\t\x12\x36\n\x13\x64\x65viceConfiguration\x18\x03 \x01(\x0b\x32\x19.DeviceConfigurationProto\"I\n RestoreApplicationsResponseProto\x12%\n\x05\x61sset\x18\x01 \x03(\x0b\x32\x16.GetAssetResponseProto\"/\n\x13RiskHeaderInfoProto\x12\x18\n\x10hashedDeviceInfo\x18\x01 \x01(\t\"L\n\x12SignatureHashProto\x12\x13\n\x0bpackageName\x18\x01 \x01(\t\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0c\n\x04hash\x18\x03 \x01(\x0c\"8\n\x0fSignedDataProto\x12\x12\n\nsignedData\x18\x01 \x01(\t\x12\x11\n\tsignature\x18\x02 \x01(\t\"\xdf\x10\n\x12SingleRequestProto\x12\x42\n\x19requestSpecificProperties\x18\x03 \x01(\x0b\x32\x1f.RequestSpecificPropertiesProto\x12)\n\x0c\x61ssetRequest\x18\x04 \x01(\x0b\x32\x13.AssetsRequestProto\x12.\n\x0f\x63ommentsRequest\x18\x05 \x01(\x0b\x32\x15.CommentsRequestProto\x12\x38\n\x14modifyCommentRequest\x18\x06 \x01(\x0b\x32\x1a.ModifyCommentRequestProto\x12\x36\n\x13purchasePostRequest\x18\x07 \x01(\x0b\x32\x19.PurchasePostRequestProto\x12\x38\n\x14purchaseOrderRequest\x18\x08 \x01(\x0b\x32\x1a.PurchaseOrderRequestProto\x12\x34\n\x12\x63ontentSyncRequest\x18\t \x01(\x0b\x32\x18.ContentSyncRequestProto\x12.\n\x0fgetAssetRequest\x18\n \x01(\x0b\x32\x15.GetAssetRequestProto\x12.\n\x0fgetImageRequest\x18\x0b \x01(\x0b\x32\x15.GetImageRequestProto\x12*\n\rrefundRequest\x18\x0c \x01(\x0b\x32\x13.RefundRequestProto\x12>\n\x17purchaseMetadataRequest\x18\r \x01(\x0b\x32\x1d.PurchaseMetadataRequestProto\x12;\n\x14subCategoriesRequest\x18\x0e \x01(\x0b\x32\x1d.GetSubCategoriesRequestProto\x12<\n\x16uninstallReasonRequest\x18\x10 \x01(\x0b\x32\x1c.UninstallReasonRequestProto\x12\x34\n\x12rateCommentRequest\x18\x11 \x01(\x0b\x32\x18.RateCommentRequestProto\x12\x36\n\x13\x63heckLicenseRequest\x18\x12 \x01(\x0b\x32\x19.CheckLicenseRequestProto\x12@\n\x18getMarketMetadataRequest\x18\x13 \x01(\x0b\x32\x1e.GetMarketMetadataRequestProto\x12\x38\n\x14getCategoriesRequest\x18\x15 \x01(\x0b\x32\x1a.GetCategoriesRequestProto\x12:\n\x15getCarrierInfoRequest\x18\x16 \x01(\x0b\x32\x1b.GetCarrierInfoRequestProto\x12\x34\n\x12removeAssetRequest\x18\x17 \x01(\x0b\x32\x18.RemoveAssetRequestProto\x12\x44\n\x1arestoreApplicationsRequest\x18\x18 \x01(\x0b\x32 .RestoreApplicationsRequestProto\x12<\n\x16querySuggestionRequest\x18\x19 \x01(\x0b\x32\x1c.QuerySuggestionRequestProto\x12\x36\n\x13\x62illingEventRequest\x18\x1a \x01(\x0b\x32\x19.BillingEventRequestProto\x12@\n\x18paypalPreapprovalRequest\x18\x1b \x01(\x0b\x32\x1e.PaypalPreapprovalRequestProto\x12N\n\x1fpaypalPreapprovalDetailsRequest\x18\x1c \x01(\x0b\x32%.PaypalPreapprovalDetailsRequestProto\x12\x44\n\x1apaypalCreateAccountRequest\x18\x1d \x01(\x0b\x32 .PaypalCreateAccountRequestProto\x12V\n#paypalPreapprovalCredentialsRequest\x18\x1e \x01(\x0b\x32).PaypalPreapprovalCredentialsRequestProto\x12N\n\x1finAppRestoreTransactionsRequest\x18\x1f \x01(\x0b\x32%.InAppRestoreTransactionsRequestProto\x12Q\n\"getInAppPurchaseInformationRequest\x18  \x01(\x0b\x32%.InAppPurchaseInformationRequestProto\x12H\n\x1c\x63heckForNotificationsRequest\x18! \x01(\x0b\x32\".CheckForNotificationsRequestProto\x12>\n\x17\x61\x63kNotificationsRequest\x18\" \x01(\x0b\x32\x1d.AckNotificationsRequestProto\x12<\n\x16purchaseProductRequest\x18# \x01(\x0b\x32\x1c.PurchaseProductRequestProto\x12\x44\n\x1areconstructDatabaseRequest\x18$ \x01(\x0b\x32 .ReconstructDatabaseRequestProto\x12\x46\n\x1bpaypalMassageAddressRequest\x18% \x01(\x0b\x32!.PaypalMassageAddressRequestProto\x12@\n\x18getAddressSnippetRequest\x18& \x01(\x0b\x32\x1e.GetAddressSnippetRequestProto\"\xdc\x10\n\x13SingleResponseProto\x12\x34\n\x12responseProperties\x18\x02 \x01(\x0b\x32\x18.ResponsePropertiesProto\x12,\n\x0e\x61ssetsResponse\x18\x03 \x01(\x0b\x32\x14.AssetsResponseProto\x12\x30\n\x10\x63ommentsResponse\x18\x04 \x01(\x0b\x32\x16.CommentsResponseProto\x12:\n\x15modifyCommentResponse\x18\x05 \x01(\x0b\x32\x1b.ModifyCommentResponseProto\x12\x38\n\x14purchasePostResponse\x18\x06 \x01(\x0b\x32\x1a.PurchasePostResponseProto\x12:\n\x15purchaseOrderResponse\x18\x07 \x01(\x0b\x32\x1b.PurchaseOrderResponseProto\x12\x36\n\x13\x63ontentSyncResponse\x18\x08 \x01(\x0b\x32\x19.ContentSyncResponseProto\x12\x30\n\x10getAssetResponse\x18\t \x01(\x0b\x32\x16.GetAssetResponseProto\x12\x30\n\x10getImageResponse\x18\n \x01(\x0b\x32\x16.GetImageResponseProto\x12,\n\x0erefundResponse\x18\x0b \x01(\x0b\x32\x14.RefundResponseProto\x12@\n\x18purchaseMetadataResponse\x18\x0c \x01(\x0b\x32\x1e.PurchaseMetadataResponseProto\x12=\n\x15subCategoriesResponse\x18\r \x01(\x0b\x32\x1e.GetSubCategoriesResponseProto\x12>\n\x17uninstallReasonResponse\x18\x0f \x01(\x0b\x32\x1d.UninstallReasonResponseProto\x12\x36\n\x13rateCommentResponse\x18\x10 \x01(\x0b\x32\x19.RateCommentResponseProto\x12\x38\n\x14\x63heckLicenseResponse\x18\x11 \x01(\x0b\x32\x1a.CheckLicenseResponseProto\x12\x42\n\x19getMarketMetadataResponse\x18\x12 \x01(\x0b\x32\x1f.GetMarketMetadataResponseProto\x12:\n\x15getCategoriesResponse\x18\x14 \x01(\x0b\x32\x1b.GetCategoriesResponseProto\x12<\n\x16getCarrierInfoResponse\x18\x15 \x01(\x0b\x32\x1c.GetCarrierInfoResponseProto\x12\x45\n\x1arestoreApplicationResponse\x18\x17 \x01(\x0b\x32!.RestoreApplicationsResponseProto\x12>\n\x17querySuggestionResponse\x18\x18 \x01(\x0b\x32\x1d.QuerySuggestionResponseProto\x12\x38\n\x14\x62illingEventResponse\x18\x19 \x01(\x0b\x32\x1a.BillingEventResponseProto\x12\x42\n\x19paypalPreapprovalResponse\x18\x1a \x01(\x0b\x32\x1f.PaypalPreapprovalResponseProto\x12P\n paypalPreapprovalDetailsResponse\x18\x1b \x01(\x0b\x32&.PaypalPreapprovalDetailsResponseProto\x12\x46\n\x1bpaypalCreateAccountResponse\x18\x1c \x01(\x0b\x32!.PaypalCreateAccountResponseProto\x12X\n$paypalPreapprovalCredentialsResponse\x18\x1d \x01(\x0b\x32*.PaypalPreapprovalCredentialsResponseProto\x12P\n inAppRestoreTransactionsResponse\x18\x1e \x01(\x0b\x32&.InAppRestoreTransactionsResponseProto\x12S\n#getInAppPurchaseInformationResponse\x18\x1f \x01(\x0b\x32&.InAppPurchaseInformationResponseProto\x12J\n\x1d\x63heckForNotificationsResponse\x18  \x01(\x0b\x32#.CheckForNotificationsResponseProto\x12@\n\x18\x61\x63kNotificationsResponse\x18! \x01(\x0b\x32\x1e.AckNotificationsResponseProto\x12>\n\x17purchaseProductResponse\x18\" \x01(\x0b\x32\x1d.PurchaseProductResponseProto\x12\x46\n\x1breconstructDatabaseResponse\x18# \x01(\x0b\x32!.ReconstructDatabaseResponseProto\x12H\n\x1cpaypalMassageAddressResponse\x18$ \x01(\x0b\x32\".PaypalMassageAddressResponseProto\x12\x42\n\x19getAddressSnippetResponse\x18% \x01(\x0b\x32\x1f.GetAddressSnippetResponseProto\"[\n\x1aStatusBarNotificationProto\x12\x12\n\ntickerText\x18\x01 \x01(\t\x12\x14\n\x0c\x63ontentTitle\x18\x02 \x01(\t\x12\x13\n\x0b\x63ontentText\x18\x03 \x01(\t\">\n\x1bUninstallReasonRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x0e\n\x06reason\x18\x02 \x01(\x05\"\x1e\n\x1cUninstallReasonResponseProto\"\xc1\x01\n\x15\x43riticReviewsResponse\x12\r\n\x05title\x18\x01 \x01(\t\x12\"\n\x12\x61ggregateSentiment\x18\x02 \x01(\x0b\x32\x06.Image\x12\x17\n\x0ftotalNumReviews\x18\x03 \x01(\r\x12\x18\n\x10percentFavorable\x18\x04 \x01(\r\x12\x12\n\nsourceText\x18\x05 \x01(\t\x12\x15\n\x06source\x18\x06 \x01(\x0b\x32\x05.Link\x12\x17\n\x06review\x18\x07 \x03(\x0b\x32\x07.Review')
 )
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -140,6 +141,34 @@ _ANDROIDAPPDELIVERYDATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='gzippedDownloadUrl', full_name='AndroidAppDeliveryData.gzippedDownloadUrl', index=12,
+      number=13, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gzippedDownloadSize', full_name='AndroidAppDeliveryData.gzippedDownloadSize', index=13,
+      number=14, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='splitDeliveryData', full_name='AndroidAppDeliveryData.splitDeliveryData', index=14,
+      number=15, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='installLocation', full_name='AndroidAppDeliveryData.installLocation', index=15,
+      number=16, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -153,7 +182,80 @@ _ANDROIDAPPDELIVERYDATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=48,
-  serialized_end=443,
+  serialized_end=572,
+)
+
+
+_SPLITDELIVERYDATA = _descriptor.Descriptor(
+  name='SplitDeliveryData',
+  full_name='SplitDeliveryData',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='SplitDeliveryData.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='downloadSize', full_name='SplitDeliveryData.downloadSize', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gzippedDownloadSize', full_name='SplitDeliveryData.gzippedDownloadSize', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='signature', full_name='SplitDeliveryData.signature', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='downloadUrl', full_name='SplitDeliveryData.downloadUrl', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gzippedDownloadUrl', full_name='SplitDeliveryData.gzippedDownloadUrl', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='patchData', full_name='SplitDeliveryData.patchData', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=575,
+  serialized_end=766,
 )
 
 
@@ -211,8 +313,8 @@ _ANDROIDAPPPATCHDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=446,
-  serialized_end=579,
+  serialized_start=769,
+  serialized_end=902,
 )
 
 
@@ -263,8 +365,8 @@ _APPFILEMETADATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=581,
-  serialized_end=672,
+  serialized_start=904,
+  serialized_end=995,
 )
 
 
@@ -308,8 +410,8 @@ _ENCRYPTIONPARAMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=674,
-  serialized_end=749,
+  serialized_start=997,
+  serialized_end=1072,
 )
 
 
@@ -346,8 +448,8 @@ _HTTPCOOKIE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=751,
-  serialized_end=792,
+  serialized_start=1074,
+  serialized_end=1115,
 )
 
 
@@ -436,7 +538,7 @@ _ADDRESS = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='isReduced', full_name='Address.isReduced', index=11,
+      name='deprecatedIsReduced', full_name='Address.deprecatedIsReduced', index=11,
       number=12, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -475,8 +577,8 @@ _ADDRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=795,
-  serialized_end=1096,
+  serialized_start=1118,
+  serialized_end=1429,
 )
 
 
@@ -520,8 +622,8 @@ _BOOKAUTHOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1098,
-  serialized_end=1172,
+  serialized_start=1431,
+  serialized_end=1505,
 )
 
 
@@ -558,8 +660,8 @@ _BOOKDETAILS_IDENTIFIER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1580,
-  serialized_end=1626,
+  serialized_start=1990,
+  serialized_end=2036,
 )
 
 _BOOKDETAILS = _descriptor.Descriptor(
@@ -681,6 +783,27 @@ _BOOKDETAILS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='fixedLayoutContent', full_name='BookDetails.fixedLayoutContent', index=16,
+      number=21, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='audioVideoContent', full_name='BookDetails.audioVideoContent', index=17,
+      number=22, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='isAgencyBook', full_name='BookDetails.isAgencyBook', index=18,
+      number=23, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -693,8 +816,8 @@ _BOOKDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1175,
-  serialized_end=1626,
+  serialized_start=1508,
+  serialized_end=2036,
 )
 
 
@@ -738,8 +861,8 @@ _BOOKSUBJECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1628,
-  serialized_end=1689,
+  serialized_start=2038,
+  serialized_end=2099,
 )
 
 
@@ -764,6 +887,13 @@ _BROWSELINK = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='serverLogsCookie', full_name='BrowseLink.serverLogsCookie', index=2,
+      number=4, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -776,8 +906,8 @@ _BROWSELINK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1691,
-  serialized_end=1734,
+  serialized_start=2101,
+  serialized_end=2170,
 )
 
 
@@ -816,90 +946,17 @@ _BROWSERESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1736,
-  serialized_end=1855,
-)
-
-
-_ADDRESSCHALLENGE = _descriptor.Descriptor(
-  name='AddressChallenge',
-  full_name='AddressChallenge',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
     _descriptor.FieldDescriptor(
-      name='responseAddressParam', full_name='AddressChallenge.responseAddressParam', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='responseCheckboxesParam', full_name='AddressChallenge.responseCheckboxesParam', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='title', full_name='AddressChallenge.title', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='descriptionHtml', full_name='AddressChallenge.descriptionHtml', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='checkbox', full_name='AddressChallenge.checkbox', index=4,
+      name='quickLink', full_name='BrowseResponse.quickLink', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='address', full_name='AddressChallenge.address', index=5,
-      number=6, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='errorInputField', full_name='AddressChallenge.errorInputField', index=6,
-      number=7, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='errorHtml', full_name='AddressChallenge.errorHtml', index=7,
-      number=8, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='requiredField', full_name='AddressChallenge.requiredField', index=8,
-      number=9, type=5, cpp_type=1, label=3,
-      has_default_value=False, default_value=[],
+      name='serverLogsCookie', full_name='BrowseResponse.serverLogsCookie', index=5,
+      number=6, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -915,64 +972,64 @@ _ADDRESSCHALLENGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1858,
-  serialized_end=2129,
+  serialized_start=2173,
+  serialized_end=2349,
 )
 
 
-_AUTHENTICATIONCHALLENGE = _descriptor.Descriptor(
-  name='AuthenticationChallenge',
-  full_name='AuthenticationChallenge',
+_QUICKLINK = _descriptor.Descriptor(
+  name='QuickLink',
+  full_name='QuickLink',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='authenticationType', full_name='AuthenticationChallenge.authenticationType', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      name='name', full_name='QuickLink.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='image', full_name='QuickLink.image', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='link', full_name='QuickLink.link', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='displayRequired', full_name='QuickLink.displayRequired', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serverLogsCookie', full_name='QuickLink.serverLogsCookie', index=4,
+      number=5, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='backendId', full_name='QuickLink.backendId', index=5,
+      number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='responseAuthenticationTypeParam', full_name='AuthenticationChallenge.responseAuthenticationTypeParam', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='responseRetryCountParam', full_name='AuthenticationChallenge.responseRetryCountParam', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='pinHeaderText', full_name='AuthenticationChallenge.pinHeaderText', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='pinDescriptionTextHtml', full_name='AuthenticationChallenge.pinDescriptionTextHtml', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='gaiaHeaderText', full_name='AuthenticationChallenge.gaiaHeaderText', index=5,
-      number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='gaiaDescriptionTextHtml', full_name='AuthenticationChallenge.gaiaDescriptionTextHtml', index=6,
-      number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='prismStyle', full_name='QuickLink.prismStyle', index=6,
+      number=7, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -988,8 +1045,8 @@ _AUTHENTICATIONCHALLENGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2132,
-  serialized_end=2371,
+  serialized_start=2352,
+  serialized_end=2519,
 )
 
 
@@ -1057,49 +1114,42 @@ _BUYRESPONSE_CHECKOUTINFO_CHECKOUTOPTION = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='deprecatedInstrumentInapplicableReason', full_name='BuyResponse.CheckoutInfo.CheckoutOption.deprecatedInstrumentInapplicableReason', index=8,
-      number=30, type=5, cpp_type=1, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='selectedInstrument', full_name='BuyResponse.CheckoutInfo.CheckoutOption.selectedInstrument', index=9,
+      name='selectedInstrument', full_name='BuyResponse.CheckoutInfo.CheckoutOption.selectedInstrument', index=8,
       number=32, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='summary', full_name='BuyResponse.CheckoutInfo.CheckoutOption.summary', index=10,
+      name='summary', full_name='BuyResponse.CheckoutInfo.CheckoutOption.summary', index=9,
       number=33, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='footnoteHtml', full_name='BuyResponse.CheckoutInfo.CheckoutOption.footnoteHtml', index=11,
+      name='footnoteHtml', full_name='BuyResponse.CheckoutInfo.CheckoutOption.footnoteHtml', index=10,
       number=35, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='instrument', full_name='BuyResponse.CheckoutInfo.CheckoutOption.instrument', index=12,
+      name='instrument', full_name='BuyResponse.CheckoutInfo.CheckoutOption.instrument', index=11,
       number=43, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='purchaseCookie', full_name='BuyResponse.CheckoutInfo.CheckoutOption.purchaseCookie', index=13,
+      name='purchaseCookie', full_name='BuyResponse.CheckoutInfo.CheckoutOption.purchaseCookie', index=12,
       number=45, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='disabledReason', full_name='BuyResponse.CheckoutInfo.CheckoutOption.disabledReason', index=14,
+      name='disabledReason', full_name='BuyResponse.CheckoutInfo.CheckoutOption.disabledReason', index=13,
       number=48, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1117,8 +1167,8 @@ _BUYRESPONSE_CHECKOUTINFO_CHECKOUTOPTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3105,
-  serialized_end=3527,
+  serialized_start=3436,
+  serialized_end=3810,
 )
 
 _BUYRESPONSE_CHECKOUTINFO = _descriptor.Descriptor(
@@ -1203,8 +1253,8 @@ _BUYRESPONSE_CHECKOUTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2795,
-  serialized_end=3527,
+  serialized_start=3126,
+  serialized_end=3810,
 )
 
 _BUYRESPONSE = _descriptor.Descriptor(
@@ -1271,7 +1321,7 @@ _BUYRESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='iabPermissionError', full_name='BuyResponse.iabPermissionError', index=8,
+      name='permissionError', full_name='BuyResponse.permissionError', index=8,
       number=38, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1298,6 +1348,48 @@ _BUYRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='addInstrumentPromptHtml', full_name='BuyResponse.addInstrumentPromptHtml', index=12,
+      number=50, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='confirmButtonText', full_name='BuyResponse.confirmButtonText', index=13,
+      number=51, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='permissionErrorTitleText', full_name='BuyResponse.permissionErrorTitleText', index=14,
+      number=52, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='permissionErrorMessageText', full_name='BuyResponse.permissionErrorMessageText', index=15,
+      number=53, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serverLogsCookie', full_name='BuyResponse.serverLogsCookie', index=16,
+      number=54, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='encodedDeliveryToken', full_name='BuyResponse.encodedDeliveryToken', index=17,
+      number=55, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1310,91 +1402,8 @@ _BUYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2374,
-  serialized_end=3527,
-)
-
-
-_CHALLENGE = _descriptor.Descriptor(
-  name='Challenge',
-  full_name='Challenge',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='addressChallenge', full_name='Challenge.addressChallenge', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='authenticationChallenge', full_name='Challenge.authenticationChallenge', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3529,
-  serialized_end=3644,
-)
-
-
-_FORMCHECKBOX = _descriptor.Descriptor(
-  name='FormCheckbox',
-  full_name='FormCheckbox',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='description', full_name='FormCheckbox.description', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='checked', full_name='FormCheckbox.checked', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='required', full_name='FormCheckbox.required', index=2,
-      number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3646,
-  serialized_end=3716,
+  serialized_start=2522,
+  serialized_end=3810,
 )
 
 
@@ -1445,8 +1454,8 @@ _LINEITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3718,
-  serialized_end=3810,
+  serialized_start=3812,
+  serialized_end=3904,
 )
 
 
@@ -1490,8 +1499,8 @@ _MONEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3812,
-  serialized_end=3882,
+  serialized_start=3906,
+  serialized_end=3976,
 )
 
 
@@ -1542,8 +1551,8 @@ _PURCHASENOTIFICATIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3885,
-  serialized_end=4013,
+  serialized_start=3979,
+  serialized_end=4107,
 )
 
 
@@ -1622,8 +1631,53 @@ _PURCHASESTATUSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4016,
-  serialized_end=4265,
+  serialized_start=4110,
+  serialized_end=4359,
+)
+
+
+_BILLINGPROFILERESPONSE = _descriptor.Descriptor(
+  name='BillingProfileResponse',
+  full_name='BillingProfileResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='BillingProfileResponse.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='billingProfile', full_name='BillingProfileResponse.billingProfile', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='userMessageHtml', full_name='BillingProfileResponse.userMessageHtml', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4361,
+  serialized_end=4467,
 )
 
 
@@ -1674,8 +1728,157 @@ _CHECKINSTRUMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4268,
-  serialized_end=4430,
+  serialized_start=4470,
+  serialized_end=4632,
+)
+
+
+_INSTRUMENTSETUPINFORESPONSE = _descriptor.Descriptor(
+  name='InstrumentSetupInfoResponse',
+  full_name='InstrumentSetupInfoResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='setupInfo', full_name='InstrumentSetupInfoResponse.setupInfo', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='checkoutTokenRequired', full_name='InstrumentSetupInfoResponse.checkoutTokenRequired', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4634,
+  serialized_end=4735,
+)
+
+
+_REDEEMGIFTCARDREQUEST = _descriptor.Descriptor(
+  name='RedeemGiftCardRequest',
+  full_name='RedeemGiftCardRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='giftCardPin', full_name='RedeemGiftCardRequest.giftCardPin', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='address', full_name='RedeemGiftCardRequest.address', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='acceptedLegalDocumentId', full_name='RedeemGiftCardRequest.acceptedLegalDocumentId', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='checkoutToken', full_name='RedeemGiftCardRequest.checkoutToken', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4737,
+  serialized_end=4864,
+)
+
+
+_REDEEMGIFTCARDRESPONSE = _descriptor.Descriptor(
+  name='RedeemGiftCardResponse',
+  full_name='RedeemGiftCardResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='RedeemGiftCardResponse.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='userMessageHtml', full_name='RedeemGiftCardResponse.userMessageHtml', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='balanceHtml', full_name='RedeemGiftCardResponse.balanceHtml', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='addressChallenge', full_name='RedeemGiftCardResponse.addressChallenge', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='checkoutTokenRequired', full_name='RedeemGiftCardResponse.checkoutTokenRequired', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4867,
+  serialized_end=5029,
 )
 
 
@@ -1712,8 +1915,8 @@ _UPDATEINSTRUMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4432,
-  serialized_end=4513,
+  serialized_start=5031,
+  serialized_end=5112,
 )
 
 
@@ -1778,8 +1981,8 @@ _UPDATEINSTRUMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4516,
-  serialized_end=4728,
+  serialized_start=5115,
+  serialized_end=5327,
 )
 
 
@@ -1809,8 +2012,8 @@ _INITIATEASSOCIATIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4730,
-  serialized_end=4778,
+  serialized_start=5329,
+  serialized_end=5377,
 )
 
 
@@ -1842,6 +2045,13 @@ _VERIFYASSOCIATIONRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='carrierErrorMessage', full_name='VerifyAssociationResponse.carrierErrorMessage', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1854,8 +2064,421 @@ _VERIFYASSOCIATIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4780,
-  serialized_end=4890,
+  serialized_start=5380,
+  serialized_end=5519,
+)
+
+
+_ADDRESSCHALLENGE = _descriptor.Descriptor(
+  name='AddressChallenge',
+  full_name='AddressChallenge',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='responseAddressParam', full_name='AddressChallenge.responseAddressParam', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='responseCheckboxesParam', full_name='AddressChallenge.responseCheckboxesParam', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='title', full_name='AddressChallenge.title', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='descriptionHtml', full_name='AddressChallenge.descriptionHtml', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='checkbox', full_name='AddressChallenge.checkbox', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='address', full_name='AddressChallenge.address', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='errorInputField', full_name='AddressChallenge.errorInputField', index=6,
+      number=7, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='errorHtml', full_name='AddressChallenge.errorHtml', index=7,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='requiredField', full_name='AddressChallenge.requiredField', index=8,
+      number=9, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='supportedCountry', full_name='AddressChallenge.supportedCountry', index=9,
+      number=10, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5522,
+  serialized_end=5829,
+)
+
+
+_AUTHENTICATIONCHALLENGE = _descriptor.Descriptor(
+  name='AuthenticationChallenge',
+  full_name='AuthenticationChallenge',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='authenticationType', full_name='AuthenticationChallenge.authenticationType', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='responseAuthenticationTypeParam', full_name='AuthenticationChallenge.responseAuthenticationTypeParam', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='responseRetryCountParam', full_name='AuthenticationChallenge.responseRetryCountParam', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gaiaHeaderText', full_name='AuthenticationChallenge.gaiaHeaderText', index=3,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gaiaDescriptionTextHtml', full_name='AuthenticationChallenge.gaiaDescriptionTextHtml', index=4,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gaiaFooterTextHtml', full_name='AuthenticationChallenge.gaiaFooterTextHtml', index=5,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gaiaOptOutCheckbox', full_name='AuthenticationChallenge.gaiaOptOutCheckbox', index=6,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gaiaOptOutDescriptionTextHtml', full_name='AuthenticationChallenge.gaiaOptOutDescriptionTextHtml', index=7,
+      number=10, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5832,
+  serialized_end=6126,
+)
+
+
+_CHALLENGE = _descriptor.Descriptor(
+  name='Challenge',
+  full_name='Challenge',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='addressChallenge', full_name='Challenge.addressChallenge', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='authenticationChallenge', full_name='Challenge.authenticationChallenge', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='webViewChallenge', full_name='Challenge.webViewChallenge', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6129,
+  serialized_end=6289,
+)
+
+
+_COUNTRY = _descriptor.Descriptor(
+  name='Country',
+  full_name='Country',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='regionCode', full_name='Country.regionCode', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='displayName', full_name='Country.displayName', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6291,
+  serialized_end=6341,
+)
+
+
+_FORMCHECKBOX = _descriptor.Descriptor(
+  name='FormCheckbox',
+  full_name='FormCheckbox',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='description', full_name='FormCheckbox.description', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='checked', full_name='FormCheckbox.checked', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='required', full_name='FormCheckbox.required', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='id', full_name='FormCheckbox.id', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6343,
+  serialized_end=6425,
+)
+
+
+_INPUTVALIDATIONERROR = _descriptor.Descriptor(
+  name='InputValidationError',
+  full_name='InputValidationError',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='inputField', full_name='InputValidationError.inputField', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='errorMessage', full_name='InputValidationError.errorMessage', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6427,
+  serialized_end=6491,
+)
+
+
+_WEBVIEWCHALLENGE = _descriptor.Descriptor(
+  name='WebViewChallenge',
+  full_name='WebViewChallenge',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='startUrl', full_name='WebViewChallenge.startUrl', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='targetUrlRegexp', full_name='WebViewChallenge.targetUrlRegexp', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cancelButtonDisplayLabel', full_name='WebViewChallenge.cancelButtonDisplayLabel', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='responseTargetUrlParam', full_name='WebViewChallenge.responseTargetUrlParam', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cancelUrlRegexp', full_name='WebViewChallenge.cancelUrlRegexp', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='title', full_name='WebViewChallenge.title', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6494,
+  serialized_end=6661,
 )
 
 
@@ -1927,8 +2550,8 @@ _ADDCREDITCARDPROMOOFFER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4893,
-  serialized_end=5097,
+  serialized_start=6664,
+  serialized_end=6868,
 )
 
 
@@ -1958,8 +2581,8 @@ _AVAILABLEPROMOOFFER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5099,
-  serialized_end=5174,
+  serialized_start=6870,
+  serialized_end=6945,
 )
 
 
@@ -2003,8 +2626,8 @@ _CHECKPROMOOFFERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5177,
-  serialized_end=5323,
+  serialized_start=6948,
+  serialized_end=7094,
 )
 
 
@@ -2048,8 +2671,570 @@ _REDEEMEDPROMOOFFER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5325,
-  serialized_end=5413,
+  serialized_start=7096,
+  serialized_end=7184,
+)
+
+
+_ACTIVEEXPERIMENTS = _descriptor.Descriptor(
+  name='ActiveExperiments',
+  full_name='ActiveExperiments',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='clientAlteringExperiment', full_name='ActiveExperiments.clientAlteringExperiment', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='otherExperiment', full_name='ActiveExperiments.otherExperiment', index=1,
+      number=2, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gwsExperiment', full_name='ActiveExperiments.gwsExperiment', index=2,
+      number=3, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=7186,
+  serialized_end=7287,
+)
+
+
+_ANDROIDCLIENTINFO = _descriptor.Descriptor(
+  name='AndroidClientInfo',
+  full_name='AndroidClientInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='androidId', full_name='AndroidClientInfo.androidId', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='loggingId', full_name='AndroidClientInfo.loggingId', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sdkVersion', full_name='AndroidClientInfo.sdkVersion', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='model', full_name='AndroidClientInfo.model', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='product', full_name='AndroidClientInfo.product', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='osBuild', full_name='AndroidClientInfo.osBuild', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='applicationBuild', full_name='AndroidClientInfo.applicationBuild', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hardware', full_name='AndroidClientInfo.hardware', index=7,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='device', full_name='AndroidClientInfo.device', index=8,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='mccMnc', full_name='AndroidClientInfo.mccMnc', index=9,
+      number=10, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='locale', full_name='AndroidClientInfo.locale', index=10,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='country', full_name='AndroidClientInfo.country', index=11,
+      number=12, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=7290,
+  serialized_end=7525,
+)
+
+
+_CLIENTINFO = _descriptor.Descriptor(
+  name='ClientInfo',
+  full_name='ClientInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='clientType', full_name='ClientInfo.clientType', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='androidClientInfo', full_name='ClientInfo.androidClientInfo', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='desktopClientInfo', full_name='ClientInfo.desktopClientInfo', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='iosClientInfo', full_name='ClientInfo.iosClientInfo', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=7528,
+  serialized_end=7693,
+)
+
+
+_DESKTOPCLIENTINFO = _descriptor.Descriptor(
+  name='DesktopClientInfo',
+  full_name='DesktopClientInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='clientId', full_name='DesktopClientInfo.clientId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='loggingId', full_name='DesktopClientInfo.loggingId', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='os', full_name='DesktopClientInfo.os', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='osMajorVersion', full_name='DesktopClientInfo.osMajorVersion', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='osFullVersion', full_name='DesktopClientInfo.osFullVersion', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='applicationBuild', full_name='DesktopClientInfo.applicationBuild', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=7696,
+  serialized_end=7837,
+)
+
+
+_EXPERIMENTIDLIST = _descriptor.Descriptor(
+  name='ExperimentIdList',
+  full_name='ExperimentIdList',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='ExperimentIdList.id', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=7839,
+  serialized_end=7869,
+)
+
+
+_IOSCLIENTINFO = _descriptor.Descriptor(
+  name='IosClientInfo',
+  full_name='IosClientInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='clientId', full_name='IosClientInfo.clientId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='loggingId', full_name='IosClientInfo.loggingId', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='osMajorVersion', full_name='IosClientInfo.osMajorVersion', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='osFullVersion', full_name='IosClientInfo.osFullVersion', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='applicationBuild', full_name='IosClientInfo.applicationBuild', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=7871,
+  serialized_end=7996,
+)
+
+
+_LOGEVENT = _descriptor.Descriptor(
+  name='LogEvent',
+  full_name='LogEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='eventTimeMs', full_name='LogEvent.eventTimeMs', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='tag', full_name='LogEvent.tag', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='LogEvent.value', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='store', full_name='LogEvent.store', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sourceExtension', full_name='LogEvent.sourceExtension', index=4,
+      number=6, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='exp', full_name='LogEvent.exp', index=5,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=7999,
+  serialized_end=8171,
+)
+
+
+_LOGEVENTKEYVALUES = _descriptor.Descriptor(
+  name='LogEventKeyValues',
+  full_name='LogEventKeyValues',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='LogEventKeyValues.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='LogEventKeyValues.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=8173,
+  serialized_end=8220,
+)
+
+
+_LOGREQUEST = _descriptor.Descriptor(
+  name='LogRequest',
+  full_name='LogRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='clientInfo', full_name='LogRequest.clientInfo', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='logSource', full_name='LogRequest.logSource', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='logEvent', full_name='LogRequest.logEvent', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='requestTimeMs', full_name='LogRequest.requestTimeMs', index=3,
+      number=4, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serializedLogEvents', full_name='LogRequest.serializedLogEvents', index=4,
+      number=5, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=8223,
+  serialized_end=8368,
+)
+
+
+_LOGRESPONSE = _descriptor.Descriptor(
+  name='LogResponse',
+  full_name='LogResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='nextRequestWaitMillis', full_name='LogResponse.nextRequestWaitMillis', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='experiments', full_name='LogResponse.experiments', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=8370,
+  serialized_end=8454,
 )
 
 
@@ -2093,8 +3278,8 @@ _DOCID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5415,
-  serialized_end=5475,
+  serialized_start=8456,
+  serialized_end=8516,
 )
 
 
@@ -2126,6 +3311,13 @@ _INSTALL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='pending', full_name='Install.pending', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2138,8 +3330,63 @@ _INSTALL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5477,
-  serialized_end=5539,
+  serialized_start=8518,
+  serialized_end=8597,
+)
+
+
+_GROUPLICENSEKEY = _descriptor.Descriptor(
+  name='GroupLicenseKey',
+  full_name='GroupLicenseKey',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=8599,
+  serialized_end=8616,
+)
+
+
+_LICENSETERMS = _descriptor.Descriptor(
+  name='LicenseTerms',
+  full_name='LicenseTerms',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='groupLicenseKey', full_name='LicenseTerms.groupLicenseKey', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=8618,
+  serialized_end=8675,
 )
 
 
@@ -2248,6 +3495,97 @@ _OFFER = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='preorder', full_name='Offer.preorder', index=14,
+      number=15, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='onSaleDateDisplayTimeZoneOffsetMsec', full_name='Offer.onSaleDateDisplayTimeZoneOffsetMsec', index=15,
+      number=16, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='licensedOfferType', full_name='Offer.licensedOfferType', index=16,
+      number=17, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='subscriptionContentTerms', full_name='Offer.subscriptionContentTerms', index=17,
+      number=18, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='offerId', full_name='Offer.offerId', index=18,
+      number=19, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='preorderFulfillmentDisplayDate', full_name='Offer.preorderFulfillmentDisplayDate', index=19,
+      number=20, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='licenseTerms', full_name='Offer.licenseTerms', index=20,
+      number=21, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='temporarilyFree', full_name='Offer.temporarilyFree', index=21,
+      number=22, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='voucherTerms', full_name='Offer.voucherTerms', index=22,
+      number=23, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='offerPayment', full_name='Offer.offerPayment', index=23,
+      number=24, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='repeatLastPayment', full_name='Offer.repeatLastPayment', index=24,
+      number=25, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='buyButtonLabel', full_name='Offer.buyButtonLabel', index=25,
+      number=26, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='instantPurchaseEnabled', full_name='Offer.instantPurchaseEnabled', index=26,
+      number=27, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2260,50 +3598,119 @@ _OFFER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5542,
-  serialized_end=5926,
+  serialized_start=8678,
+  serialized_end=9489,
 )
 
 
-_OWNERSHIPINFO = _descriptor.Descriptor(
-  name='OwnershipInfo',
-  full_name='OwnershipInfo',
+_MONTHANDDAY = _descriptor.Descriptor(
+  name='MonthAndDay',
+  full_name='MonthAndDay',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='initiationTimestampMsec', full_name='OwnershipInfo.initiationTimestampMsec', index=0,
+      name='month', full_name='MonthAndDay.month', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='day', full_name='MonthAndDay.day', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9491,
+  serialized_end=9532,
+)
+
+
+_OFFERPAYMENTPERIOD = _descriptor.Descriptor(
+  name='OfferPaymentPeriod',
+  full_name='OfferPaymentPeriod',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='duration', full_name='OfferPaymentPeriod.duration', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='start', full_name='OfferPaymentPeriod.start', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='end', full_name='OfferPaymentPeriod.end', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9534,
+  serialized_end=9641,
+)
+
+
+_OFFERPAYMENTOVERRIDE = _descriptor.Descriptor(
+  name='OfferPaymentOverride',
+  full_name='OfferPaymentOverride',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='micros', full_name='OfferPaymentOverride.micros', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='validUntilTimestampMsec', full_name='OwnershipInfo.validUntilTimestampMsec', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
+      name='start', full_name='OfferPaymentOverride.start', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='autoRenewing', full_name='OwnershipInfo.autoRenewing', index=2,
-      number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='refundTimeoutTimestampMsec', full_name='OwnershipInfo.refundTimeoutTimestampMsec', index=3,
-      number=4, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='postDeliveryRefundWindowMsec', full_name='OwnershipInfo.postDeliveryRefundWindowMsec', index=4,
-      number=5, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
+      name='end', full_name='OfferPaymentOverride.end', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2319,8 +3726,84 @@ _OWNERSHIPINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5929,
-  serialized_end=6106,
+  serialized_start=9643,
+  serialized_end=9737,
+)
+
+
+_OFFERPAYMENT = _descriptor.Descriptor(
+  name='OfferPayment',
+  full_name='OfferPayment',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='micros', full_name='OfferPayment.micros', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='currencyCode', full_name='OfferPayment.currencyCode', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='offerPaymentPeriod', full_name='OfferPayment.offerPaymentPeriod', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='offerPaymentOverride', full_name='OfferPayment.offerPaymentOverride', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9740,
+  serialized_end=9894,
+)
+
+
+_VOUCHERTERMS = _descriptor.Descriptor(
+  name='VoucherTerms',
+  full_name='VoucherTerms',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9896,
+  serialized_end=9910,
 )
 
 
@@ -2332,16 +3815,30 @@ _RENTALTERMS = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='grantPeriodSeconds', full_name='RentalTerms.grantPeriodSeconds', index=0,
+      name='dEPRECATEDGrantPeriodSeconds', full_name='RentalTerms.dEPRECATEDGrantPeriodSeconds', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='activatePeriodSeconds', full_name='RentalTerms.activatePeriodSeconds', index=1,
+      name='dEPRECATEDActivatePeriodSeconds', full_name='RentalTerms.dEPRECATEDActivatePeriodSeconds', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='grantPeriod', full_name='RentalTerms.grantPeriod', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='activatePeriod', full_name='RentalTerms.activatePeriod', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -2357,8 +3854,77 @@ _RENTALTERMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6108,
-  serialized_end=6180,
+  serialized_start=9913,
+  serialized_end=10076,
+)
+
+
+_SIGNEDDATA = _descriptor.Descriptor(
+  name='SignedData',
+  full_name='SignedData',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='signedData', full_name='SignedData.signedData', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='signature', full_name='SignedData.signature', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10078,
+  serialized_end=10129,
+)
+
+
+_SUBSCRIPTIONCONTENTTERMS = _descriptor.Descriptor(
+  name='SubscriptionContentTerms',
+  full_name='SubscriptionContentTerms',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='requiredSubscription', full_name='SubscriptionContentTerms.requiredSubscription', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10131,
+  serialized_end=10195,
 )
 
 
@@ -2395,8 +3961,8 @@ _SUBSCRIPTIONTERMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6182,
-  serialized_end=6273,
+  serialized_start=10197,
+  serialized_end=10288,
 )
 
 
@@ -2433,8 +3999,8 @@ _TIMEPERIOD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6275,
-  serialized_end=6316,
+  serialized_start=10290,
+  serialized_end=10331,
 )
 
 
@@ -2471,8 +4037,112 @@ _BILLINGADDRESSSPEC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6318,
-  serialized_end=6389,
+  serialized_start=10333,
+  serialized_end=10404,
+)
+
+
+_BILLINGPROFILE = _descriptor.Descriptor(
+  name='BillingProfile',
+  full_name='BillingProfile',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='instrument', full_name='BillingProfile.instrument', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='selectedExternalInstrumentId', full_name='BillingProfile.selectedExternalInstrumentId', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='billingProfileOption', full_name='BillingProfile.billingProfileOption', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10407,
+  serialized_end=10547,
+)
+
+
+_BILLINGPROFILEOPTION = _descriptor.Descriptor(
+  name='BillingProfileOption',
+  full_name='BillingProfileOption',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='BillingProfileOption.type', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='displayTitle', full_name='BillingProfileOption.displayTitle', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='externalInstrumentId', full_name='BillingProfileOption.externalInstrumentId', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='topupInfo', full_name='BillingProfileOption.topupInfo', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='carrierBillingInstrumentStatus', full_name='BillingProfileOption.carrierBillingInstrumentStatus', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10550,
+  serialized_end=10742,
 )
 
 
@@ -2509,8 +4179,8 @@ _CARRIERBILLINGCREDENTIALS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6391,
-  serialized_end=6453,
+  serialized_start=10744,
+  serialized_end=10806,
 )
 
 
@@ -2589,8 +4259,8 @@ _CARRIERBILLINGINSTRUMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6456,
-  serialized_end=6753,
+  serialized_start=10809,
+  serialized_end=11106,
 )
 
 
@@ -2643,6 +4313,20 @@ _CARRIERBILLINGINSTRUMENTSTATUS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='deviceAssociation', full_name='CarrierBillingInstrumentStatus.deviceAssociation', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='carrierSupportPhoneNumber', full_name='CarrierBillingInstrumentStatus.carrierSupportPhoneNumber', index=7,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2655,8 +4339,8 @@ _CARRIERBILLINGINSTRUMENTSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6756,
-  serialized_end=6958,
+  serialized_start=11109,
+  serialized_end=11393,
 )
 
 
@@ -2707,8 +4391,8 @@ _CARRIERTOS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6961,
-  serialized_end=7103,
+  serialized_start=11396,
+  serialized_end=11538,
 )
 
 
@@ -2745,8 +4429,8 @@ _CARRIERTOSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7105,
-  serialized_end=7152,
+  serialized_start=11540,
+  serialized_end=11587,
 )
 
 
@@ -2811,8 +4495,91 @@ _CREDITCARDINSTRUMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7155,
-  serialized_end=7317,
+  serialized_start=11590,
+  serialized_end=11752,
+)
+
+
+_DEVICEASSOCIATION = _descriptor.Descriptor(
+  name='DeviceAssociation',
+  full_name='DeviceAssociation',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='userTokenRequestMessage', full_name='DeviceAssociation.userTokenRequestMessage', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='userTokenRequestAddress', full_name='DeviceAssociation.userTokenRequestAddress', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=11754,
+  serialized_end=11839,
+)
+
+
+_DISABLEDINFO = _descriptor.Descriptor(
+  name='DisabledInfo',
+  full_name='DisabledInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='disabledReason', full_name='DisabledInfo.disabledReason', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='disabledMessageHtml', full_name='DisabledInfo.disabledMessageHtml', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='errorMessage', full_name='DisabledInfo.errorMessage', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=11841,
+  serialized_end=11930,
 )
 
 
@@ -2849,46 +4616,8 @@ _EFEPARAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7319,
-  serialized_end=7357,
-)
-
-
-_INPUTVALIDATIONERROR = _descriptor.Descriptor(
-  name='InputValidationError',
-  full_name='InputValidationError',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='inputField', full_name='InputValidationError.inputField', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='errorMessage', full_name='InputValidationError.errorMessage', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=7359,
-  serialized_end=7423,
+  serialized_start=11932,
+  serialized_end=11970,
 )
 
 
@@ -2900,7 +4629,7 @@ _INSTRUMENT = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='instrumentId', full_name='Instrument.instrumentId', index=0,
+      name='externalInstrumentId', full_name='Instrument.externalInstrumentId', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -2955,6 +4684,34 @@ _INSTRUMENT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='topupInfoDeprecated', full_name='Instrument.topupInfoDeprecated', index=8,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='version', full_name='Instrument.version', index=9,
+      number=10, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='storedValue', full_name='Instrument.storedValue', index=10,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='disabledInfo', full_name='Instrument.disabledInfo', index=11,
+      number=12, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2967,8 +4724,67 @@ _INSTRUMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7426,
-  serialized_end=7748,
+  serialized_start=11973,
+  serialized_end=12443,
+)
+
+
+_INSTRUMENTSETUPINFO = _descriptor.Descriptor(
+  name='InstrumentSetupInfo',
+  full_name='InstrumentSetupInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='instrumentFamily', full_name='InstrumentSetupInfo.instrumentFamily', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='supported', full_name='InstrumentSetupInfo.supported', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='addressChallenge', full_name='InstrumentSetupInfo.addressChallenge', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='balance', full_name='InstrumentSetupInfo.balance', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='footerHtml', full_name='InstrumentSetupInfo.footerHtml', index=4,
+      number=5, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=12446,
+  serialized_end=12602,
 )
 
 
@@ -3005,8 +4821,143 @@ _PASSWORDPROMPT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7750,
-  serialized_end=7809,
+  serialized_start=12604,
+  serialized_end=12663,
+)
+
+
+_STOREDVALUEINSTRUMENT = _descriptor.Descriptor(
+  name='StoredValueInstrument',
+  full_name='StoredValueInstrument',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='StoredValueInstrument.type', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='balance', full_name='StoredValueInstrument.balance', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='topupInfo', full_name='StoredValueInstrument.topupInfo', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=12665,
+  serialized_end=12758,
+)
+
+
+_TOPUPINFO = _descriptor.Descriptor(
+  name='TopupInfo',
+  full_name='TopupInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='optionsContainerDocidDeprecated', full_name='TopupInfo.optionsContainerDocidDeprecated', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='optionsListUrl', full_name='TopupInfo.optionsListUrl', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='subtitle', full_name='TopupInfo.subtitle', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='optionsContainerDocid', full_name='TopupInfo.optionsContainerDocid', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=12761,
+  serialized_end=12894,
+)
+
+
+_CONSUMEPURCHASERESPONSE = _descriptor.Descriptor(
+  name='ConsumePurchaseResponse',
+  full_name='ConsumePurchaseResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='libraryUpdate', full_name='ConsumePurchaseResponse.libraryUpdate', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='ConsumePurchaseResponse.status', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=12896,
+  serialized_end=12976,
 )
 
 
@@ -3059,6 +5010,13 @@ _CONTAINERMETADATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='containerView', full_name='ContainerMetadata.containerView', index=6,
+      number=7, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -3071,8 +5029,60 @@ _CONTAINERMETADATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7812,
-  serialized_end=7958,
+  serialized_start=12979,
+  serialized_end=13164,
+)
+
+
+_CONTAINERVIEW = _descriptor.Descriptor(
+  name='ContainerView',
+  full_name='ContainerView',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='selected', full_name='ContainerView.selected', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='title', full_name='ContainerView.title', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='listUrl', full_name='ContainerView.listUrl', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serverLogsCookie', full_name='ContainerView.serverLogsCookie', index=3,
+      number=4, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13166,
+  serialized_end=13257,
 )
 
 
@@ -3095,8 +5105,521 @@ _FLAGCONTENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7960,
-  serialized_end=7981,
+  serialized_start=13259,
+  serialized_end=13280,
+)
+
+
+_CLIENTDOWNLOADREQUEST_APKINFO = _descriptor.Descriptor(
+  name='ApkInfo',
+  full_name='ClientDownloadRequest.ApkInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='packageName', full_name='ClientDownloadRequest.ApkInfo.packageName', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='versionCode', full_name='ClientDownloadRequest.ApkInfo.versionCode', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13762,
+  serialized_end=13813,
+)
+
+_CLIENTDOWNLOADREQUEST_CERTIFICATECHAIN_ELEMENT = _descriptor.Descriptor(
+  name='Element',
+  full_name='ClientDownloadRequest.CertificateChain.Element',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='certificate', full_name='ClientDownloadRequest.CertificateChain.Element.certificate', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='parsedSuccessfully', full_name='ClientDownloadRequest.CertificateChain.Element.parsedSuccessfully', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='subject', full_name='ClientDownloadRequest.CertificateChain.Element.subject', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='issuer', full_name='ClientDownloadRequest.CertificateChain.Element.issuer', index=3,
+      number=4, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='fingerprint', full_name='ClientDownloadRequest.CertificateChain.Element.fingerprint', index=4,
+      number=5, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='expiryTime', full_name='ClientDownloadRequest.CertificateChain.Element.expiryTime', index=5,
+      number=6, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='startTime', full_name='ClientDownloadRequest.CertificateChain.Element.startTime', index=6,
+      number=7, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13903,
+  serialized_end=14054,
+)
+
+_CLIENTDOWNLOADREQUEST_CERTIFICATECHAIN = _descriptor.Descriptor(
+  name='CertificateChain',
+  full_name='ClientDownloadRequest.CertificateChain',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='element', full_name='ClientDownloadRequest.CertificateChain.element', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_CLIENTDOWNLOADREQUEST_CERTIFICATECHAIN_ELEMENT, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13816,
+  serialized_end=14054,
+)
+
+_CLIENTDOWNLOADREQUEST_DIGESTS = _descriptor.Descriptor(
+  name='Digests',
+  full_name='ClientDownloadRequest.Digests',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sha256', full_name='ClientDownloadRequest.Digests.sha256', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sha1', full_name='ClientDownloadRequest.Digests.sha1', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='md5', full_name='ClientDownloadRequest.Digests.md5', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=14056,
+  serialized_end=14108,
+)
+
+_CLIENTDOWNLOADREQUEST_RESOURCE = _descriptor.Descriptor(
+  name='Resource',
+  full_name='ClientDownloadRequest.Resource',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='url', full_name='ClientDownloadRequest.Resource.url', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='type', full_name='ClientDownloadRequest.Resource.type', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='remoteIp', full_name='ClientDownloadRequest.Resource.remoteIp', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='referrer', full_name='ClientDownloadRequest.Resource.referrer', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=14110,
+  serialized_end=14183,
+)
+
+_CLIENTDOWNLOADREQUEST_SIGNATUREINFO = _descriptor.Descriptor(
+  name='SignatureInfo',
+  full_name='ClientDownloadRequest.SignatureInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='certificateChain', full_name='ClientDownloadRequest.SignatureInfo.certificateChain', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='trusted', full_name='ClientDownloadRequest.SignatureInfo.trusted', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=14185,
+  serialized_end=14284,
+)
+
+_CLIENTDOWNLOADREQUEST = _descriptor.Descriptor(
+  name='ClientDownloadRequest',
+  full_name='ClientDownloadRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='url', full_name='ClientDownloadRequest.url', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='digests', full_name='ClientDownloadRequest.digests', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='length', full_name='ClientDownloadRequest.length', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='resources', full_name='ClientDownloadRequest.resources', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='signature', full_name='ClientDownloadRequest.signature', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='userInitiated', full_name='ClientDownloadRequest.userInitiated', index=5,
+      number=6, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='clientAsn', full_name='ClientDownloadRequest.clientAsn', index=6,
+      number=8, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='fileBasename', full_name='ClientDownloadRequest.fileBasename', index=7,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='downloadType', full_name='ClientDownloadRequest.downloadType', index=8,
+      number=10, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='locale', full_name='ClientDownloadRequest.locale', index=9,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='apkInfo', full_name='ClientDownloadRequest.apkInfo', index=10,
+      number=12, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='androidId', full_name='ClientDownloadRequest.androidId', index=11,
+      number=13, type=6, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='originatingPackages', full_name='ClientDownloadRequest.originatingPackages', index=12,
+      number=15, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='originatingSignature', full_name='ClientDownloadRequest.originatingSignature', index=13,
+      number=17, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_CLIENTDOWNLOADREQUEST_APKINFO, _CLIENTDOWNLOADREQUEST_CERTIFICATECHAIN, _CLIENTDOWNLOADREQUEST_DIGESTS, _CLIENTDOWNLOADREQUEST_RESOURCE, _CLIENTDOWNLOADREQUEST_SIGNATUREINFO, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13283,
+  serialized_end=14284,
+)
+
+
+_CLIENTDOWNLOADRESPONSE_MOREINFO = _descriptor.Descriptor(
+  name='MoreInfo',
+  full_name='ClientDownloadResponse.MoreInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='description', full_name='ClientDownloadResponse.MoreInfo.description', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='url', full_name='ClientDownloadResponse.MoreInfo.url', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=14397,
+  serialized_end=14441,
+)
+
+_CLIENTDOWNLOADRESPONSE = _descriptor.Descriptor(
+  name='ClientDownloadResponse',
+  full_name='ClientDownloadResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='verdict', full_name='ClientDownloadResponse.verdict', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='moreInfo', full_name='ClientDownloadResponse.moreInfo', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='token', full_name='ClientDownloadResponse.token', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_CLIENTDOWNLOADRESPONSE_MOREINFO, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=14287,
+  serialized_end=14441,
+)
+
+
+_CLIENTDOWNLOADSTATSREQUEST = _descriptor.Descriptor(
+  name='ClientDownloadStatsRequest',
+  full_name='ClientDownloadStatsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='userDecision', full_name='ClientDownloadStatsRequest.userDecision', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='token', full_name='ClientDownloadStatsRequest.token', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=14443,
+  serialized_end=14508,
 )
 
 
@@ -3133,8 +5656,8 @@ _DEBUGINFO_TIMING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8048,
-  serialized_end=8088,
+  serialized_start=14575,
+  serialized_end=14615,
 )
 
 _DEBUGINFO = _descriptor.Descriptor(
@@ -3170,8 +5693,46 @@ _DEBUGINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7983,
-  serialized_end=8088,
+  serialized_start=14510,
+  serialized_end=14615,
+)
+
+
+_DEBUGSETTINGSRESPONSE = _descriptor.Descriptor(
+  name='DebugSettingsResponse',
+  full_name='DebugSettingsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='playCountryOverride', full_name='DebugSettingsResponse.playCountryOverride', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='playCountryDebugInfo', full_name='DebugSettingsResponse.playCountryDebugInfo', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=14617,
+  serialized_end=14699,
 )
 
 
@@ -3208,8 +5769,8 @@ _DELIVERYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8090,
-  serialized_end=8174,
+  serialized_start=14701,
+  serialized_end=14785,
 )
 
 
@@ -3239,8 +5800,8 @@ _BULKDETAILSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8176,
-  serialized_end=8215,
+  serialized_start=14787,
+  serialized_end=14826,
 )
 
 
@@ -3265,6 +5826,27 @@ _BULKDETAILSREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='includeDetails', full_name='BulkDetailsRequest.includeDetails', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sourcePackageName', full_name='BulkDetailsRequest.sourcePackageName', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='installedVersionCode', full_name='BulkDetailsRequest.installedVersionCode', index=4,
+      number=5, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -3277,8 +5859,8 @@ _BULKDETAILSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8217,
-  serialized_end=8278,
+  serialized_start=14829,
+  serialized_end=14971,
 )
 
 
@@ -3308,8 +5890,8 @@ _BULKDETAILSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8280,
-  serialized_end=8335,
+  serialized_start=14973,
+  serialized_end=15028,
 )
 
 
@@ -3355,6 +5937,20 @@ _DETAILSRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='serverLogsCookie', full_name='DetailsResponse.serverLogsCookie', index=5,
+      number=6, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='discoveryBadge', full_name='DetailsResponse.discoveryBadge', index=6,
+      number=7, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -3367,8 +5963,154 @@ _DETAILSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8338,
-  serialized_end=8475,
+  serialized_start=15031,
+  serialized_end=15235,
+)
+
+
+_DISCOVERYBADGE = _descriptor.Descriptor(
+  name='DiscoveryBadge',
+  full_name='DiscoveryBadge',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='title', full_name='DiscoveryBadge.title', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='image', full_name='DiscoveryBadge.image', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='backgroundColor', full_name='DiscoveryBadge.backgroundColor', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='discoveryBadgeLink', full_name='DiscoveryBadge.discoveryBadgeLink', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serverLogsCookie', full_name='DiscoveryBadge.serverLogsCookie', index=4,
+      number=5, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='isPlusOne', full_name='DiscoveryBadge.isPlusOne', index=5,
+      number=6, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='aggregateRating', full_name='DiscoveryBadge.aggregateRating', index=6,
+      number=7, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='userStarRating', full_name='DiscoveryBadge.userStarRating', index=7,
+      number=8, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='downloadCount', full_name='DiscoveryBadge.downloadCount', index=8,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='downloadUnits', full_name='DiscoveryBadge.downloadUnits', index=9,
+      number=10, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='contentDescription', full_name='DiscoveryBadge.contentDescription', index=10,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=15238,
+  serialized_end=15534,
+)
+
+
+_DISCOVERYBADGELINK = _descriptor.Descriptor(
+  name='DiscoveryBadgeLink',
+  full_name='DiscoveryBadgeLink',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='link', full_name='DiscoveryBadgeLink.link', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='userReviewsUrl', full_name='DiscoveryBadgeLink.userReviewsUrl', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='criticReviewsUrl', full_name='DiscoveryBadgeLink.criticReviewsUrl', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=15536,
+  serialized_end=15627,
 )
 
 
@@ -3510,8 +6252,8 @@ _DEVICECONFIGURATIONPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8478,
-  serialized_end=8915,
+  serialized_start=15630,
+  serialized_end=16067,
 )
 
 
@@ -3648,6 +6390,27 @@ _DOCUMENT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='consumptionUrl', full_name='Document.consumptionUrl', index=18,
+      number=21, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='estimatedNumChildren', full_name='Document.estimatedNumChildren', index=19,
+      number=22, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='subtitle', full_name='Document.subtitle', index=20,
+      number=23, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -3660,8 +6423,8 @@ _DOCUMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8918,
-  serialized_end=9429,
+  serialized_start=16070,
+  serialized_end=16653,
 )
 
 
@@ -3742,6 +6505,27 @@ _DOCUMENTVARIANT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='image', full_name='DocumentVariant.image', index=10,
+      number=12, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='categoryId', full_name='DocumentVariant.categoryId', index=11,
+      number=13, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='subtitle', full_name='DocumentVariant.subtitle', index=12,
+      number=14, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -3754,8 +6538,8 @@ _DOCUMENTVARIANT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9432,
-  serialized_end=9689,
+  serialized_start=16656,
+  serialized_end=16974,
 )
 
 
@@ -3792,8 +6576,8 @@ _IMAGE_DIMENSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9915,
-  serialized_end=9957,
+  serialized_start=17416,
+  serialized_end=17458,
 )
 
 _IMAGE_CITATION = _descriptor.Descriptor(
@@ -3829,8 +6613,8 @@ _IMAGE_CITATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9959,
-  serialized_end=10006,
+  serialized_start=17460,
+  serialized_end=17507,
 )
 
 _IMAGE = _descriptor.Descriptor(
@@ -3896,6 +6680,62 @@ _IMAGE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='durationSeconds', full_name='Image.durationSeconds', index=8,
+      number=14, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='fillColorRgb', full_name='Image.fillColorRgb', index=9,
+      number=15, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='autogen', full_name='Image.autogen', index=10,
+      number=16, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attribution', full_name='Image.attribution', index=11,
+      number=17, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='backgroundColorRgb', full_name='Image.backgroundColorRgb', index=12,
+      number=19, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='palette', full_name='Image.palette', index=13,
+      number=20, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='deviceClass', full_name='Image.deviceClass', index=14,
+      number=21, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='supportsFifeMonogramOption', full_name='Image.supportsFifeMonogramOption', index=15,
+      number=22, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -3908,8 +6748,84 @@ _IMAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9692,
-  serialized_end=10006,
+  serialized_start=16977,
+  serialized_end=17507,
+)
+
+
+_IMAGEPALETTE = _descriptor.Descriptor(
+  name='ImagePalette',
+  full_name='ImagePalette',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=17509,
+  serialized_end=17523,
+)
+
+
+_ATTRIBUTION = _descriptor.Descriptor(
+  name='Attribution',
+  full_name='Attribution',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sourceTitle', full_name='Attribution.sourceTitle', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sourceUrl', full_name='Attribution.sourceUrl', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='licenseTitle', full_name='Attribution.licenseTitle', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='licenseUrl', full_name='Attribution.licenseUrl', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=17525,
+  serialized_end=17620,
 )
 
 
@@ -3953,8 +6869,8 @@ _TRANSLATEDTEXT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10008,
-  serialized_end=10082,
+  serialized_start=17622,
+  serialized_end=17696,
 )
 
 
@@ -3986,6 +6902,13 @@ _BADGE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='description', full_name='Badge.description', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -3998,8 +6921,53 @@ _BADGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10084,
-  serialized_end=10148,
+  serialized_start=17698,
+  serialized_end=17783,
+)
+
+
+_BADGECONTAINER = _descriptor.Descriptor(
+  name='BadgeContainer',
+  full_name='BadgeContainer',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='title', full_name='BadgeContainer.title', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='image', full_name='BadgeContainer.image', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='badge', full_name='BadgeContainer.badge', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=17785,
+  serialized_end=17862,
 )
 
 
@@ -4029,8 +6997,8 @@ _CONTAINERWITHBANNER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10150,
-  serialized_end=10195,
+  serialized_start=17864,
+  serialized_end=17909,
 )
 
 
@@ -4067,8 +7035,46 @@ _DEALOFTHEDAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10197,
-  serialized_end=10259,
+  serialized_start=17911,
+  serialized_end=17973,
+)
+
+
+_DISMISSAL = _descriptor.Descriptor(
+  name='Dismissal',
+  full_name='Dismissal',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='url', full_name='Dismissal.url', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='descriptionHtml', full_name='Dismissal.descriptionHtml', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=17975,
+  serialized_end=18024,
 )
 
 
@@ -4114,6 +7120,13 @@ _EDITORIALSERIESCONTAINER = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='videoSnippet', full_name='EditorialSeriesContainer.videoSnippet', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -4126,8 +7139,8 @@ _EDITORIALSERIESCONTAINER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10262,
-  serialized_end=10404,
+  serialized_start=18027,
+  serialized_end=18206,
 )
 
 
@@ -4145,6 +7158,20 @@ _LINK = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='resolvedLink', full_name='Link.resolvedLink', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='uriBackend', full_name='Link.uriBackend', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -4157,8 +7184,98 @@ _LINK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10406,
-  serialized_end=10425,
+  serialized_start=18208,
+  serialized_end=18284,
+)
+
+
+_NEXTBANNER = _descriptor.Descriptor(
+  name='NextBanner',
+  full_name='NextBanner',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='title', full_name='NextBanner.title', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='subtitle', full_name='NextBanner.subtitle', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='colorTextArgb', full_name='NextBanner.colorTextArgb', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=18286,
+  serialized_end=18354,
+)
+
+
+_OBSOLETE_REASON = _descriptor.Descriptor(
+  name='OBSOLETE_Reason',
+  full_name='OBSOLETE_Reason',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='briefReason', full_name='OBSOLETE_Reason.briefReason', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='oBSOLETEDetailedReason', full_name='OBSOLETE_Reason.oBSOLETEDetailedReason', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='uniqueId', full_name='OBSOLETE_Reason.uniqueId', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=18356,
+  serialized_end=18444,
 )
 
 
@@ -4191,7 +7308,7 @@ _PLUSONEDATA = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='circlesPeople', full_name='PlusOneData.circlesPeople', index=3,
+      name='circlesProfiles', full_name='PlusOneData.circlesProfiles', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -4209,46 +7326,8 @@ _PLUSONEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10427,
-  serialized_end=10532,
-)
-
-
-_PLUSPERSON = _descriptor.Descriptor(
-  name='PlusPerson',
-  full_name='PlusPerson',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='displayName', full_name='PlusPerson.displayName', index=0,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='profileImageUrl', full_name='PlusPerson.profileImageUrl', index=1,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=10534,
-  serialized_end=10592,
+  serialized_start=18446,
+  serialized_end=18554,
 )
 
 
@@ -4306,8 +7385,8 @@ _PROMOTEDDOC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10594,
-  serialized_end=10708,
+  serialized_start=18556,
+  serialized_end=18670,
 )
 
 
@@ -4319,23 +7398,30 @@ _REASON = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='briefReason', full_name='Reason.briefReason', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='detailedReason', full_name='Reason.detailedReason', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='uniqueId', full_name='Reason.uniqueId', index=2,
+      name='descriptionHtml', full_name='Reason.descriptionHtml', index=0,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reasonPlusProfiles', full_name='Reason.reasonPlusProfiles', index=1,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reasonReview', full_name='Reason.reasonReview', index=2,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='dismissal', full_name='Reason.dismissal', index=3,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -4351,8 +7437,101 @@ _REASON = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10710,
-  serialized_end=10781,
+  serialized_start=18673,
+  serialized_end=18823,
+)
+
+
+_REASONPLUSPROFILES = _descriptor.Descriptor(
+  name='ReasonPlusProfiles',
+  full_name='ReasonPlusProfiles',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='localizedDescriptionHtml', full_name='ReasonPlusProfiles.localizedDescriptionHtml', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='plusProfile', full_name='ReasonPlusProfiles.plusProfile', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=18825,
+  serialized_end=18914,
+)
+
+
+_REASONREVIEW = _descriptor.Descriptor(
+  name='ReasonReview',
+  full_name='ReasonReview',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='review', full_name='ReasonReview.review', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=18916,
+  serialized_end=18955,
+)
+
+
+_RECOMMENDATIONSCONTAINER = _descriptor.Descriptor(
+  name='RecommendationsContainer',
+  full_name='RecommendationsContainer',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=18957,
+  serialized_end=18983,
 )
 
 
@@ -4403,8 +7582,8 @@ _SECTIONMETADATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10783,
-  serialized_end=10877,
+  serialized_start=18985,
+  serialized_end=19079,
 )
 
 
@@ -4476,8 +7655,53 @@ _SERIESANTENNA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10880,
-  serialized_end=11093,
+  serialized_start=19082,
+  serialized_end=19295,
+)
+
+
+_SUGGESTIONREASONS = _descriptor.Descriptor(
+  name='SuggestionReasons',
+  full_name='SuggestionReasons',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='reason', full_name='SuggestionReasons.reason', index=0,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='neutralDismissal', full_name='SuggestionReasons.neutralDismissal', index=1,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='positiveDismissal', full_name='SuggestionReasons.positiveDismissal', index=2,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=19297,
+  serialized_end=19418,
 )
 
 
@@ -4565,6 +7789,20 @@ _TEMPLATE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='recommendationsContainer', full_name='Template.recommendationsContainer', index=11,
+      number=12, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='nextBanner', full_name='Template.nextBanner', index=12,
+      number=13, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -4577,8 +7815,8 @@ _TEMPLATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11096,
-  serialized_end=11623,
+  serialized_start=19421,
+  serialized_end=20042,
 )
 
 
@@ -4615,8 +7853,53 @@ _TILETEMPLATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11625,
-  serialized_end=11686,
+  serialized_start=20044,
+  serialized_end=20105,
+)
+
+
+_VIDEOSNIPPET = _descriptor.Descriptor(
+  name='VideoSnippet',
+  full_name='VideoSnippet',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='image', full_name='VideoSnippet.image', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='title', full_name='VideoSnippet.title', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='description', full_name='VideoSnippet.description', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=20107,
+  serialized_end=20180,
 )
 
 
@@ -4646,8 +7929,8 @@ _WARNING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11688,
-  serialized_end=11723,
+  serialized_start=20182,
+  serialized_end=20217,
 )
 
 
@@ -4691,8 +7974,112 @@ _ALBUMDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11725,
-  serialized_end=11824,
+  serialized_start=20219,
+  serialized_end=20318,
+)
+
+
+_DEPENDENCY = _descriptor.Descriptor(
+  name='Dependency',
+  full_name='Dependency',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='packageName', full_name='Dependency.packageName', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='minVersionCode', full_name='Dependency.minVersionCode', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='versionCodeMask', full_name='Dependency.versionCodeMask', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='skipPermissions', full_name='Dependency.skipPermissions', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=20320,
+  serialized_end=20427,
+)
+
+
+_INSTALLDETAILS = _descriptor.Descriptor(
+  name='InstallDetails',
+  full_name='InstallDetails',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='installLocation', full_name='InstallDetails.installLocation', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='size', full_name='InstallDetails.size', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='dependency', full_name='InstallDetails.dependency', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='targetSdkVersion', full_name='InstallDetails.targetSdkVersion', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=20429,
+  serialized_end=20543,
 )
 
 
@@ -4822,6 +8209,104 @@ _APPDETAILS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='certificateHash', full_name='AppDetails.certificateHash', index=17,
+      number=19, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='variesByAccount', full_name='AppDetails.variesByAccount', index=18,
+      number=21, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='certificateSet', full_name='AppDetails.certificateSet', index=19,
+      number=22, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='autoAcquireFreeAppIfHigherVersionAvailableTag', full_name='AppDetails.autoAcquireFreeAppIfHigherVersionAvailableTag', index=20,
+      number=23, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='declaresIab', full_name='AppDetails.declaresIab', index=21,
+      number=24, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='splitId', full_name='AppDetails.splitId', index=22,
+      number=25, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gamepadRequired', full_name='AppDetails.gamepadRequired', index=23,
+      number=26, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='externallyHosted', full_name='AppDetails.externallyHosted', index=24,
+      number=27, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='everExternallyHosted', full_name='AppDetails.everExternallyHosted', index=25,
+      number=28, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='installNotes', full_name='AppDetails.installNotes', index=26,
+      number=30, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='installLocation', full_name='AppDetails.installLocation', index=27,
+      number=31, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='targetSdkVersion', full_name='AppDetails.targetSdkVersion', index=28,
+      number=32, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hasPreregistrationPromoCode', full_name='AppDetails.hasPreregistrationPromoCode', index=29,
+      number=33, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='installDetails', full_name='AppDetails.installDetails', index=30,
+      number=34, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -4834,8 +8319,77 @@ _APPDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11827,
-  serialized_end=12225,
+  serialized_start=20546,
+  serialized_end=21360,
+)
+
+
+_CERTIFICATESET = _descriptor.Descriptor(
+  name='CertificateSet',
+  full_name='CertificateSet',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='certificateHash', full_name='CertificateSet.certificateHash', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=21362,
+  serialized_end=21403,
+)
+
+
+_APPPERMISSION = _descriptor.Descriptor(
+  name='AppPermission',
+  full_name='AppPermission',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='AppPermission.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='permissionRequired', full_name='AppPermission.permissionRequired', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=21405,
+  serialized_end=21461,
 )
 
 
@@ -4879,8 +8433,8 @@ _ARTISTDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12227,
-  serialized_end=12321,
+  serialized_start=21463,
+  serialized_end=21557,
 )
 
 
@@ -4924,8 +8478,8 @@ _ARTISTEXTERNALLINKS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12323,
-  serialized_end=12421,
+  serialized_start=21559,
+  serialized_end=21657,
 )
 
 
@@ -5025,8 +8579,46 @@ _DOCUMENTDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12424,
-  serialized_end=12878,
+  serialized_start=21660,
+  serialized_end=22114,
+)
+
+
+_PATCHDETAILS = _descriptor.Descriptor(
+  name='PatchDetails',
+  full_name='PatchDetails',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='baseVersionCode', full_name='PatchDetails.baseVersionCode', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='size', full_name='PatchDetails.size', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=22116,
+  serialized_end=22169,
 )
 
 
@@ -5058,6 +8650,27 @@ _FILEMETADATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='splitId', full_name='FileMetadata.splitId', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='compressedSize', full_name='FileMetadata.compressedSize', index=4,
+      number=5, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='patchDetails', full_name='FileMetadata.patchDetails', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -5070,8 +8683,8 @@ _FILEMETADATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12880,
-  serialized_end=12947,
+  serialized_start=22172,
+  serialized_end=22317,
 )
 
 
@@ -5122,8 +8735,8 @@ _MAGAZINEDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12950,
-  serialized_end=13098,
+  serialized_start=22320,
+  serialized_end=22468,
 )
 
 
@@ -5202,8 +8815,46 @@ _MUSICDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13101,
-  serialized_end=13288,
+  serialized_start=22471,
+  serialized_end=22658,
+)
+
+
+_NEWSDETAILS = _descriptor.Descriptor(
+  name='NewsDetails',
+  full_name='NewsDetails',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='parentDetailsUrl', full_name='NewsDetails.parentDetailsUrl', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='psvDescription', full_name='NewsDetails.psvDescription', index=1,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=22660,
+  serialized_end=22723,
 )
 
 
@@ -5256,6 +8907,13 @@ _SONGDETAILS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='badge', full_name='SongDetails.badge', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -5268,8 +8926,8 @@ _SONGDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13291,
-  serialized_end=13449,
+  serialized_start=22726,
+  serialized_end=22907,
 )
 
 
@@ -5299,8 +8957,8 @@ _SUBSCRIPTIONDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13451,
-  serialized_end=13500,
+  serialized_start=22909,
+  serialized_end=22958,
 )
 
 
@@ -5358,8 +9016,8 @@ _TRAILER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13502,
-  serialized_end=13603,
+  serialized_start=22960,
+  serialized_end=23061,
 )
 
 
@@ -5403,8 +9061,8 @@ _TVEPISODEDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13605,
-  serialized_end=13692,
+  serialized_start=23063,
+  serialized_end=23150,
 )
 
 
@@ -5443,6 +9101,20 @@ _TVSEASONDETAILS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='episodeCount', full_name='TvSeasonDetails.episodeCount', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='expectedEpisodeCount', full_name='TvSeasonDetails.expectedEpisodeCount', index=5,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -5455,8 +9127,8 @@ _TVSEASONDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13694,
-  serialized_end=13800,
+  serialized_start=23153,
+  serialized_end=23311,
 )
 
 
@@ -5507,8 +9179,8 @@ _TVSHOWDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13802,
-  serialized_end=13895,
+  serialized_start=23313,
+  serialized_end=23406,
 )
 
 
@@ -5552,8 +9224,8 @@ _VIDEOCREDIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13897,
-  serialized_end=13960,
+  serialized_start=23408,
+  serialized_end=23471,
 )
 
 
@@ -5627,6 +9299,20 @@ _VIDEODETAILS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='audioLanguage', full_name='VideoDetails.audioLanguage', index=9,
+      number=10, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='captionLanguage', full_name='VideoDetails.captionLanguage', index=10,
+      number=11, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -5639,8 +9325,8 @@ _VIDEODETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13963,
-  serialized_end=14182,
+  serialized_start=23474,
+  serialized_end=23741,
 )
 
 
@@ -5677,8 +9363,8 @@ _VIDEORENTALTERM_TERM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14309,
-  serialized_end=14345,
+  serialized_start=23868,
+  serialized_end=23904,
 )
 
 _VIDEORENTALTERM = _descriptor.Descriptor(
@@ -5728,8 +9414,8 @@ _VIDEORENTALTERM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14185,
-  serialized_end=14345,
+  serialized_start=23744,
+  serialized_end=23904,
 )
 
 
@@ -5829,8 +9515,8 @@ _BUCKET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14348,
-  serialized_end=14597,
+  serialized_start=23907,
+  serialized_end=24156,
 )
 
 
@@ -5867,8 +9553,8 @@ _LISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14599,
-  serialized_end=14659,
+  serialized_start=24158,
+  serialized_end=24218,
 )
 
 
@@ -6010,8 +9696,8 @@ _DOCV1 = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14662,
-  serialized_end=15066,
+  serialized_start=24221,
+  serialized_end=24625,
 )
 
 
@@ -6128,7 +9814,7 @@ _ANNOTATIONS = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='reason', full_name='Annotations.reason', index=15,
+      name='oBSOLETEReason', full_name='Annotations.oBSOLETEReason', index=15,
       number=17, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -6138,6 +9824,62 @@ _ANNOTATIONS = _descriptor.Descriptor(
       name='privacyPolicyUrl', full_name='Annotations.privacyPolicyUrl', index=16,
       number=18, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='suggestionReasons', full_name='Annotations.suggestionReasons', index=17,
+      number=19, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='optimalDeviceClassWarning', full_name='Annotations.optimalDeviceClassWarning', index=18,
+      number=20, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='docBadgeContainer', full_name='Annotations.docBadgeContainer', index=19,
+      number=21, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sectionSuggestForRating', full_name='Annotations.sectionSuggestForRating', index=20,
+      number=22, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sectionRateAndReview', full_name='Annotations.sectionRateAndReview', index=21,
+      number=23, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sectionPurchaseCrossSell', full_name='Annotations.sectionPurchaseCrossSell', index=22,
+      number=24, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='overflowLink', full_name='Annotations.overflowLink', index=23,
+      number=25, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='creatorDoc', full_name='Annotations.creatorDoc', index=24,
+      number=26, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -6153,8 +9895,98 @@ _ANNOTATIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15069,
-  serialized_end=15658,
+  serialized_start=24628,
+  serialized_end=25586,
+)
+
+
+_OVERFLOWLINK = _descriptor.Descriptor(
+  name='OverflowLink',
+  full_name='OverflowLink',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='title', full_name='OverflowLink.title', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='link', full_name='OverflowLink.link', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=25588,
+  serialized_end=25638,
+)
+
+
+_REVIEWTIP = _descriptor.Descriptor(
+  name='ReviewTip',
+  full_name='ReviewTip',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='tipUrl', full_name='ReviewTip.tipUrl', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='text', full_name='ReviewTip.text', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='polarity', full_name='ReviewTip.polarity', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reviewCount', full_name='ReviewTip.reviewCount', index=3,
+      number=4, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=25640,
+  serialized_end=25720,
 )
 
 
@@ -6319,6 +10151,76 @@ _DOCV2 = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='translatedDescriptionHtml', full_name='DocV2.translatedDescriptionHtml', index=22,
+      number=23, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serverLogsCookie', full_name='DocV2.serverLogsCookie', index=23,
+      number=24, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='productDetails', full_name='DocV2.productDetails', index=24,
+      number=25, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='mature', full_name='DocV2.mature', index=25,
+      number=26, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='promotionalDescription', full_name='DocV2.promotionalDescription', index=26,
+      number=27, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='availabileForPreregistration', full_name='DocV2.availabileForPreregistration', index=27,
+      number=29, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='tip', full_name='DocV2.tip', index=28,
+      number=30, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='snippetsUrl', full_name='DocV2.snippetsUrl', index=29,
+      number=31, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='forceShareability', full_name='DocV2.forceShareability', index=30,
+      number=32, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='useWishlistAsPrimaryAction', full_name='DocV2.useWishlistAsPrimaryAction', index=31,
+      number=33, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -6331,8 +10233,122 @@ _DOCV2 = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15661,
-  serialized_end=16213,
+  serialized_start=25723,
+  serialized_end=26572,
+)
+
+
+_PRODUCTDETAILS = _descriptor.Descriptor(
+  name='ProductDetails',
+  full_name='ProductDetails',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='title', full_name='ProductDetails.title', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='section', full_name='ProductDetails.section', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=26574,
+  serialized_end=26646,
+)
+
+
+_PRODUCTDETAILSSECTION = _descriptor.Descriptor(
+  name='ProductDetailsSection',
+  full_name='ProductDetailsSection',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='title', full_name='ProductDetailsSection.title', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='description', full_name='ProductDetailsSection.description', index=1,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=26648,
+  serialized_end=26735,
+)
+
+
+_PRODUCTDETAILSDESCRIPTION = _descriptor.Descriptor(
+  name='ProductDetailsDescription',
+  full_name='ProductDetailsDescription',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='image', full_name='ProductDetailsDescription.image', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='description', full_name='ProductDetailsDescription.description', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=26737,
+  serialized_end=26808,
 )
 
 
@@ -6397,8 +10413,8 @@ _ENCRYPTEDSUBSCRIBERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16216,
-  serialized_end=16369,
+  serialized_start=26811,
+  serialized_end=26964,
 )
 
 
@@ -6449,8 +10465,8 @@ _AVAILABILITY_PERDEVICEAVAILABILITYRESTRICTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16675,
-  serialized_end=16817,
+  serialized_start=27337,
+  serialized_end=27479,
 )
 
 _AVAILABILITY = _descriptor.Descriptor(
@@ -6516,6 +10532,20 @@ _AVAILABILITY = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='availabilityProblem', full_name='Availability.availabilityProblem', index=8,
+      number=18, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hidden', full_name='Availability.hidden', index=9,
+      number=21, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -6528,8 +10558,46 @@ _AVAILABILITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16372,
-  serialized_end=16817,
+  serialized_start=26967,
+  serialized_end=27479,
+)
+
+
+_AVAILABILITYPROBLEM = _descriptor.Descriptor(
+  name='AvailabilityProblem',
+  full_name='AvailabilityProblem',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='problemType', full_name='AvailabilityProblem.problemType', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='missingValue', full_name='AvailabilityProblem.missingValue', index=1,
+      number=2, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=27481,
+  serialized_end=27545,
 )
 
 
@@ -6559,8 +10627,8 @@ _FILTEREVALUATIONINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16819,
-  serialized_end=16882,
+  serialized_start=27547,
+  serialized_end=27610,
 )
 
 
@@ -6648,6 +10716,20 @@ _RULE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='availabilityProblemType', full_name='Rule.availabilityProblemType', index=11,
+      number=12, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='includeMissingValues', full_name='Rule.includeMissingValues', index=12,
+      number=13, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -6660,8 +10742,8 @@ _RULE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16885,
-  serialized_end=17097,
+  serialized_start=27613,
+  serialized_end=27888,
 )
 
 
@@ -6719,8 +10801,77 @@ _RULEEVALUATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17100,
-  serialized_end=17241,
+  serialized_start=27891,
+  serialized_end=28032,
+)
+
+
+_GROUPLICENSEINFO = _descriptor.Descriptor(
+  name='GroupLicenseInfo',
+  full_name='GroupLicenseInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='licensedOfferType', full_name='GroupLicenseInfo.licensedOfferType', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gaiaGroupId', full_name='GroupLicenseInfo.gaiaGroupId', index=1,
+      number=2, type=6, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=28034,
+  serialized_end=28100,
+)
+
+
+_LICENSEDDOCUMENTINFO = _descriptor.Descriptor(
+  name='LicensedDocumentInfo',
+  full_name='LicensedDocumentInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='gaiaGroupId', full_name='LicensedDocumentInfo.gaiaGroupId', index=0,
+      number=1, type=6, cpp_type=4, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=28102,
+  serialized_end=28145,
 )
 
 
@@ -6764,8 +10915,46 @@ _LIBRARYAPPDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17243,
-  serialized_end=17361,
+  serialized_start=28147,
+  serialized_end=28265,
+)
+
+
+_LIBRARYINAPPDETAILS = _descriptor.Descriptor(
+  name='LibraryInAppDetails',
+  full_name='LibraryInAppDetails',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='signedPurchaseData', full_name='LibraryInAppDetails.signedPurchaseData', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='signature', full_name='LibraryInAppDetails.signature', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=28267,
+  serialized_end=28335,
 )
 
 
@@ -6818,6 +11007,20 @@ _LIBRARYMUTATION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='inAppDetails', full_name='LibraryMutation.inAppDetails', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='validUntilTimestampMsec', full_name='LibraryMutation.validUntilTimestampMsec', index=7,
+      number=8, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -6830,8 +11033,8 @@ _LIBRARYMUTATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17364,
-  serialized_end=17560,
+  serialized_start=28338,
+  serialized_end=28611,
 )
 
 
@@ -6850,7 +11053,7 @@ _LIBRARYSUBSCRIPTIONDETAILS = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='validUntilTimestampMsec', full_name='LibrarySubscriptionDetails.validUntilTimestampMsec', index=1,
+      name='deprecatedValidUntilTimestampMsec', full_name='LibrarySubscriptionDetails.deprecatedValidUntilTimestampMsec', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -6870,6 +11073,20 @@ _LIBRARYSUBSCRIPTIONDETAILS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='signedPurchaseData', full_name='LibrarySubscriptionDetails.signedPurchaseData', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='signature', full_name='LibrarySubscriptionDetails.signature', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -6882,8 +11099,8 @@ _LIBRARYSUBSCRIPTIONDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17563,
-  serialized_end=17712,
+  serialized_start=28614,
+  serialized_end=28820,
 )
 
 
@@ -6948,8 +11165,8 @@ _LIBRARYUPDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17715,
-  serialized_end=17855,
+  serialized_start=28823,
+  serialized_end=28963,
 )
 
 
@@ -6988,6 +11205,13 @@ _CLIENTLIBRARYSTATE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='libraryId', full_name='ClientLibraryState.libraryId', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -7000,8 +11224,8 @@ _CLIENTLIBRARYSTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17857,
-  serialized_end=17956,
+  serialized_start=28965,
+  serialized_end=29083,
 )
 
 
@@ -7031,8 +11255,8 @@ _LIBRARYREPLICATIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17958,
-  serialized_end=18028,
+  serialized_start=29085,
+  serialized_end=29155,
 )
 
 
@@ -7062,8 +11286,8 @@ _LIBRARYREPLICATIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18030,
-  serialized_end=18090,
+  serialized_start=29157,
+  serialized_end=29217,
 )
 
 
@@ -7121,21 +11345,42 @@ _CLICKLOGEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18092,
-  serialized_end=18200,
+  serialized_start=29219,
+  serialized_end=29327,
 )
 
 
-_LOGREQUEST = _descriptor.Descriptor(
-  name='LogRequest',
-  full_name='LogRequest',
+_MODIFYLIBRARYREQUEST = _descriptor.Descriptor(
+  name='ModifyLibraryRequest',
+  full_name='ModifyLibraryRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='clickEvent', full_name='LogRequest.clickEvent', index=0,
-      number=1, type=11, cpp_type=10, label=3,
+      name='libraryId', full_name='ModifyLibraryRequest.libraryId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='forAddDocid', full_name='ModifyLibraryRequest.forAddDocid', index=1,
+      number=2, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='forRemovalDocid', full_name='ModifyLibraryRequest.forRemovalDocid', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='forArchiveDocid', full_name='ModifyLibraryRequest.forArchiveDocid', index=3,
+      number=4, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7152,18 +11397,25 @@ _LOGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18202,
-  serialized_end=18250,
+  serialized_start=29329,
+  serialized_end=29441,
 )
 
 
-_LOGRESPONSE = _descriptor.Descriptor(
-  name='LogResponse',
-  full_name='LogResponse',
+_MODIFYLIBRARYRESPONSE = _descriptor.Descriptor(
+  name='ModifyLibraryResponse',
+  full_name='ModifyLibraryResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='libraryUpdate', full_name='ModifyLibraryResponse.libraryUpdate', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -7176,8 +11428,8 @@ _LOGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18252,
-  serialized_end=18265,
+  serialized_start=29443,
+  serialized_end=29505,
 )
 
 
@@ -7214,8 +11466,8 @@ _ANDROIDAPPNOTIFICATIONDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18267,
-  serialized_end=18333,
+  serialized_start=29507,
+  serialized_end=29573,
 )
 
 
@@ -7252,8 +11504,8 @@ _INAPPNOTIFICATIONDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18335,
-  serialized_end=18412,
+  serialized_start=29575,
+  serialized_end=29652,
 )
 
 
@@ -7271,6 +11523,13 @@ _LIBRARYDIRTYDATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='libraryId', full_name='LibraryDirtyData.libraryId', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -7283,8 +11542,8 @@ _LIBRARYDIRTYDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18414,
-  serialized_end=18449,
+  serialized_start=29654,
+  serialized_end=29708,
 )
 
 
@@ -7405,8 +11664,8 @@ _NOTIFICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18452,
-  serialized_end=18987,
+  serialized_start=29711,
+  serialized_end=30246,
 )
 
 
@@ -7443,8 +11702,8 @@ _PURCHASEDECLINEDDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18989,
-  serialized_end=19053,
+  serialized_start=30248,
+  serialized_end=30312,
 )
 
 
@@ -7474,8 +11733,8 @@ _PURCHASEREMOVALDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19055,
-  serialized_end=19095,
+  serialized_start=30314,
+  serialized_end=30354,
 )
 
 
@@ -7533,8 +11792,781 @@ _USERNOTIFICATIONDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19098,
-  serialized_end=19234,
+  serialized_start=30357,
+  serialized_end=30493,
+)
+
+
+_OWNERSHIPINFO = _descriptor.Descriptor(
+  name='OwnershipInfo',
+  full_name='OwnershipInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='initiationTimestampMsec', full_name='OwnershipInfo.initiationTimestampMsec', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='validUntilTimestampMsec', full_name='OwnershipInfo.validUntilTimestampMsec', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='autoRenewing', full_name='OwnershipInfo.autoRenewing', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='refundTimeoutTimestampMsec', full_name='OwnershipInfo.refundTimeoutTimestampMsec', index=3,
+      number=4, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='postDeliveryRefundWindowMsec', full_name='OwnershipInfo.postDeliveryRefundWindowMsec', index=4,
+      number=5, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='developerPurchaseInfo', full_name='OwnershipInfo.developerPurchaseInfo', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='preordered', full_name='OwnershipInfo.preordered', index=6,
+      number=7, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hidden', full_name='OwnershipInfo.hidden', index=7,
+      number=8, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='rentalTerms', full_name='OwnershipInfo.rentalTerms', index=8,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='groupLicenseInfo', full_name='OwnershipInfo.groupLicenseInfo', index=9,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='licensedDocumentInfo', full_name='OwnershipInfo.licensedDocumentInfo', index=10,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='quantity', full_name='OwnershipInfo.quantity', index=11,
+      number=12, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='libraryExpirationTimestampMsec', full_name='OwnershipInfo.libraryExpirationTimestampMsec', index=12,
+      number=14, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=30496,
+  serialized_end=30944,
+)
+
+
+_APPDATA = _descriptor.Descriptor(
+  name='AppData',
+  full_name='AppData',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='version', full_name='AppData.version', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='oldVersion', full_name='AppData.oldVersion', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='systemApp', full_name='AppData.systemApp', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=30946,
+  serialized_end=31011,
+)
+
+
+_PLAYSTOREBACKGROUNDACTIONEVENT = _descriptor.Descriptor(
+  name='PlayStoreBackgroundActionEvent',
+  full_name='PlayStoreBackgroundActionEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='PlayStoreBackgroundActionEvent.type', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='document', full_name='PlayStoreBackgroundActionEvent.document', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reason', full_name='PlayStoreBackgroundActionEvent.reason', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='errorCode', full_name='PlayStoreBackgroundActionEvent.errorCode', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='exceptionType', full_name='PlayStoreBackgroundActionEvent.exceptionType', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serverLogsCookie', full_name='PlayStoreBackgroundActionEvent.serverLogsCookie', index=5,
+      number=6, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='offerType', full_name='PlayStoreBackgroundActionEvent.offerType', index=6,
+      number=7, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='fromSetting', full_name='PlayStoreBackgroundActionEvent.fromSetting', index=7,
+      number=8, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='toSetting', full_name='PlayStoreBackgroundActionEvent.toSetting', index=8,
+      number=9, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sessionInfo', full_name='PlayStoreBackgroundActionEvent.sessionInfo', index=9,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='appData', full_name='PlayStoreBackgroundActionEvent.appData', index=10,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serverLatencyMs', full_name='PlayStoreBackgroundActionEvent.serverLatencyMs', index=11,
+      number=12, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='clientLatencyMs', full_name='PlayStoreBackgroundActionEvent.clientLatencyMs', index=12,
+      number=13, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=31014,
+  serialized_end=31342,
+)
+
+
+_PLAYSTORECLICKEVENT = _descriptor.Descriptor(
+  name='PlayStoreClickEvent',
+  full_name='PlayStoreClickEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='elementPath', full_name='PlayStoreClickEvent.elementPath', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=31344,
+  serialized_end=31407,
+)
+
+
+_PLAYSTOREDEEPLINKEVENT = _descriptor.Descriptor(
+  name='PlayStoreDeepLinkEvent',
+  full_name='PlayStoreDeepLinkEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='externalUrl', full_name='PlayStoreDeepLinkEvent.externalUrl', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='resolvedType', full_name='PlayStoreDeepLinkEvent.resolvedType', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=31409,
+  serialized_end=31476,
+)
+
+
+_PLAYSTOREIMPRESSIONEVENT = _descriptor.Descriptor(
+  name='PlayStoreImpressionEvent',
+  full_name='PlayStoreImpressionEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='tree', full_name='PlayStoreImpressionEvent.tree', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='referrerPath', full_name='PlayStoreImpressionEvent.referrerPath', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='id', full_name='PlayStoreImpressionEvent.id', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=31478,
+  serialized_end=31594,
+)
+
+
+_PLAYSTORELOGEVENT = _descriptor.Descriptor(
+  name='PlayStoreLogEvent',
+  full_name='PlayStoreLogEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='impression', full_name='PlayStoreLogEvent.impression', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='click', full_name='PlayStoreLogEvent.click', index=1,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='backgroundAction', full_name='PlayStoreLogEvent.backgroundAction', index=2,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='search', full_name='PlayStoreLogEvent.search', index=3,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='deepLink', full_name='PlayStoreLogEvent.deepLink', index=4,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=31597,
+  serialized_end=31841,
+)
+
+
+_PLAYSTORESEARCHEVENT = _descriptor.Descriptor(
+  name='PlayStoreSearchEvent',
+  full_name='PlayStoreSearchEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='query', full_name='PlayStoreSearchEvent.query', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='queryUrl', full_name='PlayStoreSearchEvent.queryUrl', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='referrerUrl', full_name='PlayStoreSearchEvent.referrerUrl', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=31843,
+  serialized_end=31919,
+)
+
+
+_PLAYSTORESESSIONDATA = _descriptor.Descriptor(
+  name='PlayStoreSessionData',
+  full_name='PlayStoreSessionData',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='globalAutoUpdateEnabled', full_name='PlayStoreSessionData.globalAutoUpdateEnabled', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='globalAutoUpdateOverWifiOnly', full_name='PlayStoreSessionData.globalAutoUpdateOverWifiOnly', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='autoUpdateCleanupDialogNumTimesShown', full_name='PlayStoreSessionData.autoUpdateCleanupDialogNumTimesShown', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='networkType', full_name='PlayStoreSessionData.networkType', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='networkSubType', full_name='PlayStoreSessionData.networkSubType', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='numAccountsOnDevice', full_name='PlayStoreSessionData.numAccountsOnDevice', index=5,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='numInstalledApps', full_name='PlayStoreSessionData.numInstalledApps', index=6,
+      number=7, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='numAutoUpdatingInstalledApps', full_name='PlayStoreSessionData.numAutoUpdatingInstalledApps', index=7,
+      number=8, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='numInstalledAppsNotAutoUpdating', full_name='PlayStoreSessionData.numInstalledAppsNotAutoUpdating', index=8,
+      number=9, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gaiaPasswordAuthOptedOut', full_name='PlayStoreSessionData.gaiaPasswordAuthOptedOut', index=9,
+      number=10, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='contentFilterLevel', full_name='PlayStoreSessionData.contentFilterLevel', index=10,
+      number=11, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='allowUnknownSources', full_name='PlayStoreSessionData.allowUnknownSources', index=11,
+      number=12, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=31922,
+  serialized_end=32331,
+)
+
+
+_PLAYSTOREUIELEMENT = _descriptor.Descriptor(
+  name='PlayStoreUiElement',
+  full_name='PlayStoreUiElement',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='PlayStoreUiElement.type', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serverLogsCookie', full_name='PlayStoreUiElement.serverLogsCookie', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='clientLogsCookie', full_name='PlayStoreUiElement.clientLogsCookie', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='child', full_name='PlayStoreUiElement.child', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=32334,
+  serialized_end=32481,
+)
+
+
+_PLAYSTOREUIELEMENTINFO_INSTRUMENTINFO = _descriptor.Descriptor(
+  name='InstrumentInfo',
+  full_name='PlayStoreUiElementInfo.InstrumentInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='instrumentFamily', full_name='PlayStoreUiElementInfo.InstrumentInfo.instrumentFamily', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='isDefault', full_name='PlayStoreUiElementInfo.InstrumentInfo.isDefault', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=32595,
+  serialized_end=32656,
+)
+
+_PLAYSTOREUIELEMENTINFO = _descriptor.Descriptor(
+  name='PlayStoreUiElementInfo',
+  full_name='PlayStoreUiElementInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='instrumentInfo', full_name='PlayStoreUiElementInfo.instrumentInfo', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serialDocid', full_name='PlayStoreUiElementInfo.serialDocid', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_PLAYSTOREUIELEMENTINFO_INSTRUMENTINFO, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=32484,
+  serialized_end=32656,
+)
+
+
+_PLUSPROFILE = _descriptor.Descriptor(
+  name='PlusProfile',
+  full_name='PlusProfile',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='displayName', full_name='PlusProfile.displayName', index=0,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='profileImageUrl', full_name='PlusProfile.profileImageUrl', index=1,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='profileImage', full_name='PlusProfile.profileImage', index=2,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=32658,
+  serialized_end=32747,
 )
 
 
@@ -7557,8 +12589,303 @@ _PLUSONERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19236,
-  serialized_end=19253,
+  serialized_start=32749,
+  serialized_end=32766,
+)
+
+
+_PLUSPROFILERESPONSE = _descriptor.Descriptor(
+  name='PlusProfileResponse',
+  full_name='PlusProfileResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='plusProfile', full_name='PlusProfileResponse.plusProfile', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=32768,
+  serialized_end=32824,
+)
+
+
+_CLIENTCART = _descriptor.Descriptor(
+  name='ClientCart',
+  full_name='ClientCart',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='title', full_name='ClientCart.title', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='formattedPrice', full_name='ClientCart.formattedPrice', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='purchaseContextToken', full_name='ClientCart.purchaseContextToken', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='instrument', full_name='ClientCart.instrument', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='extendedDetailHtml', full_name='ClientCart.extendedDetailHtml', index=4,
+      number=5, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='footerHtml', full_name='ClientCart.footerHtml', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='addInstrumentPromptHtml', full_name='ClientCart.addInstrumentPromptHtml', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='buttonText', full_name='ClientCart.buttonText', index=7,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='completePurchaseChallenge', full_name='ClientCart.completePurchaseChallenge', index=8,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='priceByline', full_name='ClientCart.priceByline', index=9,
+      number=10, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='detailHtml', full_name='ClientCart.detailHtml', index=10,
+      number=11, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=32827,
+  serialized_end=33130,
+)
+
+
+_COMMITPURCHASERESPONSE = _descriptor.Descriptor(
+  name='CommitPurchaseResponse',
+  full_name='CommitPurchaseResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='purchaseStatus', full_name='CommitPurchaseResponse.purchaseStatus', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='challenge', full_name='CommitPurchaseResponse.challenge', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='libraryUpdate', full_name='CommitPurchaseResponse.libraryUpdate', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='appDeliveryData', full_name='CommitPurchaseResponse.appDeliveryData', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serverLogsCookie', full_name='CommitPurchaseResponse.serverLogsCookie', index=4,
+      number=5, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=33133,
+  serialized_end=33344,
+)
+
+
+_PREPAREPURCHASERESPONSE = _descriptor.Descriptor(
+  name='PreparePurchaseResponse',
+  full_name='PreparePurchaseResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='purchaseStatus', full_name='PreparePurchaseResponse.purchaseStatus', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='challenge', full_name='PreparePurchaseResponse.challenge', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cart', full_name='PreparePurchaseResponse.cart', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='libraryUpdate', full_name='PreparePurchaseResponse.libraryUpdate', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serverLogsCookie', full_name='PreparePurchaseResponse.serverLogsCookie', index=4,
+      number=5, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=33347,
+  serialized_end=33536,
+)
+
+
+_PURCHASESTATUS = _descriptor.Descriptor(
+  name='PurchaseStatus',
+  full_name='PurchaseStatus',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='statusCode', full_name='PurchaseStatus.statusCode', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='errorMessageHtml', full_name='PurchaseStatus.errorMessageHtml', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='permissionError', full_name='PurchaseStatus.permissionError', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=33538,
+  serialized_end=33625,
 )
 
 
@@ -7581,8 +12908,8 @@ _RATESUGGESTEDCONTENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19255,
-  serialized_end=19285,
+  serialized_start=33627,
+  serialized_end=33657,
 )
 
 
@@ -7689,8 +13016,8 @@ _AGGREGATERATING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19288,
-  serialized_end=19583,
+  serialized_start=33660,
+  serialized_end=33955,
 )
 
 
@@ -7741,49 +13068,28 @@ _DIRECTPURCHASE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19585,
-  serialized_end=19684,
+  serialized_start=33957,
+  serialized_end=34056,
 )
 
 
-_RESOLVELINKRESPONSE = _descriptor.Descriptor(
-  name='ResolveLinkResponse',
-  full_name='ResolveLinkResponse',
+_REDEEMGIFTCARD = _descriptor.Descriptor(
+  name='RedeemGiftCard',
+  full_name='RedeemGiftCard',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='detailsUrl', full_name='ResolveLinkResponse.detailsUrl', index=0,
+      name='prefillCode', full_name='RedeemGiftCard.prefillCode', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='browseUrl', full_name='ResolveLinkResponse.browseUrl', index=1,
+      name='partnerPayload', full_name='RedeemGiftCard.partnerPayload', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='searchUrl', full_name='ResolveLinkResponse.searchUrl', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='directPurchase', full_name='ResolveLinkResponse.directPurchase', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='homeUrl', full_name='ResolveLinkResponse.homeUrl', index=4,
-      number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7800,8 +13106,109 @@ _RESOLVELINKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19687,
-  serialized_end=19824,
+  serialized_start=34058,
+  serialized_end=34119,
+)
+
+
+_RESOLVEDLINK = _descriptor.Descriptor(
+  name='ResolvedLink',
+  full_name='ResolvedLink',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='detailsUrl', full_name='ResolvedLink.detailsUrl', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='browseUrl', full_name='ResolvedLink.browseUrl', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='searchUrl', full_name='ResolvedLink.searchUrl', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='directPurchase', full_name='ResolvedLink.directPurchase', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='homeUrl', full_name='ResolvedLink.homeUrl', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='redeemGiftCard', full_name='ResolvedLink.redeemGiftCard', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serverLogsCookie', full_name='ResolvedLink.serverLogsCookie', index=6,
+      number=7, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='docid', full_name='ResolvedLink.docid', index=7,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='wishlistUrl', full_name='ResolvedLink.wishlistUrl', index=8,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='backend', full_name='ResolvedLink.backend', index=9,
+      number=10, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='query', full_name='ResolvedLink.query', index=10,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=34122,
+  serialized_end=34395,
 )
 
 
@@ -7980,6 +13387,251 @@ _PAYLOAD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='instrumentSetupInfoResponse', full_name='Payload.instrumentSetupInfoResponse', index=24,
+      number=25, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='redeemGiftCardResponse', full_name='Payload.redeemGiftCardResponse', index=25,
+      number=26, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='modifyLibraryResponse', full_name='Payload.modifyLibraryResponse', index=26,
+      number=27, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='uploadDeviceConfigResponse', full_name='Payload.uploadDeviceConfigResponse', index=27,
+      number=28, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='plusProfileResponse', full_name='Payload.plusProfileResponse', index=28,
+      number=29, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='consumePurchaseResponse', full_name='Payload.consumePurchaseResponse', index=29,
+      number=30, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='billingProfileResponse', full_name='Payload.billingProfileResponse', index=30,
+      number=31, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='preparePurchaseResponse', full_name='Payload.preparePurchaseResponse', index=31,
+      number=32, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='commitPurchaseResponse', full_name='Payload.commitPurchaseResponse', index=32,
+      number=33, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='debugSettingsResponse', full_name='Payload.debugSettingsResponse', index=33,
+      number=34, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='checkIabPromoResponse', full_name='Payload.checkIabPromoResponse', index=34,
+      number=35, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='userActivitySettingsResponse', full_name='Payload.userActivitySettingsResponse', index=35,
+      number=36, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='recordUserActivityResponse', full_name='Payload.recordUserActivityResponse', index=36,
+      number=37, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='redeemCodeResponse', full_name='Payload.redeemCodeResponse', index=37,
+      number=38, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='selfUpdateResponse', full_name='Payload.selfUpdateResponse', index=38,
+      number=39, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='searchSuggestResponse', full_name='Payload.searchSuggestResponse', index=39,
+      number=40, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='getInitialInstrumentFlowStateResponse', full_name='Payload.getInitialInstrumentFlowStateResponse', index=40,
+      number=41, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='createInstrumentResponse', full_name='Payload.createInstrumentResponse', index=41,
+      number=42, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='challengeResponse', full_name='Payload.challengeResponse', index=42,
+      number=43, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='backupDeviceChoicesResponse', full_name='Payload.backupDeviceChoicesResponse', index=43,
+      number=44, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='backupDocumentChoicesResponse', full_name='Payload.backupDocumentChoicesResponse', index=44,
+      number=45, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='earlyUpdateResponse', full_name='Payload.earlyUpdateResponse', index=45,
+      number=46, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='preloadsResponse', full_name='Payload.preloadsResponse', index=46,
+      number=47, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='myAccountsResponse', full_name='Payload.myAccountsResponse', index=47,
+      number=48, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='contentFilterResponse', full_name='Payload.contentFilterResponse', index=48,
+      number=49, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='experimentsResponse', full_name='Payload.experimentsResponse', index=49,
+      number=50, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='surveyResponse', full_name='Payload.surveyResponse', index=50,
+      number=51, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='pingResponse', full_name='Payload.pingResponse', index=51,
+      number=52, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='updateUserSettingResponse', full_name='Payload.updateUserSettingResponse', index=52,
+      number=53, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='getUserSettingsREsponse', full_name='Payload.getUserSettingsREsponse', index=53,
+      number=54, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='getSharingSettingsResponse', full_name='Payload.getSharingSettingsResponse', index=54,
+      number=56, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='updateSharingSettingsResponse', full_name='Payload.updateSharingSettingsResponse', index=55,
+      number=57, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reviewSnippetsResponse', full_name='Payload.reviewSnippetsResponse', index=56,
+      number=58, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='documentSharingStateResponse', full_name='Payload.documentSharingStateResponse', index=57,
+      number=59, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='moduleDeliveryResponse', full_name='Payload.moduleDeliveryResponse', index=58,
+      number=70, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -7992,8 +13644,608 @@ _PAYLOAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19827,
-  serialized_end=21032,
+  serialized_start=34398,
+  serialized_end=37621,
+)
+
+
+_CHECKIABPROMORESPONSE = _descriptor.Descriptor(
+  name='CheckIabPromoResponse',
+  full_name='CheckIabPromoResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=37623,
+  serialized_end=37646,
+)
+
+
+_USERACTIVITYSETTINGSRESPONSE = _descriptor.Descriptor(
+  name='UserActivitySettingsResponse',
+  full_name='UserActivitySettingsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=37648,
+  serialized_end=37678,
+)
+
+
+_RECORDUSERACTIVITYRESPONSE = _descriptor.Descriptor(
+  name='RecordUserActivityResponse',
+  full_name='RecordUserActivityResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=37680,
+  serialized_end=37708,
+)
+
+
+_REDEEMCODERESPONSE = _descriptor.Descriptor(
+  name='RedeemCodeResponse',
+  full_name='RedeemCodeResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=37710,
+  serialized_end=37730,
+)
+
+
+_SELFUPDATERESPONSE = _descriptor.Descriptor(
+  name='SelfUpdateResponse',
+  full_name='SelfUpdateResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=37732,
+  serialized_end=37752,
+)
+
+
+_SEARCHSUGGESTRESPONSE = _descriptor.Descriptor(
+  name='searchSuggestResponse',
+  full_name='searchSuggestResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=36467,
+  serialized_end=36490,
+)
+
+
+_GETINITIALINSTRUMENTFLOWSTATERESPONSE = _descriptor.Descriptor(
+  name='GetInitialInstrumentFlowStateResponse',
+  full_name='GetInitialInstrumentFlowStateResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=37779,
+  serialized_end=37818,
+)
+
+
+_CREATEINSTRUMENTRESPONSE = _descriptor.Descriptor(
+  name='CreateInstrumentResponse',
+  full_name='CreateInstrumentResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=37820,
+  serialized_end=37846,
+)
+
+
+_CHALLENGERESPONSE = _descriptor.Descriptor(
+  name='ChallengeResponse',
+  full_name='ChallengeResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=37848,
+  serialized_end=37867,
+)
+
+
+_BACKDEVICECHOICESRESPONSE = _descriptor.Descriptor(
+  name='BackDeviceChoicesResponse',
+  full_name='BackDeviceChoicesResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=37869,
+  serialized_end=37896,
+)
+
+
+_BACKUPDOCUMENTCHOICESRESPONSE = _descriptor.Descriptor(
+  name='BackupDocumentChoicesResponse',
+  full_name='BackupDocumentChoicesResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=37898,
+  serialized_end=37929,
+)
+
+
+_EARLYUPDATERESPONSE = _descriptor.Descriptor(
+  name='EarlyUpdateResponse',
+  full_name='EarlyUpdateResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=37931,
+  serialized_end=37952,
+)
+
+
+_PRELOADSRESPONSE = _descriptor.Descriptor(
+  name='PreloadsResponse',
+  full_name='PreloadsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=37954,
+  serialized_end=37972,
+)
+
+
+_MYACCOUNTSRESPONSE = _descriptor.Descriptor(
+  name='MyAccountsResponse',
+  full_name='MyAccountsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=37974,
+  serialized_end=37994,
+)
+
+
+_CONTENTFILTERRESPONSE = _descriptor.Descriptor(
+  name='ContentFilterResponse',
+  full_name='ContentFilterResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=37996,
+  serialized_end=38019,
+)
+
+
+_EXPERIMENTSRESPONSE = _descriptor.Descriptor(
+  name='ExperimentsResponse',
+  full_name='ExperimentsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=38021,
+  serialized_end=38042,
+)
+
+
+_SURVEYRESPONSE = _descriptor.Descriptor(
+  name='SurveyResponse',
+  full_name='SurveyResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=38044,
+  serialized_end=38060,
+)
+
+
+_PINGRESPONSE = _descriptor.Descriptor(
+  name='PingResponse',
+  full_name='PingResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=38062,
+  serialized_end=38076,
+)
+
+
+_UPDATEUSERSETTINGRESPONSE = _descriptor.Descriptor(
+  name='UpdateUserSettingResponse',
+  full_name='UpdateUserSettingResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=38078,
+  serialized_end=38105,
+)
+
+
+_GETUSERSETTINGSRESPONSE = _descriptor.Descriptor(
+  name='GetUserSettingsResponse',
+  full_name='GetUserSettingsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=38107,
+  serialized_end=38132,
+)
+
+
+_GETSHARINGSETTINGSRESPONSE = _descriptor.Descriptor(
+  name='GetSharingSettingsResponse',
+  full_name='GetSharingSettingsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=38134,
+  serialized_end=38162,
+)
+
+
+_UPDATESHARINGSETTINGSRESPONSE = _descriptor.Descriptor(
+  name='UpdateSharingSettingsResponse',
+  full_name='UpdateSharingSettingsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=38164,
+  serialized_end=38195,
+)
+
+
+_REVIEWSNIPPETSRESPONSE = _descriptor.Descriptor(
+  name='ReviewSnippetsResponse',
+  full_name='ReviewSnippetsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=38197,
+  serialized_end=38221,
+)
+
+
+_DOCUMENTSHARINGSTATERESPONSE = _descriptor.Descriptor(
+  name='DocumentSharingStateResponse',
+  full_name='DocumentSharingStateResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=38223,
+  serialized_end=38253,
+)
+
+
+_MODULEDELIVERYRESPONSE = _descriptor.Descriptor(
+  name='ModuleDeliveryResponse',
+  full_name='ModuleDeliveryResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=38255,
+  serialized_end=38279,
 )
 
 
@@ -8051,8 +14303,8 @@ _PREFETCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21034,
-  serialized_end=21119,
+  serialized_start=38281,
+  serialized_end=38366,
 )
 
 
@@ -8091,6 +14343,13 @@ _RESPONSEWRAPPER = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='serverMetadata', full_name='ResponseWrapper.serverMetadata', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -8103,8 +14362,8 @@ _RESPONSEWRAPPER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21122,
-  serialized_end=21267,
+  serialized_start=38369,
+  serialized_end=38555,
 )
 
 
@@ -8148,8 +14407,39 @@ _SERVERCOMMANDS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21269,
-  serialized_end=21362,
+  serialized_start=38557,
+  serialized_end=38650,
+)
+
+
+_SERVERMETADATA = _descriptor.Descriptor(
+  name='ServerMetadata',
+  full_name='ServerMetadata',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='latencyMillis', full_name='ServerMetadata.latencyMillis', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=38652,
+  serialized_end=38691,
 )
 
 
@@ -8186,8 +14476,8 @@ _GETREVIEWSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21364,
-  serialized_end=21432,
+  serialized_start=38693,
+  serialized_end=38761,
 )
 
 
@@ -8282,6 +14572,27 @@ _REVIEW = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='plusProfile', full_name='Review.plusProfile', index=12,
+      number=31, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='author', full_name='Review.author', index=13,
+      number=33, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sentiment', full_name='Review.sentiment', index=14,
+      number=34, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -8294,8 +14605,8 @@ _REVIEW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21435,
-  serialized_end=21678,
+  serialized_start=38764,
+  serialized_end=39093,
 )
 
 
@@ -8320,6 +14631,13 @@ _REVIEWRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='updatedReview', full_name='ReviewResponse.updatedReview', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -8332,8 +14650,8 @@ _REVIEWRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21680,
-  serialized_end=21759,
+  serialized_start=39095,
+  serialized_end=39206,
 )
 
 
@@ -8363,8 +14681,8 @@ _REVOKERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21761,
-  serialized_end=21816,
+  serialized_start=39208,
+  serialized_end=39263,
 )
 
 
@@ -8422,8 +14740,8 @@ _RELATEDSEARCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21818,
-  serialized_end=21921,
+  serialized_start=39265,
+  serialized_end=39368,
 )
 
 
@@ -8476,6 +14794,13 @@ _SEARCHRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='serverLogsCookie', full_name='SearchResponse.serverLogsCookie', index=6,
+      number=7, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -8488,8 +14813,126 @@ _SEARCHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21924,
-  serialized_end=22096,
+  serialized_start=39371,
+  serialized_end=39569,
+)
+
+
+_BILLINGCONFIG = _descriptor.Descriptor(
+  name='BillingConfig',
+  full_name='BillingConfig',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='carrierBillingConfig', full_name='BillingConfig.carrierBillingConfig', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='maxIabApiVersion', full_name='BillingConfig.maxIabApiVersion', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=39571,
+  serialized_end=39665,
+)
+
+
+_CARRIERBILLINGCONFIG = _descriptor.Descriptor(
+  name='CarrierBillingConfig',
+  full_name='CarrierBillingConfig',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='CarrierBillingConfig.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='CarrierBillingConfig.name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='apiVersion', full_name='CarrierBillingConfig.apiVersion', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='provisioningUrl', full_name='CarrierBillingConfig.provisioningUrl', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='credentialsUrl', full_name='CarrierBillingConfig.credentialsUrl', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='tosRequired', full_name='CarrierBillingConfig.tosRequired', index=5,
+      number=6, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='perTransactionCredentialsRequired', full_name='CarrierBillingConfig.perTransactionCredentialsRequired', index=6,
+      number=7, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sendSubscriberIdWithCarrierBillingRequests', full_name='CarrierBillingConfig.sendSubscriberIdWithCarrierBillingRequests', index=7,
+      number=8, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=39668,
+  serialized_end=39901,
 )
 
 
@@ -8528,6 +14971,13 @@ _CORPUSMETADATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='recsWidgetUrl', full_name='CorpusMetadata.recsWidgetUrl', index=4,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -8540,8 +14990,8 @@ _CORPUSMETADATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22098,
-  serialized_end=22186,
+  serialized_start=39903,
+  serialized_end=40014,
 )
 
 
@@ -8571,8 +15021,39 @@ _EXPERIMENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22188,
-  serialized_end=22223,
+  serialized_start=40016,
+  serialized_end=40051,
+)
+
+
+_SELFUPDATECONFIG = _descriptor.Descriptor(
+  name='SelfUpdateConfig',
+  full_name='SelfUpdateConfig',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='latestClientVersionCode', full_name='SelfUpdateConfig.latestClientVersionCode', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=40053,
+  serialized_end=40104,
 )
 
 
@@ -8646,6 +15127,34 @@ _TOCRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='selfUpdateConfig', full_name='TocResponse.selfUpdateConfig', index=9,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='requiresUploadDeviceConfig', full_name='TocResponse.requiresUploadDeviceConfig', index=10,
+      number=11, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='billingConfig', full_name='TocResponse.billingConfig', index=11,
+      number=12, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='recsWidgetUrl', full_name='TocResponse.recsWidgetUrl', index=12,
+      number=13, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -8658,8 +15167,8 @@ _TOCRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22226,
-  serialized_end=22494,
+  serialized_start=40107,
+  serialized_end=40518,
 )
 
 
@@ -8689,8 +15198,8 @@ _USERSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22496,
-  serialized_end=22553,
+  serialized_start=40520,
+  serialized_end=40577,
 )
 
 
@@ -8713,8 +15222,84 @@ _ACCEPTTOSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22555,
-  serialized_end=22574,
+  serialized_start=40579,
+  serialized_end=40598,
+)
+
+
+_UPLOADDEVICECONFIGREQUEST = _descriptor.Descriptor(
+  name='UploadDeviceConfigRequest',
+  full_name='UploadDeviceConfigRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='deviceConfiguration', full_name='UploadDeviceConfigRequest.deviceConfiguration', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='manufacturer', full_name='UploadDeviceConfigRequest.manufacturer', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gcmRegistrationId', full_name='UploadDeviceConfigRequest.gcmRegistrationId', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=40601,
+  serialized_end=40733,
+)
+
+
+_UPLOADDEVICECONFIGRESPONSE = _descriptor.Descriptor(
+  name='UploadDeviceConfigResponse',
+  full_name='UploadDeviceConfigResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uploadDeviceConfigToken', full_name='UploadDeviceConfigResponse.uploadDeviceConfigToken', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=40735,
+  serialized_end=40796,
 )
 
 
@@ -8758,8 +15343,8 @@ _ACKNOTIFICATIONSREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22576,
-  serialized_end=22702,
+  serialized_start=40798,
+  serialized_end=40924,
 )
 
 
@@ -8782,8 +15367,8 @@ _ACKNOTIFICATIONSRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22704,
-  serialized_end=22735,
+  serialized_start=40926,
+  serialized_end=40957,
 )
 
 
@@ -8869,8 +15454,8 @@ _ADDRESSPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22738,
-  serialized_end=22897,
+  serialized_start=40960,
+  serialized_end=41119,
 )
 
 
@@ -8907,8 +15492,8 @@ _APPDATAPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22899,
-  serialized_end=22941,
+  serialized_start=41121,
+  serialized_end=41163,
 )
 
 
@@ -8938,8 +15523,8 @@ _APPSUGGESTIONPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22943,
-  serialized_end=23003,
+  serialized_start=41165,
+  serialized_end=41225,
 )
 
 
@@ -8983,8 +15568,8 @@ _ASSETIDENTIFIERPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23005,
-  serialized_end=23086,
+  serialized_start=41227,
+  serialized_end=41308,
 )
 
 
@@ -9119,8 +15704,8 @@ _ASSETSREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23089,
-  serialized_end=23485,
+  serialized_start=41311,
+  serialized_end=41707,
 )
 
 
@@ -9192,8 +15777,8 @@ _ASSETSRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23488,
-  serialized_end=23696,
+  serialized_start=41710,
+  serialized_end=41918,
 )
 
 
@@ -9251,8 +15836,8 @@ _BILLINGEVENTREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23699,
-  serialized_end=23886,
+  serialized_start=41921,
+  serialized_end=42108,
 )
 
 
@@ -9275,8 +15860,8 @@ _BILLINGEVENTRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23888,
-  serialized_end=23915,
+  serialized_start=42110,
+  serialized_end=42137,
 )
 
 
@@ -9411,8 +15996,8 @@ _BILLINGPARAMETERPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23918,
-  serialized_end=24362,
+  serialized_start=42140,
+  serialized_end=42584,
 )
 
 
@@ -9449,8 +16034,8 @@ _CARRIERBILLINGCREDENTIALSPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24364,
-  serialized_end=24445,
+  serialized_start=42586,
+  serialized_end=42667,
 )
 
 
@@ -9536,8 +16121,8 @@ _CATEGORYPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24448,
-  serialized_end=24703,
+  serialized_start=42670,
+  serialized_end=42925,
 )
 
 
@@ -9567,8 +16152,8 @@ _CHECKFORNOTIFICATIONSREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24705,
-  serialized_end=24763,
+  serialized_start=42927,
+  serialized_end=42985,
 )
 
 
@@ -9591,8 +16176,8 @@ _CHECKFORNOTIFICATIONSRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24765,
-  serialized_end=24801,
+  serialized_start=42987,
+  serialized_end=43023,
 )
 
 
@@ -9636,8 +16221,8 @@ _CHECKLICENSEREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24803,
-  serialized_end=24886,
+  serialized_start=43025,
+  serialized_end=43108,
 )
 
 
@@ -9681,8 +16266,8 @@ _CHECKLICENSERESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24888,
-  serialized_end=24976,
+  serialized_start=43110,
+  serialized_end=43198,
 )
 
 
@@ -9740,8 +16325,8 @@ _COMMENTSREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24979,
-  serialized_end=25114,
+  serialized_start=43201,
+  serialized_end=43336,
 )
 
 
@@ -9785,8 +16370,8 @@ _COMMENTSRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25117,
-  serialized_end=25249,
+  serialized_start=43339,
+  serialized_end=43471,
 )
 
 
@@ -9858,8 +16443,8 @@ _CONTENTSYNCREQUESTPROTO_ASSETINSTALLSTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25455,
-  serialized_end=25620,
+  serialized_start=43677,
+  serialized_end=43842,
 )
 
 _CONTENTSYNCREQUESTPROTO_SYSTEMAPP = _descriptor.Descriptor(
@@ -9902,8 +16487,8 @@ _CONTENTSYNCREQUESTPROTO_SYSTEMAPP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25622,
-  serialized_end=25700,
+  serialized_start=43844,
+  serialized_end=43922,
 )
 
 _CONTENTSYNCREQUESTPROTO = _descriptor.Descriptor(
@@ -9953,8 +16538,8 @@ _CONTENTSYNCREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25252,
-  serialized_end=25700,
+  serialized_start=43474,
+  serialized_end=43922,
 )
 
 
@@ -9984,8 +16569,8 @@ _CONTENTSYNCRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25702,
-  serialized_end=25757,
+  serialized_start=43924,
+  serialized_end=43979,
 )
 
 
@@ -10022,8 +16607,8 @@ _DATAMESSAGEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25759,
-  serialized_end=25827,
+  serialized_start=43981,
+  serialized_end=44049,
 )
 
 
@@ -10060,8 +16645,8 @@ _DOWNLOADINFOPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25829,
-  serialized_end=25909,
+  serialized_start=44051,
+  serialized_end=44131,
 )
 
 
@@ -10112,8 +16697,8 @@ _EXTERNALASSETPROTO_PURCHASEINFORMATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26450,
-  serialized_end=26577,
+  serialized_start=44672,
+  serialized_end=44799,
 )
 
 _EXTERNALASSETPROTO_EXTENDEDINFO_PACKAGEDEPENDENCY = _descriptor.Descriptor(
@@ -10149,8 +16734,8 @@ _EXTERNALASSETPROTO_EXTENDEDINFO_PACKAGEDEPENDENCY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27229,
-  serialized_end=27294,
+  serialized_start=45451,
+  serialized_end=45516,
 )
 
 _EXTERNALASSETPROTO_EXTENDEDINFO = _descriptor.Descriptor(
@@ -10326,8 +16911,8 @@ _EXTERNALASSETPROTO_EXTENDEDINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26580,
-  serialized_end=27294,
+  serialized_start=44802,
+  serialized_end=45516,
 )
 
 _EXTERNALASSETPROTO = _descriptor.Descriptor(
@@ -10489,8 +17074,8 @@ _EXTERNALASSETPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25912,
-  serialized_end=27294,
+  serialized_start=44134,
+  serialized_end=45516,
 )
 
 
@@ -10527,8 +17112,8 @@ _EXTERNALBADGEIMAGEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27296,
-  serialized_end=27349,
+  serialized_start=45518,
+  serialized_end=45571,
 )
 
 
@@ -10579,8 +17164,8 @@ _EXTERNALBADGEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27352,
-  serialized_end=27490,
+  serialized_start=45574,
+  serialized_end=45712,
 )
 
 
@@ -10694,8 +17279,8 @@ _EXTERNALCARRIERBILLINGINSTRUMENTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27493,
-  serialized_end=27845,
+  serialized_start=45715,
+  serialized_end=46067,
 )
 
 
@@ -10753,8 +17338,8 @@ _EXTERNALCOMMENTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27847,
-  serialized_end=27961,
+  serialized_start=46069,
+  serialized_end=46183,
 )
 
 
@@ -10868,8 +17453,8 @@ _EXTERNALCREDITCARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27964,
-  serialized_end=28215,
+  serialized_start=46186,
+  serialized_end=46437,
 )
 
 
@@ -10927,8 +17512,8 @@ _EXTERNALPAYPALINSTRUMENTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28218,
-  serialized_end=28399,
+  serialized_start=46440,
+  serialized_end=46621,
 )
 
 
@@ -10979,8 +17564,8 @@ _FILEMETADATAPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28401,
-  serialized_end=28494,
+  serialized_start=46623,
+  serialized_end=46716,
 )
 
 
@@ -11010,8 +17595,8 @@ _GETADDRESSSNIPPETREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28496,
-  serialized_end=28586,
+  serialized_start=46718,
+  serialized_end=46808,
 )
 
 
@@ -11041,8 +17626,8 @@ _GETADDRESSSNIPPETRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28588,
-  serialized_end=28644,
+  serialized_start=46810,
+  serialized_end=46866,
 )
 
 
@@ -11079,8 +17664,8 @@ _GETASSETREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28646,
-  serialized_end=28712,
+  serialized_start=46868,
+  serialized_end=46934,
 )
 
 
@@ -11201,8 +17786,8 @@ _GETASSETRESPONSEPROTO_INSTALLASSET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28844,
-  serialized_end=29189,
+  serialized_start=47066,
+  serialized_end=47411,
 )
 
 _GETASSETRESPONSEPROTO = _descriptor.Descriptor(
@@ -11238,8 +17823,8 @@ _GETASSETRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28715,
-  serialized_end=29189,
+  serialized_start=46937,
+  serialized_end=47411,
 )
 
 
@@ -11262,8 +17847,8 @@ _GETCARRIERINFOREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29191,
-  serialized_end=29219,
+  serialized_start=47413,
+  serialized_end=47441,
 )
 
 
@@ -11328,8 +17913,8 @@ _GETCARRIERINFORESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29222,
-  serialized_end=29406,
+  serialized_start=47444,
+  serialized_end=47628,
 )
 
 
@@ -11359,8 +17944,8 @@ _GETCATEGORIESREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29408,
-  serialized_end=29462,
+  serialized_start=47630,
+  serialized_end=47684,
 )
 
 
@@ -11390,8 +17975,8 @@ _GETCATEGORIESRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29464,
-  serialized_end=29528,
+  serialized_start=47686,
+  serialized_end=47750,
 )
 
 
@@ -11463,8 +18048,8 @@ _GETIMAGEREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29531,
-  serialized_end=29718,
+  serialized_start=47753,
+  serialized_end=47940,
 )
 
 
@@ -11501,8 +18086,8 @@ _GETIMAGERESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29720,
-  serialized_end=29784,
+  serialized_start=47942,
+  serialized_end=48006,
 )
 
 
@@ -11574,8 +18159,8 @@ _GETMARKETMETADATAREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29787,
-  serialized_end=30031,
+  serialized_start=48009,
+  serialized_end=48253,
 )
 
 
@@ -11661,8 +18246,8 @@ _GETMARKETMETADATARESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30034,
-  serialized_end=30345,
+  serialized_start=48256,
+  serialized_end=48567,
 )
 
 
@@ -11692,8 +18277,8 @@ _GETSUBCATEGORIESREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30347,
-  serialized_end=30396,
+  serialized_start=48569,
+  serialized_end=48618,
 )
 
 
@@ -11730,8 +18315,8 @@ _GETSUBCATEGORIESRESPONSEPROTO_SUBCATEGORY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30497,
-  serialized_end=30561,
+  serialized_start=48719,
+  serialized_end=48783,
 )
 
 _GETSUBCATEGORIESRESPONSEPROTO = _descriptor.Descriptor(
@@ -11760,8 +18345,8 @@ _GETSUBCATEGORIESRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30399,
-  serialized_end=30561,
+  serialized_start=48621,
+  serialized_end=48783,
 )
 
 
@@ -11819,8 +18404,8 @@ _INAPPPURCHASEINFORMATIONREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30564,
-  serialized_end=30740,
+  serialized_start=48786,
+  serialized_end=48962,
 )
 
 
@@ -11864,8 +18449,8 @@ _INAPPPURCHASEINFORMATIONRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30743,
-  serialized_end=30930,
+  serialized_start=48965,
+  serialized_end=49152,
 )
 
 
@@ -11916,8 +18501,8 @@ _INAPPRESTORETRANSACTIONSREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30933,
-  serialized_end=31085,
+  serialized_start=49155,
+  serialized_end=49307,
 )
 
 
@@ -11954,8 +18539,8 @@ _INAPPRESTORETRANSACTIONSRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31087,
-  serialized_end=31214,
+  serialized_start=49309,
+  serialized_end=49436,
 )
 
 
@@ -12027,8 +18612,8 @@ _MODIFYCOMMENTREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31217,
-  serialized_end=31403,
+  serialized_start=49439,
+  serialized_end=49625,
 )
 
 
@@ -12051,8 +18636,8 @@ _MODIFYCOMMENTRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31405,
-  serialized_end=31433,
+  serialized_start=49627,
+  serialized_end=49655,
 )
 
 
@@ -12103,8 +18688,8 @@ _PAYPALCOUNTRYINFOPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31435,
-  serialized_end=31553,
+  serialized_start=49657,
+  serialized_end=49775,
 )
 
 
@@ -12155,8 +18740,8 @@ _PAYPALCREATEACCOUNTREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31555,
-  serialized_end=31676,
+  serialized_start=49777,
+  serialized_end=49898,
 )
 
 
@@ -12186,8 +18771,8 @@ _PAYPALCREATEACCOUNTRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31678,
-  serialized_end=31738,
+  serialized_start=49900,
+  serialized_end=49960,
 )
 
 
@@ -12224,8 +18809,8 @@ _PAYPALCREDENTIALSPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31740,
-  serialized_end=31809,
+  serialized_start=49962,
+  serialized_end=50031,
 )
 
 
@@ -12255,8 +18840,8 @@ _PAYPALMASSAGEADDRESSREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31811,
-  serialized_end=31877,
+  serialized_start=50033,
+  serialized_end=50099,
 )
 
 
@@ -12286,8 +18871,8 @@ _PAYPALMASSAGEADDRESSRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31879,
-  serialized_end=31946,
+  serialized_start=50101,
+  serialized_end=50168,
 )
 
 
@@ -12324,8 +18909,8 @@ _PAYPALPREAPPROVALCREDENTIALSREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31948,
-  serialized_end=32042,
+  serialized_start=50170,
+  serialized_end=50264,
 )
 
 
@@ -12369,8 +18954,8 @@ _PAYPALPREAPPROVALCREDENTIALSRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32044,
-  serialized_end=32154,
+  serialized_start=50266,
+  serialized_end=50376,
 )
 
 
@@ -12407,8 +18992,8 @@ _PAYPALPREAPPROVALDETAILSREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32156,
-  serialized_end=32238,
+  serialized_start=50378,
+  serialized_end=50460,
 )
 
 
@@ -12445,8 +19030,8 @@ _PAYPALPREAPPROVALDETAILSRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32240,
-  serialized_end=32332,
+  serialized_start=50462,
+  serialized_end=50554,
 )
 
 
@@ -12469,8 +19054,8 @@ _PAYPALPREAPPROVALREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32334,
-  serialized_end=32365,
+  serialized_start=50556,
+  serialized_end=50587,
 )
 
 
@@ -12500,8 +19085,8 @@ _PAYPALPREAPPROVALRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32367,
-  serialized_end=32423,
+  serialized_start=50589,
+  serialized_end=50645,
 )
 
 
@@ -12538,8 +19123,8 @@ _PENDINGNOTIFICATIONSPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32425,
-  serialized_end=32518,
+  serialized_start=50647,
+  serialized_end=50740,
 )
 
 
@@ -12576,8 +19161,8 @@ _PREFETCHEDBUNDLEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32520,
-  serialized_end=32621,
+  serialized_start=50742,
+  serialized_end=50843,
 )
 
 
@@ -12656,8 +19241,8 @@ _PURCHASECARTINFOPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32624,
-  serialized_end=32812,
+  serialized_start=50846,
+  serialized_end=51034,
 )
 
 
@@ -12715,8 +19300,8 @@ _PURCHASEINFOPROTO_BILLINGINSTRUMENTS_BILLINGINSTRUMENT = _descriptor.Descriptor
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33232,
-  serialized_end=33346,
+  serialized_start=51454,
+  serialized_end=51568,
 )
 
 _PURCHASEINFOPROTO_BILLINGINSTRUMENTS = _descriptor.Descriptor(
@@ -12752,8 +19337,8 @@ _PURCHASEINFOPROTO_BILLINGINSTRUMENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33090,
-  serialized_end=33346,
+  serialized_start=51312,
+  serialized_end=51568,
 )
 
 _PURCHASEINFOPROTO = _descriptor.Descriptor(
@@ -12831,8 +19416,8 @@ _PURCHASEINFOPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32815,
-  serialized_end=33346,
+  serialized_start=51037,
+  serialized_end=51568,
 )
 
 
@@ -12869,8 +19454,8 @@ _PURCHASEMETADATAREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33348,
-  serialized_end=33453,
+  serialized_start=51570,
+  serialized_end=51675,
 )
 
 
@@ -12907,8 +19492,8 @@ _PURCHASEMETADATARESPONSEPROTO_COUNTRIES_COUNTRY_INSTRUMENTADDRESSSPEC = _descri
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33877,
-  serialized_end=33975,
+  serialized_start=52099,
+  serialized_end=52197,
 )
 
 _PURCHASEMETADATARESPONSEPROTO_COUNTRIES_COUNTRY = _descriptor.Descriptor(
@@ -12965,8 +19550,8 @@ _PURCHASEMETADATARESPONSEPROTO_COUNTRIES_COUNTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33632,
-  serialized_end=33975,
+  serialized_start=51854,
+  serialized_end=52197,
 )
 
 _PURCHASEMETADATARESPONSEPROTO_COUNTRIES = _descriptor.Descriptor(
@@ -12995,8 +19580,8 @@ _PURCHASEMETADATARESPONSEPROTO_COUNTRIES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33551,
-  serialized_end=33975,
+  serialized_start=51773,
+  serialized_end=52197,
 )
 
 _PURCHASEMETADATARESPONSEPROTO = _descriptor.Descriptor(
@@ -13025,8 +19610,8 @@ _PURCHASEMETADATARESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33456,
-  serialized_end=33975,
+  serialized_start=51678,
+  serialized_end=52197,
 )
 
 
@@ -13147,8 +19732,8 @@ _PURCHASEORDERREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33978,
-  serialized_end=34460,
+  serialized_start=52200,
+  serialized_end=52682,
 )
 
 
@@ -13199,8 +19784,8 @@ _PURCHASEORDERRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34463,
-  serialized_end=34645,
+  serialized_start=52685,
+  serialized_end=52867,
 )
 
 
@@ -13251,8 +19836,8 @@ _PURCHASEPOSTREQUESTPROTO_BILLINGINSTRUMENTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34960,
-  serialized_end=35178,
+  serialized_start=53182,
+  serialized_end=53400,
 )
 
 _PURCHASEPOSTREQUESTPROTO = _descriptor.Descriptor(
@@ -13337,8 +19922,8 @@ _PURCHASEPOSTREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34648,
-  serialized_end=35178,
+  serialized_start=52870,
+  serialized_end=53400,
 )
 
 
@@ -13417,8 +20002,8 @@ _PURCHASEPOSTRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35181,
-  serialized_end=35479,
+  serialized_start=53403,
+  serialized_end=53701,
 )
 
 
@@ -13462,8 +20047,8 @@ _PURCHASEPRODUCTREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35481,
-  serialized_end=35594,
+  serialized_start=53703,
+  serialized_end=53816,
 )
 
 
@@ -13514,8 +20099,8 @@ _PURCHASEPRODUCTRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35596,
-  serialized_end=35708,
+  serialized_start=53818,
+  serialized_end=53930,
 )
 
 
@@ -13552,8 +20137,8 @@ _PURCHASERESULTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35710,
-  serialized_end=35778,
+  serialized_start=53932,
+  serialized_end=54000,
 )
 
 
@@ -13597,8 +20182,8 @@ _QUERYSUGGESTIONPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35780,
-  serialized_end=35867,
+  serialized_start=54002,
+  serialized_end=54089,
 )
 
 
@@ -13635,8 +20220,8 @@ _QUERYSUGGESTIONREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35869,
-  serialized_end=35934,
+  serialized_start=54091,
+  serialized_end=54156,
 )
 
 
@@ -13673,8 +20258,8 @@ _QUERYSUGGESTIONRESPONSEPROTO_SUGGESTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36105,
-  serialized_end=36209,
+  serialized_start=54327,
+  serialized_end=54431,
 )
 
 _QUERYSUGGESTIONRESPONSEPROTO = _descriptor.Descriptor(
@@ -13717,8 +20302,8 @@ _QUERYSUGGESTIONRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35937,
-  serialized_end=36209,
+  serialized_start=54159,
+  serialized_end=54431,
 )
 
 
@@ -13762,8 +20347,8 @@ _RATECOMMENTREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36211,
-  serialized_end=36295,
+  serialized_start=54433,
+  serialized_end=54517,
 )
 
 
@@ -13786,8 +20371,8 @@ _RATECOMMENTRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36297,
-  serialized_end=36323,
+  serialized_start=54519,
+  serialized_end=54545,
 )
 
 
@@ -13817,8 +20402,8 @@ _RECONSTRUCTDATABASEREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36325,
-  serialized_end=36387,
+  serialized_start=54547,
+  serialized_end=54609,
 )
 
 
@@ -13848,8 +20433,8 @@ _RECONSTRUCTDATABASERESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36389,
-  serialized_end=36461,
+  serialized_start=54611,
+  serialized_end=54683,
 )
 
 
@@ -13879,8 +20464,8 @@ _REFUNDREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36463,
-  serialized_end=36500,
+  serialized_start=54685,
+  serialized_end=54722,
 )
 
 
@@ -13924,8 +20509,8 @@ _REFUNDRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36502,
-  serialized_end=36597,
+  serialized_start=54724,
+  serialized_end=54819,
 )
 
 
@@ -13955,8 +20540,8 @@ _REMOVEASSETREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36599,
-  serialized_end=36641,
+  serialized_start=54821,
+  serialized_end=54863,
 )
 
 
@@ -14070,8 +20655,8 @@ _REQUESTPROPERTIESPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36644,
-  serialized_end=36977,
+  serialized_start=54866,
+  serialized_end=55199,
 )
 
 
@@ -14332,8 +20917,8 @@ _REQUESTPROTO_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=37089,
-  serialized_end=39218,
+  serialized_start=55311,
+  serialized_end=57440,
 )
 
 _REQUESTPROTO = _descriptor.Descriptor(
@@ -14369,8 +20954,8 @@ _REQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36980,
-  serialized_end=39218,
+  serialized_start=55202,
+  serialized_end=57440,
 )
 
 
@@ -14400,8 +20985,8 @@ _REQUESTSPECIFICPROPERTIESPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39220,
-  serialized_end=39273,
+  serialized_start=57442,
+  serialized_end=57495,
 )
 
 
@@ -14473,8 +21058,8 @@ _RESPONSEPROPERTIESPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39276,
-  serialized_end=39466,
+  serialized_start=57498,
+  serialized_end=57688,
 )
 
 
@@ -14735,8 +21320,8 @@ _RESPONSEPROTO_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39588,
-  serialized_end=41764,
+  serialized_start=57810,
+  serialized_end=59986,
 )
 
 _RESPONSEPROTO = _descriptor.Descriptor(
@@ -14772,8 +21357,8 @@ _RESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39469,
-  serialized_end=41764,
+  serialized_start=57691,
+  serialized_end=59986,
 )
 
 
@@ -14817,8 +21402,8 @@ _RESTOREAPPLICATIONSREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41767,
-  serialized_end=41901,
+  serialized_start=59989,
+  serialized_end=60123,
 )
 
 
@@ -14848,8 +21433,8 @@ _RESTOREAPPLICATIONSRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41903,
-  serialized_end=41976,
+  serialized_start=60125,
+  serialized_end=60198,
 )
 
 
@@ -14879,8 +21464,8 @@ _RISKHEADERINFOPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41978,
-  serialized_end=42025,
+  serialized_start=60200,
+  serialized_end=60247,
 )
 
 
@@ -14924,8 +21509,8 @@ _SIGNATUREHASHPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42027,
-  serialized_end=42103,
+  serialized_start=60249,
+  serialized_end=60325,
 )
 
 
@@ -14962,8 +21547,8 @@ _SIGNEDDATAPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42105,
-  serialized_end=42161,
+  serialized_start=60327,
+  serialized_end=60383,
 )
 
 
@@ -15224,8 +21809,8 @@ _SINGLEREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42164,
-  serialized_end=44307,
+  serialized_start=60386,
+  serialized_end=62529,
 )
 
 
@@ -15479,8 +22064,8 @@ _SINGLERESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=44310,
-  serialized_end=46450,
+  serialized_start=62532,
+  serialized_end=64672,
 )
 
 
@@ -15524,8 +22109,8 @@ _STATUSBARNOTIFICATIONPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=46452,
-  serialized_end=46543,
+  serialized_start=64674,
+  serialized_end=64765,
 )
 
 
@@ -15562,8 +22147,8 @@ _UNINSTALLREASONREQUESTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=46545,
-  serialized_end=46607,
+  serialized_start=64767,
+  serialized_end=64829,
 )
 
 
@@ -15586,14 +22171,89 @@ _UNINSTALLREASONRESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=46609,
-  serialized_end=46639,
+  serialized_start=64831,
+  serialized_end=64861,
+)
+
+
+_CRITICREVIEWSRESPONSE = _descriptor.Descriptor(
+  name='CriticReviewsResponse',
+  full_name='CriticReviewsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='title', full_name='CriticReviewsResponse.title', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='aggregateSentiment', full_name='CriticReviewsResponse.aggregateSentiment', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='totalNumReviews', full_name='CriticReviewsResponse.totalNumReviews', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='percentFavorable', full_name='CriticReviewsResponse.percentFavorable', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sourceText', full_name='CriticReviewsResponse.sourceText', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='source', full_name='CriticReviewsResponse.source', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='review', full_name='CriticReviewsResponse.review', index=6,
+      number=7, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=64864,
+  serialized_end=65057,
 )
 
 _ANDROIDAPPDELIVERYDATA.fields_by_name['additionalFile'].message_type = _APPFILEMETADATA
 _ANDROIDAPPDELIVERYDATA.fields_by_name['downloadAuthCookie'].message_type = _HTTPCOOKIE
 _ANDROIDAPPDELIVERYDATA.fields_by_name['patchData'].message_type = _ANDROIDAPPPATCHDATA
 _ANDROIDAPPDELIVERYDATA.fields_by_name['encryptionParams'].message_type = _ENCRYPTIONPARAMS
+_ANDROIDAPPDELIVERYDATA.fields_by_name['splitDeliveryData'].message_type = _SPLITDELIVERYDATA
+_SPLITDELIVERYDATA.fields_by_name['patchData'].message_type = _ANDROIDAPPPATCHDATA
 _BOOKAUTHOR.fields_by_name['docid'].message_type = _DOCID
 _BOOKDETAILS_IDENTIFIER.containing_type = _BOOKDETAILS
 _BOOKDETAILS.fields_by_name['subject'].message_type = _BOOKSUBJECT
@@ -15601,9 +22261,9 @@ _BOOKDETAILS.fields_by_name['author'].message_type = _BOOKAUTHOR
 _BOOKDETAILS.fields_by_name['identifier'].message_type = _BOOKDETAILS_IDENTIFIER
 _BROWSERESPONSE.fields_by_name['category'].message_type = _BROWSELINK
 _BROWSERESPONSE.fields_by_name['breadcrumb'].message_type = _BROWSELINK
-_ADDRESSCHALLENGE.fields_by_name['checkbox'].message_type = _FORMCHECKBOX
-_ADDRESSCHALLENGE.fields_by_name['address'].message_type = _ADDRESS
-_ADDRESSCHALLENGE.fields_by_name['errorInputField'].message_type = _INPUTVALIDATIONERROR
+_BROWSERESPONSE.fields_by_name['quickLink'].message_type = _QUICKLINK
+_QUICKLINK.fields_by_name['image'].message_type = _IMAGE
+_QUICKLINK.fields_by_name['link'].message_type = _RESOLVEDLINK
 _BUYRESPONSE_CHECKOUTINFO_CHECKOUTOPTION.fields_by_name['item'].message_type = _LINEITEM
 _BUYRESPONSE_CHECKOUTINFO_CHECKOUTOPTION.fields_by_name['subItem'].message_type = _LINEITEM
 _BUYRESPONSE_CHECKOUTINFO_CHECKOUTOPTION.fields_by_name['total'].message_type = _LINEITEM
@@ -15619,36 +22279,75 @@ _BUYRESPONSE.fields_by_name['purchaseResponse'].message_type = _PURCHASENOTIFICA
 _BUYRESPONSE.fields_by_name['checkoutinfo'].message_type = _BUYRESPONSE_CHECKOUTINFO
 _BUYRESPONSE.fields_by_name['purchaseStatusResponse'].message_type = _PURCHASESTATUSRESPONSE
 _BUYRESPONSE.fields_by_name['challenge'].message_type = _CHALLENGE
-_CHALLENGE.fields_by_name['addressChallenge'].message_type = _ADDRESSCHALLENGE
-_CHALLENGE.fields_by_name['authenticationChallenge'].message_type = _AUTHENTICATIONCHALLENGE
 _LINEITEM.fields_by_name['offer'].message_type = _OFFER
 _LINEITEM.fields_by_name['amount'].message_type = _MONEY
 _PURCHASENOTIFICATIONRESPONSE.fields_by_name['debugInfo'].message_type = _DEBUGINFO
 _PURCHASESTATUSRESPONSE.fields_by_name['libraryUpdate'].message_type = _LIBRARYUPDATE
 _PURCHASESTATUSRESPONSE.fields_by_name['rejectedInstrument'].message_type = _INSTRUMENT
 _PURCHASESTATUSRESPONSE.fields_by_name['appDeliveryData'].message_type = _ANDROIDAPPDELIVERYDATA
+_BILLINGPROFILERESPONSE.fields_by_name['billingProfile'].message_type = _BILLINGPROFILE
 _CHECKINSTRUMENTRESPONSE.fields_by_name['instrument'].message_type = _INSTRUMENT
 _CHECKINSTRUMENTRESPONSE.fields_by_name['eligibleInstrument'].message_type = _INSTRUMENT
+_INSTRUMENTSETUPINFORESPONSE.fields_by_name['setupInfo'].message_type = _INSTRUMENTSETUPINFO
+_REDEEMGIFTCARDREQUEST.fields_by_name['address'].message_type = _ADDRESS
+_REDEEMGIFTCARDRESPONSE.fields_by_name['addressChallenge'].message_type = _ADDRESSCHALLENGE
 _UPDATEINSTRUMENTREQUEST.fields_by_name['instrument'].message_type = _INSTRUMENT
 _UPDATEINSTRUMENTRESPONSE.fields_by_name['errorInputField'].message_type = _INPUTVALIDATIONERROR
 _UPDATEINSTRUMENTRESPONSE.fields_by_name['redeemedOffer'].message_type = _REDEEMEDPROMOOFFER
 _VERIFYASSOCIATIONRESPONSE.fields_by_name['billingAddress'].message_type = _ADDRESS
 _VERIFYASSOCIATIONRESPONSE.fields_by_name['carrierTos'].message_type = _CARRIERTOS
+_ADDRESSCHALLENGE.fields_by_name['checkbox'].message_type = _FORMCHECKBOX
+_ADDRESSCHALLENGE.fields_by_name['address'].message_type = _ADDRESS
+_ADDRESSCHALLENGE.fields_by_name['errorInputField'].message_type = _INPUTVALIDATIONERROR
+_ADDRESSCHALLENGE.fields_by_name['supportedCountry'].message_type = _COUNTRY
+_AUTHENTICATIONCHALLENGE.fields_by_name['gaiaOptOutCheckbox'].message_type = _FORMCHECKBOX
+_CHALLENGE.fields_by_name['addressChallenge'].message_type = _ADDRESSCHALLENGE
+_CHALLENGE.fields_by_name['authenticationChallenge'].message_type = _AUTHENTICATIONCHALLENGE
+_CHALLENGE.fields_by_name['webViewChallenge'].message_type = _WEBVIEWCHALLENGE
 _ADDCREDITCARDPROMOOFFER.fields_by_name['image'].message_type = _IMAGE
 _AVAILABLEPROMOOFFER.fields_by_name['addCreditCardOffer'].message_type = _ADDCREDITCARDPROMOOFFER
 _CHECKPROMOOFFERRESPONSE.fields_by_name['availableOffer'].message_type = _AVAILABLEPROMOOFFER
 _CHECKPROMOOFFERRESPONSE.fields_by_name['redeemedOffer'].message_type = _REDEEMEDPROMOOFFER
 _REDEEMEDPROMOOFFER.fields_by_name['image'].message_type = _IMAGE
+_CLIENTINFO.fields_by_name['androidClientInfo'].message_type = _ANDROIDCLIENTINFO
+_CLIENTINFO.fields_by_name['desktopClientInfo'].message_type = _DESKTOPCLIENTINFO
+_CLIENTINFO.fields_by_name['iosClientInfo'].message_type = _IOSCLIENTINFO
+_LOGEVENT.fields_by_name['value'].message_type = _LOGEVENTKEYVALUES
+_LOGEVENT.fields_by_name['store'].message_type = _PLAYSTORELOGEVENT
+_LOGEVENT.fields_by_name['exp'].message_type = _ACTIVEEXPERIMENTS
+_LOGREQUEST.fields_by_name['clientInfo'].message_type = _CLIENTINFO
+_LOGREQUEST.fields_by_name['logEvent'].message_type = _LOGEVENT
+_LOGRESPONSE.fields_by_name['experiments'].message_type = _EXPERIMENTIDLIST
+_LICENSETERMS.fields_by_name['groupLicenseKey'].message_type = _GROUPLICENSEKEY
 _OFFER.fields_by_name['convertedPrice'].message_type = _OFFER
 _OFFER.fields_by_name['rentalTerms'].message_type = _RENTALTERMS
 _OFFER.fields_by_name['subscriptionTerms'].message_type = _SUBSCRIPTIONTERMS
+_OFFER.fields_by_name['subscriptionContentTerms'].message_type = _SUBSCRIPTIONCONTENTTERMS
+_OFFER.fields_by_name['licenseTerms'].message_type = _LICENSETERMS
+_OFFER.fields_by_name['voucherTerms'].message_type = _VOUCHERTERMS
+_OFFER.fields_by_name['offerPayment'].message_type = _OFFERPAYMENT
+_OFFERPAYMENTPERIOD.fields_by_name['duration'].message_type = _TIMEPERIOD
+_OFFERPAYMENTPERIOD.fields_by_name['start'].message_type = _MONTHANDDAY
+_OFFERPAYMENTPERIOD.fields_by_name['end'].message_type = _MONTHANDDAY
+_OFFERPAYMENTOVERRIDE.fields_by_name['start'].message_type = _MONTHANDDAY
+_OFFERPAYMENTOVERRIDE.fields_by_name['end'].message_type = _MONTHANDDAY
+_OFFERPAYMENT.fields_by_name['offerPaymentPeriod'].message_type = _OFFERPAYMENTPERIOD
+_OFFERPAYMENT.fields_by_name['offerPaymentOverride'].message_type = _OFFERPAYMENTOVERRIDE
+_RENTALTERMS.fields_by_name['grantPeriod'].message_type = _TIMEPERIOD
+_RENTALTERMS.fields_by_name['activatePeriod'].message_type = _TIMEPERIOD
+_SUBSCRIPTIONCONTENTTERMS.fields_by_name['requiredSubscription'].message_type = _DOCID
 _SUBSCRIPTIONTERMS.fields_by_name['recurringPeriod'].message_type = _TIMEPERIOD
 _SUBSCRIPTIONTERMS.fields_by_name['trialPeriod'].message_type = _TIMEPERIOD
+_BILLINGPROFILE.fields_by_name['instrument'].message_type = _INSTRUMENT
+_BILLINGPROFILE.fields_by_name['billingProfileOption'].message_type = _BILLINGPROFILEOPTION
+_BILLINGPROFILEOPTION.fields_by_name['topupInfo'].message_type = _TOPUPINFO
+_BILLINGPROFILEOPTION.fields_by_name['carrierBillingInstrumentStatus'].message_type = _CARRIERBILLINGINSTRUMENTSTATUS
 _CARRIERBILLINGINSTRUMENT.fields_by_name['encryptedSubscriberInfo'].message_type = _ENCRYPTEDSUBSCRIBERINFO
 _CARRIERBILLINGINSTRUMENT.fields_by_name['credentials'].message_type = _CARRIERBILLINGCREDENTIALS
 _CARRIERBILLINGINSTRUMENT.fields_by_name['acceptedCarrierTos'].message_type = _CARRIERTOS
 _CARRIERBILLINGINSTRUMENTSTATUS.fields_by_name['carrierTos'].message_type = _CARRIERTOS
 _CARRIERBILLINGINSTRUMENTSTATUS.fields_by_name['carrierPasswordPrompt'].message_type = _PASSWORDPROMPT
+_CARRIERBILLINGINSTRUMENTSTATUS.fields_by_name['deviceAssociation'].message_type = _DEVICEASSOCIATION
 _CARRIERTOS.fields_by_name['dcbTos'].message_type = _CARRIERTOSENTRY
 _CARRIERTOS.fields_by_name['piiTos'].message_type = _CARRIERTOSENTRY
 _CREDITCARDINSTRUMENT.fields_by_name['escrowEfeParam'].message_type = _EFEPARAM
@@ -15657,6 +22356,31 @@ _INSTRUMENT.fields_by_name['creditCard'].message_type = _CREDITCARDINSTRUMENT
 _INSTRUMENT.fields_by_name['carrierBilling'].message_type = _CARRIERBILLINGINSTRUMENT
 _INSTRUMENT.fields_by_name['billingAddressSpec'].message_type = _BILLINGADDRESSSPEC
 _INSTRUMENT.fields_by_name['carrierBillingStatus'].message_type = _CARRIERBILLINGINSTRUMENTSTATUS
+_INSTRUMENT.fields_by_name['topupInfoDeprecated'].message_type = _TOPUPINFO
+_INSTRUMENT.fields_by_name['storedValue'].message_type = _STOREDVALUEINSTRUMENT
+_INSTRUMENT.fields_by_name['disabledInfo'].message_type = _DISABLEDINFO
+_INSTRUMENTSETUPINFO.fields_by_name['addressChallenge'].message_type = _ADDRESSCHALLENGE
+_INSTRUMENTSETUPINFO.fields_by_name['balance'].message_type = _MONEY
+_STOREDVALUEINSTRUMENT.fields_by_name['balance'].message_type = _MONEY
+_STOREDVALUEINSTRUMENT.fields_by_name['topupInfo'].message_type = _TOPUPINFO
+_TOPUPINFO.fields_by_name['optionsContainerDocid'].message_type = _DOCID
+_CONSUMEPURCHASERESPONSE.fields_by_name['libraryUpdate'].message_type = _LIBRARYUPDATE
+_CONTAINERMETADATA.fields_by_name['containerView'].message_type = _CONTAINERVIEW
+_CLIENTDOWNLOADREQUEST_APKINFO.containing_type = _CLIENTDOWNLOADREQUEST
+_CLIENTDOWNLOADREQUEST_CERTIFICATECHAIN_ELEMENT.containing_type = _CLIENTDOWNLOADREQUEST_CERTIFICATECHAIN
+_CLIENTDOWNLOADREQUEST_CERTIFICATECHAIN.fields_by_name['element'].message_type = _CLIENTDOWNLOADREQUEST_CERTIFICATECHAIN_ELEMENT
+_CLIENTDOWNLOADREQUEST_CERTIFICATECHAIN.containing_type = _CLIENTDOWNLOADREQUEST
+_CLIENTDOWNLOADREQUEST_DIGESTS.containing_type = _CLIENTDOWNLOADREQUEST
+_CLIENTDOWNLOADREQUEST_RESOURCE.containing_type = _CLIENTDOWNLOADREQUEST
+_CLIENTDOWNLOADREQUEST_SIGNATUREINFO.fields_by_name['certificateChain'].message_type = _CLIENTDOWNLOADREQUEST_CERTIFICATECHAIN
+_CLIENTDOWNLOADREQUEST_SIGNATUREINFO.containing_type = _CLIENTDOWNLOADREQUEST
+_CLIENTDOWNLOADREQUEST.fields_by_name['digests'].message_type = _CLIENTDOWNLOADREQUEST_DIGESTS
+_CLIENTDOWNLOADREQUEST.fields_by_name['resources'].message_type = _CLIENTDOWNLOADREQUEST_RESOURCE
+_CLIENTDOWNLOADREQUEST.fields_by_name['signature'].message_type = _CLIENTDOWNLOADREQUEST_SIGNATUREINFO
+_CLIENTDOWNLOADREQUEST.fields_by_name['apkInfo'].message_type = _CLIENTDOWNLOADREQUEST_APKINFO
+_CLIENTDOWNLOADREQUEST.fields_by_name['originatingSignature'].message_type = _CLIENTDOWNLOADREQUEST_SIGNATUREINFO
+_CLIENTDOWNLOADRESPONSE_MOREINFO.containing_type = _CLIENTDOWNLOADRESPONSE
+_CLIENTDOWNLOADRESPONSE.fields_by_name['moreInfo'].message_type = _CLIENTDOWNLOADRESPONSE_MOREINFO
 _DEBUGINFO_TIMING.containing_type = _DEBUGINFO
 _DEBUGINFO.fields_by_name['timing'].message_type = _DEBUGINFO_TIMING
 _DELIVERYRESPONSE.fields_by_name['appDeliveryData'].message_type = _ANDROIDAPPDELIVERYDATA
@@ -15665,6 +22389,10 @@ _BULKDETAILSRESPONSE.fields_by_name['entry'].message_type = _BULKDETAILSENTRY
 _DETAILSRESPONSE.fields_by_name['docV1'].message_type = _DOCV1
 _DETAILSRESPONSE.fields_by_name['userReview'].message_type = _REVIEW
 _DETAILSRESPONSE.fields_by_name['docV2'].message_type = _DOCV2
+_DETAILSRESPONSE.fields_by_name['discoveryBadge'].message_type = _DISCOVERYBADGE
+_DISCOVERYBADGE.fields_by_name['image'].message_type = _IMAGE
+_DISCOVERYBADGE.fields_by_name['discoveryBadgeLink'].message_type = _DISCOVERYBADGELINK
+_DISCOVERYBADGELINK.fields_by_name['link'].message_type = _LINK
 _DOCUMENT.fields_by_name['docid'].message_type = _DOCID
 _DOCUMENT.fields_by_name['fetchDocid'].message_type = _DOCID
 _DOCUMENT.fields_by_name['sampleDocid'].message_type = _DOCID
@@ -15683,15 +22411,30 @@ _DOCUMENTVARIANT.fields_by_name['autoTranslation'].message_type = _TRANSLATEDTEX
 _DOCUMENTVARIANT.fields_by_name['offer'].message_type = _OFFER
 _DOCUMENTVARIANT.fields_by_name['child'].message_type = _DOCUMENT
 _DOCUMENTVARIANT.fields_by_name['decoration'].message_type = _DOCUMENT
+_DOCUMENTVARIANT.fields_by_name['image'].message_type = _IMAGE
 _IMAGE_DIMENSION.containing_type = _IMAGE
 _IMAGE_CITATION.containing_type = _IMAGE
 _IMAGE.fields_by_name['dimension'].message_type = _IMAGE_DIMENSION
 _IMAGE.fields_by_name['citation'].message_type = _IMAGE_CITATION
+_IMAGE.fields_by_name['attribution'].message_type = _ATTRIBUTION
+_IMAGE.fields_by_name['palette'].message_type = _IMAGEPALETTE
 _BADGE.fields_by_name['image'].message_type = _IMAGE
-_PLUSONEDATA.fields_by_name['circlesPeople'].message_type = _PLUSPERSON
+_BADGECONTAINER.fields_by_name['image'].message_type = _IMAGE
+_BADGECONTAINER.fields_by_name['badge'].message_type = _BADGE
+_EDITORIALSERIESCONTAINER.fields_by_name['videoSnippet'].message_type = _VIDEOSNIPPET
+_LINK.fields_by_name['resolvedLink'].message_type = _RESOLVEDLINK
+_PLUSONEDATA.fields_by_name['circlesProfiles'].message_type = _PLUSPROFILE
 _PROMOTEDDOC.fields_by_name['image'].message_type = _IMAGE
+_REASON.fields_by_name['reasonPlusProfiles'].message_type = _REASONPLUSPROFILES
+_REASON.fields_by_name['reasonReview'].message_type = _REASONREVIEW
+_REASON.fields_by_name['dismissal'].message_type = _DISMISSAL
+_REASONPLUSPROFILES.fields_by_name['plusProfile'].message_type = _PLUSPROFILE
+_REASONREVIEW.fields_by_name['review'].message_type = _REVIEW
 _SERIESANTENNA.fields_by_name['sectionTracks'].message_type = _SECTIONMETADATA
 _SERIESANTENNA.fields_by_name['sectionAlbums'].message_type = _SECTIONMETADATA
+_SUGGESTIONREASONS.fields_by_name['reason'].message_type = _REASON
+_SUGGESTIONREASONS.fields_by_name['neutralDismissal'].message_type = _DISMISSAL
+_SUGGESTIONREASONS.fields_by_name['positiveDismissal'].message_type = _DISMISSAL
 _TEMPLATE.fields_by_name['seriesAntenna'].message_type = _SERIESANTENNA
 _TEMPLATE.fields_by_name['tileGraphic2X1'].message_type = _TILETEMPLATE
 _TEMPLATE.fields_by_name['tileGraphic4X2'].message_type = _TILETEMPLATE
@@ -15703,9 +22446,15 @@ _TEMPLATE.fields_by_name['containerWithBanner'].message_type = _CONTAINERWITHBAN
 _TEMPLATE.fields_by_name['dealOfTheDay'].message_type = _DEALOFTHEDAY
 _TEMPLATE.fields_by_name['tileGraphicColoredTitle4X2'].message_type = _TILETEMPLATE
 _TEMPLATE.fields_by_name['editorialSeriesContainer'].message_type = _EDITORIALSERIESCONTAINER
+_TEMPLATE.fields_by_name['recommendationsContainer'].message_type = _RECOMMENDATIONSCONTAINER
+_TEMPLATE.fields_by_name['nextBanner'].message_type = _NEXTBANNER
+_VIDEOSNIPPET.fields_by_name['image'].message_type = _IMAGE
 _ALBUMDETAILS.fields_by_name['details'].message_type = _MUSICDETAILS
 _ALBUMDETAILS.fields_by_name['displayArtist'].message_type = _ARTISTDETAILS
+_INSTALLDETAILS.fields_by_name['dependency'].message_type = _DEPENDENCY
 _APPDETAILS.fields_by_name['file'].message_type = _FILEMETADATA
+_APPDETAILS.fields_by_name['certificateSet'].message_type = _CERTIFICATESET
+_APPDETAILS.fields_by_name['installDetails'].message_type = _INSTALLDETAILS
 _ARTISTDETAILS.fields_by_name['externalLinks'].message_type = _ARTISTEXTERNALLINKS
 _DOCUMENTDETAILS.fields_by_name['appDetails'].message_type = _APPDETAILS
 _DOCUMENTDETAILS.fields_by_name['albumDetails'].message_type = _ALBUMDETAILS
@@ -15718,9 +22467,11 @@ _DOCUMENTDETAILS.fields_by_name['magazineDetails'].message_type = _MAGAZINEDETAI
 _DOCUMENTDETAILS.fields_by_name['tvShowDetails'].message_type = _TVSHOWDETAILS
 _DOCUMENTDETAILS.fields_by_name['tvSeasonDetails'].message_type = _TVSEASONDETAILS
 _DOCUMENTDETAILS.fields_by_name['tvEpisodeDetails'].message_type = _TVEPISODEDETAILS
+_FILEMETADATA.fields_by_name['patchDetails'].message_type = _PATCHDETAILS
 _MUSICDETAILS.fields_by_name['artist'].message_type = _ARTISTDETAILS
 _SONGDETAILS.fields_by_name['details'].message_type = _MUSICDETAILS
 _SONGDETAILS.fields_by_name['displayArtist'].message_type = _ARTISTDETAILS
+_SONGDETAILS.fields_by_name['badge'].message_type = _BADGE
 _VIDEODETAILS.fields_by_name['credit'].message_type = _VIDEOCREDIT
 _VIDEODETAILS.fields_by_name['trailer'].message_type = _TRAILER
 _VIDEODETAILS.fields_by_name['rentalTerm'].message_type = _VIDEORENTALTERM
@@ -15746,7 +22497,16 @@ _ANNOTATIONS.fields_by_name['sectionCrossSell'].message_type = _SECTIONMETADATA
 _ANNOTATIONS.fields_by_name['sectionRelatedDocType'].message_type = _SECTIONMETADATA
 _ANNOTATIONS.fields_by_name['promotedDoc'].message_type = _PROMOTEDDOC
 _ANNOTATIONS.fields_by_name['subscription'].message_type = _DOCV2
-_ANNOTATIONS.fields_by_name['reason'].message_type = _REASON
+_ANNOTATIONS.fields_by_name['oBSOLETEReason'].message_type = _OBSOLETE_REASON
+_ANNOTATIONS.fields_by_name['suggestionReasons'].message_type = _SUGGESTIONREASONS
+_ANNOTATIONS.fields_by_name['optimalDeviceClassWarning'].message_type = _WARNING
+_ANNOTATIONS.fields_by_name['docBadgeContainer'].message_type = _BADGECONTAINER
+_ANNOTATIONS.fields_by_name['sectionSuggestForRating'].message_type = _SECTIONMETADATA
+_ANNOTATIONS.fields_by_name['sectionRateAndReview'].message_type = _SECTIONMETADATA
+_ANNOTATIONS.fields_by_name['sectionPurchaseCrossSell'].message_type = _SECTIONMETADATA
+_ANNOTATIONS.fields_by_name['overflowLink'].message_type = _OVERFLOWLINK
+_ANNOTATIONS.fields_by_name['creatorDoc'].message_type = _DOCV2
+_OVERFLOWLINK.fields_by_name['link'].message_type = _LINK
 _DOCV2.fields_by_name['offer'].message_type = _OFFER
 _DOCV2.fields_by_name['availability'].message_type = _AVAILABILITY
 _DOCV2.fields_by_name['image'].message_type = _IMAGE
@@ -15755,6 +22515,11 @@ _DOCV2.fields_by_name['containerMetadata'].message_type = _CONTAINERMETADATA
 _DOCV2.fields_by_name['details'].message_type = _DOCUMENTDETAILS
 _DOCV2.fields_by_name['aggregateRating'].message_type = _AGGREGATERATING
 _DOCV2.fields_by_name['annotations'].message_type = _ANNOTATIONS
+_DOCV2.fields_by_name['productDetails'].message_type = _PRODUCTDETAILS
+_DOCV2.fields_by_name['tip'].message_type = _REVIEWTIP
+_PRODUCTDETAILS.fields_by_name['section'].message_type = _PRODUCTDETAILSSECTION
+_PRODUCTDETAILSSECTION.fields_by_name['description'].message_type = _PRODUCTDETAILSDESCRIPTION
+_PRODUCTDETAILSDESCRIPTION.fields_by_name['image'].message_type = _IMAGE
 _AVAILABILITY_PERDEVICEAVAILABILITYRESTRICTION.fields_by_name['filterInfo'].message_type = _FILTEREVALUATIONINFO
 _AVAILABILITY_PERDEVICEAVAILABILITYRESTRICTION.containing_type = _AVAILABILITY
 _AVAILABILITY.fields_by_name['rule'].message_type = _RULE
@@ -15762,16 +22527,18 @@ _AVAILABILITY.fields_by_name['perdeviceavailabilityrestriction'].message_type = 
 _AVAILABILITY.fields_by_name['install'].message_type = _INSTALL
 _AVAILABILITY.fields_by_name['filterInfo'].message_type = _FILTEREVALUATIONINFO
 _AVAILABILITY.fields_by_name['ownershipInfo'].message_type = _OWNERSHIPINFO
+_AVAILABILITY.fields_by_name['availabilityProblem'].message_type = _AVAILABILITYPROBLEM
 _FILTEREVALUATIONINFO.fields_by_name['ruleEvaluation'].message_type = _RULEEVALUATION
 _RULE.fields_by_name['subrule'].message_type = _RULE
 _RULEEVALUATION.fields_by_name['rule'].message_type = _RULE
 _LIBRARYMUTATION.fields_by_name['docid'].message_type = _DOCID
 _LIBRARYMUTATION.fields_by_name['appDetails'].message_type = _LIBRARYAPPDETAILS
 _LIBRARYMUTATION.fields_by_name['subscriptionDetails'].message_type = _LIBRARYSUBSCRIPTIONDETAILS
+_LIBRARYMUTATION.fields_by_name['inAppDetails'].message_type = _LIBRARYINAPPDETAILS
 _LIBRARYUPDATE.fields_by_name['mutation'].message_type = _LIBRARYMUTATION
 _LIBRARYREPLICATIONREQUEST.fields_by_name['libraryState'].message_type = _CLIENTLIBRARYSTATE
 _LIBRARYREPLICATIONRESPONSE.fields_by_name['update'].message_type = _LIBRARYUPDATE
-_LOGREQUEST.fields_by_name['clickEvent'].message_type = _CLICKLOGEVENT
+_MODIFYLIBRARYRESPONSE.fields_by_name['libraryUpdate'].message_type = _LIBRARYUPDATE
 _NOTIFICATION.fields_by_name['docid'].message_type = _DOCID
 _NOTIFICATION.fields_by_name['appData'].message_type = _ANDROIDAPPNOTIFICATIONDATA
 _NOTIFICATION.fields_by_name['appDeliveryData'].message_type = _ANDROIDAPPDELIVERYDATA
@@ -15781,7 +22548,39 @@ _NOTIFICATION.fields_by_name['inAppNotificationData'].message_type = _INAPPNOTIF
 _NOTIFICATION.fields_by_name['purchaseDeclinedData'].message_type = _PURCHASEDECLINEDDATA
 _NOTIFICATION.fields_by_name['libraryUpdate'].message_type = _LIBRARYUPDATE
 _NOTIFICATION.fields_by_name['libraryDirtyData'].message_type = _LIBRARYDIRTYDATA
-_RESOLVELINKRESPONSE.fields_by_name['directPurchase'].message_type = _DIRECTPURCHASE
+_OWNERSHIPINFO.fields_by_name['developerPurchaseInfo'].message_type = _SIGNEDDATA
+_OWNERSHIPINFO.fields_by_name['rentalTerms'].message_type = _RENTALTERMS
+_OWNERSHIPINFO.fields_by_name['groupLicenseInfo'].message_type = _GROUPLICENSEINFO
+_OWNERSHIPINFO.fields_by_name['licensedDocumentInfo'].message_type = _LICENSEDDOCUMENTINFO
+_PLAYSTOREBACKGROUNDACTIONEVENT.fields_by_name['sessionInfo'].message_type = _PLAYSTORESESSIONDATA
+_PLAYSTOREBACKGROUNDACTIONEVENT.fields_by_name['appData'].message_type = _APPDATA
+_PLAYSTORECLICKEVENT.fields_by_name['elementPath'].message_type = _PLAYSTOREUIELEMENT
+_PLAYSTOREIMPRESSIONEVENT.fields_by_name['tree'].message_type = _PLAYSTOREUIELEMENT
+_PLAYSTOREIMPRESSIONEVENT.fields_by_name['referrerPath'].message_type = _PLAYSTOREUIELEMENT
+_PLAYSTORELOGEVENT.fields_by_name['impression'].message_type = _PLAYSTOREIMPRESSIONEVENT
+_PLAYSTORELOGEVENT.fields_by_name['click'].message_type = _PLAYSTORECLICKEVENT
+_PLAYSTORELOGEVENT.fields_by_name['backgroundAction'].message_type = _PLAYSTOREBACKGROUNDACTIONEVENT
+_PLAYSTORELOGEVENT.fields_by_name['search'].message_type = _PLAYSTORESEARCHEVENT
+_PLAYSTORELOGEVENT.fields_by_name['deepLink'].message_type = _PLAYSTOREDEEPLINKEVENT
+_PLAYSTOREUIELEMENT.fields_by_name['clientLogsCookie'].message_type = _PLAYSTOREUIELEMENTINFO
+_PLAYSTOREUIELEMENT.fields_by_name['child'].message_type = _PLAYSTOREUIELEMENT
+_PLAYSTOREUIELEMENTINFO_INSTRUMENTINFO.containing_type = _PLAYSTOREUIELEMENTINFO
+_PLAYSTOREUIELEMENTINFO.fields_by_name['instrumentInfo'].message_type = _PLAYSTOREUIELEMENTINFO_INSTRUMENTINFO
+_PLUSPROFILE.fields_by_name['profileImage'].message_type = _IMAGE
+_PLUSPROFILERESPONSE.fields_by_name['plusProfile'].message_type = _PLUSPROFILE
+_CLIENTCART.fields_by_name['instrument'].message_type = _INSTRUMENT
+_CLIENTCART.fields_by_name['completePurchaseChallenge'].message_type = _CHALLENGE
+_COMMITPURCHASERESPONSE.fields_by_name['purchaseStatus'].message_type = _PURCHASESTATUS
+_COMMITPURCHASERESPONSE.fields_by_name['challenge'].message_type = _CHALLENGE
+_COMMITPURCHASERESPONSE.fields_by_name['libraryUpdate'].message_type = _LIBRARYUPDATE
+_COMMITPURCHASERESPONSE.fields_by_name['appDeliveryData'].message_type = _ANDROIDAPPDELIVERYDATA
+_PREPAREPURCHASERESPONSE.fields_by_name['purchaseStatus'].message_type = _PURCHASESTATUS
+_PREPAREPURCHASERESPONSE.fields_by_name['challenge'].message_type = _CHALLENGE
+_PREPAREPURCHASERESPONSE.fields_by_name['cart'].message_type = _CLIENTCART
+_PREPAREPURCHASERESPONSE.fields_by_name['libraryUpdate'].message_type = _LIBRARYUPDATE
+_RESOLVEDLINK.fields_by_name['directPurchase'].message_type = _DIRECTPURCHASE
+_RESOLVEDLINK.fields_by_name['redeemGiftCard'].message_type = _REDEEMGIFTCARD
+_RESOLVEDLINK.fields_by_name['docid'].message_type = _DOCID
 _PAYLOAD.fields_by_name['listResponse'].message_type = _LISTRESPONSE
 _PAYLOAD.fields_by_name['detailsResponse'].message_type = _DETAILSRESPONSE
 _PAYLOAD.fields_by_name['reviewResponse'].message_type = _REVIEWRESPONSE
@@ -15801,24 +22600,68 @@ _PAYLOAD.fields_by_name['verifyAssociationResponse'].message_type = _VERIFYASSOC
 _PAYLOAD.fields_by_name['libraryReplicationResponse'].message_type = _LIBRARYREPLICATIONRESPONSE
 _PAYLOAD.fields_by_name['revokeResponse'].message_type = _REVOKERESPONSE
 _PAYLOAD.fields_by_name['bulkDetailsResponse'].message_type = _BULKDETAILSRESPONSE
-_PAYLOAD.fields_by_name['resolveLinkResponse'].message_type = _RESOLVELINKRESPONSE
+_PAYLOAD.fields_by_name['resolveLinkResponse'].message_type = _RESOLVEDLINK
 _PAYLOAD.fields_by_name['deliveryResponse'].message_type = _DELIVERYRESPONSE
 _PAYLOAD.fields_by_name['acceptTosResponse'].message_type = _ACCEPTTOSRESPONSE
 _PAYLOAD.fields_by_name['rateSuggestedContentResponse'].message_type = _RATESUGGESTEDCONTENTRESPONSE
 _PAYLOAD.fields_by_name['checkPromoOfferResponse'].message_type = _CHECKPROMOOFFERRESPONSE
+_PAYLOAD.fields_by_name['instrumentSetupInfoResponse'].message_type = _INSTRUMENTSETUPINFORESPONSE
+_PAYLOAD.fields_by_name['redeemGiftCardResponse'].message_type = _REDEEMGIFTCARDRESPONSE
+_PAYLOAD.fields_by_name['modifyLibraryResponse'].message_type = _MODIFYLIBRARYRESPONSE
+_PAYLOAD.fields_by_name['uploadDeviceConfigResponse'].message_type = _UPLOADDEVICECONFIGRESPONSE
+_PAYLOAD.fields_by_name['plusProfileResponse'].message_type = _PLUSPROFILERESPONSE
+_PAYLOAD.fields_by_name['consumePurchaseResponse'].message_type = _CONSUMEPURCHASERESPONSE
+_PAYLOAD.fields_by_name['billingProfileResponse'].message_type = _BILLINGPROFILERESPONSE
+_PAYLOAD.fields_by_name['preparePurchaseResponse'].message_type = _PREPAREPURCHASERESPONSE
+_PAYLOAD.fields_by_name['commitPurchaseResponse'].message_type = _COMMITPURCHASERESPONSE
+_PAYLOAD.fields_by_name['debugSettingsResponse'].message_type = _DEBUGSETTINGSRESPONSE
+_PAYLOAD.fields_by_name['checkIabPromoResponse'].message_type = _CHECKIABPROMORESPONSE
+_PAYLOAD.fields_by_name['userActivitySettingsResponse'].message_type = _USERACTIVITYSETTINGSRESPONSE
+_PAYLOAD.fields_by_name['recordUserActivityResponse'].message_type = _RECORDUSERACTIVITYRESPONSE
+_PAYLOAD.fields_by_name['redeemCodeResponse'].message_type = _REDEEMCODERESPONSE
+_PAYLOAD.fields_by_name['selfUpdateResponse'].message_type = _SELFUPDATERESPONSE
+_PAYLOAD.fields_by_name['searchSuggestResponse'].message_type = _SEARCHSUGGESTRESPONSE
+_PAYLOAD.fields_by_name['getInitialInstrumentFlowStateResponse'].message_type = _GETINITIALINSTRUMENTFLOWSTATERESPONSE
+_PAYLOAD.fields_by_name['createInstrumentResponse'].message_type = _CREATEINSTRUMENTRESPONSE
+_PAYLOAD.fields_by_name['challengeResponse'].message_type = _CHALLENGERESPONSE
+_PAYLOAD.fields_by_name['backupDeviceChoicesResponse'].message_type = _BACKDEVICECHOICESRESPONSE
+_PAYLOAD.fields_by_name['backupDocumentChoicesResponse'].message_type = _BACKUPDOCUMENTCHOICESRESPONSE
+_PAYLOAD.fields_by_name['earlyUpdateResponse'].message_type = _EARLYUPDATERESPONSE
+_PAYLOAD.fields_by_name['preloadsResponse'].message_type = _PRELOADSRESPONSE
+_PAYLOAD.fields_by_name['myAccountsResponse'].message_type = _MYACCOUNTSRESPONSE
+_PAYLOAD.fields_by_name['contentFilterResponse'].message_type = _CONTENTFILTERRESPONSE
+_PAYLOAD.fields_by_name['experimentsResponse'].message_type = _EXPERIMENTSRESPONSE
+_PAYLOAD.fields_by_name['surveyResponse'].message_type = _SURVEYRESPONSE
+_PAYLOAD.fields_by_name['pingResponse'].message_type = _PINGRESPONSE
+_PAYLOAD.fields_by_name['updateUserSettingResponse'].message_type = _UPDATEUSERSETTINGRESPONSE
+_PAYLOAD.fields_by_name['getUserSettingsREsponse'].message_type = _GETUSERSETTINGSRESPONSE
+_PAYLOAD.fields_by_name['getSharingSettingsResponse'].message_type = _GETSHARINGSETTINGSRESPONSE
+_PAYLOAD.fields_by_name['updateSharingSettingsResponse'].message_type = _UPDATESHARINGSETTINGSRESPONSE
+_PAYLOAD.fields_by_name['reviewSnippetsResponse'].message_type = _REVIEWSNIPPETSRESPONSE
+_PAYLOAD.fields_by_name['documentSharingStateResponse'].message_type = _DOCUMENTSHARINGSTATERESPONSE
+_PAYLOAD.fields_by_name['moduleDeliveryResponse'].message_type = _MODULEDELIVERYRESPONSE
 _RESPONSEWRAPPER.fields_by_name['payload'].message_type = _PAYLOAD
 _RESPONSEWRAPPER.fields_by_name['commands'].message_type = _SERVERCOMMANDS
 _RESPONSEWRAPPER.fields_by_name['preFetch'].message_type = _PREFETCH
 _RESPONSEWRAPPER.fields_by_name['notification'].message_type = _NOTIFICATION
+_RESPONSEWRAPPER.fields_by_name['serverMetadata'].message_type = _SERVERMETADATA
 _GETREVIEWSRESPONSE.fields_by_name['review'].message_type = _REVIEW
+_REVIEW.fields_by_name['plusProfile'].message_type = _PLUSPROFILE
+_REVIEW.fields_by_name['author'].message_type = _DOCV2
+_REVIEW.fields_by_name['sentiment'].message_type = _IMAGE
 _REVIEWRESPONSE.fields_by_name['getResponse'].message_type = _GETREVIEWSRESPONSE
+_REVIEWRESPONSE.fields_by_name['updatedReview'].message_type = _REVIEW
 _REVOKERESPONSE.fields_by_name['libraryUpdate'].message_type = _LIBRARYUPDATE
 _SEARCHRESPONSE.fields_by_name['bucket'].message_type = _BUCKET
 _SEARCHRESPONSE.fields_by_name['doc'].message_type = _DOCV2
 _SEARCHRESPONSE.fields_by_name['relatedSearch'].message_type = _RELATEDSEARCH
+_BILLINGCONFIG.fields_by_name['carrierBillingConfig'].message_type = _CARRIERBILLINGCONFIG
 _TOCRESPONSE.fields_by_name['corpus'].message_type = _CORPUSMETADATA
 _TOCRESPONSE.fields_by_name['experiments'].message_type = _EXPERIMENTS
 _TOCRESPONSE.fields_by_name['userSettings'].message_type = _USERSETTINGS
+_TOCRESPONSE.fields_by_name['selfUpdateConfig'].message_type = _SELFUPDATECONFIG
+_TOCRESPONSE.fields_by_name['billingConfig'].message_type = _BILLINGCONFIG
+_UPLOADDEVICECONFIGREQUEST.fields_by_name['deviceConfiguration'].message_type = _DEVICECONFIGURATIONPROTO
 _ACKNOTIFICATIONSREQUESTPROTO.fields_by_name['signatureHash'].message_type = _SIGNATUREHASHPROTO
 _APPSUGGESTIONPROTO.fields_by_name['assetInfo'].message_type = _EXTERNALASSETPROTO
 _ASSETSRESPONSEPROTO.fields_by_name['asset'].message_type = _EXTERNALASSETPROTO
@@ -16048,8 +22891,12 @@ _SINGLERESPONSEPROTO.fields_by_name['purchaseProductResponse'].message_type = _P
 _SINGLERESPONSEPROTO.fields_by_name['reconstructDatabaseResponse'].message_type = _RECONSTRUCTDATABASERESPONSEPROTO
 _SINGLERESPONSEPROTO.fields_by_name['paypalMassageAddressResponse'].message_type = _PAYPALMASSAGEADDRESSRESPONSEPROTO
 _SINGLERESPONSEPROTO.fields_by_name['getAddressSnippetResponse'].message_type = _GETADDRESSSNIPPETRESPONSEPROTO
+_CRITICREVIEWSRESPONSE.fields_by_name['aggregateSentiment'].message_type = _IMAGE
+_CRITICREVIEWSRESPONSE.fields_by_name['source'].message_type = _LINK
+_CRITICREVIEWSRESPONSE.fields_by_name['review'].message_type = _REVIEW
 DESCRIPTOR.message_types_by_name['AckNotificationResponse'] = _ACKNOTIFICATIONRESPONSE
 DESCRIPTOR.message_types_by_name['AndroidAppDeliveryData'] = _ANDROIDAPPDELIVERYDATA
+DESCRIPTOR.message_types_by_name['SplitDeliveryData'] = _SPLITDELIVERYDATA
 DESCRIPTOR.message_types_by_name['AndroidAppPatchData'] = _ANDROIDAPPPATCHDATA
 DESCRIPTOR.message_types_by_name['AppFileMetadata'] = _APPFILEMETADATA
 DESCRIPTOR.message_types_by_name['EncryptionParams'] = _ENCRYPTIONPARAMS
@@ -16060,77 +22907,133 @@ DESCRIPTOR.message_types_by_name['BookDetails'] = _BOOKDETAILS
 DESCRIPTOR.message_types_by_name['BookSubject'] = _BOOKSUBJECT
 DESCRIPTOR.message_types_by_name['BrowseLink'] = _BROWSELINK
 DESCRIPTOR.message_types_by_name['BrowseResponse'] = _BROWSERESPONSE
-DESCRIPTOR.message_types_by_name['AddressChallenge'] = _ADDRESSCHALLENGE
-DESCRIPTOR.message_types_by_name['AuthenticationChallenge'] = _AUTHENTICATIONCHALLENGE
+DESCRIPTOR.message_types_by_name['QuickLink'] = _QUICKLINK
 DESCRIPTOR.message_types_by_name['BuyResponse'] = _BUYRESPONSE
-DESCRIPTOR.message_types_by_name['Challenge'] = _CHALLENGE
-DESCRIPTOR.message_types_by_name['FormCheckbox'] = _FORMCHECKBOX
 DESCRIPTOR.message_types_by_name['LineItem'] = _LINEITEM
 DESCRIPTOR.message_types_by_name['Money'] = _MONEY
 DESCRIPTOR.message_types_by_name['PurchaseNotificationResponse'] = _PURCHASENOTIFICATIONRESPONSE
 DESCRIPTOR.message_types_by_name['PurchaseStatusResponse'] = _PURCHASESTATUSRESPONSE
+DESCRIPTOR.message_types_by_name['BillingProfileResponse'] = _BILLINGPROFILERESPONSE
 DESCRIPTOR.message_types_by_name['CheckInstrumentResponse'] = _CHECKINSTRUMENTRESPONSE
+DESCRIPTOR.message_types_by_name['InstrumentSetupInfoResponse'] = _INSTRUMENTSETUPINFORESPONSE
+DESCRIPTOR.message_types_by_name['RedeemGiftCardRequest'] = _REDEEMGIFTCARDREQUEST
+DESCRIPTOR.message_types_by_name['RedeemGiftCardResponse'] = _REDEEMGIFTCARDRESPONSE
 DESCRIPTOR.message_types_by_name['UpdateInstrumentRequest'] = _UPDATEINSTRUMENTREQUEST
 DESCRIPTOR.message_types_by_name['UpdateInstrumentResponse'] = _UPDATEINSTRUMENTRESPONSE
 DESCRIPTOR.message_types_by_name['InitiateAssociationResponse'] = _INITIATEASSOCIATIONRESPONSE
 DESCRIPTOR.message_types_by_name['VerifyAssociationResponse'] = _VERIFYASSOCIATIONRESPONSE
+DESCRIPTOR.message_types_by_name['AddressChallenge'] = _ADDRESSCHALLENGE
+DESCRIPTOR.message_types_by_name['AuthenticationChallenge'] = _AUTHENTICATIONCHALLENGE
+DESCRIPTOR.message_types_by_name['Challenge'] = _CHALLENGE
+DESCRIPTOR.message_types_by_name['Country'] = _COUNTRY
+DESCRIPTOR.message_types_by_name['FormCheckbox'] = _FORMCHECKBOX
+DESCRIPTOR.message_types_by_name['InputValidationError'] = _INPUTVALIDATIONERROR
+DESCRIPTOR.message_types_by_name['WebViewChallenge'] = _WEBVIEWCHALLENGE
 DESCRIPTOR.message_types_by_name['AddCreditCardPromoOffer'] = _ADDCREDITCARDPROMOOFFER
 DESCRIPTOR.message_types_by_name['AvailablePromoOffer'] = _AVAILABLEPROMOOFFER
 DESCRIPTOR.message_types_by_name['CheckPromoOfferResponse'] = _CHECKPROMOOFFERRESPONSE
 DESCRIPTOR.message_types_by_name['RedeemedPromoOffer'] = _REDEEMEDPROMOOFFER
+DESCRIPTOR.message_types_by_name['ActiveExperiments'] = _ACTIVEEXPERIMENTS
+DESCRIPTOR.message_types_by_name['AndroidClientInfo'] = _ANDROIDCLIENTINFO
+DESCRIPTOR.message_types_by_name['ClientInfo'] = _CLIENTINFO
+DESCRIPTOR.message_types_by_name['DesktopClientInfo'] = _DESKTOPCLIENTINFO
+DESCRIPTOR.message_types_by_name['ExperimentIdList'] = _EXPERIMENTIDLIST
+DESCRIPTOR.message_types_by_name['IosClientInfo'] = _IOSCLIENTINFO
+DESCRIPTOR.message_types_by_name['LogEvent'] = _LOGEVENT
+DESCRIPTOR.message_types_by_name['LogEventKeyValues'] = _LOGEVENTKEYVALUES
+DESCRIPTOR.message_types_by_name['LogRequest'] = _LOGREQUEST
+DESCRIPTOR.message_types_by_name['LogResponse'] = _LOGRESPONSE
 DESCRIPTOR.message_types_by_name['Docid'] = _DOCID
 DESCRIPTOR.message_types_by_name['Install'] = _INSTALL
+DESCRIPTOR.message_types_by_name['GroupLicenseKey'] = _GROUPLICENSEKEY
+DESCRIPTOR.message_types_by_name['LicenseTerms'] = _LICENSETERMS
 DESCRIPTOR.message_types_by_name['Offer'] = _OFFER
-DESCRIPTOR.message_types_by_name['OwnershipInfo'] = _OWNERSHIPINFO
+DESCRIPTOR.message_types_by_name['MonthAndDay'] = _MONTHANDDAY
+DESCRIPTOR.message_types_by_name['OfferPaymentPeriod'] = _OFFERPAYMENTPERIOD
+DESCRIPTOR.message_types_by_name['OfferPaymentOverride'] = _OFFERPAYMENTOVERRIDE
+DESCRIPTOR.message_types_by_name['OfferPayment'] = _OFFERPAYMENT
+DESCRIPTOR.message_types_by_name['VoucherTerms'] = _VOUCHERTERMS
 DESCRIPTOR.message_types_by_name['RentalTerms'] = _RENTALTERMS
+DESCRIPTOR.message_types_by_name['SignedData'] = _SIGNEDDATA
+DESCRIPTOR.message_types_by_name['SubscriptionContentTerms'] = _SUBSCRIPTIONCONTENTTERMS
 DESCRIPTOR.message_types_by_name['SubscriptionTerms'] = _SUBSCRIPTIONTERMS
 DESCRIPTOR.message_types_by_name['TimePeriod'] = _TIMEPERIOD
 DESCRIPTOR.message_types_by_name['BillingAddressSpec'] = _BILLINGADDRESSSPEC
+DESCRIPTOR.message_types_by_name['BillingProfile'] = _BILLINGPROFILE
+DESCRIPTOR.message_types_by_name['BillingProfileOption'] = _BILLINGPROFILEOPTION
 DESCRIPTOR.message_types_by_name['CarrierBillingCredentials'] = _CARRIERBILLINGCREDENTIALS
 DESCRIPTOR.message_types_by_name['CarrierBillingInstrument'] = _CARRIERBILLINGINSTRUMENT
 DESCRIPTOR.message_types_by_name['CarrierBillingInstrumentStatus'] = _CARRIERBILLINGINSTRUMENTSTATUS
 DESCRIPTOR.message_types_by_name['CarrierTos'] = _CARRIERTOS
 DESCRIPTOR.message_types_by_name['CarrierTosEntry'] = _CARRIERTOSENTRY
 DESCRIPTOR.message_types_by_name['CreditCardInstrument'] = _CREDITCARDINSTRUMENT
+DESCRIPTOR.message_types_by_name['DeviceAssociation'] = _DEVICEASSOCIATION
+DESCRIPTOR.message_types_by_name['DisabledInfo'] = _DISABLEDINFO
 DESCRIPTOR.message_types_by_name['EfeParam'] = _EFEPARAM
-DESCRIPTOR.message_types_by_name['InputValidationError'] = _INPUTVALIDATIONERROR
 DESCRIPTOR.message_types_by_name['Instrument'] = _INSTRUMENT
+DESCRIPTOR.message_types_by_name['InstrumentSetupInfo'] = _INSTRUMENTSETUPINFO
 DESCRIPTOR.message_types_by_name['PasswordPrompt'] = _PASSWORDPROMPT
+DESCRIPTOR.message_types_by_name['StoredValueInstrument'] = _STOREDVALUEINSTRUMENT
+DESCRIPTOR.message_types_by_name['TopupInfo'] = _TOPUPINFO
+DESCRIPTOR.message_types_by_name['ConsumePurchaseResponse'] = _CONSUMEPURCHASERESPONSE
 DESCRIPTOR.message_types_by_name['ContainerMetadata'] = _CONTAINERMETADATA
+DESCRIPTOR.message_types_by_name['ContainerView'] = _CONTAINERVIEW
 DESCRIPTOR.message_types_by_name['FlagContentResponse'] = _FLAGCONTENTRESPONSE
+DESCRIPTOR.message_types_by_name['ClientDownloadRequest'] = _CLIENTDOWNLOADREQUEST
+DESCRIPTOR.message_types_by_name['ClientDownloadResponse'] = _CLIENTDOWNLOADRESPONSE
+DESCRIPTOR.message_types_by_name['ClientDownloadStatsRequest'] = _CLIENTDOWNLOADSTATSREQUEST
 DESCRIPTOR.message_types_by_name['DebugInfo'] = _DEBUGINFO
+DESCRIPTOR.message_types_by_name['DebugSettingsResponse'] = _DEBUGSETTINGSRESPONSE
 DESCRIPTOR.message_types_by_name['DeliveryResponse'] = _DELIVERYRESPONSE
 DESCRIPTOR.message_types_by_name['BulkDetailsEntry'] = _BULKDETAILSENTRY
 DESCRIPTOR.message_types_by_name['BulkDetailsRequest'] = _BULKDETAILSREQUEST
 DESCRIPTOR.message_types_by_name['BulkDetailsResponse'] = _BULKDETAILSRESPONSE
 DESCRIPTOR.message_types_by_name['DetailsResponse'] = _DETAILSRESPONSE
+DESCRIPTOR.message_types_by_name['DiscoveryBadge'] = _DISCOVERYBADGE
+DESCRIPTOR.message_types_by_name['DiscoveryBadgeLink'] = _DISCOVERYBADGELINK
 DESCRIPTOR.message_types_by_name['DeviceConfigurationProto'] = _DEVICECONFIGURATIONPROTO
 DESCRIPTOR.message_types_by_name['Document'] = _DOCUMENT
 DESCRIPTOR.message_types_by_name['DocumentVariant'] = _DOCUMENTVARIANT
 DESCRIPTOR.message_types_by_name['Image'] = _IMAGE
+DESCRIPTOR.message_types_by_name['ImagePalette'] = _IMAGEPALETTE
+DESCRIPTOR.message_types_by_name['Attribution'] = _ATTRIBUTION
 DESCRIPTOR.message_types_by_name['TranslatedText'] = _TRANSLATEDTEXT
 DESCRIPTOR.message_types_by_name['Badge'] = _BADGE
+DESCRIPTOR.message_types_by_name['BadgeContainer'] = _BADGECONTAINER
 DESCRIPTOR.message_types_by_name['ContainerWithBanner'] = _CONTAINERWITHBANNER
 DESCRIPTOR.message_types_by_name['DealOfTheDay'] = _DEALOFTHEDAY
+DESCRIPTOR.message_types_by_name['Dismissal'] = _DISMISSAL
 DESCRIPTOR.message_types_by_name['EditorialSeriesContainer'] = _EDITORIALSERIESCONTAINER
 DESCRIPTOR.message_types_by_name['Link'] = _LINK
+DESCRIPTOR.message_types_by_name['NextBanner'] = _NEXTBANNER
+DESCRIPTOR.message_types_by_name['OBSOLETE_Reason'] = _OBSOLETE_REASON
 DESCRIPTOR.message_types_by_name['PlusOneData'] = _PLUSONEDATA
-DESCRIPTOR.message_types_by_name['PlusPerson'] = _PLUSPERSON
 DESCRIPTOR.message_types_by_name['PromotedDoc'] = _PROMOTEDDOC
 DESCRIPTOR.message_types_by_name['Reason'] = _REASON
+DESCRIPTOR.message_types_by_name['ReasonPlusProfiles'] = _REASONPLUSPROFILES
+DESCRIPTOR.message_types_by_name['ReasonReview'] = _REASONREVIEW
+DESCRIPTOR.message_types_by_name['RecommendationsContainer'] = _RECOMMENDATIONSCONTAINER
 DESCRIPTOR.message_types_by_name['SectionMetadata'] = _SECTIONMETADATA
 DESCRIPTOR.message_types_by_name['SeriesAntenna'] = _SERIESANTENNA
+DESCRIPTOR.message_types_by_name['SuggestionReasons'] = _SUGGESTIONREASONS
 DESCRIPTOR.message_types_by_name['Template'] = _TEMPLATE
 DESCRIPTOR.message_types_by_name['TileTemplate'] = _TILETEMPLATE
+DESCRIPTOR.message_types_by_name['VideoSnippet'] = _VIDEOSNIPPET
 DESCRIPTOR.message_types_by_name['Warning'] = _WARNING
 DESCRIPTOR.message_types_by_name['AlbumDetails'] = _ALBUMDETAILS
+DESCRIPTOR.message_types_by_name['Dependency'] = _DEPENDENCY
+DESCRIPTOR.message_types_by_name['InstallDetails'] = _INSTALLDETAILS
 DESCRIPTOR.message_types_by_name['AppDetails'] = _APPDETAILS
+DESCRIPTOR.message_types_by_name['CertificateSet'] = _CERTIFICATESET
+DESCRIPTOR.message_types_by_name['AppPermission'] = _APPPERMISSION
 DESCRIPTOR.message_types_by_name['ArtistDetails'] = _ARTISTDETAILS
 DESCRIPTOR.message_types_by_name['ArtistExternalLinks'] = _ARTISTEXTERNALLINKS
 DESCRIPTOR.message_types_by_name['DocumentDetails'] = _DOCUMENTDETAILS
+DESCRIPTOR.message_types_by_name['PatchDetails'] = _PATCHDETAILS
 DESCRIPTOR.message_types_by_name['FileMetadata'] = _FILEMETADATA
 DESCRIPTOR.message_types_by_name['MagazineDetails'] = _MAGAZINEDETAILS
 DESCRIPTOR.message_types_by_name['MusicDetails'] = _MUSICDETAILS
+DESCRIPTOR.message_types_by_name['NewsDetails'] = _NEWSDETAILS
 DESCRIPTOR.message_types_by_name['SongDetails'] = _SONGDETAILS
 DESCRIPTOR.message_types_by_name['SubscriptionDetails'] = _SUBSCRIPTIONDETAILS
 DESCRIPTOR.message_types_by_name['Trailer'] = _TRAILER
@@ -16144,13 +23047,22 @@ DESCRIPTOR.message_types_by_name['Bucket'] = _BUCKET
 DESCRIPTOR.message_types_by_name['ListResponse'] = _LISTRESPONSE
 DESCRIPTOR.message_types_by_name['DocV1'] = _DOCV1
 DESCRIPTOR.message_types_by_name['Annotations'] = _ANNOTATIONS
+DESCRIPTOR.message_types_by_name['OverflowLink'] = _OVERFLOWLINK
+DESCRIPTOR.message_types_by_name['ReviewTip'] = _REVIEWTIP
 DESCRIPTOR.message_types_by_name['DocV2'] = _DOCV2
+DESCRIPTOR.message_types_by_name['ProductDetails'] = _PRODUCTDETAILS
+DESCRIPTOR.message_types_by_name['ProductDetailsSection'] = _PRODUCTDETAILSSECTION
+DESCRIPTOR.message_types_by_name['ProductDetailsDescription'] = _PRODUCTDETAILSDESCRIPTION
 DESCRIPTOR.message_types_by_name['EncryptedSubscriberInfo'] = _ENCRYPTEDSUBSCRIBERINFO
 DESCRIPTOR.message_types_by_name['Availability'] = _AVAILABILITY
+DESCRIPTOR.message_types_by_name['AvailabilityProblem'] = _AVAILABILITYPROBLEM
 DESCRIPTOR.message_types_by_name['FilterEvaluationInfo'] = _FILTEREVALUATIONINFO
 DESCRIPTOR.message_types_by_name['Rule'] = _RULE
 DESCRIPTOR.message_types_by_name['RuleEvaluation'] = _RULEEVALUATION
+DESCRIPTOR.message_types_by_name['GroupLicenseInfo'] = _GROUPLICENSEINFO
+DESCRIPTOR.message_types_by_name['LicensedDocumentInfo'] = _LICENSEDDOCUMENTINFO
 DESCRIPTOR.message_types_by_name['LibraryAppDetails'] = _LIBRARYAPPDETAILS
+DESCRIPTOR.message_types_by_name['LibraryInAppDetails'] = _LIBRARYINAPPDETAILS
 DESCRIPTOR.message_types_by_name['LibraryMutation'] = _LIBRARYMUTATION
 DESCRIPTOR.message_types_by_name['LibrarySubscriptionDetails'] = _LIBRARYSUBSCRIPTIONDETAILS
 DESCRIPTOR.message_types_by_name['LibraryUpdate'] = _LIBRARYUPDATE
@@ -16158,8 +23070,8 @@ DESCRIPTOR.message_types_by_name['ClientLibraryState'] = _CLIENTLIBRARYSTATE
 DESCRIPTOR.message_types_by_name['LibraryReplicationRequest'] = _LIBRARYREPLICATIONREQUEST
 DESCRIPTOR.message_types_by_name['LibraryReplicationResponse'] = _LIBRARYREPLICATIONRESPONSE
 DESCRIPTOR.message_types_by_name['ClickLogEvent'] = _CLICKLOGEVENT
-DESCRIPTOR.message_types_by_name['LogRequest'] = _LOGREQUEST
-DESCRIPTOR.message_types_by_name['LogResponse'] = _LOGRESPONSE
+DESCRIPTOR.message_types_by_name['ModifyLibraryRequest'] = _MODIFYLIBRARYREQUEST
+DESCRIPTOR.message_types_by_name['ModifyLibraryResponse'] = _MODIFYLIBRARYRESPONSE
 DESCRIPTOR.message_types_by_name['AndroidAppNotificationData'] = _ANDROIDAPPNOTIFICATIONDATA
 DESCRIPTOR.message_types_by_name['InAppNotificationData'] = _INAPPNOTIFICATIONDATA
 DESCRIPTOR.message_types_by_name['LibraryDirtyData'] = _LIBRARYDIRTYDATA
@@ -16167,26 +23079,75 @@ DESCRIPTOR.message_types_by_name['Notification'] = _NOTIFICATION
 DESCRIPTOR.message_types_by_name['PurchaseDeclinedData'] = _PURCHASEDECLINEDDATA
 DESCRIPTOR.message_types_by_name['PurchaseRemovalData'] = _PURCHASEREMOVALDATA
 DESCRIPTOR.message_types_by_name['UserNotificationData'] = _USERNOTIFICATIONDATA
+DESCRIPTOR.message_types_by_name['OwnershipInfo'] = _OWNERSHIPINFO
+DESCRIPTOR.message_types_by_name['AppData'] = _APPDATA
+DESCRIPTOR.message_types_by_name['PlayStoreBackgroundActionEvent'] = _PLAYSTOREBACKGROUNDACTIONEVENT
+DESCRIPTOR.message_types_by_name['PlayStoreClickEvent'] = _PLAYSTORECLICKEVENT
+DESCRIPTOR.message_types_by_name['PlayStoreDeepLinkEvent'] = _PLAYSTOREDEEPLINKEVENT
+DESCRIPTOR.message_types_by_name['PlayStoreImpressionEvent'] = _PLAYSTOREIMPRESSIONEVENT
+DESCRIPTOR.message_types_by_name['PlayStoreLogEvent'] = _PLAYSTORELOGEVENT
+DESCRIPTOR.message_types_by_name['PlayStoreSearchEvent'] = _PLAYSTORESEARCHEVENT
+DESCRIPTOR.message_types_by_name['PlayStoreSessionData'] = _PLAYSTORESESSIONDATA
+DESCRIPTOR.message_types_by_name['PlayStoreUiElement'] = _PLAYSTOREUIELEMENT
+DESCRIPTOR.message_types_by_name['PlayStoreUiElementInfo'] = _PLAYSTOREUIELEMENTINFO
+DESCRIPTOR.message_types_by_name['PlusProfile'] = _PLUSPROFILE
 DESCRIPTOR.message_types_by_name['PlusOneResponse'] = _PLUSONERESPONSE
+DESCRIPTOR.message_types_by_name['PlusProfileResponse'] = _PLUSPROFILERESPONSE
+DESCRIPTOR.message_types_by_name['ClientCart'] = _CLIENTCART
+DESCRIPTOR.message_types_by_name['CommitPurchaseResponse'] = _COMMITPURCHASERESPONSE
+DESCRIPTOR.message_types_by_name['PreparePurchaseResponse'] = _PREPAREPURCHASERESPONSE
+DESCRIPTOR.message_types_by_name['PurchaseStatus'] = _PURCHASESTATUS
 DESCRIPTOR.message_types_by_name['RateSuggestedContentResponse'] = _RATESUGGESTEDCONTENTRESPONSE
 DESCRIPTOR.message_types_by_name['AggregateRating'] = _AGGREGATERATING
 DESCRIPTOR.message_types_by_name['DirectPurchase'] = _DIRECTPURCHASE
-DESCRIPTOR.message_types_by_name['ResolveLinkResponse'] = _RESOLVELINKRESPONSE
+DESCRIPTOR.message_types_by_name['RedeemGiftCard'] = _REDEEMGIFTCARD
+DESCRIPTOR.message_types_by_name['ResolvedLink'] = _RESOLVEDLINK
 DESCRIPTOR.message_types_by_name['Payload'] = _PAYLOAD
+DESCRIPTOR.message_types_by_name['CheckIabPromoResponse'] = _CHECKIABPROMORESPONSE
+DESCRIPTOR.message_types_by_name['UserActivitySettingsResponse'] = _USERACTIVITYSETTINGSRESPONSE
+DESCRIPTOR.message_types_by_name['RecordUserActivityResponse'] = _RECORDUSERACTIVITYRESPONSE
+DESCRIPTOR.message_types_by_name['RedeemCodeResponse'] = _REDEEMCODERESPONSE
+DESCRIPTOR.message_types_by_name['SelfUpdateResponse'] = _SELFUPDATERESPONSE
+DESCRIPTOR.message_types_by_name['searchSuggestResponse'] = _SEARCHSUGGESTRESPONSE
+DESCRIPTOR.message_types_by_name['GetInitialInstrumentFlowStateResponse'] = _GETINITIALINSTRUMENTFLOWSTATERESPONSE
+DESCRIPTOR.message_types_by_name['CreateInstrumentResponse'] = _CREATEINSTRUMENTRESPONSE
+DESCRIPTOR.message_types_by_name['ChallengeResponse'] = _CHALLENGERESPONSE
+DESCRIPTOR.message_types_by_name['BackDeviceChoicesResponse'] = _BACKDEVICECHOICESRESPONSE
+DESCRIPTOR.message_types_by_name['BackupDocumentChoicesResponse'] = _BACKUPDOCUMENTCHOICESRESPONSE
+DESCRIPTOR.message_types_by_name['EarlyUpdateResponse'] = _EARLYUPDATERESPONSE
+DESCRIPTOR.message_types_by_name['PreloadsResponse'] = _PRELOADSRESPONSE
+DESCRIPTOR.message_types_by_name['MyAccountsResponse'] = _MYACCOUNTSRESPONSE
+DESCRIPTOR.message_types_by_name['ContentFilterResponse'] = _CONTENTFILTERRESPONSE
+DESCRIPTOR.message_types_by_name['ExperimentsResponse'] = _EXPERIMENTSRESPONSE
+DESCRIPTOR.message_types_by_name['SurveyResponse'] = _SURVEYRESPONSE
+DESCRIPTOR.message_types_by_name['PingResponse'] = _PINGRESPONSE
+DESCRIPTOR.message_types_by_name['UpdateUserSettingResponse'] = _UPDATEUSERSETTINGRESPONSE
+DESCRIPTOR.message_types_by_name['GetUserSettingsResponse'] = _GETUSERSETTINGSRESPONSE
+DESCRIPTOR.message_types_by_name['GetSharingSettingsResponse'] = _GETSHARINGSETTINGSRESPONSE
+DESCRIPTOR.message_types_by_name['UpdateSharingSettingsResponse'] = _UPDATESHARINGSETTINGSRESPONSE
+DESCRIPTOR.message_types_by_name['ReviewSnippetsResponse'] = _REVIEWSNIPPETSRESPONSE
+DESCRIPTOR.message_types_by_name['DocumentSharingStateResponse'] = _DOCUMENTSHARINGSTATERESPONSE
+DESCRIPTOR.message_types_by_name['ModuleDeliveryResponse'] = _MODULEDELIVERYRESPONSE
 DESCRIPTOR.message_types_by_name['PreFetch'] = _PREFETCH
 DESCRIPTOR.message_types_by_name['ResponseWrapper'] = _RESPONSEWRAPPER
 DESCRIPTOR.message_types_by_name['ServerCommands'] = _SERVERCOMMANDS
+DESCRIPTOR.message_types_by_name['ServerMetadata'] = _SERVERMETADATA
 DESCRIPTOR.message_types_by_name['GetReviewsResponse'] = _GETREVIEWSRESPONSE
 DESCRIPTOR.message_types_by_name['Review'] = _REVIEW
 DESCRIPTOR.message_types_by_name['ReviewResponse'] = _REVIEWRESPONSE
 DESCRIPTOR.message_types_by_name['RevokeResponse'] = _REVOKERESPONSE
 DESCRIPTOR.message_types_by_name['RelatedSearch'] = _RELATEDSEARCH
 DESCRIPTOR.message_types_by_name['SearchResponse'] = _SEARCHRESPONSE
+DESCRIPTOR.message_types_by_name['BillingConfig'] = _BILLINGCONFIG
+DESCRIPTOR.message_types_by_name['CarrierBillingConfig'] = _CARRIERBILLINGCONFIG
 DESCRIPTOR.message_types_by_name['CorpusMetadata'] = _CORPUSMETADATA
 DESCRIPTOR.message_types_by_name['Experiments'] = _EXPERIMENTS
+DESCRIPTOR.message_types_by_name['SelfUpdateConfig'] = _SELFUPDATECONFIG
 DESCRIPTOR.message_types_by_name['TocResponse'] = _TOCRESPONSE
 DESCRIPTOR.message_types_by_name['UserSettings'] = _USERSETTINGS
 DESCRIPTOR.message_types_by_name['AcceptTosResponse'] = _ACCEPTTOSRESPONSE
+DESCRIPTOR.message_types_by_name['UploadDeviceConfigRequest'] = _UPLOADDEVICECONFIGREQUEST
+DESCRIPTOR.message_types_by_name['UploadDeviceConfigResponse'] = _UPLOADDEVICECONFIGRESPONSE
 DESCRIPTOR.message_types_by_name['AckNotificationsRequestProto'] = _ACKNOTIFICATIONSREQUESTPROTO
 DESCRIPTOR.message_types_by_name['AckNotificationsResponseProto'] = _ACKNOTIFICATIONSRESPONSEPROTO
 DESCRIPTOR.message_types_by_name['AddressProto'] = _ADDRESSPROTO
@@ -16288,7 +23249,7 @@ DESCRIPTOR.message_types_by_name['SingleResponseProto'] = _SINGLERESPONSEPROTO
 DESCRIPTOR.message_types_by_name['StatusBarNotificationProto'] = _STATUSBARNOTIFICATIONPROTO
 DESCRIPTOR.message_types_by_name['UninstallReasonRequestProto'] = _UNINSTALLREASONREQUESTPROTO
 DESCRIPTOR.message_types_by_name['UninstallReasonResponseProto'] = _UNINSTALLREASONRESPONSEPROTO
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
+DESCRIPTOR.message_types_by_name['CriticReviewsResponse'] = _CRITICREVIEWSRESPONSE
 
 AckNotificationResponse = _reflection.GeneratedProtocolMessageType('AckNotificationResponse', (_message.Message,), dict(
   DESCRIPTOR = _ACKNOTIFICATIONRESPONSE,
@@ -16303,6 +23264,13 @@ AndroidAppDeliveryData = _reflection.GeneratedProtocolMessageType('AndroidAppDel
   # @@protoc_insertion_point(class_scope:AndroidAppDeliveryData)
   ))
 _sym_db.RegisterMessage(AndroidAppDeliveryData)
+
+SplitDeliveryData = _reflection.GeneratedProtocolMessageType('SplitDeliveryData', (_message.Message,), dict(
+  DESCRIPTOR = _SPLITDELIVERYDATA,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:SplitDeliveryData)
+  ))
+_sym_db.RegisterMessage(SplitDeliveryData)
 
 AndroidAppPatchData = _reflection.GeneratedProtocolMessageType('AndroidAppPatchData', (_message.Message,), dict(
   DESCRIPTOR = _ANDROIDAPPPATCHDATA,
@@ -16382,19 +23350,12 @@ BrowseResponse = _reflection.GeneratedProtocolMessageType('BrowseResponse', (_me
   ))
 _sym_db.RegisterMessage(BrowseResponse)
 
-AddressChallenge = _reflection.GeneratedProtocolMessageType('AddressChallenge', (_message.Message,), dict(
-  DESCRIPTOR = _ADDRESSCHALLENGE,
+QuickLink = _reflection.GeneratedProtocolMessageType('QuickLink', (_message.Message,), dict(
+  DESCRIPTOR = _QUICKLINK,
   __module__ = 'googleplay_pb2'
-  # @@protoc_insertion_point(class_scope:AddressChallenge)
+  # @@protoc_insertion_point(class_scope:QuickLink)
   ))
-_sym_db.RegisterMessage(AddressChallenge)
-
-AuthenticationChallenge = _reflection.GeneratedProtocolMessageType('AuthenticationChallenge', (_message.Message,), dict(
-  DESCRIPTOR = _AUTHENTICATIONCHALLENGE,
-  __module__ = 'googleplay_pb2'
-  # @@protoc_insertion_point(class_scope:AuthenticationChallenge)
-  ))
-_sym_db.RegisterMessage(AuthenticationChallenge)
+_sym_db.RegisterMessage(QuickLink)
 
 BuyResponse = _reflection.GeneratedProtocolMessageType('BuyResponse', (_message.Message,), dict(
 
@@ -16418,20 +23379,6 @@ BuyResponse = _reflection.GeneratedProtocolMessageType('BuyResponse', (_message.
 _sym_db.RegisterMessage(BuyResponse)
 _sym_db.RegisterMessage(BuyResponse.CheckoutInfo)
 _sym_db.RegisterMessage(BuyResponse.CheckoutInfo.CheckoutOption)
-
-Challenge = _reflection.GeneratedProtocolMessageType('Challenge', (_message.Message,), dict(
-  DESCRIPTOR = _CHALLENGE,
-  __module__ = 'googleplay_pb2'
-  # @@protoc_insertion_point(class_scope:Challenge)
-  ))
-_sym_db.RegisterMessage(Challenge)
-
-FormCheckbox = _reflection.GeneratedProtocolMessageType('FormCheckbox', (_message.Message,), dict(
-  DESCRIPTOR = _FORMCHECKBOX,
-  __module__ = 'googleplay_pb2'
-  # @@protoc_insertion_point(class_scope:FormCheckbox)
-  ))
-_sym_db.RegisterMessage(FormCheckbox)
 
 LineItem = _reflection.GeneratedProtocolMessageType('LineItem', (_message.Message,), dict(
   DESCRIPTOR = _LINEITEM,
@@ -16461,12 +23408,40 @@ PurchaseStatusResponse = _reflection.GeneratedProtocolMessageType('PurchaseStatu
   ))
 _sym_db.RegisterMessage(PurchaseStatusResponse)
 
+BillingProfileResponse = _reflection.GeneratedProtocolMessageType('BillingProfileResponse', (_message.Message,), dict(
+  DESCRIPTOR = _BILLINGPROFILERESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:BillingProfileResponse)
+  ))
+_sym_db.RegisterMessage(BillingProfileResponse)
+
 CheckInstrumentResponse = _reflection.GeneratedProtocolMessageType('CheckInstrumentResponse', (_message.Message,), dict(
   DESCRIPTOR = _CHECKINSTRUMENTRESPONSE,
   __module__ = 'googleplay_pb2'
   # @@protoc_insertion_point(class_scope:CheckInstrumentResponse)
   ))
 _sym_db.RegisterMessage(CheckInstrumentResponse)
+
+InstrumentSetupInfoResponse = _reflection.GeneratedProtocolMessageType('InstrumentSetupInfoResponse', (_message.Message,), dict(
+  DESCRIPTOR = _INSTRUMENTSETUPINFORESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:InstrumentSetupInfoResponse)
+  ))
+_sym_db.RegisterMessage(InstrumentSetupInfoResponse)
+
+RedeemGiftCardRequest = _reflection.GeneratedProtocolMessageType('RedeemGiftCardRequest', (_message.Message,), dict(
+  DESCRIPTOR = _REDEEMGIFTCARDREQUEST,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:RedeemGiftCardRequest)
+  ))
+_sym_db.RegisterMessage(RedeemGiftCardRequest)
+
+RedeemGiftCardResponse = _reflection.GeneratedProtocolMessageType('RedeemGiftCardResponse', (_message.Message,), dict(
+  DESCRIPTOR = _REDEEMGIFTCARDRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:RedeemGiftCardResponse)
+  ))
+_sym_db.RegisterMessage(RedeemGiftCardResponse)
 
 UpdateInstrumentRequest = _reflection.GeneratedProtocolMessageType('UpdateInstrumentRequest', (_message.Message,), dict(
   DESCRIPTOR = _UPDATEINSTRUMENTREQUEST,
@@ -16496,6 +23471,55 @@ VerifyAssociationResponse = _reflection.GeneratedProtocolMessageType('VerifyAsso
   ))
 _sym_db.RegisterMessage(VerifyAssociationResponse)
 
+AddressChallenge = _reflection.GeneratedProtocolMessageType('AddressChallenge', (_message.Message,), dict(
+  DESCRIPTOR = _ADDRESSCHALLENGE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:AddressChallenge)
+  ))
+_sym_db.RegisterMessage(AddressChallenge)
+
+AuthenticationChallenge = _reflection.GeneratedProtocolMessageType('AuthenticationChallenge', (_message.Message,), dict(
+  DESCRIPTOR = _AUTHENTICATIONCHALLENGE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:AuthenticationChallenge)
+  ))
+_sym_db.RegisterMessage(AuthenticationChallenge)
+
+Challenge = _reflection.GeneratedProtocolMessageType('Challenge', (_message.Message,), dict(
+  DESCRIPTOR = _CHALLENGE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:Challenge)
+  ))
+_sym_db.RegisterMessage(Challenge)
+
+Country = _reflection.GeneratedProtocolMessageType('Country', (_message.Message,), dict(
+  DESCRIPTOR = _COUNTRY,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:Country)
+  ))
+_sym_db.RegisterMessage(Country)
+
+FormCheckbox = _reflection.GeneratedProtocolMessageType('FormCheckbox', (_message.Message,), dict(
+  DESCRIPTOR = _FORMCHECKBOX,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:FormCheckbox)
+  ))
+_sym_db.RegisterMessage(FormCheckbox)
+
+InputValidationError = _reflection.GeneratedProtocolMessageType('InputValidationError', (_message.Message,), dict(
+  DESCRIPTOR = _INPUTVALIDATIONERROR,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:InputValidationError)
+  ))
+_sym_db.RegisterMessage(InputValidationError)
+
+WebViewChallenge = _reflection.GeneratedProtocolMessageType('WebViewChallenge', (_message.Message,), dict(
+  DESCRIPTOR = _WEBVIEWCHALLENGE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:WebViewChallenge)
+  ))
+_sym_db.RegisterMessage(WebViewChallenge)
+
 AddCreditCardPromoOffer = _reflection.GeneratedProtocolMessageType('AddCreditCardPromoOffer', (_message.Message,), dict(
   DESCRIPTOR = _ADDCREDITCARDPROMOOFFER,
   __module__ = 'googleplay_pb2'
@@ -16524,6 +23548,76 @@ RedeemedPromoOffer = _reflection.GeneratedProtocolMessageType('RedeemedPromoOffe
   ))
 _sym_db.RegisterMessage(RedeemedPromoOffer)
 
+ActiveExperiments = _reflection.GeneratedProtocolMessageType('ActiveExperiments', (_message.Message,), dict(
+  DESCRIPTOR = _ACTIVEEXPERIMENTS,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ActiveExperiments)
+  ))
+_sym_db.RegisterMessage(ActiveExperiments)
+
+AndroidClientInfo = _reflection.GeneratedProtocolMessageType('AndroidClientInfo', (_message.Message,), dict(
+  DESCRIPTOR = _ANDROIDCLIENTINFO,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:AndroidClientInfo)
+  ))
+_sym_db.RegisterMessage(AndroidClientInfo)
+
+ClientInfo = _reflection.GeneratedProtocolMessageType('ClientInfo', (_message.Message,), dict(
+  DESCRIPTOR = _CLIENTINFO,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ClientInfo)
+  ))
+_sym_db.RegisterMessage(ClientInfo)
+
+DesktopClientInfo = _reflection.GeneratedProtocolMessageType('DesktopClientInfo', (_message.Message,), dict(
+  DESCRIPTOR = _DESKTOPCLIENTINFO,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:DesktopClientInfo)
+  ))
+_sym_db.RegisterMessage(DesktopClientInfo)
+
+ExperimentIdList = _reflection.GeneratedProtocolMessageType('ExperimentIdList', (_message.Message,), dict(
+  DESCRIPTOR = _EXPERIMENTIDLIST,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ExperimentIdList)
+  ))
+_sym_db.RegisterMessage(ExperimentIdList)
+
+IosClientInfo = _reflection.GeneratedProtocolMessageType('IosClientInfo', (_message.Message,), dict(
+  DESCRIPTOR = _IOSCLIENTINFO,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:IosClientInfo)
+  ))
+_sym_db.RegisterMessage(IosClientInfo)
+
+LogEvent = _reflection.GeneratedProtocolMessageType('LogEvent', (_message.Message,), dict(
+  DESCRIPTOR = _LOGEVENT,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:LogEvent)
+  ))
+_sym_db.RegisterMessage(LogEvent)
+
+LogEventKeyValues = _reflection.GeneratedProtocolMessageType('LogEventKeyValues', (_message.Message,), dict(
+  DESCRIPTOR = _LOGEVENTKEYVALUES,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:LogEventKeyValues)
+  ))
+_sym_db.RegisterMessage(LogEventKeyValues)
+
+LogRequest = _reflection.GeneratedProtocolMessageType('LogRequest', (_message.Message,), dict(
+  DESCRIPTOR = _LOGREQUEST,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:LogRequest)
+  ))
+_sym_db.RegisterMessage(LogRequest)
+
+LogResponse = _reflection.GeneratedProtocolMessageType('LogResponse', (_message.Message,), dict(
+  DESCRIPTOR = _LOGRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:LogResponse)
+  ))
+_sym_db.RegisterMessage(LogResponse)
+
 Docid = _reflection.GeneratedProtocolMessageType('Docid', (_message.Message,), dict(
   DESCRIPTOR = _DOCID,
   __module__ = 'googleplay_pb2'
@@ -16538,6 +23632,20 @@ Install = _reflection.GeneratedProtocolMessageType('Install', (_message.Message,
   ))
 _sym_db.RegisterMessage(Install)
 
+GroupLicenseKey = _reflection.GeneratedProtocolMessageType('GroupLicenseKey', (_message.Message,), dict(
+  DESCRIPTOR = _GROUPLICENSEKEY,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:GroupLicenseKey)
+  ))
+_sym_db.RegisterMessage(GroupLicenseKey)
+
+LicenseTerms = _reflection.GeneratedProtocolMessageType('LicenseTerms', (_message.Message,), dict(
+  DESCRIPTOR = _LICENSETERMS,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:LicenseTerms)
+  ))
+_sym_db.RegisterMessage(LicenseTerms)
+
 Offer = _reflection.GeneratedProtocolMessageType('Offer', (_message.Message,), dict(
   DESCRIPTOR = _OFFER,
   __module__ = 'googleplay_pb2'
@@ -16545,12 +23653,40 @@ Offer = _reflection.GeneratedProtocolMessageType('Offer', (_message.Message,), d
   ))
 _sym_db.RegisterMessage(Offer)
 
-OwnershipInfo = _reflection.GeneratedProtocolMessageType('OwnershipInfo', (_message.Message,), dict(
-  DESCRIPTOR = _OWNERSHIPINFO,
+MonthAndDay = _reflection.GeneratedProtocolMessageType('MonthAndDay', (_message.Message,), dict(
+  DESCRIPTOR = _MONTHANDDAY,
   __module__ = 'googleplay_pb2'
-  # @@protoc_insertion_point(class_scope:OwnershipInfo)
+  # @@protoc_insertion_point(class_scope:MonthAndDay)
   ))
-_sym_db.RegisterMessage(OwnershipInfo)
+_sym_db.RegisterMessage(MonthAndDay)
+
+OfferPaymentPeriod = _reflection.GeneratedProtocolMessageType('OfferPaymentPeriod', (_message.Message,), dict(
+  DESCRIPTOR = _OFFERPAYMENTPERIOD,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:OfferPaymentPeriod)
+  ))
+_sym_db.RegisterMessage(OfferPaymentPeriod)
+
+OfferPaymentOverride = _reflection.GeneratedProtocolMessageType('OfferPaymentOverride', (_message.Message,), dict(
+  DESCRIPTOR = _OFFERPAYMENTOVERRIDE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:OfferPaymentOverride)
+  ))
+_sym_db.RegisterMessage(OfferPaymentOverride)
+
+OfferPayment = _reflection.GeneratedProtocolMessageType('OfferPayment', (_message.Message,), dict(
+  DESCRIPTOR = _OFFERPAYMENT,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:OfferPayment)
+  ))
+_sym_db.RegisterMessage(OfferPayment)
+
+VoucherTerms = _reflection.GeneratedProtocolMessageType('VoucherTerms', (_message.Message,), dict(
+  DESCRIPTOR = _VOUCHERTERMS,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:VoucherTerms)
+  ))
+_sym_db.RegisterMessage(VoucherTerms)
 
 RentalTerms = _reflection.GeneratedProtocolMessageType('RentalTerms', (_message.Message,), dict(
   DESCRIPTOR = _RENTALTERMS,
@@ -16558,6 +23694,20 @@ RentalTerms = _reflection.GeneratedProtocolMessageType('RentalTerms', (_message.
   # @@protoc_insertion_point(class_scope:RentalTerms)
   ))
 _sym_db.RegisterMessage(RentalTerms)
+
+SignedData = _reflection.GeneratedProtocolMessageType('SignedData', (_message.Message,), dict(
+  DESCRIPTOR = _SIGNEDDATA,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:SignedData)
+  ))
+_sym_db.RegisterMessage(SignedData)
+
+SubscriptionContentTerms = _reflection.GeneratedProtocolMessageType('SubscriptionContentTerms', (_message.Message,), dict(
+  DESCRIPTOR = _SUBSCRIPTIONCONTENTTERMS,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:SubscriptionContentTerms)
+  ))
+_sym_db.RegisterMessage(SubscriptionContentTerms)
 
 SubscriptionTerms = _reflection.GeneratedProtocolMessageType('SubscriptionTerms', (_message.Message,), dict(
   DESCRIPTOR = _SUBSCRIPTIONTERMS,
@@ -16579,6 +23729,20 @@ BillingAddressSpec = _reflection.GeneratedProtocolMessageType('BillingAddressSpe
   # @@protoc_insertion_point(class_scope:BillingAddressSpec)
   ))
 _sym_db.RegisterMessage(BillingAddressSpec)
+
+BillingProfile = _reflection.GeneratedProtocolMessageType('BillingProfile', (_message.Message,), dict(
+  DESCRIPTOR = _BILLINGPROFILE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:BillingProfile)
+  ))
+_sym_db.RegisterMessage(BillingProfile)
+
+BillingProfileOption = _reflection.GeneratedProtocolMessageType('BillingProfileOption', (_message.Message,), dict(
+  DESCRIPTOR = _BILLINGPROFILEOPTION,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:BillingProfileOption)
+  ))
+_sym_db.RegisterMessage(BillingProfileOption)
 
 CarrierBillingCredentials = _reflection.GeneratedProtocolMessageType('CarrierBillingCredentials', (_message.Message,), dict(
   DESCRIPTOR = _CARRIERBILLINGCREDENTIALS,
@@ -16622,19 +23786,26 @@ CreditCardInstrument = _reflection.GeneratedProtocolMessageType('CreditCardInstr
   ))
 _sym_db.RegisterMessage(CreditCardInstrument)
 
+DeviceAssociation = _reflection.GeneratedProtocolMessageType('DeviceAssociation', (_message.Message,), dict(
+  DESCRIPTOR = _DEVICEASSOCIATION,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:DeviceAssociation)
+  ))
+_sym_db.RegisterMessage(DeviceAssociation)
+
+DisabledInfo = _reflection.GeneratedProtocolMessageType('DisabledInfo', (_message.Message,), dict(
+  DESCRIPTOR = _DISABLEDINFO,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:DisabledInfo)
+  ))
+_sym_db.RegisterMessage(DisabledInfo)
+
 EfeParam = _reflection.GeneratedProtocolMessageType('EfeParam', (_message.Message,), dict(
   DESCRIPTOR = _EFEPARAM,
   __module__ = 'googleplay_pb2'
   # @@protoc_insertion_point(class_scope:EfeParam)
   ))
 _sym_db.RegisterMessage(EfeParam)
-
-InputValidationError = _reflection.GeneratedProtocolMessageType('InputValidationError', (_message.Message,), dict(
-  DESCRIPTOR = _INPUTVALIDATIONERROR,
-  __module__ = 'googleplay_pb2'
-  # @@protoc_insertion_point(class_scope:InputValidationError)
-  ))
-_sym_db.RegisterMessage(InputValidationError)
 
 Instrument = _reflection.GeneratedProtocolMessageType('Instrument', (_message.Message,), dict(
   DESCRIPTOR = _INSTRUMENT,
@@ -16643,12 +23814,40 @@ Instrument = _reflection.GeneratedProtocolMessageType('Instrument', (_message.Me
   ))
 _sym_db.RegisterMessage(Instrument)
 
+InstrumentSetupInfo = _reflection.GeneratedProtocolMessageType('InstrumentSetupInfo', (_message.Message,), dict(
+  DESCRIPTOR = _INSTRUMENTSETUPINFO,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:InstrumentSetupInfo)
+  ))
+_sym_db.RegisterMessage(InstrumentSetupInfo)
+
 PasswordPrompt = _reflection.GeneratedProtocolMessageType('PasswordPrompt', (_message.Message,), dict(
   DESCRIPTOR = _PASSWORDPROMPT,
   __module__ = 'googleplay_pb2'
   # @@protoc_insertion_point(class_scope:PasswordPrompt)
   ))
 _sym_db.RegisterMessage(PasswordPrompt)
+
+StoredValueInstrument = _reflection.GeneratedProtocolMessageType('StoredValueInstrument', (_message.Message,), dict(
+  DESCRIPTOR = _STOREDVALUEINSTRUMENT,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:StoredValueInstrument)
+  ))
+_sym_db.RegisterMessage(StoredValueInstrument)
+
+TopupInfo = _reflection.GeneratedProtocolMessageType('TopupInfo', (_message.Message,), dict(
+  DESCRIPTOR = _TOPUPINFO,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:TopupInfo)
+  ))
+_sym_db.RegisterMessage(TopupInfo)
+
+ConsumePurchaseResponse = _reflection.GeneratedProtocolMessageType('ConsumePurchaseResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CONSUMEPURCHASERESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ConsumePurchaseResponse)
+  ))
+_sym_db.RegisterMessage(ConsumePurchaseResponse)
 
 ContainerMetadata = _reflection.GeneratedProtocolMessageType('ContainerMetadata', (_message.Message,), dict(
   DESCRIPTOR = _CONTAINERMETADATA,
@@ -16657,12 +23856,96 @@ ContainerMetadata = _reflection.GeneratedProtocolMessageType('ContainerMetadata'
   ))
 _sym_db.RegisterMessage(ContainerMetadata)
 
+ContainerView = _reflection.GeneratedProtocolMessageType('ContainerView', (_message.Message,), dict(
+  DESCRIPTOR = _CONTAINERVIEW,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ContainerView)
+  ))
+_sym_db.RegisterMessage(ContainerView)
+
 FlagContentResponse = _reflection.GeneratedProtocolMessageType('FlagContentResponse', (_message.Message,), dict(
   DESCRIPTOR = _FLAGCONTENTRESPONSE,
   __module__ = 'googleplay_pb2'
   # @@protoc_insertion_point(class_scope:FlagContentResponse)
   ))
 _sym_db.RegisterMessage(FlagContentResponse)
+
+ClientDownloadRequest = _reflection.GeneratedProtocolMessageType('ClientDownloadRequest', (_message.Message,), dict(
+
+  ApkInfo = _reflection.GeneratedProtocolMessageType('ApkInfo', (_message.Message,), dict(
+    DESCRIPTOR = _CLIENTDOWNLOADREQUEST_APKINFO,
+    __module__ = 'googleplay_pb2'
+    # @@protoc_insertion_point(class_scope:ClientDownloadRequest.ApkInfo)
+    ))
+  ,
+
+  CertificateChain = _reflection.GeneratedProtocolMessageType('CertificateChain', (_message.Message,), dict(
+
+    Element = _reflection.GeneratedProtocolMessageType('Element', (_message.Message,), dict(
+      DESCRIPTOR = _CLIENTDOWNLOADREQUEST_CERTIFICATECHAIN_ELEMENT,
+      __module__ = 'googleplay_pb2'
+      # @@protoc_insertion_point(class_scope:ClientDownloadRequest.CertificateChain.Element)
+      ))
+    ,
+    DESCRIPTOR = _CLIENTDOWNLOADREQUEST_CERTIFICATECHAIN,
+    __module__ = 'googleplay_pb2'
+    # @@protoc_insertion_point(class_scope:ClientDownloadRequest.CertificateChain)
+    ))
+  ,
+
+  Digests = _reflection.GeneratedProtocolMessageType('Digests', (_message.Message,), dict(
+    DESCRIPTOR = _CLIENTDOWNLOADREQUEST_DIGESTS,
+    __module__ = 'googleplay_pb2'
+    # @@protoc_insertion_point(class_scope:ClientDownloadRequest.Digests)
+    ))
+  ,
+
+  Resource = _reflection.GeneratedProtocolMessageType('Resource', (_message.Message,), dict(
+    DESCRIPTOR = _CLIENTDOWNLOADREQUEST_RESOURCE,
+    __module__ = 'googleplay_pb2'
+    # @@protoc_insertion_point(class_scope:ClientDownloadRequest.Resource)
+    ))
+  ,
+
+  SignatureInfo = _reflection.GeneratedProtocolMessageType('SignatureInfo', (_message.Message,), dict(
+    DESCRIPTOR = _CLIENTDOWNLOADREQUEST_SIGNATUREINFO,
+    __module__ = 'googleplay_pb2'
+    # @@protoc_insertion_point(class_scope:ClientDownloadRequest.SignatureInfo)
+    ))
+  ,
+  DESCRIPTOR = _CLIENTDOWNLOADREQUEST,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ClientDownloadRequest)
+  ))
+_sym_db.RegisterMessage(ClientDownloadRequest)
+_sym_db.RegisterMessage(ClientDownloadRequest.ApkInfo)
+_sym_db.RegisterMessage(ClientDownloadRequest.CertificateChain)
+_sym_db.RegisterMessage(ClientDownloadRequest.CertificateChain.Element)
+_sym_db.RegisterMessage(ClientDownloadRequest.Digests)
+_sym_db.RegisterMessage(ClientDownloadRequest.Resource)
+_sym_db.RegisterMessage(ClientDownloadRequest.SignatureInfo)
+
+ClientDownloadResponse = _reflection.GeneratedProtocolMessageType('ClientDownloadResponse', (_message.Message,), dict(
+
+  MoreInfo = _reflection.GeneratedProtocolMessageType('MoreInfo', (_message.Message,), dict(
+    DESCRIPTOR = _CLIENTDOWNLOADRESPONSE_MOREINFO,
+    __module__ = 'googleplay_pb2'
+    # @@protoc_insertion_point(class_scope:ClientDownloadResponse.MoreInfo)
+    ))
+  ,
+  DESCRIPTOR = _CLIENTDOWNLOADRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ClientDownloadResponse)
+  ))
+_sym_db.RegisterMessage(ClientDownloadResponse)
+_sym_db.RegisterMessage(ClientDownloadResponse.MoreInfo)
+
+ClientDownloadStatsRequest = _reflection.GeneratedProtocolMessageType('ClientDownloadStatsRequest', (_message.Message,), dict(
+  DESCRIPTOR = _CLIENTDOWNLOADSTATSREQUEST,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ClientDownloadStatsRequest)
+  ))
+_sym_db.RegisterMessage(ClientDownloadStatsRequest)
 
 DebugInfo = _reflection.GeneratedProtocolMessageType('DebugInfo', (_message.Message,), dict(
 
@@ -16678,6 +23961,13 @@ DebugInfo = _reflection.GeneratedProtocolMessageType('DebugInfo', (_message.Mess
   ))
 _sym_db.RegisterMessage(DebugInfo)
 _sym_db.RegisterMessage(DebugInfo.Timing)
+
+DebugSettingsResponse = _reflection.GeneratedProtocolMessageType('DebugSettingsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _DEBUGSETTINGSRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:DebugSettingsResponse)
+  ))
+_sym_db.RegisterMessage(DebugSettingsResponse)
 
 DeliveryResponse = _reflection.GeneratedProtocolMessageType('DeliveryResponse', (_message.Message,), dict(
   DESCRIPTOR = _DELIVERYRESPONSE,
@@ -16713,6 +24003,20 @@ DetailsResponse = _reflection.GeneratedProtocolMessageType('DetailsResponse', (_
   # @@protoc_insertion_point(class_scope:DetailsResponse)
   ))
 _sym_db.RegisterMessage(DetailsResponse)
+
+DiscoveryBadge = _reflection.GeneratedProtocolMessageType('DiscoveryBadge', (_message.Message,), dict(
+  DESCRIPTOR = _DISCOVERYBADGE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:DiscoveryBadge)
+  ))
+_sym_db.RegisterMessage(DiscoveryBadge)
+
+DiscoveryBadgeLink = _reflection.GeneratedProtocolMessageType('DiscoveryBadgeLink', (_message.Message,), dict(
+  DESCRIPTOR = _DISCOVERYBADGELINK,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:DiscoveryBadgeLink)
+  ))
+_sym_db.RegisterMessage(DiscoveryBadgeLink)
 
 DeviceConfigurationProto = _reflection.GeneratedProtocolMessageType('DeviceConfigurationProto', (_message.Message,), dict(
   DESCRIPTOR = _DEVICECONFIGURATIONPROTO,
@@ -16758,6 +24062,20 @@ _sym_db.RegisterMessage(Image)
 _sym_db.RegisterMessage(Image.Dimension)
 _sym_db.RegisterMessage(Image.Citation)
 
+ImagePalette = _reflection.GeneratedProtocolMessageType('ImagePalette', (_message.Message,), dict(
+  DESCRIPTOR = _IMAGEPALETTE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ImagePalette)
+  ))
+_sym_db.RegisterMessage(ImagePalette)
+
+Attribution = _reflection.GeneratedProtocolMessageType('Attribution', (_message.Message,), dict(
+  DESCRIPTOR = _ATTRIBUTION,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:Attribution)
+  ))
+_sym_db.RegisterMessage(Attribution)
+
 TranslatedText = _reflection.GeneratedProtocolMessageType('TranslatedText', (_message.Message,), dict(
   DESCRIPTOR = _TRANSLATEDTEXT,
   __module__ = 'googleplay_pb2'
@@ -16771,6 +24089,13 @@ Badge = _reflection.GeneratedProtocolMessageType('Badge', (_message.Message,), d
   # @@protoc_insertion_point(class_scope:Badge)
   ))
 _sym_db.RegisterMessage(Badge)
+
+BadgeContainer = _reflection.GeneratedProtocolMessageType('BadgeContainer', (_message.Message,), dict(
+  DESCRIPTOR = _BADGECONTAINER,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:BadgeContainer)
+  ))
+_sym_db.RegisterMessage(BadgeContainer)
 
 ContainerWithBanner = _reflection.GeneratedProtocolMessageType('ContainerWithBanner', (_message.Message,), dict(
   DESCRIPTOR = _CONTAINERWITHBANNER,
@@ -16786,6 +24111,13 @@ DealOfTheDay = _reflection.GeneratedProtocolMessageType('DealOfTheDay', (_messag
   ))
 _sym_db.RegisterMessage(DealOfTheDay)
 
+Dismissal = _reflection.GeneratedProtocolMessageType('Dismissal', (_message.Message,), dict(
+  DESCRIPTOR = _DISMISSAL,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:Dismissal)
+  ))
+_sym_db.RegisterMessage(Dismissal)
+
 EditorialSeriesContainer = _reflection.GeneratedProtocolMessageType('EditorialSeriesContainer', (_message.Message,), dict(
   DESCRIPTOR = _EDITORIALSERIESCONTAINER,
   __module__ = 'googleplay_pb2'
@@ -16800,19 +24132,26 @@ Link = _reflection.GeneratedProtocolMessageType('Link', (_message.Message,), dic
   ))
 _sym_db.RegisterMessage(Link)
 
+NextBanner = _reflection.GeneratedProtocolMessageType('NextBanner', (_message.Message,), dict(
+  DESCRIPTOR = _NEXTBANNER,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:NextBanner)
+  ))
+_sym_db.RegisterMessage(NextBanner)
+
+OBSOLETE_Reason = _reflection.GeneratedProtocolMessageType('OBSOLETE_Reason', (_message.Message,), dict(
+  DESCRIPTOR = _OBSOLETE_REASON,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:OBSOLETE_Reason)
+  ))
+_sym_db.RegisterMessage(OBSOLETE_Reason)
+
 PlusOneData = _reflection.GeneratedProtocolMessageType('PlusOneData', (_message.Message,), dict(
   DESCRIPTOR = _PLUSONEDATA,
   __module__ = 'googleplay_pb2'
   # @@protoc_insertion_point(class_scope:PlusOneData)
   ))
 _sym_db.RegisterMessage(PlusOneData)
-
-PlusPerson = _reflection.GeneratedProtocolMessageType('PlusPerson', (_message.Message,), dict(
-  DESCRIPTOR = _PLUSPERSON,
-  __module__ = 'googleplay_pb2'
-  # @@protoc_insertion_point(class_scope:PlusPerson)
-  ))
-_sym_db.RegisterMessage(PlusPerson)
 
 PromotedDoc = _reflection.GeneratedProtocolMessageType('PromotedDoc', (_message.Message,), dict(
   DESCRIPTOR = _PROMOTEDDOC,
@@ -16828,6 +24167,27 @@ Reason = _reflection.GeneratedProtocolMessageType('Reason', (_message.Message,),
   ))
 _sym_db.RegisterMessage(Reason)
 
+ReasonPlusProfiles = _reflection.GeneratedProtocolMessageType('ReasonPlusProfiles', (_message.Message,), dict(
+  DESCRIPTOR = _REASONPLUSPROFILES,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ReasonPlusProfiles)
+  ))
+_sym_db.RegisterMessage(ReasonPlusProfiles)
+
+ReasonReview = _reflection.GeneratedProtocolMessageType('ReasonReview', (_message.Message,), dict(
+  DESCRIPTOR = _REASONREVIEW,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ReasonReview)
+  ))
+_sym_db.RegisterMessage(ReasonReview)
+
+RecommendationsContainer = _reflection.GeneratedProtocolMessageType('RecommendationsContainer', (_message.Message,), dict(
+  DESCRIPTOR = _RECOMMENDATIONSCONTAINER,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:RecommendationsContainer)
+  ))
+_sym_db.RegisterMessage(RecommendationsContainer)
+
 SectionMetadata = _reflection.GeneratedProtocolMessageType('SectionMetadata', (_message.Message,), dict(
   DESCRIPTOR = _SECTIONMETADATA,
   __module__ = 'googleplay_pb2'
@@ -16841,6 +24201,13 @@ SeriesAntenna = _reflection.GeneratedProtocolMessageType('SeriesAntenna', (_mess
   # @@protoc_insertion_point(class_scope:SeriesAntenna)
   ))
 _sym_db.RegisterMessage(SeriesAntenna)
+
+SuggestionReasons = _reflection.GeneratedProtocolMessageType('SuggestionReasons', (_message.Message,), dict(
+  DESCRIPTOR = _SUGGESTIONREASONS,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:SuggestionReasons)
+  ))
+_sym_db.RegisterMessage(SuggestionReasons)
 
 Template = _reflection.GeneratedProtocolMessageType('Template', (_message.Message,), dict(
   DESCRIPTOR = _TEMPLATE,
@@ -16856,6 +24223,13 @@ TileTemplate = _reflection.GeneratedProtocolMessageType('TileTemplate', (_messag
   ))
 _sym_db.RegisterMessage(TileTemplate)
 
+VideoSnippet = _reflection.GeneratedProtocolMessageType('VideoSnippet', (_message.Message,), dict(
+  DESCRIPTOR = _VIDEOSNIPPET,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:VideoSnippet)
+  ))
+_sym_db.RegisterMessage(VideoSnippet)
+
 Warning = _reflection.GeneratedProtocolMessageType('Warning', (_message.Message,), dict(
   DESCRIPTOR = _WARNING,
   __module__ = 'googleplay_pb2'
@@ -16870,12 +24244,40 @@ AlbumDetails = _reflection.GeneratedProtocolMessageType('AlbumDetails', (_messag
   ))
 _sym_db.RegisterMessage(AlbumDetails)
 
+Dependency = _reflection.GeneratedProtocolMessageType('Dependency', (_message.Message,), dict(
+  DESCRIPTOR = _DEPENDENCY,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:Dependency)
+  ))
+_sym_db.RegisterMessage(Dependency)
+
+InstallDetails = _reflection.GeneratedProtocolMessageType('InstallDetails', (_message.Message,), dict(
+  DESCRIPTOR = _INSTALLDETAILS,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:InstallDetails)
+  ))
+_sym_db.RegisterMessage(InstallDetails)
+
 AppDetails = _reflection.GeneratedProtocolMessageType('AppDetails', (_message.Message,), dict(
   DESCRIPTOR = _APPDETAILS,
   __module__ = 'googleplay_pb2'
   # @@protoc_insertion_point(class_scope:AppDetails)
   ))
 _sym_db.RegisterMessage(AppDetails)
+
+CertificateSet = _reflection.GeneratedProtocolMessageType('CertificateSet', (_message.Message,), dict(
+  DESCRIPTOR = _CERTIFICATESET,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:CertificateSet)
+  ))
+_sym_db.RegisterMessage(CertificateSet)
+
+AppPermission = _reflection.GeneratedProtocolMessageType('AppPermission', (_message.Message,), dict(
+  DESCRIPTOR = _APPPERMISSION,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:AppPermission)
+  ))
+_sym_db.RegisterMessage(AppPermission)
 
 ArtistDetails = _reflection.GeneratedProtocolMessageType('ArtistDetails', (_message.Message,), dict(
   DESCRIPTOR = _ARTISTDETAILS,
@@ -16898,6 +24300,13 @@ DocumentDetails = _reflection.GeneratedProtocolMessageType('DocumentDetails', (_
   ))
 _sym_db.RegisterMessage(DocumentDetails)
 
+PatchDetails = _reflection.GeneratedProtocolMessageType('PatchDetails', (_message.Message,), dict(
+  DESCRIPTOR = _PATCHDETAILS,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:PatchDetails)
+  ))
+_sym_db.RegisterMessage(PatchDetails)
+
 FileMetadata = _reflection.GeneratedProtocolMessageType('FileMetadata', (_message.Message,), dict(
   DESCRIPTOR = _FILEMETADATA,
   __module__ = 'googleplay_pb2'
@@ -16918,6 +24327,13 @@ MusicDetails = _reflection.GeneratedProtocolMessageType('MusicDetails', (_messag
   # @@protoc_insertion_point(class_scope:MusicDetails)
   ))
 _sym_db.RegisterMessage(MusicDetails)
+
+NewsDetails = _reflection.GeneratedProtocolMessageType('NewsDetails', (_message.Message,), dict(
+  DESCRIPTOR = _NEWSDETAILS,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:NewsDetails)
+  ))
+_sym_db.RegisterMessage(NewsDetails)
 
 SongDetails = _reflection.GeneratedProtocolMessageType('SongDetails', (_message.Message,), dict(
   DESCRIPTOR = _SONGDETAILS,
@@ -17018,12 +24434,47 @@ Annotations = _reflection.GeneratedProtocolMessageType('Annotations', (_message.
   ))
 _sym_db.RegisterMessage(Annotations)
 
+OverflowLink = _reflection.GeneratedProtocolMessageType('OverflowLink', (_message.Message,), dict(
+  DESCRIPTOR = _OVERFLOWLINK,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:OverflowLink)
+  ))
+_sym_db.RegisterMessage(OverflowLink)
+
+ReviewTip = _reflection.GeneratedProtocolMessageType('ReviewTip', (_message.Message,), dict(
+  DESCRIPTOR = _REVIEWTIP,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ReviewTip)
+  ))
+_sym_db.RegisterMessage(ReviewTip)
+
 DocV2 = _reflection.GeneratedProtocolMessageType('DocV2', (_message.Message,), dict(
   DESCRIPTOR = _DOCV2,
   __module__ = 'googleplay_pb2'
   # @@protoc_insertion_point(class_scope:DocV2)
   ))
 _sym_db.RegisterMessage(DocV2)
+
+ProductDetails = _reflection.GeneratedProtocolMessageType('ProductDetails', (_message.Message,), dict(
+  DESCRIPTOR = _PRODUCTDETAILS,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ProductDetails)
+  ))
+_sym_db.RegisterMessage(ProductDetails)
+
+ProductDetailsSection = _reflection.GeneratedProtocolMessageType('ProductDetailsSection', (_message.Message,), dict(
+  DESCRIPTOR = _PRODUCTDETAILSSECTION,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ProductDetailsSection)
+  ))
+_sym_db.RegisterMessage(ProductDetailsSection)
+
+ProductDetailsDescription = _reflection.GeneratedProtocolMessageType('ProductDetailsDescription', (_message.Message,), dict(
+  DESCRIPTOR = _PRODUCTDETAILSDESCRIPTION,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ProductDetailsDescription)
+  ))
+_sym_db.RegisterMessage(ProductDetailsDescription)
 
 EncryptedSubscriberInfo = _reflection.GeneratedProtocolMessageType('EncryptedSubscriberInfo', (_message.Message,), dict(
   DESCRIPTOR = _ENCRYPTEDSUBSCRIBERINFO,
@@ -17047,6 +24498,13 @@ Availability = _reflection.GeneratedProtocolMessageType('Availability', (_messag
 _sym_db.RegisterMessage(Availability)
 _sym_db.RegisterMessage(Availability.PerDeviceAvailabilityRestriction)
 
+AvailabilityProblem = _reflection.GeneratedProtocolMessageType('AvailabilityProblem', (_message.Message,), dict(
+  DESCRIPTOR = _AVAILABILITYPROBLEM,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:AvailabilityProblem)
+  ))
+_sym_db.RegisterMessage(AvailabilityProblem)
+
 FilterEvaluationInfo = _reflection.GeneratedProtocolMessageType('FilterEvaluationInfo', (_message.Message,), dict(
   DESCRIPTOR = _FILTEREVALUATIONINFO,
   __module__ = 'googleplay_pb2'
@@ -17068,12 +24526,33 @@ RuleEvaluation = _reflection.GeneratedProtocolMessageType('RuleEvaluation', (_me
   ))
 _sym_db.RegisterMessage(RuleEvaluation)
 
+GroupLicenseInfo = _reflection.GeneratedProtocolMessageType('GroupLicenseInfo', (_message.Message,), dict(
+  DESCRIPTOR = _GROUPLICENSEINFO,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:GroupLicenseInfo)
+  ))
+_sym_db.RegisterMessage(GroupLicenseInfo)
+
+LicensedDocumentInfo = _reflection.GeneratedProtocolMessageType('LicensedDocumentInfo', (_message.Message,), dict(
+  DESCRIPTOR = _LICENSEDDOCUMENTINFO,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:LicensedDocumentInfo)
+  ))
+_sym_db.RegisterMessage(LicensedDocumentInfo)
+
 LibraryAppDetails = _reflection.GeneratedProtocolMessageType('LibraryAppDetails', (_message.Message,), dict(
   DESCRIPTOR = _LIBRARYAPPDETAILS,
   __module__ = 'googleplay_pb2'
   # @@protoc_insertion_point(class_scope:LibraryAppDetails)
   ))
 _sym_db.RegisterMessage(LibraryAppDetails)
+
+LibraryInAppDetails = _reflection.GeneratedProtocolMessageType('LibraryInAppDetails', (_message.Message,), dict(
+  DESCRIPTOR = _LIBRARYINAPPDETAILS,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:LibraryInAppDetails)
+  ))
+_sym_db.RegisterMessage(LibraryInAppDetails)
 
 LibraryMutation = _reflection.GeneratedProtocolMessageType('LibraryMutation', (_message.Message,), dict(
   DESCRIPTOR = _LIBRARYMUTATION,
@@ -17124,19 +24603,19 @@ ClickLogEvent = _reflection.GeneratedProtocolMessageType('ClickLogEvent', (_mess
   ))
 _sym_db.RegisterMessage(ClickLogEvent)
 
-LogRequest = _reflection.GeneratedProtocolMessageType('LogRequest', (_message.Message,), dict(
-  DESCRIPTOR = _LOGREQUEST,
+ModifyLibraryRequest = _reflection.GeneratedProtocolMessageType('ModifyLibraryRequest', (_message.Message,), dict(
+  DESCRIPTOR = _MODIFYLIBRARYREQUEST,
   __module__ = 'googleplay_pb2'
-  # @@protoc_insertion_point(class_scope:LogRequest)
+  # @@protoc_insertion_point(class_scope:ModifyLibraryRequest)
   ))
-_sym_db.RegisterMessage(LogRequest)
+_sym_db.RegisterMessage(ModifyLibraryRequest)
 
-LogResponse = _reflection.GeneratedProtocolMessageType('LogResponse', (_message.Message,), dict(
-  DESCRIPTOR = _LOGRESPONSE,
+ModifyLibraryResponse = _reflection.GeneratedProtocolMessageType('ModifyLibraryResponse', (_message.Message,), dict(
+  DESCRIPTOR = _MODIFYLIBRARYRESPONSE,
   __module__ = 'googleplay_pb2'
-  # @@protoc_insertion_point(class_scope:LogResponse)
+  # @@protoc_insertion_point(class_scope:ModifyLibraryResponse)
   ))
-_sym_db.RegisterMessage(LogResponse)
+_sym_db.RegisterMessage(ModifyLibraryResponse)
 
 AndroidAppNotificationData = _reflection.GeneratedProtocolMessageType('AndroidAppNotificationData', (_message.Message,), dict(
   DESCRIPTOR = _ANDROIDAPPNOTIFICATIONDATA,
@@ -17187,12 +24666,139 @@ UserNotificationData = _reflection.GeneratedProtocolMessageType('UserNotificatio
   ))
 _sym_db.RegisterMessage(UserNotificationData)
 
+OwnershipInfo = _reflection.GeneratedProtocolMessageType('OwnershipInfo', (_message.Message,), dict(
+  DESCRIPTOR = _OWNERSHIPINFO,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:OwnershipInfo)
+  ))
+_sym_db.RegisterMessage(OwnershipInfo)
+
+AppData = _reflection.GeneratedProtocolMessageType('AppData', (_message.Message,), dict(
+  DESCRIPTOR = _APPDATA,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:AppData)
+  ))
+_sym_db.RegisterMessage(AppData)
+
+PlayStoreBackgroundActionEvent = _reflection.GeneratedProtocolMessageType('PlayStoreBackgroundActionEvent', (_message.Message,), dict(
+  DESCRIPTOR = _PLAYSTOREBACKGROUNDACTIONEVENT,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:PlayStoreBackgroundActionEvent)
+  ))
+_sym_db.RegisterMessage(PlayStoreBackgroundActionEvent)
+
+PlayStoreClickEvent = _reflection.GeneratedProtocolMessageType('PlayStoreClickEvent', (_message.Message,), dict(
+  DESCRIPTOR = _PLAYSTORECLICKEVENT,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:PlayStoreClickEvent)
+  ))
+_sym_db.RegisterMessage(PlayStoreClickEvent)
+
+PlayStoreDeepLinkEvent = _reflection.GeneratedProtocolMessageType('PlayStoreDeepLinkEvent', (_message.Message,), dict(
+  DESCRIPTOR = _PLAYSTOREDEEPLINKEVENT,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:PlayStoreDeepLinkEvent)
+  ))
+_sym_db.RegisterMessage(PlayStoreDeepLinkEvent)
+
+PlayStoreImpressionEvent = _reflection.GeneratedProtocolMessageType('PlayStoreImpressionEvent', (_message.Message,), dict(
+  DESCRIPTOR = _PLAYSTOREIMPRESSIONEVENT,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:PlayStoreImpressionEvent)
+  ))
+_sym_db.RegisterMessage(PlayStoreImpressionEvent)
+
+PlayStoreLogEvent = _reflection.GeneratedProtocolMessageType('PlayStoreLogEvent', (_message.Message,), dict(
+  DESCRIPTOR = _PLAYSTORELOGEVENT,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:PlayStoreLogEvent)
+  ))
+_sym_db.RegisterMessage(PlayStoreLogEvent)
+
+PlayStoreSearchEvent = _reflection.GeneratedProtocolMessageType('PlayStoreSearchEvent', (_message.Message,), dict(
+  DESCRIPTOR = _PLAYSTORESEARCHEVENT,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:PlayStoreSearchEvent)
+  ))
+_sym_db.RegisterMessage(PlayStoreSearchEvent)
+
+PlayStoreSessionData = _reflection.GeneratedProtocolMessageType('PlayStoreSessionData', (_message.Message,), dict(
+  DESCRIPTOR = _PLAYSTORESESSIONDATA,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:PlayStoreSessionData)
+  ))
+_sym_db.RegisterMessage(PlayStoreSessionData)
+
+PlayStoreUiElement = _reflection.GeneratedProtocolMessageType('PlayStoreUiElement', (_message.Message,), dict(
+  DESCRIPTOR = _PLAYSTOREUIELEMENT,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:PlayStoreUiElement)
+  ))
+_sym_db.RegisterMessage(PlayStoreUiElement)
+
+PlayStoreUiElementInfo = _reflection.GeneratedProtocolMessageType('PlayStoreUiElementInfo', (_message.Message,), dict(
+
+  InstrumentInfo = _reflection.GeneratedProtocolMessageType('InstrumentInfo', (_message.Message,), dict(
+    DESCRIPTOR = _PLAYSTOREUIELEMENTINFO_INSTRUMENTINFO,
+    __module__ = 'googleplay_pb2'
+    # @@protoc_insertion_point(class_scope:PlayStoreUiElementInfo.InstrumentInfo)
+    ))
+  ,
+  DESCRIPTOR = _PLAYSTOREUIELEMENTINFO,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:PlayStoreUiElementInfo)
+  ))
+_sym_db.RegisterMessage(PlayStoreUiElementInfo)
+_sym_db.RegisterMessage(PlayStoreUiElementInfo.InstrumentInfo)
+
+PlusProfile = _reflection.GeneratedProtocolMessageType('PlusProfile', (_message.Message,), dict(
+  DESCRIPTOR = _PLUSPROFILE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:PlusProfile)
+  ))
+_sym_db.RegisterMessage(PlusProfile)
+
 PlusOneResponse = _reflection.GeneratedProtocolMessageType('PlusOneResponse', (_message.Message,), dict(
   DESCRIPTOR = _PLUSONERESPONSE,
   __module__ = 'googleplay_pb2'
   # @@protoc_insertion_point(class_scope:PlusOneResponse)
   ))
 _sym_db.RegisterMessage(PlusOneResponse)
+
+PlusProfileResponse = _reflection.GeneratedProtocolMessageType('PlusProfileResponse', (_message.Message,), dict(
+  DESCRIPTOR = _PLUSPROFILERESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:PlusProfileResponse)
+  ))
+_sym_db.RegisterMessage(PlusProfileResponse)
+
+ClientCart = _reflection.GeneratedProtocolMessageType('ClientCart', (_message.Message,), dict(
+  DESCRIPTOR = _CLIENTCART,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ClientCart)
+  ))
+_sym_db.RegisterMessage(ClientCart)
+
+CommitPurchaseResponse = _reflection.GeneratedProtocolMessageType('CommitPurchaseResponse', (_message.Message,), dict(
+  DESCRIPTOR = _COMMITPURCHASERESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:CommitPurchaseResponse)
+  ))
+_sym_db.RegisterMessage(CommitPurchaseResponse)
+
+PreparePurchaseResponse = _reflection.GeneratedProtocolMessageType('PreparePurchaseResponse', (_message.Message,), dict(
+  DESCRIPTOR = _PREPAREPURCHASERESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:PreparePurchaseResponse)
+  ))
+_sym_db.RegisterMessage(PreparePurchaseResponse)
+
+PurchaseStatus = _reflection.GeneratedProtocolMessageType('PurchaseStatus', (_message.Message,), dict(
+  DESCRIPTOR = _PURCHASESTATUS,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:PurchaseStatus)
+  ))
+_sym_db.RegisterMessage(PurchaseStatus)
 
 RateSuggestedContentResponse = _reflection.GeneratedProtocolMessageType('RateSuggestedContentResponse', (_message.Message,), dict(
   DESCRIPTOR = _RATESUGGESTEDCONTENTRESPONSE,
@@ -17215,12 +24821,19 @@ DirectPurchase = _reflection.GeneratedProtocolMessageType('DirectPurchase', (_me
   ))
 _sym_db.RegisterMessage(DirectPurchase)
 
-ResolveLinkResponse = _reflection.GeneratedProtocolMessageType('ResolveLinkResponse', (_message.Message,), dict(
-  DESCRIPTOR = _RESOLVELINKRESPONSE,
+RedeemGiftCard = _reflection.GeneratedProtocolMessageType('RedeemGiftCard', (_message.Message,), dict(
+  DESCRIPTOR = _REDEEMGIFTCARD,
   __module__ = 'googleplay_pb2'
-  # @@protoc_insertion_point(class_scope:ResolveLinkResponse)
+  # @@protoc_insertion_point(class_scope:RedeemGiftCard)
   ))
-_sym_db.RegisterMessage(ResolveLinkResponse)
+_sym_db.RegisterMessage(RedeemGiftCard)
+
+ResolvedLink = _reflection.GeneratedProtocolMessageType('ResolvedLink', (_message.Message,), dict(
+  DESCRIPTOR = _RESOLVEDLINK,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ResolvedLink)
+  ))
+_sym_db.RegisterMessage(ResolvedLink)
 
 Payload = _reflection.GeneratedProtocolMessageType('Payload', (_message.Message,), dict(
   DESCRIPTOR = _PAYLOAD,
@@ -17228,6 +24841,181 @@ Payload = _reflection.GeneratedProtocolMessageType('Payload', (_message.Message,
   # @@protoc_insertion_point(class_scope:Payload)
   ))
 _sym_db.RegisterMessage(Payload)
+
+CheckIabPromoResponse = _reflection.GeneratedProtocolMessageType('CheckIabPromoResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CHECKIABPROMORESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:CheckIabPromoResponse)
+  ))
+_sym_db.RegisterMessage(CheckIabPromoResponse)
+
+UserActivitySettingsResponse = _reflection.GeneratedProtocolMessageType('UserActivitySettingsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _USERACTIVITYSETTINGSRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:UserActivitySettingsResponse)
+  ))
+_sym_db.RegisterMessage(UserActivitySettingsResponse)
+
+RecordUserActivityResponse = _reflection.GeneratedProtocolMessageType('RecordUserActivityResponse', (_message.Message,), dict(
+  DESCRIPTOR = _RECORDUSERACTIVITYRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:RecordUserActivityResponse)
+  ))
+_sym_db.RegisterMessage(RecordUserActivityResponse)
+
+RedeemCodeResponse = _reflection.GeneratedProtocolMessageType('RedeemCodeResponse', (_message.Message,), dict(
+  DESCRIPTOR = _REDEEMCODERESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:RedeemCodeResponse)
+  ))
+_sym_db.RegisterMessage(RedeemCodeResponse)
+
+SelfUpdateResponse = _reflection.GeneratedProtocolMessageType('SelfUpdateResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SELFUPDATERESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:SelfUpdateResponse)
+  ))
+_sym_db.RegisterMessage(SelfUpdateResponse)
+
+searchSuggestResponse = _reflection.GeneratedProtocolMessageType('searchSuggestResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SEARCHSUGGESTRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:searchSuggestResponse)
+  ))
+_sym_db.RegisterMessage(searchSuggestResponse)
+
+GetInitialInstrumentFlowStateResponse = _reflection.GeneratedProtocolMessageType('GetInitialInstrumentFlowStateResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETINITIALINSTRUMENTFLOWSTATERESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:GetInitialInstrumentFlowStateResponse)
+  ))
+_sym_db.RegisterMessage(GetInitialInstrumentFlowStateResponse)
+
+CreateInstrumentResponse = _reflection.GeneratedProtocolMessageType('CreateInstrumentResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CREATEINSTRUMENTRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:CreateInstrumentResponse)
+  ))
+_sym_db.RegisterMessage(CreateInstrumentResponse)
+
+ChallengeResponse = _reflection.GeneratedProtocolMessageType('ChallengeResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CHALLENGERESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ChallengeResponse)
+  ))
+_sym_db.RegisterMessage(ChallengeResponse)
+
+BackDeviceChoicesResponse = _reflection.GeneratedProtocolMessageType('BackDeviceChoicesResponse', (_message.Message,), dict(
+  DESCRIPTOR = _BACKDEVICECHOICESRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:BackDeviceChoicesResponse)
+  ))
+_sym_db.RegisterMessage(BackDeviceChoicesResponse)
+
+BackupDocumentChoicesResponse = _reflection.GeneratedProtocolMessageType('BackupDocumentChoicesResponse', (_message.Message,), dict(
+  DESCRIPTOR = _BACKUPDOCUMENTCHOICESRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:BackupDocumentChoicesResponse)
+  ))
+_sym_db.RegisterMessage(BackupDocumentChoicesResponse)
+
+EarlyUpdateResponse = _reflection.GeneratedProtocolMessageType('EarlyUpdateResponse', (_message.Message,), dict(
+  DESCRIPTOR = _EARLYUPDATERESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:EarlyUpdateResponse)
+  ))
+_sym_db.RegisterMessage(EarlyUpdateResponse)
+
+PreloadsResponse = _reflection.GeneratedProtocolMessageType('PreloadsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _PRELOADSRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:PreloadsResponse)
+  ))
+_sym_db.RegisterMessage(PreloadsResponse)
+
+MyAccountsResponse = _reflection.GeneratedProtocolMessageType('MyAccountsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _MYACCOUNTSRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:MyAccountsResponse)
+  ))
+_sym_db.RegisterMessage(MyAccountsResponse)
+
+ContentFilterResponse = _reflection.GeneratedProtocolMessageType('ContentFilterResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CONTENTFILTERRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ContentFilterResponse)
+  ))
+_sym_db.RegisterMessage(ContentFilterResponse)
+
+ExperimentsResponse = _reflection.GeneratedProtocolMessageType('ExperimentsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _EXPERIMENTSRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ExperimentsResponse)
+  ))
+_sym_db.RegisterMessage(ExperimentsResponse)
+
+SurveyResponse = _reflection.GeneratedProtocolMessageType('SurveyResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SURVEYRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:SurveyResponse)
+  ))
+_sym_db.RegisterMessage(SurveyResponse)
+
+PingResponse = _reflection.GeneratedProtocolMessageType('PingResponse', (_message.Message,), dict(
+  DESCRIPTOR = _PINGRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:PingResponse)
+  ))
+_sym_db.RegisterMessage(PingResponse)
+
+UpdateUserSettingResponse = _reflection.GeneratedProtocolMessageType('UpdateUserSettingResponse', (_message.Message,), dict(
+  DESCRIPTOR = _UPDATEUSERSETTINGRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:UpdateUserSettingResponse)
+  ))
+_sym_db.RegisterMessage(UpdateUserSettingResponse)
+
+GetUserSettingsResponse = _reflection.GeneratedProtocolMessageType('GetUserSettingsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETUSERSETTINGSRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:GetUserSettingsResponse)
+  ))
+_sym_db.RegisterMessage(GetUserSettingsResponse)
+
+GetSharingSettingsResponse = _reflection.GeneratedProtocolMessageType('GetSharingSettingsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETSHARINGSETTINGSRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:GetSharingSettingsResponse)
+  ))
+_sym_db.RegisterMessage(GetSharingSettingsResponse)
+
+UpdateSharingSettingsResponse = _reflection.GeneratedProtocolMessageType('UpdateSharingSettingsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _UPDATESHARINGSETTINGSRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:UpdateSharingSettingsResponse)
+  ))
+_sym_db.RegisterMessage(UpdateSharingSettingsResponse)
+
+ReviewSnippetsResponse = _reflection.GeneratedProtocolMessageType('ReviewSnippetsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _REVIEWSNIPPETSRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ReviewSnippetsResponse)
+  ))
+_sym_db.RegisterMessage(ReviewSnippetsResponse)
+
+DocumentSharingStateResponse = _reflection.GeneratedProtocolMessageType('DocumentSharingStateResponse', (_message.Message,), dict(
+  DESCRIPTOR = _DOCUMENTSHARINGSTATERESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:DocumentSharingStateResponse)
+  ))
+_sym_db.RegisterMessage(DocumentSharingStateResponse)
+
+ModuleDeliveryResponse = _reflection.GeneratedProtocolMessageType('ModuleDeliveryResponse', (_message.Message,), dict(
+  DESCRIPTOR = _MODULEDELIVERYRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ModuleDeliveryResponse)
+  ))
+_sym_db.RegisterMessage(ModuleDeliveryResponse)
 
 PreFetch = _reflection.GeneratedProtocolMessageType('PreFetch', (_message.Message,), dict(
   DESCRIPTOR = _PREFETCH,
@@ -17249,6 +25037,13 @@ ServerCommands = _reflection.GeneratedProtocolMessageType('ServerCommands', (_me
   # @@protoc_insertion_point(class_scope:ServerCommands)
   ))
 _sym_db.RegisterMessage(ServerCommands)
+
+ServerMetadata = _reflection.GeneratedProtocolMessageType('ServerMetadata', (_message.Message,), dict(
+  DESCRIPTOR = _SERVERMETADATA,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:ServerMetadata)
+  ))
+_sym_db.RegisterMessage(ServerMetadata)
 
 GetReviewsResponse = _reflection.GeneratedProtocolMessageType('GetReviewsResponse', (_message.Message,), dict(
   DESCRIPTOR = _GETREVIEWSRESPONSE,
@@ -17292,6 +25087,20 @@ SearchResponse = _reflection.GeneratedProtocolMessageType('SearchResponse', (_me
   ))
 _sym_db.RegisterMessage(SearchResponse)
 
+BillingConfig = _reflection.GeneratedProtocolMessageType('BillingConfig', (_message.Message,), dict(
+  DESCRIPTOR = _BILLINGCONFIG,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:BillingConfig)
+  ))
+_sym_db.RegisterMessage(BillingConfig)
+
+CarrierBillingConfig = _reflection.GeneratedProtocolMessageType('CarrierBillingConfig', (_message.Message,), dict(
+  DESCRIPTOR = _CARRIERBILLINGCONFIG,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:CarrierBillingConfig)
+  ))
+_sym_db.RegisterMessage(CarrierBillingConfig)
+
 CorpusMetadata = _reflection.GeneratedProtocolMessageType('CorpusMetadata', (_message.Message,), dict(
   DESCRIPTOR = _CORPUSMETADATA,
   __module__ = 'googleplay_pb2'
@@ -17305,6 +25114,13 @@ Experiments = _reflection.GeneratedProtocolMessageType('Experiments', (_message.
   # @@protoc_insertion_point(class_scope:Experiments)
   ))
 _sym_db.RegisterMessage(Experiments)
+
+SelfUpdateConfig = _reflection.GeneratedProtocolMessageType('SelfUpdateConfig', (_message.Message,), dict(
+  DESCRIPTOR = _SELFUPDATECONFIG,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:SelfUpdateConfig)
+  ))
+_sym_db.RegisterMessage(SelfUpdateConfig)
 
 TocResponse = _reflection.GeneratedProtocolMessageType('TocResponse', (_message.Message,), dict(
   DESCRIPTOR = _TOCRESPONSE,
@@ -17326,6 +25142,20 @@ AcceptTosResponse = _reflection.GeneratedProtocolMessageType('AcceptTosResponse'
   # @@protoc_insertion_point(class_scope:AcceptTosResponse)
   ))
 _sym_db.RegisterMessage(AcceptTosResponse)
+
+UploadDeviceConfigRequest = _reflection.GeneratedProtocolMessageType('UploadDeviceConfigRequest', (_message.Message,), dict(
+  DESCRIPTOR = _UPLOADDEVICECONFIGREQUEST,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:UploadDeviceConfigRequest)
+  ))
+_sym_db.RegisterMessage(UploadDeviceConfigRequest)
+
+UploadDeviceConfigResponse = _reflection.GeneratedProtocolMessageType('UploadDeviceConfigResponse', (_message.Message,), dict(
+  DESCRIPTOR = _UPLOADDEVICECONFIGRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:UploadDeviceConfigResponse)
+  ))
+_sym_db.RegisterMessage(UploadDeviceConfigResponse)
 
 AckNotificationsRequestProto = _reflection.GeneratedProtocolMessageType('AckNotificationsRequestProto', (_message.Message,), dict(
   DESCRIPTOR = _ACKNOTIFICATIONSREQUESTPROTO,
@@ -18161,6 +25991,13 @@ UninstallReasonResponseProto = _reflection.GeneratedProtocolMessageType('Uninsta
   # @@protoc_insertion_point(class_scope:UninstallReasonResponseProto)
   ))
 _sym_db.RegisterMessage(UninstallReasonResponseProto)
+
+CriticReviewsResponse = _reflection.GeneratedProtocolMessageType('CriticReviewsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CRITICREVIEWSRESPONSE,
+  __module__ = 'googleplay_pb2'
+  # @@protoc_insertion_point(class_scope:CriticReviewsResponse)
+  ))
+_sym_db.RegisterMessage(CriticReviewsResponse)
 
 
 # @@protoc_insertion_point(module_scope)
