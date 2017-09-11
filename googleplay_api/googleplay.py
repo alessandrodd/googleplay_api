@@ -247,7 +247,6 @@ class GooglePlayAPI(object):
                      str(sdk) + ",device=" + devicename + ",hardware=" + devicename + ",product=" + \
                      devicename + ",build=NZZ99Z:user)"
         if datapost is None and path in self.preFetch:
-            print("HIT CACHE")
             data = self.preFetch[path]
         else:
             headers = {"Accept-Language": self.lang,
@@ -333,26 +332,46 @@ class GooglePlayAPI(object):
         """
         return self.executeRequestApi2(path, datapost=datapost)
 
-    def details(self, packageName, getPrefetchUrls=False):
+    def details(self, packageName, getPrefetchPages=False):
         """
         Get app details from a package name.
 
         :param packageName: the app unique ID e.g. 'com.android.chrome' or 'org.mozilla.firefox'
-        :param getPrefetchUrls: if True, also returns the pre-fetched urls that were sent by the server.
-                             These urls will be already in cache after the details request, so requesting
+        :param getPrefetchPages: if True, also returns the pre-fetched pages that were sent by the server.
+                             These pages will be already in cache after the details request, so requesting
                              these will not result in a remote call.
         :return: details for packageName
-        :rtype: Union[DetailsResponse, (DetailsResponse, list)]
+        :rtype: Union[DetailsResponse, (DetailsResponse, dict)]
         """
         path = "details?doc={0}".format(packageName)
         message = self.executeRequestApi2(path)
-        if not getPrefetchUrls:
+        if not getPrefetchPages:
             return message.payload.detailsResponse
         else:
-            urls = []
+            prefetchedPages = {}
             for prefetch in message.preFetch:
-                urls.append(prefetch.url)
-            return message.payload.detailsResponse, urls
+                prefetchMessage = self.executeRequestApi2(prefetch.url)
+                listResponse = prefetchMessage.payload.listResponse
+                for doc in listResponse.doc:
+                    if doc.backendDocid == ("similar_apps_" + packageName):
+                        if prefetchedPages.get("similar", None) is not None:
+                            logging.error("Similar page already prefetched for package {0}!".format(packageName))
+                        else:
+                            prefetchedPages["similar"] = doc
+                    elif doc.backendDocid == ("pre_install_users_also_installed_" + packageName):
+                        if prefetchedPages.get("preInstall", None) is not None:
+                            logging.error("Pre-install page already prefetched for package {0}!".format(packageName))
+                        else:
+                            prefetchedPages["preInstall"] = doc
+                    elif doc.backendDocid == ("post_install_users_also_installed_" + packageName):
+                        if prefetchedPages.get("postInstall", None) is not None:
+                            logging.error("Post-install page already prefetched for package {0}!".format(packageName))
+                        else:
+                            prefetchedPages["postInstall"] = doc
+                    else:
+                        logging.error("Unknown prefetch: {1} for package {0}!".format(packageName, doc.backendDocid))
+
+            return message.payload.detailsResponse, prefetchedPages
 
     def search(self, query, maxResults=None, offset=None):
         """

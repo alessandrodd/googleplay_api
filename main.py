@@ -14,10 +14,10 @@ def get_message(path):
 
 
 def get_details(package):
-    details, urls = play_store.details(package, True)
+    details, pages = play_store.details(package, True)
     print(details)
-    for url in urls:
-        print(play_store.freeRequest(url))
+    for page in pages.values():
+        print(page)
 
 
 def get_bulk_details(packages):
