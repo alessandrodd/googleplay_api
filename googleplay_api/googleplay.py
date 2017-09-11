@@ -247,6 +247,7 @@ class GooglePlayAPI(object):
                      str(sdk) + ",device=" + devicename + ",hardware=" + devicename + ",product=" + \
                      devicename + ",build=NZZ99Z:user)"
         if datapost is None and path in self.preFetch:
+            print("HIT CACHE")
             data = self.preFetch[path]
         else:
             headers = {"Accept-Language": self.lang,
@@ -322,17 +323,36 @@ class GooglePlayAPI(object):
     # Google Play API Methods
     #####################################
 
-    def details(self, packageName):
+    def freeRequest(self, path, datapost=None):
+        """
+        Do a generic request, useful for debugging
+
+        :param path: request path
+        :param datapost: post data (if any)
+        :return: Message
+        """
+        return self.executeRequestApi2(path, datapost=datapost)
+
+    def details(self, packageName, getPrefetchUrls=False):
         """
         Get app details from a package name.
 
         :param packageName: the app unique ID e.g. 'com.android.chrome' or 'org.mozilla.firefox'
+        :param getPrefetchUrls: if True, also returns the pre-fetched urls that were sent by the server.
+                             These urls will be already in cache after the details request, so requesting
+                             these will not result in a remote call.
         :return: details for packageName
-        :rtype: DetailsResponse
+        :rtype: Union[DetailsResponse, (DetailsResponse, list)]
         """
         path = "details?doc={0}".format(packageName)
         message = self.executeRequestApi2(path)
-        return message.payload.detailsResponse
+        if not getPrefetchUrls:
+            return message.payload.detailsResponse
+        else:
+            urls = []
+            for prefetch in message.preFetch:
+                urls.append(prefetch.url)
+            return message.payload.detailsResponse, urls
 
     def search(self, query, maxResults=None, offset=None):
         """
@@ -407,7 +427,7 @@ class GooglePlayAPI(object):
         requires only one request.
 
         :param packageNames: a list of app unique ID e.g. ['com.android.chrome', 'org.mozilla.firefox']
-        :param includeChildDocs: include child docs if present
+        :param includeChildDocs: include child docs if presents
         :param includeDetails: include more details, such as html description and so on
         :return: details for the packages specified in packageNames
         :rtype: BulkDetailsResponse

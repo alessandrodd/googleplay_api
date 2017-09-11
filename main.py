@@ -9,8 +9,15 @@ emulated_device = play_conf.get_option("device")
 play_store = None
 
 
+def get_message(path):
+    print(play_store.freeRequest(path))
+
+
 def get_details(package):
-    print(play_store.details(package))
+    details, urls = play_store.details(package, True)
+    print(details)
+    for url in urls:
+        print(play_store.freeRequest(url))
 
 
 def get_bulk_details(packages):
@@ -54,6 +61,8 @@ def main():
     parser = argparse.ArgumentParser(
         description='Unofficial PlayStore python interface', add_help=True
     )
+    parser.add_argument('--request', action="store", dest='request_path',
+                        help='Do a generic request, useful for deugging')
     parser.add_argument('--details', action="store", dest='package_to_detail', help='Shows various details for the '
                                                                                     'given package')
     parser.add_argument('--similar', action="store", dest='package_similar', help='Shows various packages similar '
@@ -94,6 +103,10 @@ def main():
         token = response.text
         print("Using auth token: {0}".format(token))
     play_store.login(authSubToken=token)
+
+    if results.request_path:
+        get_message(results.request_path)
+        return
 
     if results.package_to_detail:
         get_details(results.package_to_detail)
