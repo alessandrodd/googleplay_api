@@ -2,6 +2,7 @@
 import logging
 import operator
 from time import sleep
+from urllib.parse import urlsplit, parse_qs, urlencode
 
 import requests
 from google.protobuf import descriptor
@@ -477,14 +478,16 @@ class GooglePlayAPI(object):
         bulk_details = self.bulkDetails(packages)
         return bulk_details
 
-    def getPages(self, response, maxPages=None, details=False):
+    def getPages(self, response, maxPages=None, alterMaxResults=None, details=False):
         """
         Given a SearchResponse or ListResponse from e.g. listSimilar or search, returns the passed response
         merged to other maxPages-1 pages of responses (or less if not enough results are available).
         If details is True, returns the details for each app
 
         :param response: SearchResponse or ListResponse object
-        :param maxPages: max number of pages to retrieve
+        :param maxPages: max number of pages to
+        :param alterMaxResults: if set to a number, it tries to detect pagination parameters and
+                                   increment it to the desired amount. Usually ok for values <= 100
         :param details: if True, returns the list of app details
         :return: a list of apps or app details
         :rtype: SearchResponse or ListResponse or BulkDetailsResponse
@@ -516,6 +519,17 @@ class GooglePlayAPI(object):
             if not next_page:
                 # break if there isn't any page left
                 break
+            if alterMaxResults and "n=" in next_page:
+                # parse original string url
+                url_data = urlsplit(next_page)
+                # parse original query-string
+                qs_data = parse_qs(url_data.query)
+                # manipulate the query-string
+                qs_data['n'] = [alterMaxResults]
+                # get the url with modified query-string
+                # noinspection PyProtectedMember
+                next_page = url_data._replace(query=urlencode(qs_data, True)).geturl()
+
             message = self.executeRequestApi2(next_page)
             response = operator.attrgetter(response_location)(message)
             if not response.doc:
