@@ -357,17 +357,17 @@ class GooglePlayAPI(object):
                         if prefetchedPages.get("similar", None) is not None:
                             logging.error("Similar page already prefetched for package {0}!".format(packageName))
                         else:
-                            prefetchedPages["similar"] = doc
+                            prefetchedPages["similar"] = listResponse
                     elif doc.backendDocid == ("pre_install_users_also_installed_" + packageName):
                         if prefetchedPages.get("preInstall", None) is not None:
                             logging.error("Pre-install page already prefetched for package {0}!".format(packageName))
                         else:
-                            prefetchedPages["preInstall"] = doc
+                            prefetchedPages["preInstall"] = listResponse
                     elif doc.backendDocid == ("post_install_users_also_installed_" + packageName):
                         if prefetchedPages.get("postInstall", None) is not None:
                             logging.error("Post-install page already prefetched for package {0}!".format(packageName))
                         else:
-                            prefetchedPages["postInstall"] = doc
+                            prefetchedPages["postInstall"] = listResponse
                     else:
                         logging.error("Unknown prefetch: {1} for package {0}!".format(packageName, doc.backendDocid))
 
