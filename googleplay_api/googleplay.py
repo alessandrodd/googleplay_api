@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import logging
 import operator
+from collections import OrderedDict
 from time import sleep
 from urllib.parse import urlsplit, parse_qs, urlencode
 
@@ -14,6 +15,7 @@ from . import config
 from . import googleplay_pb2
 
 MIN_THROTTLE_TIME = 0.05
+MAX_PREFETCH_ELEMENTS = 200
 
 # should be always True, but we leave this here for testing purpose
 ssl_verify = True
@@ -85,7 +87,7 @@ class GooglePlayAPI(object):
                         {"http":"http://123.0.123.100:8080", "https": "https://231.1.2.34:3123"}
                         If None, no proxy will be used
         """
-        self.preFetch = {}
+        self.preFetch = OrderedDict()
         if androidId is None:
             androidId = config.get_option("android_id")
         if lang is None:
@@ -162,6 +164,12 @@ class GooglePlayAPI(object):
         if "preFetch" in fields:
             for p in protoObj.preFetch:
                 self.preFetch[p.url] = p.response
+        if 0 < MAX_PREFETCH_ELEMENTS < len(self.preFetch.keys()):
+            # To avoid memory leaks, remove elements from dict when reaching limit.
+            # Set MAX_PREFETCH_ELEMENTS to -1 to disable it
+            difference = len(self.preFetch.keys()) - MAX_PREFETCH_ELEMENTS
+            for i in range(difference):
+                self.preFetch.popitem(False)  # False => FIFO
 
     def setAuthSubToken(self, authSubToken):
         self.authSubToken = authSubToken
