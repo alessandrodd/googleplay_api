@@ -53,8 +53,12 @@ def download_apk(package, version_code, output_path):
     if not data:
         print("Error downloading apk.")
         return
-    with open(output_path, "wb") as f:
+    # warning: we must emulate an ATOMIC write to avoid unfinished files.
+    # To do so, we use the os.rename() function that should always be atomic under
+    # certain conditions (https://linux.die.net/man/2/rename)
+    with open(output_path + ".temp", "wb") as f:
         f.write(data)
+    os.rename(output_path + ".temp", output_path)
 
 
 def main():
