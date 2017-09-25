@@ -1,5 +1,6 @@
 import argparse
 import os
+import logging
 
 import googleplay_api.config as play_conf
 import requests
@@ -22,6 +23,10 @@ def get_details(package):
 
 def get_bulk_details(packages):
     print(play_store.bulkDetails(packages))
+
+
+def search(query):
+    print(play_store.getPages(play_store.search(query)))
 
 
 def get_similar(package):
@@ -49,7 +54,7 @@ def download_apk(package, version_code, output_path):
     if not version_code:
         version_code = get_latest_versioncode(package)
         print("Latest Version Code: {0}".format(version_code))
-    data = play_store.download(package, version_code, progressBar=True)
+    data = play_store.download(package, version_code, progressBar=False)
     if not data:
         print("Error downloading apk.")
         return
@@ -62,6 +67,8 @@ def download_apk(package, version_code, output_path):
 
 
 def main():
+    logging.basicConfig(level=logging.DEBUG)
+
     parser = argparse.ArgumentParser(
         description='Unofficial PlayStore python interface', add_help=True
     )
@@ -69,6 +76,7 @@ def main():
                         help='Do a generic request, useful for deugging')
     parser.add_argument('--details', action="store", dest='package_to_detail', help='Shows various details for the '
                                                                                     'given package')
+    parser.add_argument('--search', action="store", dest='query', help='Search the playstore')
     parser.add_argument('--similar', action="store", dest='package_similar', help='Shows various packages similar '
                                                                                   'to the given package')
     parser.add_argument('--bulk-details', action="store", dest='packages_to_detail', nargs='+', type=str,
@@ -114,6 +122,10 @@ def main():
 
     if results.package_to_detail:
         get_details(results.package_to_detail)
+        return
+
+    if results.query:
+        search(results.query)
         return
 
     if results.packages_to_detail:
