@@ -67,7 +67,7 @@ def download_apk(package, version_code, output_path):
 
 
 def main():
-    logging.basicConfig(level=logging.DEBUG)
+    logging.basicConfig(level=logging.INFO)
 
     parser = argparse.ArgumentParser(
         description='Unofficial PlayStore python interface', add_help=True
