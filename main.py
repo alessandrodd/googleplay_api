@@ -1,9 +1,10 @@
 import argparse
-import os
 import logging
+import os
+
+import requests
 
 import googleplay_api.config as play_conf
-import requests
 from googleplay_api.googleplay import GooglePlayAPI
 
 emulated_device = play_conf.get_option("device")
@@ -22,11 +23,18 @@ def get_details(package):
 
 
 def get_bulk_details(packages):
-    print(play_store.bulkDetails(packages))
+    print(play_store.bulkDetails(packages, True, True))
 
 
 def search(query):
     print(play_store.getPages(play_store.search(query)))
+
+
+def list_category(cat, subcat):
+    if not cat and not subcat:
+        print(play_store.browse())
+    else:
+        print(play_store.getPages(play_store.list(cat=cat, ctr=subcat)))
 
 
 def get_similar(package):
@@ -81,6 +89,15 @@ def main():
                                                                                   'to the given package')
     parser.add_argument('--bulk-details', action="store", dest='packages_to_detail', nargs='+', type=str,
                         help='Shows details for a list of packages')
+    list_group = parser.add_argument_group()
+    list_group.add_argument('--list', action="store_true", dest='list',
+                            help='List the categories avilable on playstore. If --category is specified, lists the '
+                                 'subcategories of the specified category. If --subcategory is also specified, lists '
+                                 'the app in the subcategory.')
+    list_group.add_argument('--category', action="store", dest='cat',
+                            help='Specify a certain category (e.g. GAME_ARCADE)')
+    list_group.add_argument('--subcategory', action="store", dest='subcat',
+                            help='Specify a certain subcategory (e.g. apps_topselling_free)')
     group = parser.add_argument_group()
     group.add_argument('--download', action="store", dest='package_to_download', help='Download the apk with given '
                                                                                       'package name')
@@ -134,6 +151,10 @@ def main():
 
     if results.package_similar:
         get_similar(results.package_similar)
+        return
+
+    if results.list:
+        list_category(results.cat, results.subcat)
         return
 
     if results.package_to_download:

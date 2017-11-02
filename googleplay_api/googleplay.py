@@ -470,12 +470,14 @@ class GooglePlayAPI(object):
                                           post_content_type="application/x-protobuf")
         return message.payload.bulkDetailsResponse
 
-    def bulkDetailsFromDocs(self, docs):
+    def bulkDetailsFromDocs(self, docs, includeChildDocs=False, includeDetails=False):
         """
         Utility method to retrieve details from a list of DocV2. Used mainly to retrieve details
         during pagination (getPages).
 
         :param docs: list of DocV2 documents
+        :param includeChildDocs: include child docs if presents
+        :param includeDetails: include more details, such as html description and so on
         :return: details for the packages specified in the documents
         :rtype: BulkDetailsResponse
         """
@@ -483,10 +485,11 @@ class GooglePlayAPI(object):
         for doc in docs:
             for child in doc.child:
                 packages.append(child.docid)
-        bulk_details = self.bulkDetails(packages)
+        bulk_details = self.bulkDetails(packages, includeChildDocs, includeDetails)
         return bulk_details
 
-    def getPages(self, response, maxPages=None, alterMaxResults=None, details=False):
+    def getPages(self, response, maxPages=None, alterMaxResults=None, details=False, includeChildDocs=False,
+                 includeDetails=False):
         """
         Given a SearchResponse or ListResponse from e.g. listSimilar or search, returns the passed response
         merged to other maxPages-1 pages of responses (or less if not enough results are available).
@@ -497,6 +500,8 @@ class GooglePlayAPI(object):
         :param alterMaxResults: if set to a number, it tries to detect pagination parameters and
                                    increment it to the desired amount. Usually ok for values <= 100
         :param details: if True, returns the list of app details
+        :param includeChildDocs: (valid only if details is True) include child docs if presents
+        :param includeDetails: (valid only if details is True) include more details, such as html description and so on
         :return: a list of apps or app details
         :rtype: SearchResponse or ListResponse or BulkDetailsResponse
         """
@@ -516,7 +521,7 @@ class GooglePlayAPI(object):
         all_responses = response
         all_details = None
         if details:
-            bulk_details = self.bulkDetailsFromDocs(response.doc)
+            bulk_details = self.bulkDetailsFromDocs(response.doc, includeChildDocs, includeDetails)
             all_details = bulk_details
         page = 1
         next_page = response.doc[-1].containerMetadata.nextPageUrl
@@ -545,7 +550,7 @@ class GooglePlayAPI(object):
                 break
             all_responses.MergeFrom(response)
             if details:
-                bulk_details = self.bulkDetailsFromDocs(response.doc)
+                bulk_details = self.bulkDetailsFromDocs(response.doc, includeChildDocs, includeDetails)
                 all_details.MergeFrom(bulk_details)
             page += 1
             next_page = response.doc[-1].containerMetadata.nextPageUrl
