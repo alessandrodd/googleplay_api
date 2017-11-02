@@ -6,9 +6,6 @@
 http_proxy =
 https_proxy =
 
-# separator used by search.py, categories.py, ...
-separator = \;
-
 # can be en_US, fr_FR, ...
 lang = en_GB
 
