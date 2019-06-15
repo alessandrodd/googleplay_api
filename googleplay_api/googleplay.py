@@ -258,6 +258,7 @@ class GooglePlayAPI(object):
                 k, v = d.split("=")[0:2]
                 response_params[k.strip().lower()] = v.strip()
             if "token" in response_params:
+                logging.info("Token found in response params. Trying to request a \"second round\" token.")
                 second_round_token = self.get_second_round_token(params, headers, response_params["token"])
                 if second_round_token is not None:
                     self.setAuthSubToken(second_round_token)
