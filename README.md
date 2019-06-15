@@ -17,7 +17,7 @@ An unofficial Python API that let you search, browse and download Android apps f
 You can install the required dependencies with _pip_ (a _requirements.txt_ file is provided for this purpose).
 
 ## Requirements
-You must create a `config.ini` file before using the provided scripts (you can copy `config.ini.example` and modify the required fields). First, you need to provide your phone's `androidID`:
+You must create a `config.ini` file before using the provided scripts (you can copy `config.example.ini` and modify the required fields). First, you need to provide your phone's `androidID`:
 
     # Google Service Framework ID (GSF ID)
     android_id = 1234567890ABCDEF
