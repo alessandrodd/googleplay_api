@@ -304,7 +304,7 @@ class GooglePlayAPI(object):
                     self.throttleTime *= 2
                     logging.warning("Too many request reached. "
                                     "Throttling connection (sleep {0})...".format(self.throttleTime))
-                elif int(response_code) == 401 and errorRetries > 0:
+                elif int(response_code) == 401 and errorRetries > 0 and self.password is not None and self.email is not None:
                     logging.warning("Received 401; trying to obtain a new subAuth token from credentials")
                     self.login(self.email, self.password)
                     errorRetries -= 1
