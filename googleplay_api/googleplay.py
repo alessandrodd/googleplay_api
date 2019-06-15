@@ -180,6 +180,33 @@ class GooglePlayAPI(object):
         if self.debug:
             print("authSubToken: " + authSubToken)
 
+    def get_second_round_token(self, params, headers, token):
+        new_params = params.copy()
+        new_params["Token"] = token
+        new_params["androidId"] = self.androidId
+        new_params["check_email"] = "1"
+        new_params["token_request_options"] = "CAA4AQ=="
+        new_params["system_partition"] = "1"
+        new_params["_opt_is_called_from_account_manager"] = "1"
+        del new_params["Email"]
+        del new_params["EncryptedPasswd"]
+        response = requests.post(self.URL_LOGIN, data=new_params,
+                                 headers=headers, verify=ssl_verify, proxies=self.proxies)
+        data = response.text.split()
+        response_params = {}
+        for d in data:
+            if "=" not in d:
+                continue
+            k, v = d.split("=")[0:2]
+            response_params[k.strip().lower()] = v.strip()
+        if "auth" in response_params:
+            return response_params["auth"]
+        elif "error" in response_params:
+            logging.warning("server says: " + response_params["error"])
+        else:
+            logging.warning("Auth token not found in second round.")
+        return None
+
     def login(self, email=None, password=None, authSubToken=None):
         """
         Login to your Google Account. You must provide either:
@@ -224,16 +251,21 @@ class GooglePlayAPI(object):
             response = requests.post(self.URL_LOGIN, data=params,
                                      headers=headers, verify=ssl_verify, proxies=self.proxies)
             data = response.text.split()
-            params = {}
+            response_params = {}
             for d in data:
                 if "=" not in d:
                     continue
                 k, v = d.split("=")[0:2]
-                params[k.strip().lower()] = v.strip()
-            if "auth" in params:
-                self.setAuthSubToken(params["auth"])
-            elif "error" in params:
-                raise LoginError("server says: " + params["error"])
+                response_params[k.strip().lower()] = v.strip()
+            if "token" in response_params:
+                second_round_token = self.get_second_round_token(params, headers, response_params["token"])
+                if second_round_token is not None:
+                    self.setAuthSubToken(second_round_token)
+                    return
+            if "auth" in response_params:
+                self.setAuthSubToken(response_params["auth"])
+            elif "error" in response_params:
+                raise LoginError("server says: " + response_params["error"])
             else:
                 raise LoginError("Auth token not found.")
 
@@ -272,7 +304,7 @@ class GooglePlayAPI(object):
             while retry:
                 if self.throttle:
                     sleep(self.throttleTime)
-                    
+
                 headers = {"Accept-Language": self.lang,
                            "Authorization": "GoogleLogin auth={0}".format(self.authSubToken),
                            "X-DFE-Enabled-Experiments": "cl:billing.select_add_instrument_by_default",
