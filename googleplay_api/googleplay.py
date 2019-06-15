@@ -113,6 +113,8 @@ class GooglePlayAPI(object):
         self.debug = debug
         self.proxies = proxies
         self.authSubToken = None
+        self.email = None
+        self.password = None
 
     def toDict(self, protoObj):
         """
@@ -197,6 +199,8 @@ class GooglePlayAPI(object):
         if authSubToken:
             self.setAuthSubToken(authSubToken)
         else:
+            self.email = email
+            self.password = password
             if not email or not password:
                 raise LoginError("You should provide at least authSubToken or (email and password)")
             encrypted_password = crypt_utils.encrypt_login(email, password)
@@ -300,6 +304,10 @@ class GooglePlayAPI(object):
                     self.throttleTime *= 2
                     logging.warning("Too many request reached. "
                                     "Throttling connection (sleep {0})...".format(self.throttleTime))
+                elif int(response_code) == 401 and errorRetries > 0:
+                    logging.warning("Received 401; trying to obtain a new subAuth token from credentials")
+                    self.login(self.email, self.password)
+                    errorRetries -= 1
                 elif int(response_code) != 200:
                     logging.error("Response code: {0} triggered by: {1} "
                                   "with datapost: {2}".format(response_code, url, str(datapost)))
