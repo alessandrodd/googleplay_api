@@ -13,6 +13,7 @@ from google.protobuf.message import Message
 
 from . import config
 from . import googleplay_pb2
+from . import crypt_utils
 
 MIN_THROTTLE_TIME = 0.05
 MAX_PREFETCH_ELEMENTS = 200
@@ -198,8 +199,9 @@ class GooglePlayAPI(object):
         else:
             if not email or not password:
                 raise LoginError("You should provide at least authSubToken or (email and password)")
+            encrypted_password = crypt_utils.encrypt_login(email, password)
             params = {"Email": email,
-                      "Passwd": password,
+                      "EncryptedPasswd": encrypted_password,
                       "service": self.SERVICE,
                       "accountType": self.ACCOUNT_TYPE_HOSTED_OR_GOOGLE,
                       "has_permission": "1",
@@ -213,6 +215,7 @@ class GooglePlayAPI(object):
                       "sdk_version": "19"}
             headers = {
                 "Accept-Encoding": "",
+                "app": "com.android.vending",
             }
             response = requests.post(self.URL_LOGIN, data=params,
                                      headers=headers, verify=ssl_verify, proxies=self.proxies)
