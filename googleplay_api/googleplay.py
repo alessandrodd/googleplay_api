@@ -530,11 +530,14 @@ class GooglePlayAPI(object):
             for child1 in doc.child:
                 if child1.docType == 45:
                     for child2 in child1.child:
-                        packages.append(child2.docid)
+                        if child2.docType == 1:
+                            packages.append(child2.docid)
+                        else:
+                            logging.warning("Unknown docType {0}. Maybe it's not an app?".format(child1.docType))
                 elif child1.docType == 1:
                     packages.append(child1.docid)
                 else:
-                    logging.error("Unknown docType {0}".format(child1.docType))
+                    logging.warning("Unknown docType {0}. Maybe it's not an app?".format(child1.docType))
         bulk_details = self.bulkDetails(packages, includeChildDocs, includeDetails)
         return bulk_details
 
