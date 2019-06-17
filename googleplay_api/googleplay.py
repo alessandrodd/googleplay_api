@@ -514,21 +514,26 @@ class GooglePlayAPI(object):
                                           post_content_type="application/x-protobuf")
         return message.payload.bulkDetailsResponse
 
-    def bulkDetailsFromDocs(self, docs, includeChildDocs=False, includeDetails=False):
+    def bulkDetailsFromDocs(self, response, includeChildDocs=False, includeDetails=False):
         """
         Utility method to retrieve details from a list of DocV2. Used mainly to retrieve details
         during pagination (getPages).
 
-        :param docs: list of DocV2 documents
+        :param response: response that contains a list of DocV2 documents
         :param includeChildDocs: include child docs if presents
         :param includeDetails: include more details, such as html description and so on
         :return: details for the packages specified in the documents
         :rtype: BulkDetailsResponse
         """
         packages = []
+        docs = response.doc
         for doc in docs:
-            for child in doc.child:
-                packages.append(child.docid)
+            for child1 in doc.child:
+                if type(response) == googleplay_pb2.SearchResponse:
+                    for child2 in child1.child:
+                        packages.append(child2.docid)
+                elif type(response) == googleplay_pb2.ListResponse:
+                    packages.append(child1.docid)
         bulk_details = self.bulkDetails(packages, includeChildDocs, includeDetails)
         return bulk_details
 
@@ -565,7 +570,7 @@ class GooglePlayAPI(object):
         all_responses = response
         all_details = None
         if details:
-            bulk_details = self.bulkDetailsFromDocs(response.doc, includeChildDocs, includeDetails)
+            bulk_details = self.bulkDetailsFromDocs(response, includeChildDocs, includeDetails)
             all_details = bulk_details
         page = 1
         next_page = response.doc[-1].containerMetadata.nextPageUrl
@@ -594,7 +599,7 @@ class GooglePlayAPI(object):
                 break
             all_responses.MergeFrom(response)
             if details:
-                bulk_details = self.bulkDetailsFromDocs(response.doc, includeChildDocs, includeDetails)
+                bulk_details = self.bulkDetailsFromDocs(response, includeChildDocs, includeDetails)
                 all_details.MergeFrom(bulk_details)
             page += 1
             next_page = response.doc[-1].containerMetadata.nextPageUrl
